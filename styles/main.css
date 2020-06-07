@@ -790,7 +790,7 @@ body {
   .header__navmenu {
     z-index: 50;
     position: fixed;
-    top: -100%;
+    top: -110%;
     right: 0;
     width: 50%;
     height: 95vh;
@@ -817,6 +817,10 @@ body {
     transition: all 1s;
   }
 
+  .header__mini-nav a {
+    text-decoration: none;
+  }
+
   .header__mini-nav-active .header__mini-nav-down {
     display: none;
   }
@@ -840,6 +844,10 @@ body {
     display: none;
   }
 
+  .about__promo-wrapper-item {
+    min-width: 300px;
+  }
+
   .about__promo-wrapper-img {
     display: none;
   }
@@ -847,6 +855,20 @@ body {
   .about__skill-wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about__skils-item {
+    width: 90%;
+  }
+
+  .porto__item {
+    width: 90%;
+  }
+
+  .porto__container {
+    justify-content: center;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
