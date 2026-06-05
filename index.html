@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Инженерные руны — Дмитрий Антонов</title>
-  <meta name="description" content="Инженерная модель реальности. Руны как этапы процессов. Книги Дмитрия Антонова.">
+  <title>Руны как этапы процесса — Дмитрий Антонов</title>
+  <meta name="description" content="Руны как этапы процесса. Инженерная модель реальности. Книги Дмитрия Антонова.">
   <style>
     * {
       margin: 0;
@@ -33,19 +33,19 @@
     }
 
     h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       margin-bottom: 0.5rem;
     }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       margin-bottom: 1.5rem;
-      border-left: 5px solid #2c6e49;
+      border-left: 4px solid #2c6e49;
       padding-left: 1rem;
     }
 
     .section {
-      padding: 3.5rem 0;
+      padding: 3rem 0;
       border-bottom: 1px solid #e6e4e0;
     }
 
@@ -54,27 +54,27 @@
     }
 
     .navbar {
-      padding: 1.2rem 0;
+      padding: 1rem 0;
       background: #ffffff;
       border-bottom: 1px solid #e2e2e6;
       position: sticky;
       top: 0;
       backdrop-filter: blur(10px);
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.94);
       z-index: 10;
     }
 
     .nav-inner {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
+      align-items: center;
       flex-wrap: wrap;
       gap: 0.8rem;
     }
 
     .logo {
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       letter-spacing: -0.3px;
       text-decoration: none;
       color: #1e3a2f;
@@ -86,7 +86,7 @@
 
     .nav-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.2rem;
       flex-wrap: wrap;
     }
 
@@ -95,6 +95,7 @@
       font-weight: 500;
       color: #2d3e3b;
       transition: color 0.2s;
+      font-size: 0.9rem;
     }
 
     .nav-links a:hover {
@@ -118,18 +119,18 @@
 
     .author-text p {
       margin-bottom: 1rem;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #2c2c34;
     }
 
     .author-badge {
       background: #eef4ed;
-      padding: 0.6rem 1.2rem;
+      padding: 0.4rem 1rem;
       border-radius: 32px;
       font-weight: 500;
       display: inline-block;
       margin-bottom: 1rem;
-      font-size: 0.85rem;
+      font-size: 0.75rem;
       color: #1b4d2e;
     }
 
@@ -139,7 +140,7 @@
       border-left: 3px solid #2c6e49;
       padding: 0.2rem 0.6rem;
       border-radius: 12px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       display: inline-block;
       margin: 0.2rem 0;
     }
@@ -147,30 +148,30 @@
     .books-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     .book-card {
       background: white;
-      border-radius: 28px;
-      padding: 1.5rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.02), 0 0 0 1px #ece8e2;
+      border-radius: 24px;
+      padding: 1.3rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03), 0 0 0 1px #ece8e2;
       transition: all 0.2s;
       display: flex;
       flex-direction: column;
     }
 
     .book-card:hover {
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05), 0 0 0 1px #d4cfc5;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05), 0 0 0 1px #d4cfc5;
     }
 
     .book-status {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: 600;
       color: #2c6e49;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
 
     .book-status.soon {
@@ -182,20 +183,20 @@
     }
 
     .book-number {
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       color: #8a7f6d;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.25rem;
     }
 
     .book-title {
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
       line-height: 1.25;
     }
 
     .book-subtitle {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: #2c6e49;
       font-weight: 500;
       margin-bottom: 0.75rem;
@@ -204,11 +205,11 @@
     .book-annotation {
       margin: 0.75rem 0;
       color: #2e2e3a;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
     .book-annotation p {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     .book-meta {
@@ -216,24 +217,24 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.8rem;
       margin-top: auto;
-      padding-top: 1rem;
+      padding-top: 0.8rem;
       border-top: 1px dashed #ddd8cf;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
       background: #1e3a2f;
       color: white;
-      padding: 0.6rem 1.2rem;
+      padding: 0.5rem 1rem;
       border-radius: 40px;
       text-decoration: none;
       font-weight: 500;
       transition: background 0.2s;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
     }
 
     .btn-outline {
@@ -246,6 +247,11 @@
       background: #1e3a2f0c;
     }
 
+    .btn-small {
+      padding: 0.3rem 0.8rem;
+      font-size: 0.75rem;
+    }
+
     .btn:hover {
       background: #0f2c22;
     }
@@ -253,30 +259,30 @@
     .contacts-list {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.8rem;
       background: #ffffffd9;
-      border-radius: 2rem;
-      padding: 1.5rem;
+      border-radius: 1.5rem;
+      padding: 1.3rem;
       border: 1px solid #e2ddd4;
     }
 
     .contact-item {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.8rem;
       flex-wrap: wrap;
     }
 
     .contact-icon {
-      font-size: 1.6rem;
-      min-width: 2rem;
+      font-size: 1.3rem;
+      min-width: 1.8rem;
     }
 
     .contact-link {
       text-decoration: none;
       color: #1e3a2f;
       font-weight: 500;
-      word-break: break-all;
+      font-size: 0.9rem;
     }
 
     .contact-link:hover {
@@ -285,8 +291,8 @@
 
     footer {
       text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.85rem;
+      padding: 1.5rem 1rem;
+      font-size: 0.75rem;
       color: #5f6c66;
       background: #f1efe9;
       margin-top: 1rem;
@@ -294,9 +300,9 @@
 
     .rune-line {
       font-family: monospace;
-      font-size: 1rem;
+      font-size: 0.9rem;
       background: #ece8e0;
-      padding: 0.3rem 0.8rem;
+      padding: 0.2rem 0.6rem;
       border-radius: 40px;
       display: inline-block;
     }
@@ -309,14 +315,14 @@
 
     @media (min-width: 1024px) {
       .books-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
       .author-wrap {
         flex-direction: row;
         align-items: flex-start;
       }
       h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
       }
       .section {
         padding: 4rem 0;
@@ -327,11 +333,11 @@
 <body>
   <nav class="navbar">
     <div class="container nav-inner">
-      <a href="#" class="logo">ИНЖЕНЕРНЫЕ<span> РУНЫ</span></a>
+      <a href="index.html" class="logo">РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></a>
       <div class="nav-links">
-        <a href="#about">Об авторе</a>
-        <a href="#books">Книги</a>
-        <a href="#contacts">Контакты</a>
+        <a href="index.html#about">Об авторе</a>
+        <a href="index.html#books">Книги</a>
+        <a href="index.html#contacts">Контакты</a>
       </div>
     </div>
   </nav>
@@ -341,23 +347,23 @@
       <div class="container">
         <div class="author-wrap">
           <div class="author-text">
-            <div class="author-badge">⚙️ ИНЖЕНЕРНАЯ МОДЕЛЬ РЕАЛЬНОСТИ</div>
-            <h1>Дмитрий Антонов<br><span style="color: #2c6e49;">руны как этапы процессов</span></h1>
+            <div class="author-badge">⚙️ РУНЫ — ЭТО ЭТАПЫ, А НЕ МАГИЯ</div>
+            <h1>Дмитрий Антонов</h1>
             <p>Инженер-программист, управленец, практикующий рунолог. Соединил логику системного анализа с древним знанием.</p>
-            <p><strong>Ключевой тезис:</strong> руны — это не магические символы, а <strong>глаголы процессов</strong>.</p>
+            <p><strong>Главный тезис:</strong> руны — это не магические символы, а <strong>глаголы процессов</strong>.</p>
             <p>
               <span class="principle-tag">ᚠ Феху — начало</span>
               <span class="principle-tag">ᚺ Хагалаз — жизнь с результатом</span>
               <span class="principle-tag">ᚦ Турисаз — выбор</span>
               <span class="principle-tag">ᚱ Райдо — первый шаг</span>
             </p>
-            <p>Никаких ритуалов. Только структура, наблюдение и управление этапами: от мытья посуды до смены профессии, от сделки с клиентом до выстраивания команды.</p>
+            <p>Никаких ритуалов. Только структура, наблюдение и управление этапами: от мытья посуды до смены профессии.</p>
           </div>
-          <div style="flex:1; text-align: center; background: #eef2e9; border-radius: 48px; padding: 1.8rem 1rem;">
-            <div style="font-size: 3rem; line-height: 1;">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ</div>
-            <div style="font-size: 0.8rem; margin-top: 0.6rem;">Футарк — язык этапов</div>
-            <hr style="margin: 1rem 0; border-color:#cbd5c3; width: 40px; margin-left: auto; margin-right: auto;">
-            <div style="font-size: 0.9rem;">«Инженерная модель»<br>без магии, но с глубиной</div>
+          <div style="flex:1; text-align: center; background: #eef2e9; border-radius: 48px; padding: 1.5rem 1rem;">
+            <div style="font-size: 2.5rem; line-height: 1;">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ</div>
+            <div style="font-size: 0.7rem; margin-top: 0.5rem;">Футарк — язык этапов</div>
+            <hr style="margin: 0.8rem 0; border-color:#cbd5c3; width: 40px; margin-left: auto; margin-right: auto;">
+            <div style="font-size: 0.8rem;">«Инженерная модель»<br>без магии, но с глубиной</div>
           </div>
         </div>
       </div>
@@ -365,7 +371,7 @@
 
     <section id="books" class="section">
       <div class="container">
-        <h2>📚 Серия «Инженерные руны»</h2>
+        <h2>📚 Серия «Руны как этапы процесса»</h2>
         <div class="books-grid">
           
           <!-- КНИГА 1 -->
@@ -375,51 +381,63 @@
             <div class="book-title">Инженерная модель реальности</div>
             <div class="book-subtitle">Прикладная рунология для рационалистов и управленцев</div>
             <div class="book-annotation">
-              <p>Вы держите в руках не «книгу тайн» и не сборник магических рецептов. Это инженерная модель реальности.</p>
-              <p>Руна Феху — это не «деньги». Это «начало». Руна Хагалаз — это не «разрушение». Это «жизнь с результатом». Руны не делают за вас. Они показывают — на каком этапе процесса вы находитесь и что делать дальше.</p>
-              <p><strong>Эта книга — первая из трёх. Её задача — дать систему.</strong> Без магии. Без ритуалов. Без «тайных знаний».</p>
+              <p>Вы держите в руках не «книгу тайн». Это инженерная модель реальности. Руна Феху — это не «деньги». Это «начало». Руна Хагалаз — это не «разрушение». Это «жизнь с результатом».</p>
             </div>
             <div class="book-meta">
               <span>📖 2025</span>
-              <a href="https://www.litres.ru/73990393/" class="btn" target="_blank">Читать на Литрес →</a>
+              <a href="book1.html" class="btn btn-small">Подробнее →</a>
+              <a href="https://www.litres.ru/73990393/" class="btn btn-small" target="_blank">Литрес</a>
             </div>
           </div>
           
-          <!-- КНИГА 2 — Мантика без иллюзий -->
+          <!-- КНИГА 2 -->
           <div class="book-card">
             <div class="book-number">Книга вторая</div>
             <div class="book-status soon">📝 Скоро</div>
-            <div class="book-title">Мантика без иллюзий</div>
-            <div class="book-subtitle">Гадание как диагностика текущего этапа</div>
-            <div class="book-annotation">
-              <p>Как задавать вопросы рунам, не впадая в магическое мышление. Гадание как диагностика текущего этапа. Анализ раскладов через «три времени»: То, что есть → То, что происходит → То, что должно быть.</p>
-              <p>Вторая книга серии — о практической мантике без самообмана.</p>
-            </div>
-            <div class="book-meta">
-              <span>🔮 Практика наблюдения</span>
-              <span class="btn-outline btn" style="pointer-events: none;">Готовится</span>
-            </div>
-          </div>
-          
-          <!-- КНИГА 3 — Психология рун -->
-          <div class="book-card">
-            <div class="book-number">Книга третья</div>
-            <div class="book-status soon">📖 В разработке</div>
             <div class="book-title">Психология рун</div>
             <div class="book-subtitle">Руническая навигация: как понять, где вы находитесь, и что делать дальше</div>
             <div class="book-annotation">
-              <p>Вы держите не книгу тайн и не сборник магических рецептов. Это продолжение инженерной модели реальности.</p>
-              <p>Автор предлагает взглянуть на руны как на универсальный язык описания этапов любого процесса. Никаких ритуалов. Никакой магии. Только структура, логика и примеры из быта, бизнеса и отношений.</p>
+              <p>Как определить своё состояние без гадания. 24 состояния — от «искры» до «просветления». Три вопроса навигации: Где я? Почему застрял? Что делать?</p>
             </div>
             <div class="book-meta">
               <span>🧭 Навигация</span>
-              <span class="btn-outline btn" style="pointer-events: none;">Анонс</span>
+              <a href="book2.html" class="btn btn-small">Подробнее →</a>
             </div>
           </div>
           
-          <!-- КНИГА 4 — Рунический менеджмент / Эдда процессов (на ваш выбор) -->
+          <!-- КНИГА 3 -->
+          <div class="book-card">
+            <div class="book-number">Книга третья</div>
+            <div class="book-status soon">📝 Планируется</div>
+            <div class="book-title">Мантика без иллюзий</div>
+            <div class="book-subtitle">Гадание как диагностика, а не магия</div>
+            <div class="book-annotation">
+              <p>Как задавать вопросы рунам, не впадая в магическое мышление. Гадание как диагностика текущего этапа. Анализ раскладов через «три времени».</p>
+            </div>
+            <div class="book-meta">
+              <span>🔮 Практика</span>
+              <span class="btn-outline btn-small" style="pointer-events: none;">Готовится</span>
+            </div>
+          </div>
+          
+          <!-- КНИГА 4 -->
           <div class="book-card">
             <div class="book-number">Книга четвёртая</div>
+            <div class="book-status soon">📝 Планируется</div>
+            <div class="book-title">Рунический менеджмент</div>
+            <div class="book-subtitle">Управление проектами и командами через этапы Футарка</div>
+            <div class="book-annotation">
+              <p>Как применять ᚱ Райдо как первый шаг, а ᚺ Хагалаз как нормальную жизнь продукта. Бизнес-примеры и кейсы из продаж и управления.</p>
+            </div>
+            <div class="book-meta">
+              <span>🏭 Бизнес</span>
+              <span class="btn-outline btn-small" style="pointer-events: none;">Готовится</span>
+            </div>
+          </div>
+          
+          <!-- КНИГА 5 -->
+          <div class="book-card">
+            <div class="book-number">Книга пятая</div>
             <div class="book-status idea">🌱 Идея</div>
             <div class="book-title">Эдда процессов</div>
             <div class="book-subtitle">Наследие, связь поколений, передача опыта</div>
@@ -428,13 +446,13 @@
             </div>
             <div class="book-meta">
               <span>⚡ Наследие</span>
-              <span class="btn-outline btn" style="pointer-events: none;">Ожидается</span>
+              <span class="btn-outline btn-small" style="pointer-events: none;">Ожидается</span>
             </div>
           </div>
         </div>
 
-        <p style="margin-top: 2rem; background: #ece5da30; padding: 0.8rem 1rem; border-radius: 2rem; font-size: 0.85rem; text-align: center;">
-          🧠 <strong>Инженерный подход:</strong> руны не делают за вас — они показывают этап. Первая книга уже в продаже. Вторая — о мантике без иллюзий.
+        <p style="margin-top: 1.5rem; background: #ece5da30; padding: 0.6rem 1rem; border-radius: 2rem; font-size: 0.8rem; text-align: center;">
+          🧠 <strong>Инженерный подход:</strong> руны не делают за вас — они показывают этап. Первая книга уже в продаже.
         </p>
       </div>
     </section>
@@ -460,7 +478,7 @@
             <a href="https://www.litres.ru/73990393/" target="_blank" class="contact-link">Книга на Литрес</a>
           </div>
         </div>
-        <div style="margin-top: 2rem; text-align: center;">
+        <div style="margin-top: 1.5rem; text-align: center;">
           <span class="rune-line">ᚠ ᚱ ᚨ ᛗ ᛖ ᛉ ᚲ ᛃ</span>
         </div>
       </div>
@@ -469,8 +487,8 @@
 
   <footer>
     <div class="container">
-      <p>© Дмитрий Антонов · Инженерная модель реальности · руны как этапы процессов</p>
-      <p style="margin-top: 0.4rem; font-size: 0.8rem;">«Никакой магии — только системное мышление и наблюдение»</p>
+      <p>© Дмитрий Антонов · Руны как этапы процесса</p>
+      <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Никакой магии — только системное мышление и наблюдение»</p>
     </div>
   </footer>
 </body>
