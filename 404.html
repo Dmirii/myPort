@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Руническая навигация — путь не найден</title>
+    <title>Руническая навигация — не в потоке</title>
     <style>
         * {
             margin: 0;
@@ -13,293 +13,209 @@
 
         body {
             background: #0f0c0a;
-            background-image: radial-gradient(circle at 10% 20%, rgba(40, 30, 25, 0.6) 0%, #0a0807 90%);
-            font-family: 'Segoe UI', 'Roboto', 'Georgia', 'Times New Roman', serif;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            padding: 16px;
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', serif;
             color: #e2dcd5;
         }
 
-        /* рунический свиток */
-        .error-container {
-            max-width: 720px;
+        .card {
+            max-width: 480px;
             width: 100%;
             background: #1a1613;
-            border-left: 6px solid #b87c4f;
-            border-right: 2px solid #3e2c22;
-            border-radius: 24px 8px 24px 8px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-            padding: 2.5rem;
-            transition: all 0.2s;
+            border-left: 4px solid #b87c4f;
+            border-radius: 20px;
+            padding: 20px 18px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
         }
 
-        /* рунический символ в заголовке */
-        .rune-header {
+        .rune {
             text-align: center;
-            margin-bottom: 2rem;
-            border-bottom: 1px dashed #4f3a2c;
-            padding-bottom: 1rem;
-        }
-
-        .rune-sign {
-            font-size: 4.5rem;
-            letter-spacing: 1rem;
-            font-weight: normal;
-            font-family: 'Courier New', monospace;
-            text-shadow: 0 0 6px #b87c4f;
-            color: #e0b185;
-        }
-
-        h1 {
             font-size: 2.2rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-            margin-top: 0.5rem;
+            letter-spacing: 6px;
+            color: #e0b185;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-align: center;
             color: #eedbcb;
+            margin-bottom: 4px;
         }
 
         .sub {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
+            text-align: center;
+            font-size: 0.7rem;
             color: #b68b65;
-            margin-top: 0.5rem;
-        }
-
-        /* блок "Ты находишься здесь" */
-        .location-block {
-            background: #0f0d0b;
-            border-radius: 32px;
-            padding: 1.5rem;
-            margin: 1.8rem 0;
-            border: 1px solid #36281e;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.3);
-        }
-
-        .location-title {
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            color: #c2946c;
             text-transform: uppercase;
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            margin-bottom: 20px;
         }
 
-        .location-title span {
-            font-size: 1.2rem;
-        }
-
-        .location-text {
-            font-size: 1.15rem;
-            line-height: 1.5;
-            margin-bottom: 1rem;
-        }
-
-        .rune-mention {
-            font-family: monospace;
-            background: #2b211c;
-            display: inline-block;
-            padding: 0.2rem 0.6rem;
+        .box {
+            background: #0f0d0b;
             border-radius: 20px;
-            font-size: 0.9rem;
-            color: #e7ba8e;
+            padding: 14px 16px;
+            margin: 16px 0;
+            border: 1px solid #36281e;
         }
 
-        .advice-block {
-            margin: 2rem 0;
-        }
-
-        .advice-item {
+        .box-title {
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            color: #c2946c;
+            margin-bottom: 8px;
             display: flex;
-            gap: 14px;
-            margin-bottom: 1.2rem;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .box-text {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .rune-badge {
+            background: #2b211c;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-family: monospace;
+            color: #e7ba8e;
+            display: inline-block;
+        }
+
+        .step {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
             align-items: flex-start;
         }
 
-        .advice-num {
+        .step-num {
             background: #2c211b;
-            width: 32px;
-            height: 32px;
-            border-radius: 40px;
-            display: inline-flex;
+            width: 24px;
+            height: 24px;
+            border-radius: 30px;
+            display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 0.75rem;
             font-weight: bold;
-            color: #e7b48b;
-            font-size: 1rem;
             flex-shrink: 0;
-            border: 1px solid #61442f;
+            color: #e7b48b;
         }
 
-        .advice-text {
-            line-height: 1.45;
+        .step-text {
+            font-size: 0.88rem;
+            line-height: 1.35;
         }
 
-        .button-group {
+        .btn-group {
             display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin: 2rem 0 1.5rem;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px 0 12px;
         }
 
         .btn {
-            background: none;
-            border: 1.5px solid #9b6e4b;
-            padding: 0.8rem 1.8rem;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #f2e0d2;
-            cursor: pointer;
-            transition: 0.2s;
-            font-family: inherit;
-            border-radius: 40px;
-            text-decoration: none;
-            display: inline-block;
+            display: block;
             text-align: center;
+            background: none;
+            border: 1px solid #9b6e4b;
+            padding: 10px 12px;
+            border-radius: 40px;
+            color: #f2e0d2;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
         .btn-primary {
             background: #5e3a25;
             border-color: #c69062;
-            color: #fff6ef;
         }
 
-        .btn-primary:hover {
-            background: #7a4e33;
-            border-color: #e0a672;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline:hover {
-            background: #2f221d;
-            border-color: #c69062;
-        }
-
-        .footer-phrase {
-            margin-top: 2rem;
-            text-align: center;
-            font-style: italic;
-            font-size: 0.9rem;
-            padding-top: 1rem;
-            border-top: 1px solid #2f241e;
-            color: #b68b65;
-        }
-
-        /* поиск */
-        .search-wrap {
-            margin: 1.2rem 0 0.5rem;
-        }
         .search-input {
             width: 100%;
             background: #0c0907;
             border: 1px solid #4d3626;
-            padding: 12px 18px;
-            font-size: 1rem;
+            padding: 10px 14px;
+            border-radius: 40px;
             color: #eedbcb;
-            border-radius: 60px;
-            outline: none;
-            font-family: inherit;
-        }
-        .search-input:focus {
-            border-color: #c38b58;
+            font-size: 0.85rem;
+            margin-top: 8px;
         }
 
-        @media (max-width: 550px) {
-            .error-container {
-                padding: 1.5rem;
-            }
-            h1 {
-                font-size: 1.6rem;
-            }
-            .rune-sign {
-                font-size: 2.8rem;
-                letter-spacing: 0.5rem;
-            }
+        .footer {
+            text-align: center;
+            font-size: 0.7rem;
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px solid #2f241e;
+            color: #b68b65;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
-<div class="error-container">
-    <div class="rune-header">
-        <div class="rune-sign">ᚱ ᚢ ᚾ ᛖ</div>
-        <h1>Путь не найден</h1>
-        <div class="sub">код ошибки · узел Хагалаз</div>
-    </div>
+<div class="card">
+    <div class="rune">ᚱ ᚢ ᚾ ᛖ</div>
+    <h2>Путь не найден</h2>
+    <div class="sub">код · не в потоке</div>
 
-    <!-- ГДЕ ВЫ НАХОДИТЕСЬ -->
-    <div class="location-block">
-        <div class="location-title">
-            <span>ᛝ</span> ТЫ НАХОДИШЬСЯ ЗДЕСЬ
-        </div>
-        <div class="location-text">
-            Между рунами. Этой страницы больше нет в потоке.  
-            Ты попал в <span class="rune-mention">«разрыв навигации»</span> — место, где карта расходится с реальностью.  
-            С точки зрения рунического подхода — <strong>узел ᚺ (Хагалаз)</strong>: град, разрушающий ложную форму, но не направление.
+    <!-- где ты -->
+    <div class="box">
+        <div class="box-title">ᛝ ТЫ ЗДЕСЬ</div>
+        <div class="box-text">
+            Этой страницы <strong>нет в потоке</strong>.  
+            Узел <span class="rune-badge">ᚺ Хагалаз</span> — разрыв навигации.
         </div>
     </div>
 
-    <!-- ЧТО ДЕЛАТЬ ДАЛЬШЕ -->
-    <div class="advice-block">
-        <div class="location-title" style="margin-bottom: 1rem;">
-            <span>ᚦ</span> ЧТО ДЕЛАТЬ ДАЛЬШЕ
+    <!-- что делать -->
+    <div class="box">
+        <div class="box-title">ᚦ ЧТО ДАЛЬШЕ</div>
+        <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-text">Не повторяй адрес — его здесь нет.</div>
         </div>
-
-        <div class="advice-item">
-            <div class="advice-num">1</div>
-            <div class="advice-text"><strong>Не ищи прежний адрес</strong> — он исчез из этого слоя. Любое повторение приведёт к тому же узлу.</div>
+        <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-text">Вернись на главную (твой якорь <span class="rune-badge">ᚨ</span>).</div>
         </div>
-        <div class="advice-item">
-            <div class="advice-num">2</div>
-            <div class="advice-text"><strong>Вернись к известной опоре</strong> (главная / навигация). Используй кнопку ниже — это твой рунический якорь <span class="rune-mention">ᚨ (Ансуз)</span>.</div>
+        <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-text">Проверь ссылку: лишний знак ломает путь.</div>
         </div>
-        <div class="advice-item">
-            <div class="advice-num">3</div>
-            <div class="advice-text"><strong>Проверь адрес вручную</strong>: возможно, ты добавил лишний символ. Как трещина в руническом ряду — один лишний штрих меняет значение.</div>
-        </div>
-        <div class="advice-item">
-            <div class="advice-num">4</div>
-            <div class="advice-text"><strong>Поиск по сайту = твой Турисаз</strong> (пробивание). Задай вопрос в поле ниже.</div>
+        <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-text">Поиск = <span class="rune-badge">ᚦ Турисаз</span>. Напиши ниже.</div>
         </div>
     </div>
 
-    <!-- Кнопки навигации -->
-    <div class="button-group">
-        <a href="/" class="btn btn-primary">ᚦ Вернуться на главную</a>
-        <a href="/sitemap" class="btn btn-outline">ᛉ Карта рун (содержание)</a>
+    <div class="btn-group">
+        <a href="/" class="btn btn-primary">ᚦ На главную</a>
+        <a href="/sitemap" class="btn">ᛉ Карта рун</a>
     </div>
 
-    <!-- Поиск как инструмент навигации -->
-    <div class="search-wrap">
-        <input type="text" class="search-input" id="runeSearch" placeholder="Поискать через Турисаз... например, «руническая навигация» или «что делать в узле»" onkeypress="if(event.key==='Enter'){searchSite()}">
-    </div>
+    <input type="text" class="search-input" id="search" placeholder="Поиск... (Турисаз)" onkeypress="if(event.key==='Enter'){searchIt()}">
 
-    <div class="footer-phrase">
-        ᚱᚢᚾ · ᚾᚨᚢᚱ · ᚦᛁᛗᛉ<br>
-        «Ни одна ошибка не случайна — это просто руна, которую ты ещё не прочитал»
+    <div class="footer">
+        ᚱᚢᚾ · ошибка не случайна — ты ещё не прочитал эту руну
     </div>
 </div>
 
 <script>
-    // простая эмуляция поиска (можно заменить на настоящий поиск по сайту)
-    function searchSite() {
-        let query = document.getElementById('runeSearch').value.trim();
-        if(query === "") {
-            alert("Напиши, что ищешь — руны подскажут направление.");
-            return;
-        }
-        // перенаправление на поисковую систему сайта (пример)
-        // замените /search?q= на реальный URL поиска вашего сайта
-        let searchUrl = "/search?q=" + encodeURIComponent(query);
-        window.location.href = searchUrl;
+    function searchIt() {
+        let q = document.getElementById('search').value.trim();
+        if(!q) { alert('Напиши что ищешь'); return; }
+        window.location.href = '/search?q=' + encodeURIComponent(q);
     }
-
-    // небольшое руническое приветствие в консоли (необязательно, но атмосферно)
-    console.log("ᚱᚢᚾᛁᚲ ᚾᚨᚡᛁᚷᚨᚲᛁᚨ · узел Хагалаз · ты уже в правильном месте, чтобы переписать путь");
 </script>
 </body>
 </html>
