@@ -1,117 +1,465 @@
-
-<!--include ../views/layouts/config--><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Главная</title>
-    <meta name="theme-color" content="#fff">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
-    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
-    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.min.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/main.min.css">
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__logo"><a class="Главная" href="index.html"> Dima A         </a></div>
-      <div class="header__menuwrapper">
-        <ul class="header__navmenu">           
-          <li class="header__navmenu-item Главная"><a class="Главная" href="contact.html">Контакты</a></li>
-          <li class="header__navmenu-item Главная"><a href="port.html"><a href="port.html">Портфолио</a></a></li>
-          <li class="header__navmenu-item Главная"><a href="about.html">Обо мне</a></li>
-        </ul>
-        <div class="header__mini-nav"><a href="#"><p class="header__mini-nav-down"> <span></span></p> <p class="header__mini-nav-up"> X </p></a></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Инженерные руны — Дмитрий Антонов</title>
+  <meta name="description" content="Инженерная модель реальности. Руны как этапы процессов. Книги Дмитрия Антонова.">
+  <!-- Предзагрузка шрифтов и базовые стили -->
+  <style>
+    /* RESET + Базовые переменные — mobile first, инженерный минимализм */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf9f8;
+      font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Noto Sans', sans-serif;
+      line-height: 1.5;
+      color: #1e1e2a;
+      scroll-behavior: smooth;
+    }
+
+    /* контейнеры и сетка */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* типографика */
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      border-left: 5px solid #2c6e49;
+      padding-left: 1rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      color: #2c6e49;
+    }
+
+    .section {
+      padding: 3.5rem 0;
+      border-bottom: 1px solid #e6e4e0;
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    /* навигация — лаконичная */
+    .navbar {
+      padding: 1.2rem 0;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e2e6;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.92);
+      z-index: 10;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: -0.3px;
+      text-decoration: none;
+      color: #1e3a2f;
+    }
+
+    .logo span {
+      color: #2c6e49;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2d3e3b;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #1b5e3f;
+    }
+
+    /* hero / авторский блок */
+    .hero {
+      padding: 2rem 0 1rem 0;
+    }
+
+    .author-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .author-text {
+      flex: 2;
+    }
+
+    .author-text p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: #2c2c34;
+    }
+
+    .author-badge {
+      background: #eef4ed;
+      padding: 1rem 1.5rem;
+      border-radius: 32px;
+      font-weight: 500;
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.3px;
+      color: #1b4d2e;
+    }
+
+    .principle-tag {
+      font-family: monospace;
+      background: #2c6e4910;
+      border-left: 3px solid #2c6e49;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.9rem;
+    }
+
+    /* сетка книг — 4 карточки */
+    .books-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .book-card {
+      background: white;
+      border-radius: 28px;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.02), 0 0 0 1px #ece8e2;
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .book-status {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: #2c6e49;
+      margin-bottom: 0.75rem;
+    }
+
+    .book-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .book-annotation {
+      margin: 1rem 0;
+      color: #2e2e3a;
+    }
+
+    .book-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px dashed #ddd8cf;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #1e3a2f;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+      font-size: 0.9rem;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #1e3a2f;
+      color: #1e3a2f;
+    }
+
+    .btn-outline:hover {
+      background: #1e3a2f0c;
+    }
+
+    .btn:hover {
+      background: #0f2c22;
+    }
+
+    .coming-soon {
+      opacity: 0.7;
+    }
+
+    /* контакты */
+    .contacts-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: #ffffffd9;
+      border-radius: 2rem;
+      padding: 1.5rem;
+      border: 1px solid #e2ddd4;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-icon {
+      font-size: 1.6rem;
+      min-width: 2rem;
+    }
+
+    .contact-link {
+      text-decoration: none;
+      color: #1e3a2f;
+      font-weight: 500;
+      word-break: break-all;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      color: #5f6c66;
+      background: #f1efe9;
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 720px) {
+      .books-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+      .author-wrap {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      h1 {
+        font-size: 2.8rem;
+      }
+      .section {
+        padding: 4rem 0;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .books-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* дополнительные детали — рунный акцент */
+    .rune-accent {
+      font-family: monospace;
+      font-size: 1.2rem;
+      background: #ece8e0;
+      padding: 0.2rem 0.5rem;
+      border-radius: 20px;
+    }
+
+    .inline-code {
+      background: #eae6de;
+      padding: 0.1rem 0.3rem;
+      border-radius: 8px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">ИНЖЕНЕРНЫЕ<span> РУНЫ</span></a>
+      <div class="nav-links">
+        <a href="#about">Об авторе</a>
+        <a href="#books">Книги</a>
+        <a href="#contacts">Контакты</a>
       </div>
-    </header>
-    <!--li.header__navmenu-item(class= title=="Главная" ? 'header__navmenu-item-active' : title): a(href="index.html" class = title ) Главная.header__mini-nav: a(href="#" ) <p class="header__mini-nav-down"> V </p> <p class="header__mini-nav-up"> X </p>
-    -->
-    <section class="about">
-      <div class="about__topwrapper">
-        <div class="about__container">
-          <div class="about__title">  Приветствую вас на моём сайте. </div>
-          <div class="about__subtitle">    Меня зовут Дмитрий Антонов.</div>
-          <div class="about__promo-wrapper">              
-            <div class="about__promo-wrapper-item">
-               Родился я в славном городе Тверь в 1981г. Сменил 10 школ, а затем в 2002 году успешно окончил ГУАП (ЛИАП).<br>Всю сознательную жизнь я
-              посветил управлению продажами. С 2019 года я решил сменить сферу
-              деятельности.<br> В данный момент я занимаюсь Frontend разработкой.
-              <br> <i>На этой странице вы узнаете какими навыками я уже обладаю и что изучаю в данный момент.</i>
-            </div>
-            <div class="about__promo-wrapper-img"><img src="./img/DimaA.jpg" alt=""></div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Блок об авторе / концепция -->
+    <section id="about" class="section hero">
+      <div class="container">
+        <div class="author-wrap">
+          <div class="author-text">
+            <div class="author-badge">⚙️ ИНЖЕНЕРНАЯ МОДЕЛЬ РЕАЛЬНОСТИ</div>
+            <h1>Дмитрий Антонов<br> <span style="color: #2c6e49;">руны как этапы процессов</span></h1>
+            <p>Инженер-программист, управленец, практикующий рунолог. Всю жизнь проработал в продажах и управлении, а затем соединил логику системного анализа с древним знанием.</p>
+            <p><strong>Ключевой тезис:</strong> руны — это не магические символы «на удачу», а <strong>глаголы процессов</strong>. <span class="inline-code">ᚠ Феху</span> — это не «деньги», это <strong>начало</strong>. <span class="inline-code">ᚺ Хагалаз</span> — не «разрушение», а <strong>жизнь с результатом</strong>.</p>
+            <p>Никаких ритуалов и заклинаний. Только структура, наблюдение и управление этапами: от мытья посуды до смены профессии, от сделки с клиентом до выстраивания команды.</p>
+            <p><span class="principle-tag">📐 три времени: то, что есть → то, что происходит → то, что должно быть</span></p>
           </div>
-          <div class="about__skill-wrapper">
-            <div class="about__skils-base about__skils-item">Мои основные навыки 
-              <ul>
-                <li> HTML</li>
-                <li> CSS</li>
-                <li> JS </li>
-                <li> Использую Git</li>
-                <li> Использую Figma,Avacode</li>
-                <li> Создаю чатботов для Telegram</li>
-              </ul>
-            </div>
-            <div class="about__skils-lib about__skils-item"> Препроцессоры
-              <ul>
-                <li> PUG</li>
-                <li> CSS предпочитаю SASS в синтаксисе scss</li>
-              </ul>
-            </div>
-            <div class="about__skils-work about__skils-item">Верстка
-              <ul>
-                <li> Использовал Bootstrap's grid</li>
-                <li> Изучал Float</li>
-                <li> Предпочитаю адаптивно-отзывчивую верстку (Flex + @media)</li>
-                <li> Не люблю статику. Люблю генерить  верстку JSом.</li>
-              </ul>
-            </div>
-            <div class="about__skils-common about__skils-item">Общие задачи
-              <ul>
-                <li> Gulp</li>
-                <li> Yarn</li>
-                <li> npm</li>
-                <li> PerfectPixel</li>
-                <li> Webpack</li>
-              </ul>
-            </div>
-            <div class="about__skils-JS about__skils-item">Библиотеки JS
-              <ul>
-                <li> </li>
-                <li>Node.JS</li>
-                <li>изучаю React</li>
-              </ul>
-            </div>
-            <div class="about__skils-JS about__skils-item">БД
-              <ul>
-                <li>Firebase</li>
-                <li>Mongo DB</li>
-              </ul>
-            </div>
-            <div class="about__skils-JS about__skils-item">Стеки
-              <ul>
-                <li>MERN</li>
-              </ul>
-            </div>
+          <!-- условно декоративная вставка -->
+          <div style="flex:1; text-align: center; background: #eef2e9; border-radius: 48px; padding: 1.8rem 1rem;">
+            <div style="font-size: 4rem; line-height: 1;">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ</div>
+            <div style="font-size: 0.8rem; margin-top: 0.6rem;">Футарк — язык этапов</div>
+            <hr style="margin: 1rem 0; border-color:#cbd5c3; width: 40px; margin-left: auto; margin-right: auto;">
+            <div style="font-size: 1rem;">«Инженерная модель»<br>без магии, но с глубиной</div>
           </div>
         </div>
       </div>
     </section>
-    <script src="js/main.min.js"></script>
-  </body>
+
+    <!-- Книги — серия из 4 книг. Первая готова, остальные анонс -->
+    <section id="books" class="section">
+      <div class="container">
+        <h2>📚 Серия «Инженерные руны»</h2>
+        <div class="books-grid">
+          
+          <!-- КНИГА 1 — готовая, ссылка на Литрес -->
+          <div class="book-card">
+            <div class="book-status">✅ Книга 1 · Доступна</div>
+            <div class="book-title">Инженерная модель реальности</div>
+            <div class="book-annotation">
+              Прикладная рунология для рационалистов и управленцев. Система, а не магия. 24 руны — 24 этапа любого процесса. Вы научитесь видеть начало, хаос выбора, действие, рутину и перерождение.
+            </div>
+            <div class="book-meta">
+              <span>📖 2025 · 320 с.</span>
+              <a href="https://www.litres.ru/73990393/" class="btn" target="_blank" rel="noopener noreferrer">Читать на Литрес →</a>
+            </div>
+          </div>
+          
+          <!-- КНИГА 2 — анонс, готовится -->
+          <div class="book-card">
+            <div class="book-status">⏳ Готовится к выходу</div>
+            <div class="book-title">Мантика без иллюзий</div>
+            <div class="book-annotation">
+              Вторая книга серии. Как задавать вопросы рунам, не впадая в магическое мышление. Гадание как диагностика текущего этапа. Анализ раскладов через «три времени».
+            </div>
+            <div class="book-meta">
+              <span>🔮 Практика наблюдения</span>
+              <span class="btn-outline btn" style="pointer-events: none;">Скоро</span>
+            </div>
+          </div>
+          
+          <!-- КНИГА 3 — анонс -->
+          <div class="book-card">
+            <div class="book-status">📖 В разработке</div>
+            <div class="book-title">Рунический менеджмент</div>
+            <div class="book-annotation">
+              Управление проектами, командами и переговорами через этапы Футарка. Как применять ᚱ Райдо как первый шаг, а ᚺ Хагалаз как нормальную жизнь продукта.
+            </div>
+            <div class="book-meta">
+              <span>🏭 Бизнес-примеры</span>
+              <span class="btn-outline btn" style="pointer-events: none;">Анонс</span>
+            </div>
+          </div>
+          
+          <!-- КНИГА 4 — анонс, завершающая -->
+          <div class="book-card">
+            <div class="book-status">🌱 Идея</div>
+            <div class="book-title">Эдда процессов</div>
+            <div class="book-annotation">
+              Четвёртая книга: рунический строй как код реальности. Наследие, связь поколений, передача опыта. Родовые системы и инженерный взгляд на традицию.
+            </div>
+            <div class="book-meta">
+              <span>⚡ Завершение цикла</span>
+              <span class="btn-outline btn" style="pointer-events: none;">Ожидается</span>
+            </div>
+          </div>
+        </div>
+        <!-- подсказка с описанием подхода к книгам -->
+        <p style="margin-top: 2rem; background: #ece5da30; padding: 0.8rem 1rem; border-radius: 2rem; font-size: 0.9rem;">
+          🧠 <strong>Инженерный подход:</strong> руны не делают за вас — они показывают этап. Первая книга уже изменила взгляд многих управленцев и программистов. Вторая — про практику гадания без самообмана. Третья и четвёртая раскроют применение в бизнесе и наследии.
+        </p>
+      </div>
+    </section>
+
+    <!-- Контакты + ссылки на внешние профили -->
+    <section id="contacts" class="section">
+      <div class="container">
+        <h2>📫 Контакты и связь</h2>
+        <div class="contacts-list">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <a href="mailto:dimaa@dimaa.ru" class="contact-link">dimaa@dimaa.ru</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <a href="tel:+79117335515" class="contact-link">+7 (911) 733-55-15</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">⚡</div>
+            <a href="https://vk.com/dimaa_ru" target="_blank" rel="noopener" class="contact-link">ВКонтакте / @dimaa_ru</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🐙</div>
+            <a href="https://github.com/Dmirii/" target="_blank" class="contact-link">github.com/Dmirii</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📘</div>
+            <a href="https://www.litres.ru/73990393/" target="_blank" class="contact-link">Книга на Литрес — «Инженерная модель реальности»</a>
+          </div>
+        </div>
+        <div style="margin-top: 2rem; border-top: 1px solid #ddd0c0; padding-top: 1.5rem; font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;">
+          <div>✍️ Для вопросов по сотрудничеству, лекциям и консультациям — пишите на почту</div>
+          <div class="rune-accent">ᚠ ᚱ ᚨ ᛗ ᛖ ᛉ ᚲ ᛃ</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© Дмитрий Антонов · Инженерная модель реальности · руны как этапы процессов</p>
+      <p style="margin-top: 0.4rem;">«Никакой магии — только системное мышление и наблюдение»</p>
+    </div>
+  </footer>
+</body>
 </html>
