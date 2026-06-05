@@ -12,256 +12,268 @@
         }
 
         body {
-            background: #0f0c0a;
-            font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', sans-serif;
-            color: #e2dcd5;
-            padding: 16px;
+            background: #f7f4ef;
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Georgia', serif;
+            color: #2a241f;
+            padding: 24px 16px;
         }
 
         .container {
-            max-width: 600px;
+            max-width: 720px;
             margin: 0 auto;
         }
 
-        .header {
+        /* шапка — мягкий, основной сайт */
+        .hero {
             text-align: center;
-            margin-bottom: 24px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid #2a201b;
+            margin-bottom: 32px;
         }
 
-        .rune-title {
-            font-size: 2rem;
-            letter-spacing: 6px;
-            color: #e0b185;
+        .rune-symbol {
+            font-size: 3rem;
+            letter-spacing: 8px;
+            color: #b87c4f;
             margin-bottom: 8px;
         }
 
         h1 {
-            font-size: 1.6rem;
+            font-size: 2rem;
             font-weight: 500;
-            color: #eedbcb;
+            color: #3e2a22;
+            letter-spacing: -0.3px;
         }
 
-        .sub {
-            font-size: 0.75rem;
-            color: #b68b65;
-            text-transform: uppercase;
-            margin-top: 6px;
+        .subhead {
+            font-size: 0.9rem;
+            color: #8b6f55;
+            margin-top: 8px;
+            border-bottom: 1px solid #e2d8ce;
+            display: inline-block;
+            padding-bottom: 6px;
         }
 
-        .book-note {
-            background: #1a1512;
-            padding: 10px 14px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin: 16px 0;
-            border-left: 3px solid #b87c4f;
-            color: #ccb79e;
+        .description {
+            background: #ffffffd9;
+            padding: 18px 20px;
+            border-radius: 32px;
+            margin: 20px 0 28px;
+            border: 1px solid #e7dfd7;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            font-size: 0.95rem;
+            line-height: 1.45;
+            color: #4c3a2e;
         }
 
-        .rune-card {
-            background: #161210;
-            border-radius: 24px;
-            margin-bottom: 16px;
-            padding: 16px;
-            border: 1px solid #2a201b;
+        .description strong {
+            color: #b1622c;
+            font-weight: 500;
+        }
+
+        /* фильтр групп */
+        .filter-row {
             display: flex;
-            gap: 16px;
-            align-items: center;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 6px 0 20px;
+            margin-bottom: 8px;
+            scrollbar-width: thin;
+        }
+
+        .filter-chip {
+            background: #ece4db;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #5a4433;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: 0.1s;
+        }
+
+        .filter-chip.active {
+            background: #b87c4f;
+            color: white;
+            box-shadow: 0 2px 8px rgba(184,124,79,0.2);
+        }
+
+        /* карточка руны — светлая, добрая */
+        .rune-card {
+            background: white;
+            border-radius: 28px;
+            margin-bottom: 20px;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            border: 1px solid #e2d5ca;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            transition: all 0.15s;
         }
 
         .rune-img {
             flex-shrink: 0;
-            width: 70px;
-            height: 70px;
-            background: #0f0d0b;
-            border-radius: 20px;
+            width: 80px;
+            height: 80px;
+            background: #fefaf5;
+            border-radius: 28px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid #3e2c22;
+            border: 1px solid #edd7c4;
+            padding: 8px;
         }
 
         .rune-img img {
-            max-width: 55px;
-            max-height: 55px;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
-        .rune-info {
+        .rune-content {
             flex: 1;
         }
 
         .rune-name {
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: #e7ba8e;
-            letter-spacing: 1px;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #784e2c;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
         }
 
         .rune-energy {
             font-size: 0.7rem;
-            color: #b87c4f;
             text-transform: uppercase;
-            margin: 4px 0 6px;
+            color: #b87c4f;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
         }
 
-        .where {
-            font-size: 0.85rem;
-            color: #c2b09b;
-            margin-bottom: 6px;
+        .where-block, .what-block {
+            font-size: 0.88rem;
+            line-height: 1.4;
+            margin-top: 10px;
         }
 
-        .where span {
-            color: #e0b185;
-            font-weight: 500;
+        .where-block span, .what-block span {
+            font-weight: 600;
+            color: #876a4e;
         }
 
-        .what {
-            font-size: 0.85rem;
-            color: #ccb79e;
-            border-left: 2px solid #5e3a25;
-            padding-left: 10px;
-            margin-top: 6px;
+        .what-block {
+            border-left: 3px solid #e7c9b2;
+            padding-left: 12px;
+            margin-top: 12px;
+            color: #5e4a38;
         }
 
-        .rune-num {
+        .rune-meta {
             font-size: 0.7rem;
-            color: #6b4f38;
-            margin-top: 6px;
+            color: #bc9f86;
+            margin-top: 12px;
             text-align: right;
-        }
-
-        .filter-bar {
-            display: flex;
-            gap: 8px;
-            overflow-x: auto;
-            padding: 8px 0 16px;
-            margin-bottom: 8px;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .filter-btn {
-            background: #1f1916;
-            border: none;
-            padding: 6px 14px;
-            border-radius: 40px;
-            color: #ccb79e;
-            font-size: 0.75rem;
-            white-space: nowrap;
-            cursor: pointer;
-        }
-
-        .filter-btn.active {
-            background: #5e3a25;
-            color: #f2e0d2;
-            border: 1px solid #c69062;
         }
 
         .footer {
             text-align: center;
-            font-size: 0.7rem;
-            color: #6b4f38;
-            margin: 32px 0 20px;
-            padding-top: 16px;
-            border-top: 1px solid #2a201b;
+            font-size: 0.75rem;
+            color: #b19b86;
+            margin-top: 48px;
+            padding-top: 20px;
+            border-top: 1px solid #e7ddd2;
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 550px) {
             .rune-card {
                 flex-direction: column;
+                align-items: center;
                 text-align: center;
             }
-            .rune-img {
-                width: 80px;
-                height: 80px;
-            }
-            .what {
+            .what-block {
                 text-align: left;
+            }
+            .rune-meta {
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="header">
-        <div class="rune-title">ᚱ ᚢ ᚾ ᛖ</div>
+    <div class="hero">
+        <div class="rune-symbol">ᚱ ᚢ ᚾ ᛖ</div>
         <h1>Карта рун</h1>
-        <div class="sub">24 этапа · Инженерная модель реальности</div>
-        <div class="book-note">
-            📖 Руна — не «магия», а этап процесса. Феху — не деньги, а начало.<br>
-            Хагалаз — не разрушение, а жизнь с результатом.
+        <div class="subhead">24 этапа · порядок Футарка</div>
+        <div class="description">
+            <strong>Руны — это не просто магия</strong>. Это язык этапов любого процесса: от мыслей до результатов.<br>
+            Феху — начало. Хагалаз — жизнь с результатом. Каждая руна отвечает на вопрос: <strong>«Где ты сейчас и что делать дальше?»</strong>
         </div>
     </div>
 
-    <div class="filter-bar">
-        <button class="filter-btn active" data-group="all">Все руны</button>
-        <button class="filter-btn" data-group="1">1–4 Зарождение</button>
-        <button class="filter-btn" data-group="2">5–8 Движение</button>
-        <button class="filter-btn" data-group="3">9–12 Трансформация</button>
-        <button class="filter-btn" data-group="4">13–16 Перерождение</button>
-        <button class="filter-btn" data-group="5">17–20 Завершение</button>
-        <button class="filter-btn" data-group="6">21–24 Итог</button>
+    <div class="filter-row">
+        <button class="filter-chip active" data-group="all">▸ Все руны</button>
+        <button class="filter-chip" data-group="1">1–4 Зарождение</button>
+        <button class="filter-chip" data-group="2">5–8 Движение</button>
+        <button class="filter-chip" data-group="3">9–12 Трансформация</button>
+        <button class="filter-chip" data-group="4">13–16 Перерождение</button>
+        <button class="filter-chip" data-group="5">17–20 Завершение</button>
+        <button class="filter-chip" data-group="6">21–24 Итог</button>
     </div>
 
     <div id="runeList"></div>
 
     <div class="footer">
-        ᚦ По книге «Инженерная модель реальности» · этапы, а не заклинания<br>
-        Порядок рун — классический Футарк (1–24)
+        ᚦ по книге «Инженерная модель реальности» · руны описывают этапы, а не заклинания
     </div>
 </div>
 
 <script>
     const runes = [
-        { id: 1, name: "ᚠ Феху", energy: "Начало, искра, зарождение идеи", where: "Мысль появилась из ниоткуда. То, чего не было минуту назад — теперь есть.", what: "Зафиксируй мысль. Не действуй сразу. Дай ей пройти Уруз и Турисаз.", group: 1 },
-        { id: 2, name: "ᚢ Уруз", energy: "Многообразие, вихрь, хаос вариантов", where: "В голове каша. 100 вариантов. Глаза разбегаются.", what: "Не принимай решение. Собирай данные. Крутись в вихре.", group: 1 },
-        { id: 3, name: "ᚦ Турисаз", energy: "Выбор, отсечение лишнего, острие", where: "Ты говоришь 'да' одному и 'нет' остальным.", what: "Сделай выбор. Без него ты застрянешь в Уруз навсегда.", group: 1 },
-        { id: 4, name: "ᚨ Ансуз", energy: "Подтверждение, одобрение, зелёный свет", where: "Ты получил знак — внутренний или внешний — что выбор верен.", what: "Закрепи решение. Скажи вслух: 'Да, я выбрал это'.", group: 1 },
-        { id: 5, name: "ᚱ Райдо", energy: "Первый шаг, рывок, старт", where: "Страх первого шага позади. Ты начал.", what: "Делай самое маленькое движение. Не жди идеального момента.", group: 2 },
-        { id: 6, name: "ᚲ Кеназ", energy: "Проявление, материализация, свет", where: "Идея стала видимой для мира. Её можно потрогать.", what: "Покажи результат. Выведи из тени.", group: 2 },
-        { id: 7, name: "ᚷ Гебо", energy: "Гармония, баланс, равновесие", where: "Новое и старое договорились. Никто не уничтожен.", what: "Сохрани связи со старым миром. Не сжигай мосты.", group: 2 },
-        { id: 8, name: "ᚹ Вуньо", energy: "Радость, завершение этапа, выдох", where: "Ты сделал. Короткое счастье.", what: "Порадуйся. Но не застревай — дальше Хагалаз.", group: 2 },
-        { id: 9, name: "ᚺ Хагалаз", energy: "Жизнь с результатом, рутина, проверка", where: "Эйфория прошла. Начались будни. Машина пачкается и требует бензина.", what: "Не паникуй. Это норма. Хагалаз — зеркало качества твоего творения.", group: 3 },
-        { id: 10, name: "ᚾ Наутиз", energy: "Нужда, дискомфорт, сигнал к переменам", where: "Что-то жмёт, трет, беспокоит. Ещё не катастрофа, но уже не то.", what: "Услышь сигнал. Не игнорируй маленькую боль.", group: 3 },
-        { id: 11, name: "ᛁ Иса", energy: "Пауза, заморозка, концентрация", where: "Ты остановился. Думаешь. Не бежишь.", what: "Возьми паузу. Не действуй. Собирай внимание.", group: 3 },
-        { id: 12, name: "ᛃ Йера", energy: "Озарение, эврика, результат как награда", where: "Вспышка. 'Точно!'. Решение пришло само.", what: "Запиши озарение. Оно не повторится.", group: 3 },
-        { id: 13, name: "ᛈ Перт", energy: "Второй шанс, новая игра на старом поле", where: "Ты не начинаешь с нуля. Ты используешь старый опыт для нового результата.", what: "Не беги за новым. Посмотри на старое свежим взглядом.", group: 4 },
-        { id: 14, name: "ᛇ Эйваз", energy: "Действие на основе опыта, мост", where: "Ты чинишь старую машину новым способом. Не покупаешь новую.", what: "Используй то, что уже есть. Не добывай новое.", group: 4 },
-        { id: 15, name: "ᛉ Альгиз", energy: "Защита, интуиция, антенна", where: "Ты чувствуешь опасность заранее. Внутренний голос говорит 'стой'.", what: "Доверься. Проверь ещё раз. Это не паранойя, а осознанность.", group: 4 },
-        { id: 16, name: "ᛋ Соулу", energy: "Победа, целостность, опыт как форма", where: "Ты прошёл цикл. Ты стал другим. Опыт остался с тобой.", what: "Зафиксируй: чему ты научился. Это твоё солнце.", group: 4 },
-        { id: 17, name: "ᛏ Тейваз", energy: "Концентрация воли, начало конца", where: "Ты бросаешь копьё в цель. Вкладываешь весь накопленный опыт в одно движение.", what: "Действуй без сомнений. Но только если есть Соулу за спиной.", group: 5 },
-        { id: 18, name: "ᛒ Беркана", energy: "Возрождение, рост, взращивание", where: "Из действия вырастает новое. Беременность, запуск продукта, ежедневная забота.", what: "Не торопись. Рост требует времени. Не бросай новорождённое.", group: 5 },
-        { id: 19, name: "ᛖ Эваз", energy: "Перемещение, обмен, партнёрство", where: "Ты обмениваешь старое на новое. Продаёшь машину, синхронизируешься с миром.", what: "Найди пару. В одиночку Эваз не работает.", group: 5 },
-        { id: 20, name: "ᛗ Маназ", energy: "Человек разумный, интеграция, социум", where: "Ты смотришь в зеркало и узнаёшь себя — но другого. Общество приняло твою новую роль.", what: "Прими себя нового. Позволь миру подтвердить.", group: 5 },
-        { id: 21, name: "ᛚ Лагуз", energy: "Поток, доверие, подсознание", where: "Ответ приходит во сне. Или случайно. Вода сама находит путь.", what: "Перестань контролировать. Доверься течению. Но не ложись на диван.", group: 6 },
-        { id: 22, name: "ᛜ Ингуз", energy: "Семя, потенциал внутри формы", where: "Книга сдана в печать, но ещё не вышла. Результат уже есть, но не проявлен.", what: "Жди. Не раскапывай семя. Дай время.", group: 6 },
-        { id: 23, name: "ᛟ Отал", energy: "Наследство, традиция, связь", where: "Ты передаёшь плоды тем, кто придёт после. Бизнес — сыну. Знания — ученику.", what: "Осознай: ты не первый и не последний. Передай дальше.", group: 6 },
-        { id: 24, name: "ᛞ Дагаз", energy: "Перерождение, смена дня и ночи", where: "Старое ушло. Новое пришло. Бабочка вышла из кокона.", what: "Открой дверь. Дагаз — не конец. Это начало нового Феху.", group: 6 }
+        { id: 1, name: "ᚠ Феху", energy: "начало, искра, зарождение", where: "Мысль появилась — её не было минуту назад.", what: "Запиши. Не действуй сразу. Дай идее пройти дальше.", group: 1 },
+        { id: 2, name: "ᚢ Уруз", energy: "многообразие, вихрь вариантов", where: "Голова идёт кругом, 100 возможностей.", what: "Собирай данные. Не выбирай. Просто смотри.", group: 1 },
+        { id: 3, name: "ᚦ Турисаз", energy: "выбор, отсечение лишнего", where: "Ты говоришь 'да' одному и 'нет' остальным.", what: "Сделай выбор. Без него застрянешь в Уруз.", group: 1 },
+        { id: 4, name: "ᚨ Ансуз", energy: "подтверждение, зелёный свет", where: "Внутренний или внешний знак: решение верно.", what: "Закрепи. Скажи вслух: 'Да, я выбрал это'.", group: 1 },
+        { id: 5, name: "ᚱ Райдо", energy: "первый шаг, старт", where: "Страх позади. Ты начал движение.", what: "Сделай самое маленькое действие. Не жди идеального момента.", group: 2 },
+        { id: 6, name: "ᚲ Кеназ", energy: "проявление, свет", where: "Идея стала видимой. Её можно потрогать.", what: "Покажи миру. Выведи из тени.", group: 2 },
+        { id: 7, name: "ᚷ Гебо", energy: "гармония, равновесие", where: "Новое и старое договорились.", what: "Сохрани связи. Не сжигай мосты.", group: 2 },
+        { id: 8, name: "ᚹ Вуньо", energy: "радость, завершение этапа", where: "Короткое счастье. Сделано.", what: "Порадуйся. Но не застревай — дальше Хагалаз.", group: 2 },
+        { id: 9, name: "ᚺ Хагалаз", energy: "жизнь с результатом", where: "Эйфория прошла. Рутина. Машина пачкается.", what: "Не паникуй. Это норма. Хагалаз — зеркало качества.", group: 3 },
+        { id: 10, name: "ᚾ Наутиз", energy: "потребность, сигнал", where: "Что-то трет, беспокоит. Ещё не катастрофа.", what: "Услышь. Не игнорируй маленькую боль.", group: 3 },
+        { id: 11, name: "ᛁ Иса", energy: "пауза, концентрация", where: "Ты остановился. Думаешь.", what: "Возьми паузу. Не действуй. Собери внимание.", group: 3 },
+        { id: 12, name: "ᛃ Йера", energy: "озарение, эврика", where: "Вспышка. 'Точно!'", what: "Запиши озарение. Оно не повторится.", group: 3 },
+        { id: 13, name: "ᛈ Перт", energy: "второй шанс", where: "Ты не с нуля. Используешь старый опыт.", what: "Не беги за новым. Посмотри на старое свежим взглядом.", group: 4 },
+        { id: 14, name: "ᛇ Эйваз", energy: "опыт в действии", where: "Чинишь старую машину новым способом.", what: "Используй то, что уже есть. Не добывай новое.", group: 4 },
+        { id: 15, name: "ᛉ Альгиз", energy: "интуиция, защита", where: "Чувствуешь опасность заранее. Внутренний голос.", what: "Доверься. Проверь. Это осознанность.", group: 4 },
+        { id: 16, name: "ᛋ Соулу", energy: "опыт как форма", where: "Цикл пройден. Ты стал другим.", what: "Зафиксируй: чему научился. Это твой свет.", group: 4 },
+        { id: 17, name: "ᛏ Тейваз", energy: "воля, начало конца", where: "Бросаешь копьё в цель.", what: "Действуй без сомнений. Но только если опыт есть.", group: 5 },
+        { id: 18, name: "ᛒ Беркана", energy: "рост, взращивание", where: "Новое растёт. Беременность, запуск.", what: "Не торопись. Рост требует времени.", group: 5 },
+        { id: 19, name: "ᛖ Эваз", energy: "обмен, партнёрство", where: "Обмениваешь старое на новое.", what: "Найди пару. В одиночку Эваз не идёт.", group: 5 },
+        { id: 20, name: "ᛗ Маназ", energy: "интеграция, социум", where: "Ты узнаёшь себя — но другого.", what: "Прими себя нового. Позволь миру подтвердить.", group: 5 },
+        { id: 21, name: "ᛚ Лагуз", energy: "поток, доверие", where: "Ответ приходит во сне. Вода санаходит путь.", what: "Перестань контролировать. Доверься.", group: 6 },
+        { id: 22, name: "ᛜ Ингуз", energy: "семя, потенциал", where: "Результат уже есть, но не проявлен.", what: "Жди. Не раскапывай семя.", group: 6 },
+        { id: 23, name: "ᛟ Отал", energy: "наследство, связь", where: "Передаёшь плоды тем, кто после.", what: "Ты не первый и не последний. Передай дальше.", group: 6 },
+        { id: 24, name: "ᛞ Дагаз", energy: "перерождение", where: "Старое ушло. Новое пришло.", what: "Открой дверь. Дагаз — начало нового Феху.", group: 6 }
     ];
 
     function renderRunes(filterGroup = "all") {
         const container = document.getElementById("runeList");
         if (!container) return;
-        
-        let filtered = runes;
-        if (filterGroup !== "all") {
-            filtered = runes.filter(r => r.group === parseInt(filterGroup));
-        }
-        
+        let filtered = filterGroup === "all" ? runes : runes.filter(r => r.group === parseInt(filterGroup));
         let html = "";
         for (let r of filtered) {
             html += `
                 <div class="rune-card">
                     <div class="rune-img">
-                        <img src="/img/${r.id}.jpg" alt="${r.name}" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2050%2050%22%3E%3Crect%20width%3D%2250%22%20height%3D%2250%22%20fill%3D%22%232b211c%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23b87c4f%22%20font-size%3D%2220%22%3E${r.name.charAt(2)}%3C%2Ftext%3E%3C%2Fsvg%3E'">
+                        <img src="/img/${r.id}.jpg" alt="${r.name}" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22%23fefaf5%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23b87c4f%22%20font-size%3D%2232%22%3E${r.name.charAt(2)}%3C%2Ftext%3E%3C%2Fsvg%3E'">
                     </div>
-                    <div class="rune-info">
+                    <div class="rune-content">
                         <div class="rune-name">${r.name}</div>
                         <div class="rune-energy">${r.energy}</div>
-                        <div class="where"><span>📍 Где ты:</span> ${r.where}</div>
-                        <div class="what">⚡ Что делать дальше: ${r.what}</div>
-                        <div class="rune-num">#${r.id} · ${r.group === 1 ? "Группа 1–4 Зарождение" : r.group === 2 ? "Группа 5–8 Движение" : r.group === 3 ? "Группа 9–12 Трансформация" : r.group === 4 ? "Группа 13–16 Перерождение" : r.group === 5 ? "Группа 17–20 Завершение" : "Группа 21–24 Итог"}</div>
+                        <div class="where-block"><span>📍 где ты:</span> ${r.where}</div>
+                        <div class="what-block"><span>⚡ что делать дальше:</span> ${r.what}</div>
+                        <div class="rune-meta">#${r.id} · ${["", "1–4 Зарождение", "5–8 Движение", "9–12 Трансформация", "13–16 Перерождение", "17–20 Завершение", "21–24 Итог"][r.group]}</div>
                     </div>
                 </div>
             `;
@@ -269,16 +281,13 @@
         container.innerHTML = html;
     }
 
-    const btns = document.querySelectorAll(".filter-btn");
-    btns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            btns.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-            const group = btn.getAttribute("data-group");
-            renderRunes(group);
+    document.querySelectorAll(".filter-chip").forEach(btn => {
+        btn.addEventListener("click", function() {
+            document.querySelectorAll(".filter-chip").forEach(b => b.classList.remove("active"));
+            this.classList.add("active");
+            renderRunes(this.getAttribute("data-group"));
         });
     });
-
     renderRunes("all");
 </script>
 </body>
