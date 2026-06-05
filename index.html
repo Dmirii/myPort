@@ -74,7 +74,7 @@
 
     .logo {
       font-weight: 700;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       letter-spacing: -0.3px;
       text-decoration: none;
       color: #1e3a2f;
@@ -143,6 +143,22 @@
       font-size: 0.85rem;
       display: inline-block;
       margin: 0.2rem 0;
+    }
+
+    .author-photo {
+      flex: 1;
+      text-align: center;
+      background: #eef2e9;
+      border-radius: 48px;
+      padding: 1.8rem 1rem;
+    }
+
+    .author-photo img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
     }
 
     .books-grid {
@@ -335,9 +351,9 @@
     <div class="container nav-inner">
       <a href="index.html" class="logo">РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></a>
       <div class="nav-links">
-        <a href="index.html#about">Об авторе</a>
-        <a href="index.html#books">Книги</a>
-        <a href="index.html#contacts">Контакты</a>
+        <a href="#about">Об авторе</a>
+        <a href="#books">Книги</a>
+        <a href="#contacts">Контакты</a>
       </div>
     </div>
   </nav>
@@ -359,11 +375,12 @@
             </p>
             <p>Никаких ритуалов. Только структура, наблюдение и управление этапами: от мытья посуды до смены профессии.</p>
           </div>
-          <div style="flex:1; text-align: center; background: #eef2e9; border-radius: 48px; padding: 1.5rem 1rem;">
-            <div style="font-size: 2.5rem; line-height: 1;">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ</div>
-            <div style="font-size: 0.7rem; margin-top: 0.5rem;">Футарк — язык этапов</div>
-            <hr style="margin: 0.8rem 0; border-color:#cbd5c3; width: 40px; margin-left: auto; margin-right: auto;">
-            <div style="font-size: 0.8rem;">«Инженерная модель»<br>без магии, но с глубиной</div>
+          <div class="author-photo">
+            <img src="img/DimaA.jpg" alt="Дмитрий Антонов">
+            <div style="font-size: 1.2rem; font-weight: 600;">Дмитрий Антонов</div>
+            <div style="font-size: 0.8rem; margin-top: 0.3rem;">инженер-программист, управленец, рунолог</div>
+            <hr style="margin: 1rem 0; border-color:#cbd5c3; width: 40px; margin-left: auto; margin-right: auto;">
+            <div style="font-size: 0.85rem;">«Руны — это этапы,<br>а не магия»</div>
           </div>
         </div>
       </div>
