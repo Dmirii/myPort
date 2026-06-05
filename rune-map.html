@@ -23,7 +23,6 @@
             margin: 0 auto;
         }
 
-        /* шапка */
         .header {
             text-align: center;
             margin-bottom: 24px;
@@ -61,14 +60,12 @@
             color: #ccb79e;
         }
 
-        /* карточка руны */
         .rune-card {
             background: #161210;
             border-radius: 24px;
             margin-bottom: 16px;
             padding: 16px;
             border: 1px solid #2a201b;
-            transition: 0.1s;
             display: flex;
             gap: 16px;
             align-items: center;
@@ -135,7 +132,6 @@
             text-align: right;
         }
 
-        /* фильтр */
         .filter-bar {
             display: flex;
             gap: 8px;
@@ -198,7 +194,6 @@
         </div>
     </div>
 
-    <!-- фильтр по группам (из книги) -->
     <div class="filter-bar">
         <button class="filter-btn active" data-group="all">Все руны</button>
         <button class="filter-btn" data-group="1">1–4 Зарождение</button>
@@ -218,7 +213,6 @@
 </div>
 
 <script>
-    // Данные из твоей книги (редакция 4) — сжато, по сути
     const runes = [
         { id: 1, name: "ᚠ Феху", energy: "Начало, искра, зарождение идеи", where: "Мысль появилась из ниоткуда. То, чего не было минуту назад — теперь есть.", what: "Зафиксируй мысль. Не действуй сразу. Дай ей пройти Уруз и Турисаз.", group: 1 },
         { id: 2, name: "ᚢ Уруз", energy: "Многообразие, вихрь, хаос вариантов", where: "В голове каша. 100 вариантов. Глаза разбегаются.", what: "Не принимай решение. Собирай данные. Крутись в вихре.", group: 1 },
@@ -260,7 +254,7 @@
             html += `
                 <div class="rune-card">
                     <div class="rune-img">
-                        <img src="/images/runs/${r.id}.jpg" alt="${r.name}" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2050%2050%22%3E%3Crect%20width%3D%2250%22%20height%3D%2250%22%20fill%3D%22%232b211c%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23b87c4f%22%20font-size%3D%2220%22%3E${r.name.charAt(2)}%3C%2Ftext%3E%3C%2Fsvg%3E'">
+                        <img src="/img/${r.id}.jpg" alt="${r.name}" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2050%2050%22%3E%3Crect%20width%3D%2250%22%20height%3D%2250%22%20fill%3D%22%232b211c%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23b87c4f%22%20font-size%3D%2220%22%3E${r.name.charAt(2)}%3C%2Ftext%3E%3C%2Fsvg%3E'">
                     </div>
                     <div class="rune-info">
                         <div class="rune-name">${r.name}</div>
@@ -275,7 +269,6 @@
         container.innerHTML = html;
     }
 
-    // фильтр
     const btns = document.querySelectorAll(".filter-btn");
     btns.forEach(btn => {
         btn.addEventListener("click", () => {
@@ -286,7 +279,6 @@
         });
     });
 
-    // начальная отрисовка
     renderRunes("all");
 </script>
 </body>
