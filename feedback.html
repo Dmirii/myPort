@@ -7,19 +7,25 @@
   <meta name="description" content="Оставьте email, чтобы узнать о выходе новой книги первым.">
   <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       background: #faf9f8;
       font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
       line-height: 1.5;
       color: #1e1e2a;
     }
+
     .container {
       max-width: 860px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }
-    /* Хедер (как на всех страницах) */
+
     .navbar {
       padding: 1rem 0;
       background: #ffffff;
@@ -30,6 +36,7 @@
       background: rgba(255,255,255,0.94);
       z-index: 10;
     }
+
     .nav-inner {
       display: flex;
       justify-content: space-between;
@@ -40,6 +47,7 @@
       margin: 0 auto;
       padding: 0 1.5rem;
     }
+
     .logo {
       font-weight: 700;
       font-size: 1rem;
@@ -49,24 +57,34 @@
       align-items: center;
       gap: 8px;
     }
+
     .logo img {
       width: 32px;
       height: 32px;
       border-radius: 8px;
     }
-    .logo span span { color: #2c6e49; }
+
+    .logo span span {
+      color: #2c6e49;
+    }
+
     .nav-links {
       display: flex;
       gap: 1.2rem;
       flex-wrap: wrap;
     }
+
     .nav-links a {
       text-decoration: none;
       font-weight: 500;
       color: #2d3e3b;
       font-size: 0.85rem;
     }
-    .nav-links a:hover { color: #1b5e3f; }
+
+    .nav-links a:hover {
+      color: #1b5e3f;
+    }
+
     .form-section {
       background: white;
       border-radius: 32px;
@@ -75,25 +93,31 @@
       border: 1px solid #e2ddd4;
       box-shadow: 0 2px 12px rgba(0,0,0,0.03);
     }
+
     h1 {
       font-size: 1.8rem;
       color: #1e3a2f;
       margin-bottom: 0.5rem;
     }
+
     .description {
       color: #5f6c66;
       margin-bottom: 2rem;
     }
+
     .form-group {
       margin-bottom: 1.5rem;
     }
+
     .form-group label {
       display: block;
       font-weight: 600;
       margin-bottom: 0.5rem;
       color: #1e3a2f;
     }
-    .form-group input, .form-group select {
+
+    .form-group input,
+    .form-group select {
       width: 100%;
       padding: 0.8rem 1rem;
       border: 1px solid #ddd8cf;
@@ -102,10 +126,13 @@
       background: #fefaf5;
       font-family: inherit;
     }
-    .form-group input:focus, .form-group select:focus {
+
+    .form-group input:focus,
+    .form-group select:focus {
       outline: none;
       border-color: #2c6e49;
     }
+
     .btn {
       background: #1e3a2f;
       color: white;
@@ -117,9 +144,11 @@
       cursor: pointer;
       transition: background 0.2s;
     }
+
     .btn:hover {
       background: #0f2c22;
     }
+
     .message {
       margin-top: 1rem;
       padding: 0.8rem;
@@ -127,8 +156,17 @@
       text-align: center;
       font-size: 0.9rem;
     }
-    .success { background: #eef4ed; color: #2c6e49; }
-    .error { background: #fff6e8; color: #c97e2a; }
+
+    .success {
+      background: #eef4ed;
+      color: #2c6e49;
+    }
+
+    .error {
+      background: #fff6e8;
+      color: #c97e2a;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -137,10 +175,18 @@
       background: #f1efe9;
       margin-top: 2rem;
     }
+
     @media (max-width: 640px) {
-      .nav-inner { flex-direction: column; text-align: center; }
-      .form-section { padding: 1.5rem; }
-      h1 { font-size: 1.5rem; }
+      .nav-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .form-section {
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -167,8 +213,7 @@
       Оставьте ваш email. Я пришлю уведомление, когда выйдет новая книга из серии «Руны как этапы процесса». Без спама. Только важные новости.
     </div>
 
-    <!-- ===== ВСТАВЬТЕ ВАШ FORMSPREE КОД В СТРОКУ action ===== -->
-    <form id="subscribeForm" action="https://formspree.io/f/YOUR_CODE" method="POST">
+    <form id="subscribeForm" action="https://formspree.io/f/mdavljnv" method="POST">
       <div class="form-group">
         <label>📧 Ваш email *</label>
         <input type="email" name="email" required placeholder="example@mail.ru">
@@ -226,7 +271,6 @@
       msgDiv.className = 'message error';
     }
     
-    // Скрыть сообщение через 5 секунд
     setTimeout(() => {
       msgDiv.style.display = 'none';
     }, 5000);
