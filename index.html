@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-      <title>Инженерная модель реальности — руны как этапы процессов | Дмитрий Антонов</title>
-      <meta name="description" content="Руны — это не магия, а этапы любого процесса. Инженерная модель реальности Дмитрия Антонова. Узнай, где ты находишься и что делать дальше. Книги, карта рун, руническая навигация.">
-      <meta name="keywords" content="инженерная модель реальности, руны, этапы процессов, руническая навигация, Дмитрий Антонов, футарк, руны значение, прикладная рунология">
-      <meta name="author" content="Дмитрий Антонов">
-      <meta name="robots" content="index, follow">
-      <link rel="canonical" href="https://dimaa.ru/">
-      <meta property="og:title" content="Инженерная модель реальности — руны как этапы процессов">
-      <meta property="og:description" content="Руны — это не магия, а этапы любого процесса. Инженерная модель реальности Дмитрия Антонова. Книги, карта рун, руническая навигация.">
-      <meta property="og:type" content="website">
-      <meta property="og:url" content="https://dimaa.ru/">
-      <meta property="og:site_name" content="Инженерная модель реальности">
-      <meta property="og:image" content="https://dimaa.ru/img/logo.jpeg">
-      <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="Инженерная модель реальности — руны как этапы процессов">
-      <meta name="twitter:description" content="Руны — это не магия, а этапы любого процесса. Инженерная модель реальности Дмитрия Антонова.">
-      <meta name="twitter:image" content="https://dimaa.ru/img/logo.jpeg">
-      <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
-      <link rel="shortcut icon" href="/img/logo.jpeg">
-        
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Инженерная модель реальности — руны как этапы процессов | Дмитрий Антонов</title>
+  <meta name="description" content="Руны — это не магия, а этапы любого процесса. Инженерная модель реальности Дмитрия Антонова. Узнай, где ты находишься и что делать дальше. Книги, карта рун, руническая навигация.">
+  <meta name="keywords" content="инженерная модель реальности, руны, этапы процессов, руническая навигация, Дмитрий Антонов, футарк, руны значение, прикладная рунология">
+  <meta name="author" content="Дмитрий Антонов">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dimaa.ru/">
+  <meta property="og:title" content="Инженерная модель реальности — руны как этапы процессов">
+  <meta property="og:description" content="Руны — это не магия, а этапы любого процесса. Инженерная модель реальности Дмитрия Антонова. Книги, карта рун, руническая навигация.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dimaa.ru/">
+  <meta property="og:site_name" content="Инженерная модель реальности">
+  <meta property="og:image" content="https://dimaa.ru/img/logo.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Инженерная модель реальности — руны как этапы процессов">
+  <meta name="twitter:description" content="Руны — это не магия, а этапы любого процесса. Инженерная модель реальности Дмитрия Антонова.">
+  <meta name="twitter:image" content="https://dimaa.ru/img/logo.jpeg">
+  <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
+  <link rel="shortcut icon" href="/img/logo.jpeg">
+
   <style>
     * {
       margin: 0;
@@ -71,6 +70,7 @@
       border-bottom: none;
     }
 
+    /* ===== ХЕДЕР (как на book1.html) ===== */
     .navbar {
       padding: 1rem 0;
       background: #ffffff;
@@ -88,17 +88,29 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 0.8rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
     }
 
     .logo {
       font-weight: 700;
-      font-size: 1.2rem;
+      font-size: 1rem;
       letter-spacing: -0.3px;
       text-decoration: none;
       color: #1e3a2f;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    .logo span {
+    .logo img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .logo span span {
       color: #2c6e49;
     }
 
@@ -112,8 +124,8 @@
       text-decoration: none;
       font-weight: 500;
       color: #2d3e3b;
+      font-size: 0.85rem;
       transition: color 0.2s;
-      font-size: 0.9rem;
     }
 
     .nav-links a:hover {
@@ -362,175 +374,181 @@
         padding: 4rem 0;
       }
     }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container nav-inner">
-      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px;">
-        <img src="/img/logo.jpeg" alt="Логотип" style="width: 40px; height: 40px; border-radius: 10px; object-fit: cover;">
-        <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
-      </a>
-      <div class="nav-links">
-        <a href="#about">Об авторе</a>
-        <a href="#books">Книги</a>
-        <a href="#contacts">Контакты</a>
-      </div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="/img/logo.jpeg" alt="Логотип">
+      <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">Об авторе</a>
+      <a href="#books">Книги</a>
+      <a href="#contacts">Контакты</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <main>
-    <section id="about" class="section hero">
-      <div class="container">
-        <div class="author-wrap">
-          <div class="author-text">
-            <div class="author-badge">⚙️ РУНЫ — ЭТО БОЛЬШЕ, ЧЕМ МАГИЯ. ЭТО ЭТАПЫ ПРОЦЕССА. </div>
-            <h1>Дмитрий Антонов</h1>
-            <p>Инженер-программист, управленец, практикующий рунолог. Соединил логику системного анализа с древним знанием.</p>
-            <p><strong>Главный тезис:</strong>  Руны — это не просто мистические знаки,  <strong> а в первую очередь глаголы процессов </strong>.</p>
-            <p>
-              <span class="principle-tag">ᚠ Феху — начало</span>
-              <span class="principle-tag">ᚺ Хагалаз — жизнь с результатом</span>
-              <span class="principle-tag">ᚦ Турисаз — выбор</span>
-              <span class="principle-tag">ᚱ Райдо — первый шаг</span>
-            </p>
-            <p>В основе метода — структура, наблюдение и управление этапами: от мытья посуды до смены профессии. </p>
-          </div>
-          
-         <div class="author-photo">
-            <img src="img/DimaA.jpg" alt="Дмитрий Антонов" style="width: 180px; height: 180px; border-radius: 24px; object-fit: cover; margin: 0 auto 1rem auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-            <div style="font-size: 1.2rem; font-weight: 600;">Дмитрий Антонов</div>
-            <div style="font-size: 0.8rem; margin-top: 0.3rem;">инженер-программист, управленец, рунолог</div>
-            <hr style="margin: 1rem 0; border-color:#cbd5c3; width: 40px; margin-left: auto; margin-right: auto;">
-            <div style="font-size: 0.85rem;">РУНЫ — это больше, чем магия. <br>это этапы процесса.</div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-
-    <section id="books" class="section">
-      <div class="container">
-        <h2>📚 Серия «Руны как этапы процесса»</h2>
-        <div class="books-grid">
-          
-          <!-- КНИГА 1 -->
-          <div class="book-card">
-            <div class="book-number">Книга первая</div>
-            <div class="book-status">✅ Доступна</div>
-            <div class="book-title">Инженерная модель реальности</div>
-            <div class="book-subtitle">Прикладная рунология для рационалистов и управленцев</div>
-            <div class="book-annotation">
-              <p>Вы держите в руках не «книгу тайн». Это инженерная модель реальности. Руна Феху — это не «деньги». Это «начало». Руна Хагалаз — это не «разрушение». Это «жизнь с результатом».</p>
-            </div>
-            <div class="book-meta">
-              <span>📖 Система</span>
-              <a href="book1.html" class="btn btn-small">Подробнее →</a>
-              <a href="https://www.litres.ru/73990393/" class="btn btn-small" target="_blank">Литрес</a>
-            </div>
-          </div>
-          
-          <!-- КНИГА 2 -->
-          <div class="book-card">
-            <div class="book-number">Книга вторая</div>
-            <div class="book-status soon">📝 Скоро</div>
-            <div class="book-title">Психология рун</div>
-            <div class="book-subtitle">Руническая навигация: как понять, где вы находитесь, и что делать дальше</div>
-            <div class="book-annotation">
-              <p>Как определить своё состояние без гадания. 24 состояния — от «искры» до «просветления». Три вопроса навигации: Где я? Почему застрял? Что делать?</p>
-            </div>
-            <div class="book-meta">
-              <span>🧭 Навигация</span>
-              <a href="book2.html" class="btn btn-small">Подробнее →</a>
-            </div>
-          </div>
-          
-          <!-- КНИГА 3 -->
-          <div class="book-card">
-            <div class="book-number">Книга третья</div>
-            <div class="book-status soon">📝 Планируется</div>
-            <div class="book-title">Мантика без иллюзий</div>
-            <div class="book-subtitle">Гадание как диагностика, а не только магия</div>
-            <div class="book-annotation">
-              <p>Как задавать вопросы рунам, не впадая в магическое мышление. Гадание как диагностика текущего этапа. Анализ раскладов через «три времени».</p>
-            </div>
-            <div class="book-meta">
-              <span>🔮 Практика</span>
-              <a href="book3.html" class="btn btn-small">Подробнее →</a>
-             
-            </div>
-          </div>
-          
-          <!-- КНИГА 4 -->
-          <div class="book-card">
-            <div class="book-number">Книга четвёртая</div>
-            <div class="book-status soon">📝 Планируется</div>
-            <div class="book-title">Рунический менеджмент</div>
-            <div class="book-subtitle">Управление проектами и командами через этапы Футарка</div>
-            <div class="book-annotation">
-              <p>Как применять ᚱ Райдо как первый шаг, а ᚺ Хагалаз как нормальную жизнь продукта. Бизнес-примеры и кейсы из продаж и управления.</p>
-            </div>
-            <div class="book-meta">
-              <span>🏭 Бизнес</span>
-              <span class="btn-outline btn-small" style="pointer-events: none;">Готовится</span>
-            </div>
-          </div>
-          
-          <!-- КНИГА 5 -->
-          <div class="book-card">
-            <div class="book-number">Книга пятая</div>
-            <div class="book-status idea">🌱 Идея</div>
-            <div class="book-title">Эдда процессов</div>
-            <div class="book-subtitle">Наследие, связь поколений, передача опыта</div>
-            <div class="book-annotation">
-              <p>Рунический строй как код реальности. Родовые системы и инженерный взгляд на традицию. Завершение цикла и связь между поколениями.</p>
-            </div>
-            <div class="book-meta">
-              <span>⚡ Наследие</span>
-              <span class="btn-outline btn-small" style="pointer-events: none;">Ожидается</span>
-            </div>
-          </div>
-        </div>
-
-        <p style="margin-top: 1.5rem; background: #ece5da30; padding: 0.6rem 1rem; border-radius: 2rem; font-size: 0.8rem; text-align: center;">
-          🧠 <strong>Инженерный подход:</strong> руны не делают за вас — они показывают этап. Первая книга уже в продаже.
-        </p>
-      </div>
-    </section>
-
-    <section id="contacts" class="section">
-      <div class="container">
-        <h2>📫 Контакты</h2>
-        <div class="contacts-list">
-          <div class="contact-item">
-            <div class="contact-icon">📧</div>
-            <a href="mailto:dimaa@dimaa.ru" class="contact-link">dimaa@dimaa.ru</a>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">📞</div>
-            <a href="tel:+79117335515" class="contact-link">+7 (911) 733-55-15</a>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">⚡</div>
-            <a href="https://vk.com/dimaa_ru" target="_blank" class="contact-link">ВКонтакте / @dimaa_ru</a>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">📘</div>
-            <a href="https://www.litres.ru/73990393/" target="_blank" class="contact-link">Книга на Литрес</a>
-          </div>
-        </div>
-        <div style="margin-top: 1.5rem; text-align: center;">
-          <span class="rune-line">ᚠ ᚱ ᚨ ᛗ ᛖ ᛉ ᚲ ᛃ</span>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+<main>
+  <section id="about" class="section hero">
     <div class="container">
-      <p>© Дмитрий Антонов · Руны как этапы процесса</p>
-      <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Мир устроен системно. Руны — это способ увидеть и настроить его процессы»</p>
+      <div class="author-wrap">
+        <div class="author-text">
+          <div class="author-badge">⚙️ РУНЫ — ЭТО БОЛЬШЕ, ЧЕМ МАГИЯ. ЭТО ЭТАПЫ ПРОЦЕССА.</div>
+          <h1>Дмитрий Антонов</h1>
+          <p>Инженер-программист, управленец, практикующий рунолог. Соединил логику системного анализа с древним знанием.</p>
+          <p><strong>Главный тезис:</strong> Руны — это не просто мистические знаки, <strong>а в первую очередь глаголы процессов</strong>.</p>
+          <p>
+            <span class="principle-tag">ᚠ Феху — начало</span>
+            <span class="principle-tag">ᚺ Хагалаз — жизнь с результатом</span>
+            <span class="principle-tag">ᚦ Турисаз — выбор</span>
+            <span class="principle-tag">ᚱ Райдо — первый шаг</span>
+          </p>
+          <p>В основе метода — структура, наблюдение и управление этапами: от мытья посуды до смены профессии.</p>
+        </div>
+
+        <div class="author-photo">
+          <img src="img/DimaA.jpg" alt="Дмитрий Антонов" style="width: 180px; height: 180px; border-radius: 24px; object-fit: cover; margin: 0 auto 1rem auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <div style="font-size: 1.2rem; font-weight: 600;">Дмитрий Антонов</div>
+          <div style="font-size: 0.8rem; margin-top: 0.3rem;">инженер-программист, управленец, рунолог</div>
+          <hr style="margin: 1rem 0; border-color:#cbd5c3; width: 40px; margin-left: auto; margin-right: auto;">
+          <div style="font-size: 0.85rem;">РУНЫ — это больше, чем магия. <br>это этапы процесса.</div>
+        </div>
+      </div>
     </div>
-  </footer>
+  </section>
+
+  <section id="books" class="section">
+    <div class="container">
+      <h2>📚 Серия «Руны как этапы процесса»</h2>
+      <div class="books-grid">
+        <!-- КНИГА 1 -->
+        <div class="book-card">
+          <div class="book-number">Книга первая</div>
+          <div class="book-status">✅ Доступна</div>
+          <div class="book-title">Инженерная модель реальности</div>
+          <div class="book-subtitle">Прикладная рунология для рационалистов и управленцев</div>
+          <div class="book-annotation">
+            <p>Вы держите в руках не «книгу тайн». Это инженерная модель реальности. Руна Феху — это не «деньги». Это «начало». Руна Хагалаз — это не «разрушение». Это «жизнь с результатом».</p>
+          </div>
+          <div class="book-meta">
+            <span>📖 Система</span>
+            <a href="book1.html" class="btn btn-small">Подробнее →</a>
+            <a href="https://www.litres.ru/73990393/" class="btn btn-small" target="_blank">Литрес</a>
+          </div>
+        </div>
+
+        <!-- КНИГА 2 -->
+        <div class="book-card">
+          <div class="book-number">Книга вторая</div>
+          <div class="book-status soon">📝 Скоро</div>
+          <div class="book-title">Психология рун</div>
+          <div class="book-subtitle">Руническая навигация: как понять, где вы находитесь, и что делать дальше</div>
+          <div class="book-annotation">
+            <p>Как определить своё состояние без гадания. 24 состояния — от «искры» до «просветления». Три вопроса навигации: Где я? Почему застрял? Что делать?</p>
+          </div>
+          <div class="book-meta">
+            <span>🧭 Навигация</span>
+            <a href="book2.html" class="btn btn-small">Подробнее →</a>
+          </div>
+        </div>
+
+        <!-- КНИГА 3 -->
+        <div class="book-card">
+          <div class="book-number">Книга третья</div>
+          <div class="book-status soon">📝 Планируется</div>
+          <div class="book-title">Мантика без иллюзий</div>
+          <div class="book-subtitle">Гадание как диагностика, а не только магия</div>
+          <div class="book-annotation">
+            <p>Как задавать вопросы рунам, не впадая в магическое мышление. Гадание как диагностика текущего этапа. Анализ раскладов через «три времени».</p>
+          </div>
+          <div class="book-meta">
+            <span>🔮 Практика</span>
+            <a href="book3.html" class="btn btn-small">Подробнее →</a>
+          </div>
+        </div>
+
+        <!-- КНИГА 4 -->
+        <div class="book-card">
+          <div class="book-number">Книга четвёртая</div>
+          <div class="book-status soon">📝 Планируется</div>
+          <div class="book-title">Рунический менеджмент</div>
+          <div class="book-subtitle">Управление проектами и командами через этапы Футарка</div>
+          <div class="book-annotation">
+            <p>Как применять ᚱ Райдо как первый шаг, а ᚺ Хагалаз как нормальную жизнь продукта. Бизнес-примеры и кейсы из продаж и управления.</p>
+          </div>
+          <div class="book-meta">
+            <span>🏭 Бизнес</span>
+            <span class="btn-outline btn-small" style="pointer-events: none;">Готовится</span>
+          </div>
+        </div>
+
+        <!-- КНИГА 5 -->
+        <div class="book-card">
+          <div class="book-number">Книга пятая</div>
+          <div class="book-status idea">🌱 Идея</div>
+          <div class="book-title">Эдда процессов</div>
+          <div class="book-subtitle">Наследие, связь поколений, передача опыта</div>
+          <div class="book-annotation">
+            <p>Рунический строй как код реальности. Родовые системы и инженерный взгляд на традицию. Завершение цикла и связь между поколениями.</p>
+          </div>
+          <div class="book-meta">
+            <span>⚡ Наследие</span>
+            <span class="btn-outline btn-small" style="pointer-events: none;">Ожидается</span>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top: 1.5rem; background: #ece5da30; padding: 0.6rem 1rem; border-radius: 2rem; font-size: 0.8rem; text-align: center;">
+        🧠 <strong>Инженерный подход:</strong> руны не делают за вас — они показывают этап. Первая книга уже в продаже.
+      </p>
+    </div>
+  </section>
+
+  <section id="contacts" class="section">
+    <div class="container">
+      <h2>📫 Контакты</h2>
+      <div class="contacts-list">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <a href="mailto:dimaa@dimaa.ru" class="contact-link">dimaa@dimaa.ru</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <a href="tel:+79117335515" class="contact-link">+7 (911) 733-55-15</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">⚡</div>
+          <a href="https://vk.com/dimaa_ru" target="_blank" class="contact-link">ВКонтакте / @dimaa_ru</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📘</div>
+          <a href="https://www.litres.ru/73990393/" target="_blank" class="contact-link">Книга на Литрес</a>
+        </div>
+      </div>
+      <div style="margin-top: 1.5rem; text-align: center;">
+        <span class="rune-line">ᚠ ᚱ ᚨ ᛗ ᛖ ᛉ ᚲ ᛃ</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© Дмитрий Антонов · Руны как этапы процесса</p>
+    <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Мир устроен системно. Руны — это способ увидеть и настроить его процессы»</p>
+  </div>
+</footer>
+
 </body>
 </html>
