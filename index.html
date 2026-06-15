@@ -70,7 +70,6 @@
       border-bottom: none;
     }
 
-    /* ===== ХЕДЕР (как на book1.html) ===== */
     .navbar {
       padding: 1rem 0;
       background: #ffffff;
@@ -258,15 +257,26 @@
       margin-bottom: 0.4rem;
     }
 
+    /* ===== ИСПРАВЛЕННЫЙ БЛОК КНОПОК ===== */
     .book-meta {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
-      gap: 0.8rem;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.5rem;
       margin-top: auto;
       padding-top: 0.8rem;
       border-top: 1px dashed #ddd8cf;
+    }
+
+    .book-meta > span {
+      flex-shrink: 0;
+    }
+
+    .book-meta .btn,
+    .book-meta .btn-outline {
+      flex-shrink: 0;
+      white-space: nowrap;
     }
 
     .btn {
@@ -378,6 +388,17 @@
     @media (max-width: 640px) {
       .nav-inner {
         flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .book-meta {
+        gap: 0.5rem;
+      }
+      .book-meta .btn,
+      .book-meta .btn-outline {
+        white-space: normal;
         text-align: center;
       }
     }
@@ -552,7 +573,6 @@
     <p>© Дмитрий Антонов · Руны как этапы процесса</p>
     <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Мир устроен системно. Руны — это способ увидеть и настроить его процессы»</p>
     <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
-    
   </div>
 </footer>
 
