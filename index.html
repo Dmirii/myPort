@@ -257,26 +257,20 @@
       margin-bottom: 0.4rem;
     }
 
-    /* ===== ИСПРАВЛЕННЫЙ БЛОК КНОПОК ===== */
+    /* ===== КНОПКИ — АККУРАТНО НА МОБИЛЬНЫХ ===== */
     .book-meta {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
       gap: 0.5rem;
       margin-top: auto;
       padding-top: 0.8rem;
       border-top: 1px dashed #ddd8cf;
     }
 
-    .book-meta > span {
-      flex-shrink: 0;
-    }
-
-    .book-meta .btn,
-    .book-meta .btn-outline {
-      flex-shrink: 0;
-      white-space: nowrap;
+    .book-meta > span:first-child {
+      margin-right: auto;
     }
 
     .btn {
@@ -385,20 +379,31 @@
       }
     }
 
-    @media (max-width: 640px) {
-      .nav-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 480px) {
+    /* ===== МОБИЛЬНЫЕ — ВСЁ В КОЛОНКУ, РОВНО ===== */
+    @media (max-width: 550px) {
       .book-meta {
-        gap: 0.5rem;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
+      }
+      .book-meta > span:first-child {
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 0.2rem;
       }
       .book-meta .btn,
       .book-meta .btn-outline {
-        white-space: normal;
+        display: block;
+        text-align: center;
+        width: 100%;
+      }
+      .book-meta > div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .nav-inner {
+        flex-direction: column;
         text-align: center;
       }
     }
@@ -464,8 +469,10 @@
           </div>
           <div class="book-meta">
             <span>📖 Система</span>
-            <a href="book1.html" class="btn btn-small">Подробнее →</a>
-            <a href="https://www.litres.ru/73990393/" class="btn btn-small" target="_blank">Литрес</a>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="book1.html" class="btn btn-small">Подробнее →</a>
+              <a href="https://www.litres.ru/73990393/" class="btn btn-small" target="_blank">Литрес</a>
+            </div>
           </div>
         </div>
 
@@ -480,8 +487,10 @@
           </div>
           <div class="book-meta">
             <span>🧭 Навигация</span>
-            <a href="book2.html" class="btn btn-small">Подробнее →</a>
-            <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="book2.html" class="btn btn-small">Подробнее →</a>
+              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
+            </div>
           </div>
         </div>
 
@@ -496,8 +505,10 @@
           </div>
           <div class="book-meta">
             <span>🔮 Практика</span>
-            <a href="book3.html" class="btn btn-small">Подробнее →</a>
-            <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="book3.html" class="btn btn-small">Подробнее →</a>
+              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
+            </div>
           </div>
         </div>
 
@@ -512,8 +523,10 @@
           </div>
           <div class="book-meta">
             <span>🏭 Бизнес</span>
-            <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            <span class="btn-outline btn-small" style="pointer-events: none;">Готовится</span>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
+              <span class="btn-outline btn-small" style="pointer-events: none;">Готовится</span>
+            </div>
           </div>
         </div>
 
@@ -528,8 +541,10 @@
           </div>
           <div class="book-meta">
             <span>⚡ Наследие</span>
-            <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            <span class="btn-outline btn-small" style="pointer-events: none;">Ожидается</span>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
+              <span class="btn-outline btn-small" style="pointer-events: none;">Ожидается</span>
+            </div>
           </div>
         </div>
       </div>
