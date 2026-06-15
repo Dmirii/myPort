@@ -26,6 +26,7 @@
       padding: 0 1.5rem;
     }
 
+    /* Хедер (как на всех страницах) */
     .navbar {
       padding: 1rem 0;
       background: #ffffff;
@@ -85,6 +86,7 @@
       color: #1b5e3f;
     }
 
+    /* Форма */
     .form-section {
       background: white;
       border-radius: 32px;
@@ -133,6 +135,32 @@
       border-color: #2c6e49;
     }
 
+    /* Чекбокс */
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .checkbox-group input {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+
+    .checkbox-group label {
+      font-size: 0.85rem;
+      color: #4a5b55;
+      line-height: 1.4;
+    }
+
+    .checkbox-group a {
+      color: #1e3a2f;
+      text-decoration: underline;
+    }
+
     .btn {
       background: #1e3a2f;
       color: white;
@@ -147,6 +175,11 @@
 
     .btn:hover {
       background: #0f2c22;
+    }
+
+    .btn:disabled {
+      background: #b0c0b8;
+      cursor: not-allowed;
     }
 
     .message {
@@ -213,8 +246,8 @@
       Оставьте ваш email. Я пришлю уведомление, когда выйдет новая книга из серии «Руны как этапы процесса». Без спама. Только важные новости.
     </div>
 
+    <!-- ФОРМА С ЧЕКБОКСОМ -->
     <form id="subscribeForm" action="https://formspree.io/f/meewldoe" method="POST">
-      
       <div class="form-group">
         <label>📧 Ваш email *</label>
         <input type="email" name="email" required placeholder="example@mail.ru">
@@ -228,7 +261,17 @@
           <option value="Книга 5. Эдда процессов">Книга 5. Эдда процессов (идея)</option>
         </select>
       </div>
-      <button type="submit" class="btn">📬 Сообщить о выходе</button>
+
+      <!-- ЧЕКБОКС СОГЛАСИЯ -->
+      <div class="checkbox-group">
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent">
+          Я соглашаюсь на обработку моих персональных данных в соответствии с 
+          <a href="/privacy.html" target="_blank">Политикой конфиденциальности</a>
+        </label>
+      </div>
+
+      <button type="submit" class="btn" id="submitBtn">📬 Сообщить о выходе</button>
       <div id="formMessage" class="message" style="display: none;"></div>
     </form>
   </div>
@@ -244,12 +287,34 @@
 <script>
   const form = document.getElementById('subscribeForm');
   const msgDiv = document.getElementById('formMessage');
-  
+  const submitBtn = document.getElementById('submitBtn');
+  const consentCheckbox = document.getElementById('consent');
+
+  // Блокируем кнопку, пока не поставлена галка
+  function toggleSubmitButton() {
+    submitBtn.disabled = !consentCheckbox.checked;
+  }
+
+  consentCheckbox.addEventListener('change', toggleSubmitButton);
+  toggleSubmitButton(); // начальное состояние
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    
+    if (!consentCheckbox.checked) {
+      msgDiv.style.display = 'block';
+      msgDiv.textContent = '❌ Пожалуйста, подтвердите согласие на обработку данных.';
+      msgDiv.className = 'message error';
+      setTimeout(() => {
+        msgDiv.style.display = 'none';
+      }, 3000);
+      return;
+    }
+
     msgDiv.style.display = 'block';
     msgDiv.textContent = '⏳ Отправка...';
     msgDiv.className = 'message';
+    submitBtn.disabled = true;
     
     const formData = new FormData(form);
     
@@ -264,12 +329,15 @@
         msgDiv.textContent = '✅ Спасибо! Я пришлю уведомление, когда книга выйдет.';
         msgDiv.className = 'message success';
         form.reset();
+        consentCheckbox.checked = false;
+        toggleSubmitButton();
       } else {
         throw new Error('Ошибка отправки');
       }
     } catch (error) {
       msgDiv.textContent = '❌ Что-то пошло не так. Попробуйте позже или напишите мне: dimaa@dimaa.ru';
       msgDiv.className = 'message error';
+      submitBtn.disabled = false;
     }
     
     setTimeout(() => {
