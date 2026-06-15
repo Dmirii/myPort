@@ -4,21 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Психология рун. Руническая навигация — книга вторая | Дмитрий Антонов</title>
-  <meta name="description" content="Книга «Психология рун. Руническая навигация». 24 состояния + пустая руна. Как понять, где вы находитесь, и что делать дальше. Диагностика себя без гадания.">
-  <meta name="keywords" content="руническая навигация, психология рун, 24 руны, пустая руна, диагностика себя, Дмитрий Антонов, вторая книга">
+  <meta name="description" content="Книга «Психология рун. Руническая навигация». 24 состояния + пустая руна. Как понять, где вы находитесь, и что делать дальше.">
+  <meta name="keywords" content="руническая навигация, психология рун, 24 руны, пустая руна, Дмитрий Антонов, вторая книга">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book2.html">
-  <meta property="og:title" content="Психология рун. Руническая навигация — книга вторая | Дмитрий Антонов">
-  <meta property="og:description" content="24 состояния + пустая руна. Как понять, где вы находитесь, и что делать дальше. Диагностика себя без гадания.">
+  <meta property="og:title" content="Психология рун. Руническая навигация — книга вторая">
+  <meta property="og:description" content="24 состояния + пустая руна. Как понять, где вы находитесь, и что делать дальше.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book2.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
   <meta property="og:image" content="https://dimaa.ru/img/logo.jpeg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Психология рун. Руническая навигация">
-  <meta name="twitter:description" content="24 состояния + пустая руна. Диагностика себя без гадания.">
-  <meta name="twitter:image" content="https://dimaa.ru/img/logo.jpeg">
   <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
   <link rel="shortcut icon" href="/img/logo.jpeg">
   
@@ -50,7 +47,7 @@
     }
 
     h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       margin-bottom: 0.5rem;
       color: #1e3a2f;
     }
@@ -60,12 +57,6 @@
       margin: 2rem 0 1rem;
       border-left: 4px solid #2c6e49;
       padding-left: 1rem;
-    }
-
-    h3 {
-      font-size: 1.2rem;
-      margin: 1.5rem 0 0.75rem;
-      color: #2c6e49;
     }
 
     .navbar {
@@ -158,25 +149,35 @@
       border-radius: 16px;
     }
 
+    /* ===== АДАПТИВНЫЕ ТАБЛИЦЫ ===== */
     .matrix {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       background: white;
       border: 1px solid #e2ddd4;
       border-radius: 24px;
-      padding: 1.5rem;
+      padding: 0.5rem 1rem;
       margin: 1.5rem 0;
     }
 
     .matrix-item {
-      padding: 0.5rem 0;
-      border-bottom: 1px solid #eee8e0;
       display: flex;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #eee8e0;
       gap: 1rem;
+    }
+
+    .matrix-item:last-child {
+      border-bottom: none;
     }
 
     .matrix-question {
       font-weight: 600;
-      min-width: 200px;
+      min-width: 160px;
       color: #1e3a2f;
+      flex-shrink: 0;
     }
 
     .btn {
@@ -196,6 +197,14 @@
       color: #1e3a2f;
     }
 
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -212,16 +221,34 @@
       background: #e2ddd4;
     }
 
-    .btn-group {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 1rem;
+    /* ===== МОБИЛЬНАЯ ВЕРСИЯ ===== */
+    @media (max-width: 640px) {
+      .nav-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      .book-title {
+        font-size: 1.5rem;
+      }
+      .matrix-item {
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 1rem 0;
+      }
+      .matrix-question {
+        min-width: auto;
+      }
     }
   </style>
 </head>
 <body>
+
 <nav class="navbar">
   <div class="nav-inner">
     <a href="index.html" class="logo">
@@ -236,94 +263,81 @@
   </div>
 </nav>
 
-  <main class="container">
-    <div class="book-header">
-      <div class="book-number">Книга вторая</div>
-      <div class="book-title">Психология рун</div>
-      <div class="book-subtitle">Руническая навигация: как понять, где вы находитесь, и что делать дальше</div>
-    </div>
+<main class="container">
+  <div class="book-header">
+    <div class="book-number">Книга вторая</div>
+    <div class="book-title">Психология рун</div>
+    <div class="book-subtitle">Руническая навигация: как понять, где вы находитесь, и что делать дальше</div>
+  </div>
 
-    <div class="info-box">
-      <strong>📘 О чём эта книга</strong><br><br>
-      Вы приходите на кухню. Хотите заварить кофе. Мысль «хочу кофе» — это Феху (начало). Дальше вы смотрите на три пачки — это Уруз (хаос выбора). Берёте одну пачку — Турисаз (выбор). Завариваете — Райдо (первый шаг). Пьёте и кайфуете — Вуньо (радость). А потом идёте мыть чашку — и это Хагалаз (рутина жизни с результатом).<br><br>
-      <strong>24 руны = 24 состояния, в которых может быть человек.</strong> Книга учит распознавать их без гадания. Просто наблюдая за собой.
-    </div>
+  <div class="info-box">
+    <strong>📘 О чём эта книга</strong><br><br>
+    Вы приходите на кухню. Хотите заварить кофе. Мысль «хочу кофе» — это Феху (начало). Дальше вы смотрите на три пачки — это Уруз (хаос выбора). Берёте одну пачку — Турисаз (выбор). Завариваете — Райдо (первый шаг). Пьёте и кайфуете — Вуньо (радость). А потом идёте мыть чашку — и это Хагалаз (рутина жизни с результатом).<br><br>
+    <strong>24 руны = 24 состояния, в которых может быть человек.</strong> Книга учит распознавать их без гадания. Просто наблюдая за собой.
+  </div>
 
-    <h2>24 состояния + пустая руна</h2>
-    <div class="matrix">
-      <div class="matrix-item"><span class="matrix-question">ᚠ Феху</span> — начало, искра, идея</div>
-      <div class="matrix-item"><span class="matrix-question">ᚢ Уруз</span> — хаос вариантов, многообразие</div>
-      <div class="matrix-item"><span class="matrix-question">ᚦ Турисаз</span> — выбор, отсечение лишнего</div>
-      <div class="matrix-item"><span class="matrix-question">ᚨ Ансуз</span> — подтверждение, зелёный свет</div>
-      <div class="matrix-item"><span class="matrix-question">ᚱ Райдо</span> — первый шаг, старт</div>
-      <div class="matrix-item"><span class="matrix-question">ᚲ Кеназ</span> — проявление, материализация</div>
-      <div class="matrix-item"><span class="matrix-question">ᚷ Гебо</span> — гармония, равновесие</div>
-      <div class="matrix-item"><span class="matrix-question">ᚹ Вуньо</span> — радость, завершение этапа</div>
-      <div class="matrix-item"><span class="matrix-question">ᚺ Хагалаз</span> — жизнь с результатом, рутина</div>
-      <div class="matrix-item"><span class="matrix-question">ᚾ Наутиз</span> — нужда, дискомфорт, сигнал</div>
-      <div class="matrix-item"><span class="matrix-question">ᛁ Иса</span> — пауза, заморозка</div>
-      <div class="matrix-item"><span class="matrix-question">ᛃ Йера</span> — озарение, эврика</div>
-      <div class="matrix-item"><span class="matrix-question">ᛈ Перт</span> — второй шанс, новая игра на старом поле</div>
-      <div class="matrix-item"><span class="matrix-question">ᛇ Эйваз</span> — действие на основе опыта</div>
-      <div class="matrix-item"><span class="matrix-question">ᛉ Альгиз</span> — интуиция, защита</div>
-      <div class="matrix-item"><span class="matrix-question">ᛋ Соулу</span> — победа, целостность</div>
-      <div class="matrix-item"><span class="matrix-question">ᛏ Тейваз</span> — воля, начало конца</div>
-      <div class="matrix-item"><span class="matrix-question">ᛒ Беркана</span> — рост, взращивание</div>
-      <div class="matrix-item"><span class="matrix-question">ᛖ Эваз</span> — обмен, партнёрство</div>
-      <div class="matrix-item"><span class="matrix-question">ᛗ Маназ</span> — интеграция, социум</div>
-      <div class="matrix-item"><span class="matrix-question">ᛚ Лагуз</span> — поток, доверие</div>
-      <div class="matrix-item"><span class="matrix-question">ᛜ Ингуз</span> — семя, потенциал</div>
-      <div class="matrix-item"><span class="matrix-question">ᛟ Отал</span> — наследство, связь</div>
-      <div class="matrix-item"><span class="matrix-question">ᛞ Дагаз</span> — перерождение, смена дня и ночи</div>
-      <div class="matrix-item"><span class="matrix-question">➕ Пустая руна</span> — тишина, потенциал, пауза перед новым циклом</div>
-    </div>
+  <h2>24 состояния + пустая руна</h2>
+  <div class="matrix">
+    <div class="matrix-item"><span class="matrix-question">ᚠ Феху</span> начало, искра, идея</div>
+    <div class="matrix-item"><span class="matrix-question">ᚢ Уруз</span> хаос вариантов, многообразие</div>
+    <div class="matrix-item"><span class="matrix-question">ᚦ Турисаз</span> выбор, отсечение лишнего</div>
+    <div class="matrix-item"><span class="matrix-question">ᚨ Ансуз</span> подтверждение, зелёный свет</div>
+    <div class="matrix-item"><span class="matrix-question">ᚱ Райдо</span> первый шаг, старт</div>
+    <div class="matrix-item"><span class="matrix-question">ᚲ Кеназ</span> проявление, материализация</div>
+    <div class="matrix-item"><span class="matrix-question">ᚷ Гебо</span> гармония, равновесие</div>
+    <div class="matrix-item"><span class="matrix-question">ᚹ Вуньо</span> радость, завершение этапа</div>
+    <div class="matrix-item"><span class="matrix-question">ᚺ Хагалаз</span> жизнь с результатом, рутина</div>
+    <div class="matrix-item"><span class="matrix-question">ᚾ Наутиз</span> нужда, дискомфорт, сигнал</div>
+    <div class="matrix-item"><span class="matrix-question">ᛁ Иса</span> пауза, заморозка</div>
+    <div class="matrix-item"><span class="matrix-question">ᛃ Йера</span> озарение, эврика</div>
+    <div class="matrix-item"><span class="matrix-question">ᛈ Перт</span> второй шанс, новая игра на старом поле</div>
+    <div class="matrix-item"><span class="matrix-question">ᛇ Эйваз</span> действие на основе опыта</div>
+    <div class="matrix-item"><span class="matrix-question">ᛉ Альгиз</span> интуиция, защита</div>
+    <div class="matrix-item"><span class="matrix-question">ᛋ Соулу</span> победа, целостность</div>
+    <div class="matrix-item"><span class="matrix-question">ᛏ Тейваз</span> воля, начало конца</div>
+    <div class="matrix-item"><span class="matrix-question">ᛒ Беркана</span> рост, взращивание</div>
+    <div class="matrix-item"><span class="matrix-question">ᛖ Эваз</span> обмен, партнёрство</div>
+    <div class="matrix-item"><span class="matrix-question">ᛗ Маназ</span> интеграция, социум</div>
+    <div class="matrix-item"><span class="matrix-question">ᛚ Лагуз</span> поток, доверие</div>
+    <div class="matrix-item"><span class="matrix-question">ᛜ Ингуз</span> семя, потенциал</div>
+    <div class="matrix-item"><span class="matrix-question">ᛟ Отал</span> наследство, связь</div>
+    <div class="matrix-item"><span class="matrix-question">ᛞ Дагаз</span> перерождение, смена дня и ночи</div>
+    <div class="matrix-item"><span class="matrix-question">➕ Пустая руна</span> тишина, потенциал, пауза перед новым циклом</div>
+  </div>
 
-    <h2>Матрица тупиков (или «почему я застрял»)</h2>
-    <div class="matrix">
-      <div class="matrix-item"><span class="matrix-question">❓ Вопрос</span><span>💡 Ответ в книге</span></div>
-      <div class="matrix-item"><span class="matrix-question">Не могу начать</span> — застрял до Феху (нет идеи) или после Уруз (нет выбора)</div>
-      <div class="matrix-item"><span class="matrix-question">Завис в выборе</span> — Уруз без Турисаз (страх отсечь лишнее)</div>
-      <div class="matrix-item"><span class="matrix-question">Сделал, но нет радости</span> — пропустил Кеназ (не показал миру) или Гебо (нет баланса)</div>
-      <div class="matrix-item"><span class="matrix-question">Результат есть, но выматывает</span> — застрял в Хагалаз (не вижу Наутиз)</div>
-      <div class="matrix-item"><span class="matrix-question">Всё надоело, ничего не хочу</span> — Иса без Йера (пауза без озарения)</div>
-      <div class="matrix-item"><span class="matrix-question">Знаю, что надо, но не делаю</span> — нет Райдо (страх первого шага)</div>
-      <div class="matrix-item"><span class="matrix-question">Не могу подтвердить выбор</span> — выход в книге (Ансуз, зелёный свет)</div>
-    </div>
+  <h2>Матрица тупиков (или «почему я застрял»)</h2>
+  <div class="matrix">
+    <div class="matrix-item"><span class="matrix-question">Не могу начать</span> застрял до Феху (нет идеи) или после Уруз (нет выбора)</div>
+    <div class="matrix-item"><span class="matrix-question">Завис в выборе</span> Уруз без Турисаз (страх отсечь лишнее)</div>
+    <div class="matrix-item"><span class="matrix-question">Сделал, но нет радости</span> пропустил Кеназ (не показал миру) или Гебо (нет баланса)</div>
+    <div class="matrix-item"><span class="matrix-question">Результат есть, но выматывает</span> застрял в Хагалаз (не вижу Наутиз)</div>
+    <div class="matrix-item"><span class="matrix-question">Всё надоело, ничего не хочу</span> Иса без Йера (пауза без озарения)</div>
+    <div class="matrix-item"><span class="matrix-question">Знаю, что надо, но не делаю</span> нет Райдо (страх первого шага)</div>
+    <div class="matrix-item"><span class="matrix-question">Не могу подтвердить выбор</span> выход в книге (Ансуз, зелёный свет)</div>
+  </div>
 
-    <h2>Что вы получите из книги</h2>
-    <div class="info-box">
-      <ul style="margin-left: 1.5rem; padding-top: 0.5rem;">
-        <li>✅ Научитесь распознавать любое своё состояние как одну из 24 рун</li>
-        <li>✅ Узнаете, какая руна следует за какой (логика цикла)</li>
-        <li>✅ Поймёте, почему застряли — и как перейти на следующий этап</li>
-        <li>✅ Сможете диагностировать себя без гадания и интернета</li>
-        <li>✅ Перестанете бояться Хагалаз и путать Уруз с тупиком</li>
-      </ul>
-    </div>
+  <div class="info-box">
+    <strong>📌 Важно:</strong> Книга также содержит этические ограничения (диагностика себя, а не других) и подготовку к третьей книге о мантике.
+  </div>
 
-    <div class="info-box">
-      <strong>📌 Важно:</strong> Книга также содержит этические ограничения (диагностика себя, а не других) и подготовку к третьей книге о мантике.
-    </div>
+  <div class="btn-group">
+    <a href="book1.html" class="btn">📖 Читать первую книгу</a>
+    <a href="index.html#books" class="btn btn-outline">← Назад к книгам</a>
+  </div>
 
-    <div class="btn-group">
-      <a href="book1.html" class="btn">📖 Читать первую книгу</a>
-      <a href="https://www.litres.ru/73990393/" class="btn" target="_blank">📚 Приобрести на Литрес</a>
-      <a href="index.html#books" class="btn btn-outline">← Назад к книгам</a>
-    </div>
+  <hr>
 
-    <hr>
+  <div style="text-align: center; margin: 1rem 0 2rem; font-size: 0.85rem; color: #5f6c66;">
+    После второй книги — третья: «Мантика без иллюзий» (диалог с Создателем через руны).
+  </div>
+</main>
 
-    <div style="text-align: center; margin: 1rem 0 2rem; font-size: 0.85rem; color: #5f6c66;">
-      После второй книги — третья: «Мантика без иллюзий» (диалог с Создателем через руны).
-    </div>
-  </main>
+<footer>
+  <div class="container">
+    <p>© Дмитрий Антонов · Руны как этапы процесса</p>
+    <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Руническая навигация — это умение спросить себя: где я сейчас?»</p>
+  </div>
+</footer>
 
-  <footer>
-    <div class="container">
-      <p>© Дмитрий Антонов · Руны как этапы процесса</p>
-      <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Руническая навигация — это умение спросить себя: где я сейчас?»</p>
-      <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
-    </div>
-  </footer>
 </body>
 </html>
