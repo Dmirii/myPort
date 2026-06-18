@@ -17,15 +17,69 @@
       font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
       line-height: 1.5;
       color: #1e1e2a;
-      padding: 2rem 1rem;
     }
     .container {
-      max-width: 800px;
+      max-width: 860px;
       margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .navbar {
+      padding: 1rem 0;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e2e6;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.94);
+      z-index: 10;
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #1e3a2f;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+    .logo span span {
+      color: #2c6e49;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2d3e3b;
+      font-size: 0.85rem;
+    }
+    .nav-links a:hover {
+      color: #1b5e3f;
+    }
+    .policy-content {
       background: white;
-      padding: 2rem;
       border-radius: 32px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      padding: 2rem;
+      margin: 2rem 0;
+      border: 1px solid #e2ddd4;
     }
     h1 {
       font-size: 1.8rem;
@@ -40,52 +94,87 @@
     p {
       margin-bottom: 0.8rem;
     }
-    .back-link {
-      display: inline-block;
-      margin-top: 2rem;
-      color: #1e3a2f;
-      text-decoration: none;
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.75rem;
+      color: #5f6c66;
+      background: #f1efe9;
+      margin-top: 1rem;
     }
-    hr {
-      margin: 1rem 0;
+    @media (max-width: 640px) {
+      .nav-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .policy-content {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-<div class="container">
-  <h1>Политика обработки персональных данных</h1>
-  <p><strong>Дата последнего обновления:</strong> 11 июня 2025 г.</p>
-  <p><strong>Оператор персональных данных:</strong> Дмитрий Антонов (частное лицо, не ИП).<br>
-  Контактный email: <a href="mailto:dimaa@dimaa.ru">dimaa@dimaa.ru</a></p>
 
-  <h2>1. Какие данные собираются</h2>
-  <p>При заполнении формы «Сообщить о выходе книги» вы добровольно предоставляете:<br>
-  • Ваш адрес электронной почты (email).<br>
-  • (Опционально) Выбор интересующей книги.</p>
-  <p>Сайт не собирает IP-адреса, файлы cookie или данные о местоположении.</p>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="/img/logo.jpeg" alt="Логотип">
+      <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#about">Об авторе</a>
+      <a href="index.html#books">Книги</a>
+      <a href="index.html#contacts">Контакты</a>
+    </div>
+  </div>
+</nav>
 
-  <h2>2. Как используются данные</h2>
-  <p>Ваш email используется исключительно для:<br>
-  • Рассылки уведомлений о выходе новых книг серии «Руны как этапы процесса».<br>
-  • Ответов на ваши обращения.<br>
-  • Данные не передаются третьим лицам, не продаются и не используются для спама.</p>
+<main>
+  <div class="container">
+    <div class="policy-content">
+      <h1>Политика обработки персональных данных</h1>
+      <p><strong>Дата последнего обновления:</strong> 18 июня 2025 г.</p>
+      <p><strong>Оператор персональных данных:</strong> Дмитрий Антонов (частное лицо).<br>
+      Контактный email: <a href="mailto:dimaa@dimaa.ru">dimaa@dimaa.ru</a></p>
 
-  <h2>3. Где и как хранятся данные</h2>
-  <p>Данные хранятся в защищённой Google Форме (Google Forms), доступ к которой есть только у Дмитрия Антонова. Google соблюдает требования 152-ФЗ и GDPR.</p>
+      <h2>1. Какие данные собираются</h2>
+      <p>При заполнении формы «Сообщить о выходе книги» вы добровольно предоставляете:<br>
+      • Ваш адрес электронной почты (email).<br>
+      • (Опционально) Выбор интересующей книги.</p>
+      <p>Сайт не собирает IP-адреса, файлы cookie или данные о местоположении.</p>
 
-  <h2>4. Как удалить свои данные</h2>
-  <p>Вы можете в любой момент написать на <a href="mailto:dimaa@dimaa.ru">dimaa@dimaa.ru</a> с темой «Удалить данные», и ваш email будет удалён из списка в течение 3 рабочих дней.</p>
+      <h2>2. Как используются данные</h2>
+      <p>Ваш email используется исключительно для:<br>
+      • Рассылки уведомлений о выходе новых книг серии «Руны как этапы процесса».<br>
+      • Ответов на ваши обращения.<br>
+      • Данные не передаются третьим лицам, не продаются и не используются для спама.</p>
 
-  <h2>5. Срок хранения</h2>
-  <p>Ваш email хранится до тех пор, пока вы не откажетесь от уведомлений, либо до завершения рассылки по всем запланированным книгам серии.</p>
+      <h2>3. Где и как хранятся данные</h2>
+      <p>Данные, отправленные через форму, поступают в защищённый сервис Formspree и пересылаются на email оператора <a href="mailto:dimaa@dimaa.ru">dimaa@dimaa.ru</a>. Доступ к почтовому ящику есть только у Дмитрия Антонова.</p>
+      <p>Formspree соответствует требованиям GDPR и 152-ФЗ. Подробнее о безопасности данных в Formspree: <a href="https://formspree.io/privacy" target="_blank">https://formspree.io/privacy</a>.</p>
 
-  <h2>6. Отказ от подписки</h2>
-  <p>В каждом письме будет ссылка «Отписаться». Вы также можете просто написать письмо с просьбой удалить вас из списка.</p>
+      <h2>4. Как удалить свои данные</h2>
+      <p>Вы можете в любой момент написать на <a href="mailto:dimaa@dimaa.ru">dimaa@dimaa.ru</a> с темой «Удалить данные», и ваш email будет удалён из списка в течение 3 рабочих дней.</p>
 
-  <hr>
-  <p><em>Сайт собирает только email — исключительно для того, чтобы вы не пропустили выход новой книги. Без скрытых сборов, без передачи данных третьим лицам.</em></p>
+      <h2>5. Срок хранения</h2>
+      <p>Ваш email хранится до тех пор, пока вы не откажетесь от уведомлений, либо до завершения рассылки по всем запланированным книгам серии.</p>
 
-  <a href="index.html" class="back-link">← Вернуться на главную</a>
-</div>
+      <h2>6. Отказ от подписки</h2>
+      <p>В каждом письме будет ссылка «Отписаться». Вы также можете просто написать письмо с просьбой удалить вас из списка.</p>
+
+      <hr style="margin: 1rem 0;">
+      <p><em>Сайт собирает только email — исключительно для того, чтобы вы не пропустили выход новой книги. Без скрытых сборов, без передачи данных третьим лицам.</em></p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© Дмитрий Антонов · Руны как этапы процесса</p>
+    <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Мир устроен системно. Руны — это способ увидеть и настроить его процессы»</p>
+    <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
+  </div>
+</footer>
+
 </body>
 </html>
