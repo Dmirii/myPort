@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Ключ к мантике — книга 2.5 | Дмитрий Антонов</title>
+  <meta name="description" content="Книга «Ключ к мантике». 7-дневный переход от навигации к диалогу с рунами. Тренинг для подготовки к книге «Мантика без иллюзий».">
+  <meta name="keywords" content="ключ к мантике, тренинг по рунам, 7 дней, подготовка к мантике, Дмитрий Антонов, книга 2.5">
+  <meta name="author" content="Дмитрий Антонов">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dimaa.ru/book25.html">
+  <meta property="og:title" content="Ключ к мантике — книга 2.5 | Дмитрий Антонов">
+  <meta property="og:description" content="7-дневный переход от навигации к диалогу с рунами. Тренинг для подготовки к книге «Мантика без иллюзий».">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dimaa.ru/book25.html">
+  <meta property="og:site_name" content="Инженерная модель реальности">
+  <meta property="og:image" content="https://dimaa.ru/img/logo.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
+  <link rel="shortcut icon" href="/img/logo.jpeg">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf9f8;
+      font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', sans-serif;
+      line-height: 1.5;
+      color: #1e1e2a;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #1e3a2f;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin: 2rem 0 1rem;
+      border-left: 4px solid #2c6e49;
+      padding-left: 1rem;
+    }
+
+    .navbar {
+      padding: 1rem 0;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e2e6;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.94);
+      z-index: 10;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: -0.3px;
+      text-decoration: none;
+      color: #1e3a2f;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .logo span span {
+      color: #2c6e49;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2d3e3b;
+      font-size: 0.85rem;
+    }
+
+    .nav-links a:hover {
+      color: #1b5e3f;
+    }
+
+    .book-header {
+      background: #eef4ed;
+      border-radius: 32px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .book-number {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #2c6e49;
+    }
+
+    .book-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0.5rem 0;
+    }
+
+    .book-subtitle {
+      font-size: 1.1rem;
+      color: #4a6a5c;
+    }
+
+    .book-cover {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .book-cover img {
+      max-width: 280px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .info-box {
+      background: #fff6e8;
+      border-left: 4px solid #c97e2a;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 16px;
+    }
+
+    .section {
+      margin: 2rem 0;
+    }
+
+    .section ul {
+      margin-left: 1.5rem;
+    }
+
+    .section li {
+      margin-bottom: 0.3rem;
+    }
+
+    .day-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+
+    .day-item {
+      background: #f7f4ef;
+      border-radius: 16px;
+      padding: 0.8rem 1rem;
+      text-align: center;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    .day-item span {
+      display: block;
+      font-weight: 700;
+      color: #2c6e49;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #1e3a2f;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 1rem 0.5rem 0 0;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-litres {
+      background: #ff5a5f;
+    }
+
+    .btn-litres:hover {
+      background: #e04e52;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #1e3a2f;
+      color: #1e3a2f;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.75rem;
+      color: #5f6c66;
+      background: #f1efe9;
+      margin-top: 3rem;
+    }
+
+    hr {
+      margin: 2rem 0;
+      border: none;
+      height: 1px;
+      background: #e2ddd4;
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      .book-title {
+        font-size: 1.5rem;
+      }
+      .day-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="/img/logo.jpeg" alt="Логотип">
+      <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#about">Об авторе</a>
+      <a href="index.html#books">Книги</a>
+      <a href="index.html#contacts">Контакты</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="book-header">
+    <div class="book-number">Книга 2.5</div>
+    <div class="book-title">Ключ к мантике</div>
+    <div class="book-subtitle">7-дневный переход от навигации к диалогу с рунами</div>
+  </div>
+
+  <div class="book-cover">
+    <img src="img/cover_book_25.jpg" alt="Ключ к мантике — обложка книги" onerror="this.src='https://placehold.co/300x400/eef4ed/2c6e49?text=%D0%9A%D0%BB%D1%8E%D1%87+%D0%BA+%D0%BC%D0%B0%D0%BD%D1%82%D0%B8%D0%BA%D0%B5'">
+  </div>
+
+  <div class="info-box">
+    <strong>🗝️ Для кого этот тренинг</strong><br><br>
+    В <strong>первой книге</strong> вы получили <strong>знание</strong>: руны — это этапы процесса, три времени — матрица.<br><br>
+    Во <strong>второй книге</strong> вы превратили знание в <strong>навык</strong>: научились определять своё состояние без рун.<br><br>
+    <strong>Третья книга</strong> — «Мантика без иллюзий» — потребует другого уровня мастерства: <strong>практики вопроса</strong>.<br><br>
+    Этот тренинг — <strong>Ключ</strong>. Он не заменит третью книгу, но подготовит вас к ней. За 7 дней вы превратите знания в навыки, которые потребуются для честного диалога.
+  </div>
+
+  <div class="section">
+    <h2>Что вы освоите за 7 дней</h2>
+    <ul>
+      <li>✅ Отличать момент, когда навигация заканчивается</li>
+      <li>✅ Формулировать вопросы, на которые руны могут ответить</li>
+      <li>✅ Входить в состояние «чистого листа» без тревоги</li>
+      <li>✅ Интерпретировать ответы без страха и иллюзий</li>
+      <li>✅ Переводить ответы рун в реальные действия</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Структура тренинга</h2>
+    <div class="day-list">
+      <div class="day-item"><span>День 0</span>Подготовка</div>
+      <div class="day-item"><span>День 1</span>Когда навигация заканчивается</div>
+      <div class="day-item"><span>День 2</span>Первый вопрос к рунам (без рун)</div>
+      <div class="day-item"><span>День 3</span>Состояние «чистого листа»</div>
+      <div class="day-item"><span>День 4</span>Одна руна — самый честный расклад</div>
+      <div class="day-item"><span>День 5</span>Три руны — «То, что есть → То, что происходит → То, что должно быть»</div>
+      <div class="day-item"><span>День 6</span>Как услышать ответ, а не свой страх</div>
+      <div class="day-item"><span>День 7</span>Интеграция: от ответа к действию</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Как работать с этим тренингом</h2>
+    <ul>
+      <li><strong>Формат:</strong> 7 дней, по одному упражнению в день</li>
+      <li><strong>Время:</strong> 10–20 минут в день</li>
+      <li><strong>Инструменты:</strong> Ваш Дневник навигации, ручка, тишина</li>
+      <li><strong>Правило:</strong> Не перескакивайте. Каждый день — это шаг. Пропустили день — вернитесь</li>
+    </ul>
+    <p style="margin-top: 1rem; background: #eef4ed; padding: 0.8rem 1.2rem; border-radius: 16px;">
+      <strong>📝 Важно:</strong> В конце каждого дня есть поле для записи. Записывайте обязательно. Без записей тренинг — просто чтение. С записями — практика.
+    </p>
+  </div>
+
+  <div class="info-box">
+    <strong>🧠 Нужны ли вам руны для этого тренинга?</strong><br><br>
+    <strong>Нет.</strong> Этот тренинг — про <strong>понимание</strong>, а не про инструменты. Вы учитесь формулировать вопросы, входить в состояние диалога и интерпретировать ответы. Всё это можно делать с помощью книг серии и вашего Дневника.<br><br>
+    Физические руны здесь — лишь возможное дополнение, а не обязательное условие.
+  </div>
+
+  <div class="section">
+    <h2>Чек-лист готовности</h2>
+    <ul>
+      <li>✅ Я знаю названия и значения 24 рун как этапов процесса</li>
+      <li>✅ Я могу определить своё состояние в конкретной ситуации</li>
+      <li>✅ Я понимаю, что делать в каждом состоянии (сужать, выбирать, останавливаться)</li>
+      <li>✅ Я веду или вёл Дневник навигации хотя бы несколько дней</li>
+      <li>✅ Я сталкивался с ситуацией, когда знал своё состояние, но не знал, что делать дальше</li>
+    </ul>
+    <p style="margin-top: 1rem; background: #fff6e8; padding: 0.8rem 1.2rem; border-radius: 16px;">
+      <strong>⚠️ Если вы отметили меньше 4 пунктов из 5 — остановитесь.</strong> Откройте книгу «Психология рун. Руническая навигация». Пройдите её заново. Ключ подождёт.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Карта перехода: навигация или мантика</h2>
+    <ul>
+      <li><strong>Если вы знаете своё состояние и чётко понимаете, что делать</strong> → <strong>Навигация</strong> (Книга 2)</li>
+      <li><strong>Если вы знаете своё состояние, но не знаете, что делать, или боитесь делать</strong> → <strong>Мантика</strong> (Книга 3)</li>
+      <li><strong>Если вы не знаете своё состояние</strong> → Сначала <strong>Навигация</strong> (Книга 2), потом <strong>Мантика</strong> (Книга 3)</li>
+      <li><strong>Если вы получили ответ от рун, но не знаете, что с ним делать</strong> → Вернуться к <strong>Навигации</strong> (Книга 2)</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div style="text-align: center; margin: 1rem 0 2rem;">
+    <p style="font-size: 1.1rem; font-weight: 600; color: #1e3a2f;">«Не бойтесь спрашивать. Но не забывайте действовать.»</p>
+    <p style="color: #5f6c66;">Этот тренинг — подарок для читателей серии «Инженерная модель реальности».</p>
+  </div>
+
+  <div class="btn-group">
+    <a href="https://www.litres.ru/74093559/" class="btn btn-litres" target="_blank">📖 Читать на Литрес</a>
+    <a href="index.html#books" class="btn btn-outline">← Назад к книгам</a>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© Дмитрий Антонов · Руны как этапы процесса</p>
+    <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Путь от хаоса к ясности начинается с одного шага»</p>
+    <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
