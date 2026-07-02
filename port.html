@@ -1,172 +1,552 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Портфолио</title>
-    <meta name="theme-color" content="#fff">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
-    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
-    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.min.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/main.min.css">
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__logo"><a class="Портфолио" href="index.html"> Dima A         </a></div>
-      <div class="header__menuwrapper">
-        <ul class="header__navmenu">           
-          <li class="header__navmenu-item Портфолио"><a class="Портфолио" href="contact.html">Контакты</a></li>
-          <li class="header__navmenu-item header__navmenu-item-active"><a href="port.html"><a href="port.html">Портфолио</a></a></li>
-          <li class="header__navmenu-item Портфолио"><a href="about.html">Обо мне</a></li>
-        </ul>
-        <div class="header__mini-nav"><a href="#"><p class="header__mini-nav-down"> <span></span></p> <p class="header__mini-nav-up"> X </p></a></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Инженерный бэкграунд — Дмитрий Антонов</title>
+  <meta name="description" content="Инженерный бэкграунд Дмитрия Антонова: ИТ-эксперименты, системная логика, практические навыки программирования и разработки.">
+  <meta name="keywords" content="инженерный бэкграунд, ИТ-эксперименты, программирование, системная логика, Дмитрий Антонов, портфолио разработчика">
+  <meta name="author" content="Дмитрий Антонов">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dimaa.ru/lab.html">
+  <meta property="og:title" content="Инженерный бэкграунд — Дмитрий Антонов">
+  <meta property="og:description" content="Инженерный бэкграунд: ИТ-эксперименты, системная логика, практические навыки программирования и разработки.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dimaa.ru/lab.html">
+  <meta property="og:site_name" content="Инженерная модель реальности">
+  <meta property="og:image" content="https://dimaa.ru/img/logo.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
+  <link rel="shortcut icon" href="/img/logo.jpeg">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf9f8;
+      font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', sans-serif;
+      line-height: 1.5;
+      color: #1e1e2a;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: #1e3a2f;
+    }
+
+    .navbar {
+      padding: 1rem 0;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e2e6;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.94);
+      z-index: 10;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: -0.3px;
+      text-decoration: none;
+      color: #1e3a2f;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .logo span span {
+      color: #2c6e49;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2d3e3b;
+      font-size: 0.85rem;
+    }
+
+    .nav-links a:hover {
+      color: #1b5e3f;
+    }
+
+    .lab-header {
+      background: #eef4ed;
+      border-radius: 32px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .lab-header h1 {
+      font-size: 2.2rem;
+    }
+
+    .lab-header .sub {
+      font-size: 1rem;
+      color: #4a6a5c;
+      margin-top: 0.5rem;
+    }
+
+    .lab-intro {
+      background: white;
+      border-radius: 32px;
+      padding: 1.5rem 2rem;
+      margin: 1.5rem 0;
+      border: 1px solid #e2ddd4;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+    }
+
+    .lab-intro p {
+      font-size: 1.05rem;
+      color: #2d3e3b;
+    }
+
+    .lab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .lab-card {
+      background: white;
+      border-radius: 24px;
+      padding: 1.2rem;
+      border: 1px solid #e2ddd4;
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lab-card:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05), 0 0 0 1px #d4cfc5;
+    }
+
+    .lab-card-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #1e3a2f;
+      margin-bottom: 0.3rem;
+    }
+
+    .lab-card-tech {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #7a8a82;
+      margin-bottom: 0.8rem;
+    }
+
+    .lab-card img {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid #eee8e0;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      background: #f7f4ef;
+    }
+
+    .lab-card-links {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .lab-card-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #1e3a2f;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.75rem;
+    }
+
+    .lab-card-links a.github {
+      background: #24292e;
+    }
+
+    .lab-card-links a:hover {
+      opacity: 0.85;
+    }
+
+    .lab-card-num {
+      font-size: 0.65rem;
+      color: #8a7f6d;
+      margin-top: 0.5rem;
+      text-align: right;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.75rem;
+      color: #5f6c66;
+      background: #f1efe9;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .lab-grid {
+        grid-template-columns: 1fr;
+      }
+      .lab-header h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="/img/logo.jpeg" alt="Логотип">
+      <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#about">Об авторе</a>
+      <a href="index.html#books">Книги</a>
+      <a href="index.html#contacts">Контакты</a>
+      <a href="lab.html">🧪 Лаборатория</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="lab-header">
+    <h1>🧪 Инженерный бэкграунд</h1>
+    <div class="sub">Цифровая лаборатория Дмитрия Антонова</div>
+  </div>
+
+  <div class="lab-intro">
+    <p>Здесь я храню свои практические ИТ-эксперименты, которые помогают мне поддерживать навыки программирования и изучать системную логику. Каждый проект — это шаг в понимании того, как устроены процессы, алгоритмы и взаимодействие систем.</p>
+  </div>
+
+  <div class="lab-grid">
+    <!-- Данные из вашего портфолио (сокращённо, но все 24 работы) -->
+    <div class="lab-card">
+      <div class="lab-card-title">Телеграм бот</div>
+      <div class="lab-card-tech">JS · NODE.JS · @Dimaaru</div>
+      <img src="./img/bot.png" alt="Телеграм бот" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://github.com/Dmirii/TelegramBot" target="_blank" class="github">🐙 Код</a>
       </div>
-    </header>
-    <!--li.header__navmenu-item(class= title=="Главная" ? 'header__navmenu-item-active' : title): a(href="index.html" class = title ) Главная.header__mini-nav: a(href="#" ) <p class="header__mini-nav-down"> V </p> <p class="header__mini-nav-up"> X </p>
-    -->
-    <section class="porto">
-      <div class="porto__topwrapper"></div>
-      <div class="porto__title">Нажмите на картинку для просмотра работы. Нажмите на <i>OctoCat</i> для просмотра кода.</div>
-      <div class="porto__container">
-            <div class="porto__item">
-              <div class="porto__item-title">Телеграм бот</div><a data-tooltip="JS, NODE.JS, @Dimaaru" href="https://github.com/Dmirii/TelegramBot" target="_blank"><img class="porto__item-img" src="./img/bot.png" alt="JS, NODE.JS, @Dimaaru"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/TelegramBot" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №24</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">Интернет магазин</div><a data-tooltip="JS, SCSS, HTML" href="https://dmirii.github.io/flmarafon/" target="_blank"><img class="porto__item-img" src="./img/fl.png" alt="JS, SCSS, HTML"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/flmarafon" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №23</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">Hunter game</div><a data-tooltip="Чистый JS" href="https://dmirii.github.io/hunter/" target="_blank"><img class="porto__item-img" src="./img/hunter.png" alt="Чистый JS"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/hunter" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №22</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">Ikea</div><a data-tooltip="Чистый JS" href="https://dmirii.github.io/ikea/" target="_blank"><img class="porto__item-img" src="./img/ikea.png" alt="Чистый JS"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/ikea" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №21</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">Flappy</div><a data-tooltip="Чистый JS" href="https://dmirii.github.io/Flappy/" target="_blank"><img class="porto__item-img" src="./img/flappy.png" alt="Чистый JS"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/Flappy" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №20</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">Need for JS</div><a data-tooltip="Чистый JS" href="https://dmirii.github.io/nfjs/" target="_blank"><img class="porto__item-img" src="./img/nfjs.png" alt="Чистый JS"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/nfjs" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №19</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">MERN(только src)</div><a data-tooltip="Mogo, Express, Node,React JS, Fetch" href="https://github.com/Dmirii/mern" target="_blank"><img class="porto__item-img" src="./img/surl.png" alt="Mogo, Express, Node,React JS, Fetch"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/mern" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №18</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">Todo React</div><a data-tooltip="React JS, Fetch, lazyLoad" href="https://dmirii.github.io/reactTodo/" target="_blank"><img class="porto__item-img" src="./img/reacttodo.png" alt="React JS, Fetch, lazyLoad"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/reactTodo" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №17</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">Money calc</div><a data-tooltip="React JS" href="https://dmirii.github.io/reactCalc/" target="_blank"><img class="porto__item-img" src="./img/monycalcreact.png" alt="React JS"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/reactCalc" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №16</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">Ya Tunes</div><a data-tooltip="JS" href="https://dmirii.github.io/yatuns/" target="_blank"><img class="porto__item-img" src="./img/yatuns.png" alt="JS"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/yatuns" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №15</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">UI Компоненты</div><a data-tooltip="JS,SCSS,динамический HTML ,webpack" href="https://dmirii.github.io/DIM/" target="_blank"><img class="porto__item-img" src="./img/js.png" alt="JS,SCSS,динамический HTML ,webpack"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/DIM" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №14</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">FireBase App</div><a data-tooltip="JS,MUI,динамический HTML ,webpack,Работа с Firebase" href="https://vnode-app.firebaseapp.com/" target="_blank"><img class="porto__item-img" src="./img/vnode.png" alt="JS,MUI,динамический HTML ,webpack,Работа с Firebase"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/vNode" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №13</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">Framwork(Excel)</div><a data-tooltip="JS, SCSS, динамический HTML ,webpack, Курс от Владилена Минина" href="https://dmirii.github.io/Framework/" target="_blank"><img class="porto__item-img" src="./img/excel.png" alt="JS, SCSS, динамический HTML ,webpack, Курс от Владилена Минина"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/ExelCourse" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №12</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">Awito</div><a data-tooltip="Мой JS" href="https://dmirii.github.io/Awito/" target="_blank"><img class="porto__item-img" src="./img/awito.png" alt="Мой JS"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/Awito" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №11</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">Yoga туры</div><a data-tooltip="Мой JS, Собрано Webpack" href="https://dmirii.github.io/yoga/" target="_blank"><img class="porto__item-img" src="./img/yoga.png" alt="Мой JS, Собрано Webpack"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/yoga" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №10</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">ghostbusters</div><a data-tooltip="HTML+SCSS+JS. Интенсив по верстке. Glo" href="https://dmirii.github.io/ghost/" target="_blank"><img class="porto__item-img" src="./img/gb.png" alt="HTML+SCSS+JS. Интенсив по верстке. Glo"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/ghost" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №9</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">moneyKeeper</div><a data-tooltip="Первое SPA. JS+  чуть адаптива FLEX+ media" href="https://dmirii.github.io/monyekeeper/" target="_blank"><img class="porto__item-img" src="./img/monye.png" alt="Первое SPA. JS+  чуть адаптива FLEX+ media"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/monyekeeper" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №8</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">ПОРТФОЛИО</div><a data-tooltip="PUG + SASS +JS. Адаптив FLEX+ media" href="https://dimaa.ru" target="_blank"><img class="porto__item-img" src="./img/porto.png" alt="PUG + SASS +JS. Адаптив FLEX+ media"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/myPort" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №7</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">NETCLICKS</div><a data-tooltip="Мой только JS" href="https://dmirii.github.io/netclicks/" target="_blank"><img class="porto__item-img" src="./img/net.png" alt="Мой только JS"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/netclicks" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №6</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">ПОДБОР ПУЛЬСОМЕТРА</div><a data-tooltip="HTML(Bootstrap Grid) + SASS + JS + БЭМ" href="https://dmirii.github.io/puls_p/" target="_blank"><img class="porto__item-img" src="./img/puls.png" alt="HTML(Bootstrap Grid) + SASS + JS + БЭМ"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/puls" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №5</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">UBER PARTNERS</div><a data-tooltip="HTML + Bootstrap + SASS " href="https://dmirii.github.io/uber/" target="_blank"><img class="porto__item-img" src="./img/uber.png" alt="HTML + Bootstrap + SASS "></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/uber" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №4</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">WORDPRESS ИНТЕНСИВ</div><a data-tooltip="Простой HTML и SASS" href="https://dmirii.github.io/Scss/" target="_blank"><img class="porto__item-img" src="./img/wpi.png" alt="Простой HTML и SASS"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://dmirii.github.io/Scss/" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №3</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">MOUNTAIN</div><a data-tooltip="Простой HTML и CSS" href="https://dmirii.github.io/Mountain/" target="_blank"><img class="porto__item-img" src="./img/mount.png" alt="Простой HTML и CSS"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/Scss" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №2</div>
-            </div>
-            <div class="porto__item">
-              <div class="porto__item-title">Новости культуры</div><a data-tooltip="Простой HTML и CSS" href="https://dmirii.github.io/Culture_News/" target="_blank"><img class="porto__item-img" src="./img/cnp.png" alt="Простой HTML и CSS"></a>
-              <div class="porto__item-descr-wrap"></div><a href="https://github.com/Dmirii/Culture_News" target="_blank"><img src="./img/GitHub.png" alt=""></a>
-              <div class="porto__item-txt">работа №1</div>
-            </div>
+      <div class="lab-card-num">#24</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Интернет магазин</div>
+      <div class="lab-card-tech">JS · SCSS · HTML</div>
+      <img src="./img/fl.png" alt="Интернет магазин" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/flmarafon/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/flmarafon" target="_blank" class="github">🐙 Код</a>
       </div>
-    </section>
-    <script src="js/main.min.js"></script>
-  </body>
+      <div class="lab-card-num">#23</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Hunter game</div>
+      <div class="lab-card-tech">Чистый JS</div>
+      <img src="./img/hunter.png" alt="Hunter game" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/hunter/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/hunter" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#22</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Ikea</div>
+      <div class="lab-card-tech">Чистый JS</div>
+      <img src="./img/ikea.png" alt="Ikea" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/ikea/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/ikea" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#21</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Flappy</div>
+      <div class="lab-card-tech">Чистый JS</div>
+      <img src="./img/flappy.png" alt="Flappy" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/Flappy/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/Flappy" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#20</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Need for JS</div>
+      <div class="lab-card-tech">Чистый JS</div>
+      <img src="./img/nfjs.png" alt="Need for JS" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/nfjs/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/nfjs" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#19</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">MERN (только src)</div>
+      <div class="lab-card-tech">Mongo · Express · React · Node · Fetch</div>
+      <img src="./img/surl.png" alt="MERN" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://github.com/Dmirii/mern" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#18</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Todo React</div>
+      <div class="lab-card-tech">React · Fetch · lazyLoad</div>
+      <img src="./img/reacttodo.png" alt="Todo React" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/reactTodo/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/reactTodo" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#17</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Money calc</div>
+      <div class="lab-card-tech">React</div>
+      <img src="./img/monycalcreact.png" alt="Money calc" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/reactCalc/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/reactCalc" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#16</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Ya Tunes</div>
+      <div class="lab-card-tech">JS</div>
+      <img src="./img/yatuns.png" alt="Ya Tunes" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/yatuns/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/yatuns" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#15</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">UI Компоненты</div>
+      <div class="lab-card-tech">JS · SCSS · Webpack · Динамический HTML</div>
+      <img src="./img/js.png" alt="UI Компоненты" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/DIM/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/DIM" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#14</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">FireBase App</div>
+      <div class="lab-card-tech">JS · MUI · Webpack · Firebase</div>
+      <img src="./img/vnode.png" alt="FireBase App" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://vnode-app.firebaseapp.com/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/vNode" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#13</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Framework (Excel)</div>
+      <div class="lab-card-tech">JS · SCSS · Webpack</div>
+      <img src="./img/excel.png" alt="Framework" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/Framework/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/ExelCourse" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#12</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Awito</div>
+      <div class="lab-card-tech">JS</div>
+      <img src="./img/awito.png" alt="Awito" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/Awito/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/Awito" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#11</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Yoga туры</div>
+      <div class="lab-card-tech">JS · Webpack</div>
+      <img src="./img/yoga.png" alt="Yoga туры" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/yoga/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/yoga" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#10</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Ghostbusters</div>
+      <div class="lab-card-tech">HTML · SCSS · JS</div>
+      <img src="./img/gb.png" alt="Ghostbusters" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/ghost/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/ghost" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#9</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">MoneyKeeper</div>
+      <div class="lab-card-tech">JS · Flex · Media</div>
+      <img src="./img/monye.png" alt="MoneyKeeper" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/monyekeeper/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/monyekeeper" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#8</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Портфолио</div>
+      <div class="lab-card-tech">PUG · SASS · JS · Flex · Media</div>
+      <img src="./img/porto.png" alt="Портфолио" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dimaa.ru" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/myPort" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#7</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Netclicks</div>
+      <div class="lab-card-tech">JS</div>
+      <img src="./img/net.png" alt="Netclicks" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/netclicks/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/netclicks" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#6</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Пульсометр</div>
+      <div class="lab-card-tech">Bootstrap · SASS · JS · БЭМ</div>
+      <img src="./img/puls.png" alt="Пульсометр" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/puls_p/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/puls" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#5</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Uber Partners</div>
+      <div class="lab-card-tech">HTML · Bootstrap · SASS</div>
+      <img src="./img/uber.png" alt="Uber" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/uber/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/uber" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#4</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">WordPress Интенсив</div>
+      <div class="lab-card-tech">HTML · SASS</div>
+      <img src="./img/wpi.png" alt="WordPress" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/Scss/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/Scss" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#3</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Mountain</div>
+      <div class="lab-card-tech">HTML · CSS</div>
+      <img src="./img/mount.png" alt="Mountain" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/Mountain/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/Mountain" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#2</div>
+    </div>
+
+    <div class="lab-card">
+      <div class="lab-card-title">Новости культуры</div>
+      <div class="lab-card-tech">HTML · CSS</div>
+      <img src="./img/cnp.png" alt="Новости культуры" loading="lazy">
+      <div class="lab-card-links">
+        <a href="https://dmirii.github.io/Culture_News/" target="_blank">🌐 Демо</a>
+        <a href="https://github.com/Dmirii/Culture_News" target="_blank" class="github">🐙 Код</a>
+      </div>
+      <div class="lab-card-num">#1</div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© Дмитрий Антонов · Руны как этапы процесса</p>
+    <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Мир устроен системно. Руны — это способ увидеть и настроить его процессы»</p>
+    <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
+  </div>
+</footer>
+
+</body>
 </html>
