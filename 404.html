@@ -12,107 +12,115 @@
         }
 
         body {
-            background: #0f0c0a;
+            background: #faf9f8;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 16px;
             font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', serif;
-            color: #e2dcd5;
+            color: #1e1e2a;
         }
 
         .card {
-            max-width: 480px;
+            max-width: 520px;
             width: 100%;
-            background: #1a1613;
+            background: white;
             border-left: 4px solid #b87c4f;
-            border-radius: 20px;
-            padding: 20px 18px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            border-radius: 28px;
+            padding: 28px 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06), 0 0 0 1px #e2ddd4;
         }
 
         .rune {
             text-align: center;
-            font-size: 2.2rem;
-            letter-spacing: 6px;
-            color: #e0b185;
-            margin-bottom: 8px;
+            font-size: 2.4rem;
+            letter-spacing: 8px;
+            color: #b87c4f;
+            margin-bottom: 4px;
         }
 
         h2 {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             font-weight: 500;
             text-align: center;
-            color: #eedbcb;
+            color: #1e3a2f;
             margin-bottom: 4px;
         }
 
         .sub {
             text-align: center;
             font-size: 0.7rem;
-            color: #b68b65;
+            color: #8a7f6d;
             text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 20px;
         }
 
         .box {
-            background: #0f0d0b;
+            background: #f7f4ef;
             border-radius: 20px;
-            padding: 14px 16px;
+            padding: 14px 18px;
             margin: 16px 0;
-            border: 1px solid #36281e;
+            border: 1px solid #ece8e2;
         }
 
         .box-title {
             font-size: 0.75rem;
             letter-spacing: 1.5px;
-            color: #c2946c;
-            margin-bottom: 8px;
+            color: #b87c4f;
+            margin-bottom: 6px;
             display: flex;
             gap: 6px;
             align-items: center;
+            font-weight: 600;
         }
 
         .box-text {
             font-size: 0.95rem;
             line-height: 1.4;
+            color: #2d3e3b;
         }
 
         .rune-badge {
-            background: #2b211c;
-            padding: 2px 8px;
+            background: #ece4db;
+            padding: 2px 10px;
             border-radius: 20px;
             font-size: 0.8rem;
             font-family: monospace;
-            color: #e7ba8e;
+            color: #784e2c;
             display: inline-block;
         }
 
         .step {
             display: flex;
             gap: 10px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             align-items: flex-start;
         }
 
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
         .step-num {
-            background: #2c211b;
+            background: #eef4ed;
             width: 24px;
             height: 24px;
             border-radius: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.75rem;
-            font-weight: bold;
+            font-size: 0.7rem;
+            font-weight: 600;
             flex-shrink: 0;
-            color: #e7b48b;
+            color: #1e3a2f;
         }
 
         .step-text {
             font-size: 0.88rem;
             line-height: 1.35;
+            color: #2d3e3b;
         }
 
         .btn-group {
@@ -126,29 +134,28 @@
             display: block;
             text-align: center;
             background: none;
-            border: 1px solid #9b6e4b;
+            border: 1px solid #1e3a2f;
             padding: 10px 12px;
             border-radius: 40px;
-            color: #f2e0d2;
+            color: #1e3a2f;
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
+            transition: 0.2s;
         }
 
         .btn-primary {
-            background: #5e3a25;
-            border-color: #c69062;
+            background: #1e3a2f;
+            border-color: #1e3a2f;
+            color: white;
         }
 
-        .search-input {
-            width: 100%;
-            background: #0c0907;
-            border: 1px solid #4d3626;
-            padding: 10px 14px;
-            border-radius: 40px;
-            color: #eedbcb;
-            font-size: 0.85rem;
-            margin-top: 8px;
+        .btn-primary:hover {
+            background: #0f2c22;
+        }
+
+        .btn:hover {
+            background: #1e3a2f0c;
         }
 
         .footer {
@@ -156,9 +163,18 @@
             font-size: 0.7rem;
             margin-top: 16px;
             padding-top: 12px;
-            border-top: 1px solid #2f241e;
-            color: #b68b65;
+            border-top: 1px solid #ece8e2;
+            color: #8a7f6d;
             font-style: italic;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 20px 16px;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
@@ -168,16 +184,14 @@
     <h2>Путь не найден</h2>
     <div class="sub">код · не в потоке</div>
 
-    <!-- где ты -->
     <div class="box">
         <div class="box-title">ᛝ ТЫ ЗДЕСЬ</div>
         <div class="box-text">
-            Этой страницы <strong>нет в потоке</strong>.  
+            Этой страницы <strong>нет в потоке</strong>.
             Узел <span class="rune-badge">ᚺ Хагалаз</span> — разрыв навигации.
         </div>
     </div>
 
-    <!-- что делать -->
     <div class="box">
         <div class="box-title">ᚦ ЧТО ДАЛЬШЕ</div>
         <div class="step">
@@ -194,7 +208,7 @@
         </div>
         <div class="step">
             <div class="step-num">4</div>
-            <div class="step-text">Поиск = <span class="rune-badge">ᚦ Турисаз</span>. Напиши ниже.</div>
+            <div class="step-text">Вернись к <span class="rune-badge">ᚦ Турисаз</span> — выбери правильный адрес.</div>
         </div>
     </div>
 
@@ -203,19 +217,9 @@
         <a href="/rune-map.html" class="btn">ᛉ Карта рун (24 этапа)</a>
     </div>
 
-    <input type="text" class="search-input" id="search" placeholder="Поиск... (Турисаз)" onkeypress="if(event.key==='Enter'){searchIt()}">
-
     <div class="footer">
         ᚱᚢᚾ · ошибка не случайна — ты ещё не прочитал эту руну
     </div>
 </div>
-
-<script>
-    function searchIt() {
-        let q = document.getElementById('search').value.trim();
-        if(!q) { alert('Напиши что ищешь'); return; }
-        window.location.href = '/search?q=' + encodeURIComponent(q);
-    }
-</script>
 </body>
 </html>
