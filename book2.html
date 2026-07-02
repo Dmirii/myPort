@@ -98,6 +98,10 @@
       border-radius: 8px;
     }
 
+    .logo span span {
+      color: #2c6e49;
+    }
+
     .nav-links {
       display: flex;
       gap: 1.2rem;
@@ -230,6 +234,66 @@
       flex-shrink: 0;
     }
 
+    /* ===== БЛОК «ДРУГИЕ КНИГИ СЕРИИ» ===== */
+    .series-books {
+      background: #f7f4ef;
+      border-radius: 24px;
+      padding: 1.5rem 1.5rem 0.5rem;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .series-books h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #1e3a2f;
+    }
+
+    .series-books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+
+    .series-book-item {
+      background: white;
+      border-radius: 16px;
+      padding: 0.8rem 1rem;
+      border: 1px solid #e2ddd4;
+      text-align: center;
+    }
+
+    .series-book-item .sb-number {
+      font-size: 0.6rem;
+      color: #8a7f6d;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .series-book-item .sb-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #1e3a2f;
+      margin: 0.2rem 0;
+    }
+
+    .series-book-item .sb-status {
+      font-size: 0.65rem;
+      color: #2c6e49;
+    }
+
+    .series-book-item .sb-status.soon {
+      color: #c97e2a;
+    }
+
+    .series-book-item a {
+      text-decoration: none;
+      display: block;
+    }
+
+    .series-book-item a:hover .sb-title {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -237,19 +301,6 @@
       color: #5f6c66;
       background: #f1efe9;
       margin-top: 3rem;
-    }
-
-    footer a {
-      color: #5f6c66;
-      text-decoration: none;
-      border-bottom: 1px dotted #5f6c66;
-    }
-
-    hr {
-      margin: 2rem 0;
-      border: none;
-      height: 1px;
-      background: #e2ddd4;
     }
 
     @media (max-width: 640px) {
@@ -272,6 +323,9 @@
         min-width: auto;
         font-size: 0.9rem;
       }
+      .series-books-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
@@ -283,8 +337,8 @@
       <img src="/img/logo.jpeg" alt="Логотип">
       <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
     </a>
-    <div class="nav-links">     
-       <a href="index.html#about">Об авторе</a>
+    <div class="nav-links">
+      <a href="index.html#about">Об авторе</a>
       <a href="index.html#books">Книги</a>
       <a href="index.html#contacts">Контакты</a>
       <a href="methodology.html">📐 Методология</a>
@@ -386,6 +440,33 @@
     <p><strong>📌 После этой книги — третья:</strong> «Мантика без иллюзий» — диалог с Создателем через руны. Если вы научились видеть свои состояния, вы готовы задавать вопросы.</p>
   </div>
 
+  <!-- ===== ДРУГИЕ КНИГИ СЕРИИ ===== -->
+  <div class="series-books">
+    <h3>📚 Другие книги серии</h3>
+    <div class="series-books-grid">
+      <a href="book1.html" class="series-book-item">
+        <div class="sb-number">Книга 1</div>
+        <div class="sb-title">Инженерная модель реальности</div>
+        <div class="sb-status">✅ Доступна</div>
+      </a>
+      <a href="book25.html" class="series-book-item">
+        <div class="sb-number">Книга 2.5</div>
+        <div class="sb-title">Ключ к мантике</div>
+        <div class="sb-status">✅ Доступна</div>
+      </a>
+      <a href="book3.html" class="series-book-item">
+        <div class="sb-number">Книга 3</div>
+        <div class="sb-title">Мантика без иллюзий</div>
+        <div class="sb-status">✅ Доступна</div>
+      </a>
+      <div class="series-book-item" style="opacity:0.5;">
+        <div class="sb-number">Книга 4</div>
+        <div class="sb-title">Рунический менеджмент</div>
+        <div class="sb-status soon">📝 Планируется</div>
+      </div>
+    </div>
+  </div>
+
   <!-- ===== КНОПКИ ===== -->
   <div style="margin: 1rem 0 2rem;">
     <a href="https://www.litres.ru/74056056/" class="btn btn-litres" target="_blank">📘 Купить на Литрес</a>
@@ -397,7 +478,7 @@
   <div class="container">
     <p>© Дмитрий Антонов · Руны как этапы процесса</p>
     <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Руническая навигация — это умение спросить себя: где я сейчас?»</p>
-    <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html">Политика обработки данных</a></p>
+    <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
   </div>
 </footer>
 
