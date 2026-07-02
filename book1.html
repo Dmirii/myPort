@@ -98,6 +98,10 @@
       border-radius: 8px;
     }
 
+    .logo span span {
+      color: #2c6e49;
+    }
+
     .nav-links {
       display: flex;
       gap: 1.2rem;
@@ -179,6 +183,71 @@
       color: #1e3a2f;
     }
 
+    .btn-outline:hover {
+      background: #1e3a2f;
+      color: white;
+    }
+
+    /* ===== БЛОК «ДРУГИЕ КНИГИ СЕРИИ» ===== */
+    .series-books {
+      background: #f7f4ef;
+      border-radius: 24px;
+      padding: 1.5rem 1.5rem 0.5rem;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .series-books h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #1e3a2f;
+    }
+
+    .series-books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+
+    .series-book-item {
+      background: white;
+      border-radius: 16px;
+      padding: 0.8rem 1rem;
+      border: 1px solid #e2ddd4;
+      text-align: center;
+    }
+
+    .series-book-item .sb-number {
+      font-size: 0.6rem;
+      color: #8a7f6d;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .series-book-item .sb-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #1e3a2f;
+      margin: 0.2rem 0;
+    }
+
+    .series-book-item .sb-status {
+      font-size: 0.65rem;
+      color: #2c6e49;
+    }
+
+    .series-book-item .sb-status.soon {
+      color: #c97e2a;
+    }
+
+    .series-book-item a {
+      text-decoration: none;
+      display: block;
+    }
+
+    .series-book-item a:hover .sb-title {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -199,6 +268,9 @@
       h2 {
         font-size: 1.3rem;
       }
+      .series-books-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
@@ -216,7 +288,6 @@
       <a href="index.html#contacts">Контакты</a>
       <a href="methodology.html">📐 Методология</a>
       <a href="port.html">🧪 Лаборатория</a>
-      
     </div>
   </div>
 </nav>
@@ -283,6 +354,33 @@
 
   <div class="info-block">
     <p style="font-style: italic;">«Эта книга — первая из серии. Её задача — дать систему. Без магии. Без ритуалов. Без „тайных знаний“. Только структура, логика, примеры из быта, бизнеса, продаж и отношений.»</p>
+  </div>
+
+  <!-- ===== ДРУГИЕ КНИГИ СЕРИИ ===== -->
+  <div class="series-books">
+    <h3>📚 Другие книги серии</h3>
+    <div class="series-books-grid">
+      <a href="book2.html" class="series-book-item">
+        <div class="sb-number">Книга 2</div>
+        <div class="sb-title">Психология рун</div>
+        <div class="sb-status">✅ Доступна</div>
+      </a>
+      <a href="book25.html" class="series-book-item">
+        <div class="sb-number">Книга 2.5</div>
+        <div class="sb-title">Ключ к мантике</div>
+        <div class="sb-status">✅ Доступна</div>
+      </a>
+      <a href="book3.html" class="series-book-item">
+        <div class="sb-number">Книга 3</div>
+        <div class="sb-title">Мантика без иллюзий</div>
+        <div class="sb-status">✅ Доступна</div>
+      </a>
+      <div class="series-book-item" style="opacity:0.5;">
+        <div class="sb-number">Книга 4</div>
+        <div class="sb-title">Рунический менеджмент</div>
+        <div class="sb-status soon">📝 Планируется</div>
+      </div>
+    </div>
   </div>
 
   <div style="margin: 1rem 0 2rem;">
