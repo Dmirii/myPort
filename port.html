@@ -189,17 +189,6 @@
       background: #f7f4ef;
     }
 
-    .lab-card ul {
-      font-size: 0.85rem;
-      color: #2d3e3b;
-      padding-left: 1.2rem;
-      margin: 0.2rem 0 0.5rem;
-    }
-
-    .lab-card ul li {
-      margin-bottom: 0.2rem;
-    }
-
     .lab-card-links {
       display: flex;
       gap: 0.8rem;
@@ -238,18 +227,18 @@
     .lab-card .project-desc {
       font-size: 0.85rem;
       color: #2d3e3b;
-      margin: 0.8rem 0;
+      margin: 0.5rem 0;
     }
 
-    .lab-card .project-desc strong {
-      color: #1e3a2f;
+    .lab-card .project-desc p {
+      margin-bottom: 0.2rem;
     }
 
     .lab-card .insight {
       font-style: italic;
       color: #7a8a82;
       font-size: 0.8rem;
-      margin-top: 0.3rem;
+      margin-top: 0.2rem;
     }
 
     footer {
@@ -259,24 +248,6 @@
       color: #5f6c66;
       background: #f1efe9;
       margin-top: 2rem;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 0.5rem 0 1rem;
-      font-size: 0.8rem;
-    }
-
-    .footer-links a {
-      color: #5f6c66;
-      text-decoration: none;
-    }
-
-    .footer-links a:hover {
-      text-decoration: underline;
     }
 
     @media (max-width: 640px) {
@@ -323,22 +294,14 @@
 
   <div class="lab-grid">
 
-    <!-- ===== УМНЫЙ ДОМ ВЫХОДНОГО ДНЯ ===== -->
+    <!-- ===== УМНЫЙ ДОМ ВЫХОДНОГО ДНЯ (КОМПАКТНАЯ ВЕРСИЯ) ===== -->
     <div class="lab-card" style="border-left: 4px solid #1e3a2f;">
       <div class="lab-card-title">🏠 Умный дом выходного дня</div>
-      <div class="lab-card-tech">IoT · Xiaomi/Aqara · ZigBee · Автоматизация · Климат-контроль</div>
-      <img src="./img/smart.png" alt="Умный дом — автоматизация дачи" loading="lazy">
+      <div class="lab-card-tech">IoT · Xiaomi/Aqara · ZigBee · Автоматизация</div>
+      <img src="./img/smart.png" alt="Умный дом — автоматизация дачи" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22169%22%3E%3Crect width=%22300%22 height=%22169%22 fill=%22%23eef4ed%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22 fill=%22%234a6a5c%22 font-size=%2216%22 font-family=%22system-ui%22%3E🏠 Умный дом%3C/text%3E%3C/svg%3E'">
       <div class="project-desc">
-        <p><strong>Задача:</strong> Обеспечить удалённый контроль, экономию отопления и автоматическую вентиляцию загородного дома.</p>
-        <p style="margin-top: 0.3rem;"><strong>Решения:</strong></p>
-        <ul>
-          <li>Автоматизация шиберной заслонки дымохода и вентиляции (сервопривод 220V + 2-канальное реле Aqara)</li>
-          <li>Сценарии климат-контроля: эконом-режим (+7°C) в будни → прогрев до комфортной (+23°C) к выходным</li>
-          <li>Сеть датчиков ZigBee: температура, влажность, протечка воды, открытие дверей/окон</li>
-          <li>Логика: при включении вытяжки автоматически открывается воздушный заслон</li>
-        </ul>
-        <p style="margin-top: 0.5rem;"><strong>Результат:</strong> Экономия отопления до 40% в будни, мгновенные уведомления о протечках.</p>
-        <div class="insight">«Инсайт: при проектировании IoT для редко посещаемых помещений критически важна аппаратная защита — возвратные пружины в приводах заслонок».</div>
+        <p><strong>Задача:</strong> Удалённый контроль, экономия отопления и автоматическая вентиляция дачи.</p>
+        <p><strong>Результат:</strong> Экономия до 40% в будни, мгновенные уведомления о протечках.</p>
       </div>
       <div class="lab-card-links">
         <a href="https://pikabu.ru/story/umnyiy_dom_vyikhodnogo_dnya_xiaomi_7690972" target="_blank" style="background: #c97e2a;">📄 Подробнее</a>
@@ -346,7 +309,7 @@
       <div class="lab-card-num">Актуальный проект · 2020 — настоящее время</div>
     </div>
 
-    <!-- ===== ОСТАЛЬНЫЕ 24 ПРОЕКТА ===== -->
+    <!-- ===== ОСТАЛЬНЫЕ ПРОЕКТЫ ===== -->
     <div class="lab-card">
       <div class="lab-card-title">Телеграм бот</div>
       <div class="lab-card-tech">JS · NODE.JS · @Dimaaru</div>
