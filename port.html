@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Инженерный бэкграунд — Дмитрий Антонов</title>
-  <meta name="description" content="Инженерный бэкграунд Дмитрия Антонова: ИТ-эксперименты, системная логика, практические навыки программирования и разработки.">
-  <meta name="keywords" content="инженерный бэкграунд, ИТ-эксперименты, программирование, системная логика, Дмитрий Антонов, портфолио разработчика">
+  <meta name="description" content="Инженерный бэкграунд Дмитрия Антонова: ИТ-эксперименты, IoT, системная логика, практические навыки программирования и разработки.">
+  <meta name="keywords" content="инженерный бэкграунд, ИТ-эксперименты, программирование, системная логика, Дмитрий Антонов, портфолио разработчика, умный дом, IoT">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://dimaa.ru/lab.html">
+  <link rel="canonical" href="https://dimaa.ru/port.html">
   <meta property="og:title" content="Инженерный бэкграунд — Дмитрий Антонов">
-  <meta property="og:description" content="Инженерный бэкграунд: ИТ-эксперименты, системная логика, практические навыки программирования и разработки.">
+  <meta property="og:description" content="Инженерный бэкграунд: ИТ-эксперименты, IoT, системная логика, практические навыки программирования и разработки.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dimaa.ru/lab.html">
+  <meta property="og:url" content="https://dimaa.ru/port.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
   <meta property="og:image" content="https://dimaa.ru/img/logo.jpeg">
   <meta name="twitter:card" content="summary_large_image">
@@ -189,6 +189,17 @@
       background: #f7f4ef;
     }
 
+    .lab-card ul {
+      font-size: 0.85rem;
+      color: #2d3e3b;
+      padding-left: 1.2rem;
+      margin: 0.2rem 0 0.5rem;
+    }
+
+    .lab-card ul li {
+      margin-bottom: 0.2rem;
+    }
+
     .lab-card-links {
       display: flex;
       gap: 0.8rem;
@@ -224,6 +235,23 @@
       text-align: right;
     }
 
+    .lab-card .project-desc {
+      font-size: 0.85rem;
+      color: #2d3e3b;
+      margin: 0.8rem 0;
+    }
+
+    .lab-card .project-desc strong {
+      color: #1e3a2f;
+    }
+
+    .lab-card .insight {
+      font-style: italic;
+      color: #7a8a82;
+      font-size: 0.8rem;
+      margin-top: 0.3rem;
+    }
+
     footer {
       text-align: center;
       padding: 1.5rem 1rem;
@@ -231,6 +259,24 @@
       color: #5f6c66;
       background: #f1efe9;
       margin-top: 2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 0.5rem 0 1rem;
+      font-size: 0.8rem;
+    }
+
+    .footer-links a {
+      color: #5f6c66;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 640px) {
@@ -255,7 +301,7 @@
       <img src="/img/logo.jpeg" alt="Логотип">
       <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
     </a>
-    <div class="nav-links">      
+    <div class="nav-links">
       <a href="index.html#about">Об авторе</a>
       <a href="index.html#books">Книги</a>
       <a href="index.html#contacts">Контакты</a>
@@ -276,31 +322,31 @@
   </div>
 
   <div class="lab-grid">
-    <!-- Данные из вашего портфолио (сокращённо, но все 24 работы) -->
 
-    <!-- УМНЫЙ ДОМ ВЫХОДНОГО ДНЯ -->
+    <!-- ===== УМНЫЙ ДОМ ВЫХОДНОГО ДНЯ ===== -->
     <div class="lab-card" style="border-left: 4px solid #1e3a2f;">
       <div class="lab-card-title">🏠 Умный дом выходного дня</div>
       <div class="lab-card-tech">IoT · Xiaomi/Aqara · ZigBee · Автоматизация · Климат-контроль</div>
-      <img src="./img/smarthome.jpg" alt="Умный дом — автоматизация дачи" loading="lazy" style="aspect-ratio: 16/9; object-fit: cover; background: #eef4ed;">
-      <div style="font-size: 0.85rem; margin: 0.8rem 0; color: #2d3e3b;">
+      <img src="./img/smarthome.jpg" alt="Умный дом — автоматизация дачи" loading="lazy">
+      <div class="project-desc">
         <p><strong>Задача:</strong> Обеспечить удалённый контроль, экономию отопления и автоматическую вентиляцию загородного дома.</p>
         <p style="margin-top: 0.3rem;"><strong>Решения:</strong></p>
-        <ul style="margin-left: 1.2rem; margin-top: 0.2rem;">
+        <ul>
           <li>Автоматизация шиберной заслонки дымохода и вентиляции (сервопривод 220V + 2-канальное реле Aqara)</li>
           <li>Сценарии климат-контроля: эконом-режим (+7°C) в будни → прогрев до комфортной (+23°C) к выходным</li>
           <li>Сеть датчиков ZigBee: температура, влажность, протечка воды, открытие дверей/окон</li>
           <li>Логика: при включении вытяжки автоматически открывается воздушный заслон</li>
         </ul>
         <p style="margin-top: 0.5rem;"><strong>Результат:</strong> Экономия отопления до 40% в будни, мгновенные уведомления о протечках.</p>
-        <p style="margin-top: 0.3rem; font-style: italic; color: #7a8a82; font-size: 0.8rem;">«Инсайт: при проектировании IoT для редко посещаемых помещений критически важна аппаратная защита — возвратные пружины в приводах заслонок».</p>
+        <div class="insight">«Инсайт: при проектировании IoT для редко посещаемых помещений критически важна аппаратная защита — возвратные пружины в приводах заслонок».</div>
       </div>
       <div class="lab-card-links">
-        <a href="https://pikabu.ru/story/umnyiy_dom_vyikhodnogo_dnya_xiaomi_7690972" target="_blank" style="display: inline-flex; align-items: center; gap: 0.4rem; background: #c97e2a; color: white; padding: 0.3rem 0.8rem; border-radius: 40px; text-decoration: none; font-weight: 500; font-size: 0.75rem;">📄 Подробнее</a>
+        <a href="https://pikabu.ru/story/umnyiy_dom_vyikhodnogo_dnya_xiaomi_7690972" target="_blank" style="background: #c97e2a;">📄 Подробнее</a>
       </div>
       <div class="lab-card-num">Актуальный проект · 2020 — настоящее время</div>
     </div>
-    
+
+    <!-- ===== ОСТАЛЬНЫЕ 24 ПРОЕКТА ===== -->
     <div class="lab-card">
       <div class="lab-card-title">Телеграм бот</div>
       <div class="lab-card-tech">JS · NODE.JS · @Dimaaru</div>
@@ -562,6 +608,7 @@
       </div>
       <div class="lab-card-num">#1</div>
     </div>
+
   </div>
 </main>
 
