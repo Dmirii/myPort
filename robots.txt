@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /feedback.html
+Disallow: /privacy.html
+
+Sitemap: https://dimaa.ru/sitemap.xml
