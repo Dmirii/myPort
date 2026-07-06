@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Рунический менеджмент — книга пятая | Дмитрий Антонов</title>
+  <meta name="description" content="Книга «Рунический менеджмент». Управление проектами, командами и разработкой через этапы Футарка. Райдо — первый шаг. Диагностика застревания.">
+  <meta name="keywords" content="рунический менеджмент, управление проектами, руны для руководителей, Райдо, первый шаг, Дмитрий Антонов, книга пятая">
+  <meta name="author" content="Дмитрий Антонов">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dimaa.ru/book5.html">
+  <meta property="og:title" content="Рунический менеджмент — книга пятая | Дмитрий Антонов">
+  <meta property="og:description" content="Управление проектами, командами и разработкой через этапы Футарка. Диагностика застревания, первый шаг, практические инструменты.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dimaa.ru/book5.html">
+  <meta property="og:site_name" content="Инженерная модель реальности">
+  <meta property="og:image" content="https://dimaa.ru/img/logo.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
+  <link rel="shortcut icon" href="/img/logo.jpeg">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf9f8;
+      font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', sans-serif;
+      line-height: 1.5;
+      color: #1e1e2a;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #1e3a2f;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin: 2rem 0 1rem;
+      border-left: 4px solid #2c6e49;
+      padding-left: 1rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin: 1.5rem 0 0.5rem;
+      color: #2c6e49;
+    }
+
+    .navbar {
+      padding: 1rem 0;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e2e6;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.94);
+      z-index: 10;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: -0.3px;
+      text-decoration: none;
+      color: #1e3a2f;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .logo span span {
+      color: #2c6e49;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2d3e3b;
+      font-size: 0.85rem;
+    }
+
+    .nav-links a:hover {
+      color: #1b5e3f;
+    }
+
+    .book-header {
+      background: #eef4ed;
+      border-radius: 32px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .book-number {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #2c6e49;
+    }
+
+    .book-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0.5rem 0;
+    }
+
+    .book-subtitle {
+      font-size: 1.1rem;
+      color: #4a6a5c;
+    }
+
+    .book-cover {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .book-cover img {
+      max-width: 280px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .info-block {
+      background: #eef4ed;
+      padding: 1rem 1.2rem;
+      border-radius: 20px;
+      margin: 1rem 0;
+    }
+
+    .info-block.warning {
+      background: #fdf2f0;
+      border-left: 4px solid #c97e2a;
+    }
+
+    .section {
+      margin: 2rem 0;
+    }
+
+    .section ul {
+      margin-left: 1.5rem;
+    }
+
+    .section li {
+      margin-bottom: 0.3rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #1e3a2f;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 1rem 0.5rem 0 0;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-litres {
+      background: #ff5a5f;
+    }
+
+    .btn-litres:hover {
+      background: #e04e52;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #1e3a2f;
+      color: #1e3a2f;
+    }
+
+    .btn-outline:hover {
+      background: #1e3a2f;
+      color: white;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+
+    /* ===== ТАБЛИЦЫ ===== */
+    .matrix {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      background: white;
+      border: 1px solid #e2ddd4;
+      border-radius: 24px;
+      padding: 0.5rem 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .matrix-item {
+      display: flex;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #eee8e0;
+      gap: 1rem;
+      align-items: baseline;
+    }
+
+    .matrix-item:last-child {
+      border-bottom: none;
+    }
+
+    .matrix-item.blank {
+      background: #f7f3ed;
+      border-radius: 12px;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      border-bottom: none;
+      margin-top: 0.25rem;
+    }
+
+    .matrix-question {
+      font-weight: 600;
+      min-width: 140px;
+      color: #1e3a2f;
+      flex-shrink: 0;
+    }
+
+    /* ===== БЛОК «ДРУГИЕ КНИГИ СЕРИИ» ===== */
+    .series-books {
+      background: #f7f4ef;
+      border-radius: 24px;
+      padding: 1.5rem 1.5rem 0.5rem;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .series-books h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #1e3a2f;
+    }
+
+    .series-books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+
+    .series-book-item {
+      background: white;
+      border-radius: 16px;
+      padding: 0.8rem 1rem;
+      border: 1px solid #e2ddd4;
+      text-align: center;
+    }
+
+    .series-book-item .sb-number {
+      font-size: 0.6rem;
+      color: #8a7f6d;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .series-book-item .sb-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #1e3a2f;
+      margin: 0.2rem 0;
+    }
+
+    .series-book-item .sb-status {
+      font-size: 0.65rem;
+      color: #2c6e49;
+    }
+
+    .series-book-item .sb-status.soon {
+      color: #c97e2a;
+    }
+
+    .series-book-item a {
+      text-decoration: none;
+      display: block;
+    }
+
+    .series-book-item a:hover .sb-title {
+      text-decoration: underline;
+    }
+
+    .series-book-item .sb-coming {
+      font-size: 0.6rem;
+      color: #b87c4f;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.75rem;
+      color: #5f6c66;
+      background: #f1efe9;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      .matrix-item {
+        flex-direction: column;
+        gap: 0.15rem;
+        padding: 0.9rem 0;
+      }
+      .matrix-question {
+        min-width: auto;
+        font-size: 0.9rem;
+      }
+      .series-books-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="/img/logo.jpeg" alt="Логотип">
+      <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#about">👤 Об авторе</a>
+      <a href="index.html#books">📚 Книги</a>
+      <a href="index.html#contacts">📬 Контакты</a>
+      <a href="methodology.html">📐 Методология</a>
+      <a href="port.html">🧪 Лаборатория</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <!-- ===== ШАПКА КНИГИ ===== -->
+  <div class="book-header">
+    <div class="book-number">Книга пятая</div>
+    <div class="book-title">Рунический менеджмент</div>
+    <div class="book-subtitle">Управление проектами, командами и разработкой через этапы Футарка</div>
+  </div>
+
+  <!-- ===== ОБЛОЖКА ===== -->
+  <div class="book-cover">
+    <img src="img/cover_book_5.jpg" alt="Рунический менеджмент — обложка книги" onerror="this.src='https://placehold.co/300x400/eef4ed/2c6e49?text=%D0%A0%D1%83%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9+%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%BC%D0%B5%D0%BD%D1%82'">
+  </div>
+
+  <div class="info-block">
+    <p><strong>📖 Статус:</strong> 🌱 Идея</p>
+    <p><strong>📚 Серия:</strong> Руны как этапы процесса — книга 5</p>
+    <p><strong>🧭 Блок:</strong> 2. Движение и раскрытие</p>
+    <p><strong>ᚱ Руна:</strong> Райдо — первый шаг</p>
+  </div>
+
+  <!-- ===== О КНИГЕ ===== -->
+  <div class="section">
+    <h2>О чём эта книга</h2>
+    <p><strong>Главный вопрос:</strong> «Почему я стою на месте, хотя толчок уже был?»</p>
+    <p>Вы держите в руках книгу о том, как перестать ждать и начать действовать. О том, как распознать момент, когда пора сделать первый шаг — и как не застрять на полпути.</p>
+    <p>Эта книга соединяет <strong>руническую систему</strong> с лучшими управленческими подходами:</p>
+    <ul>
+      <li><strong>Адизес</strong> — жизненный цикл корпорации</li>
+      <li><strong>Голдратт</strong> — теория ограничений</li>
+      <li><strong>Agile / Scrum / Kanban</strong> — управление проектами</li>
+    </ul>
+    <p>Вы получите инструменты для диагностики застревания, управления командой, продажами и проектами.</p>
+  </div>
+
+  <!-- ===== ДЛЯ КОГО ===== -->
+  <div class="section">
+    <h2>Для кого эта книга</h2>
+    <ul>
+      <li>Для управленцев, которые чувствуют, что компания стоит на месте</li>
+      <li>Для продажников, чьи сделки застревают на полпути</li>
+      <li>Для предпринимателей, которые не могут перейти на новый уровень</li>
+      <li>Для руководителей проектов, чьи команды буксуют</li>
+      <li>Для всех, кто знает, что пора действовать, но не решается</li>
+    </ul>
+  </div>
+
+  <!-- ===== ТРИ ВИДА ЗАСТРЕВАНИЯ ===== -->
+  <div class="section">
+    <h2>Три вида застревания</h2>
+    <p>Книга начинается с диагностики. Вот три основных типа застревания, которые мы разбираем:</p>
+    <div class="matrix">
+      <div class="matrix-item"><span class="matrix-question">Не начинают вообще</span> До ᚠ Феху — инерция, страх, отсутствие толчка</div>
+      <div class="matrix-item"><span class="matrix-question">Начинают и бросают</span> После ᚱ Райдо — нет подтверждения (Ансуз), нет баланса (Гебо)</div>
+      <div class="matrix-item"><span class="matrix-question">Начинают, но не видят результата</span> Пропущен ᚲ Кеназ — не замечают своих шагов</div>
+    </div>
+  </div>
+
+  <!-- ===== ОГЛАВЛЕНИЕ ===== -->
+  <div class="section">
+    <h2>Содержание</h2>
+
+    <p><strong>Введение.</strong> Почему мы не начинаем</p>
+
+    <p><strong>Часть 1. Диагностика застревания</strong></p>
+    <ul>
+      <li>Глава 1.1. Три вида застревания (руническая диагностика)</li>
+      <li>Глава 1.2. Жизненный цикл корпорации по Адизесу</li>
+      <li>Глава 1.3. Теория ограничений Голдратта</li>
+    </ul>
+
+    <p><strong>Часть 2. Как распознать толчок от Создателя</strong></p>
+    <ul>
+      <li>Глава 2.1. Откуда приходит толчок</li>
+      <li>Глава 2.2. Почему мы игнорируем толчки</li>
+      <li>Глава 2.3. Как перестать ждать и начать действовать</li>
+    </ul>
+
+    <p><strong>Часть 3. Райдо в управлении проектами</strong></p>
+    <ul>
+      <li>Глава 3.1. Жизненный цикл проекта и руны</li>
+      <li>Глава 3.2. Ретроспектива через руны</li>
+      <li>Глава 3.3. Управление бэклогом через этапы</li>
+    </ul>
+
+    <p><strong>Часть 4. Райдо в управлении командой</strong></p>
+    <ul>
+      <li>Глава 4.1. Диагностика состояния команды</li>
+      <li>Глава 4.2. Как переключать команду между этапами</li>
+      <li>Глава 4.3. Найм, адаптация и обучение через руны</li>
+    </ul>
+
+    <p><strong>Часть 5. Райдо в продажах</strong></p>
+    <ul>
+      <li>Глава 5.1. От контакта до закрытия: путь клиента</li>
+      <li>Глава 5.2. Ошибки продажников с точки зрения этапов</li>
+      <li>Глава 5.3. Теория ограничений в продажах</li>
+    </ul>
+
+    <p><strong>Часть 6. Райдо в жизни</strong></p>
+    <ul>
+      <li>Глава 6.1. Первый шаг в отношениях</li>
+      <li>Глава 6.2. Первый шаг в творчестве</li>
+      <li>Глава 6.3. Первый шаг в здоровье</li>
+    </ul>
+
+    <p><strong>Часть 7. Практические инструменты</strong></p>
+    <ul>
+      <li>Глава 7.1. Чек-лист диагностики застревания</li>
+      <li>Глава 7.2. Упражнение «Мой толчок»</li>
+      <li>Глава 7.3. Дневник Райдо</li>
+      <li>Глава 7.4. Таблица соответствий</li>
+    </ul>
+
+    <p><strong>Заключение.</strong> Райдо как начало пути</p>
+  </div>
+
+  <!-- ===== ПУТЬ КЛИЕНТА ===== -->
+  <div class="section">
+    <h2>От контакта до закрытия: путь клиента</h2>
+    <p>В книге вы найдёте подробную карту пути клиента через руны:</p>
+    <div class="matrix">
+      <div class="matrix-item"><span class="matrix-question">ᚠ Феху</span> Первый контакт</div>
+      <div class="matrix-item"><span class="matrix-question">ᚢ Уруз</span> Клиент рассматривает варианты</div>
+      <div class="matrix-item"><span class="matrix-question">ᚦ Турисаз</span> Клиент выбрал вас</div>
+      <div class="matrix-item"><span class="matrix-question">ᚨ Ансуз</span> Получение оффера</div>
+      <div class="matrix-item"><span class="matrix-question">ᚱ Райдо</span> Оплата, договор</div>
+      <div class="matrix-item"><span class="matrix-question">ᚲ Кеназ</span> Сделка закрыта</div>
+      <div class="matrix-item"><span class="matrix-question">ᚷ Гебо</span> Клиент доволен</div>
+      <div class="matrix-item"><span class="matrix-question">ᚹ Вуньо</span> Радость завершения</div>
+    </div>
+  </div>
+
+  <!-- ===== КЛЮЧЕВАЯ ЦИТАТА ===== -->
+  <div class="info-block warning">
+    <p style="font-style: italic; font-size: 1.05rem;"><strong>«Райдо — это не конец. Это начало. Первый шаг — самый трудный, но именно он запускает весь процесс.»</strong></p>
+  </div>
+
+  <!-- ===== ДРУГИЕ КНИГИ СЕРИИ ===== -->
+  <div class="series-books">
+    <h3>📚 Другие книги серии</h3>
+    <div class="series-books-grid">
+      <a href="book1.html" class="series-book-item">
+        <div class="sb-number">Книга 1</div>
+        <div class="sb-title">Инженерная модель реальности</div>
+        <div class="sb-status">✅ Доступна</div>
+      </a>
+      <a href="book2.html" class="series-book-item">
+        <div class="sb-number">Книга 2</div>
+        <div class="sb-title">Психология рун</div>
+        <div class="sb-status">✅ Доступна</div>
+      </a>
+      <a href="book25.html" class="series-book-item">
+        <div class="sb-number">Книга 2.5</div>
+        <div class="sb-title">Ключ к мантике</div>
+        <div class="sb-status">✅ Доступна</div>
+      </a>
+      <a href="book3.html" class="series-book-item">
+        <div class="sb-number">Книга 3</div>
+        <div class="sb-title">Мантика без иллюзий</div>
+        <div class="sb-status">✅ Доступна</div>
+      </a>
+      <a href="book5.html" class="series-book-item" style="border-left: 4px solid #c97e2a;">
+        <div class="sb-number">Книга 5</div>
+        <div class="sb-title">Рунический менеджмент</div>
+        <div class="sb-status soon">📝 Скоро</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== КНОПКИ ===== -->
+  <div class="btn-group">
+    <a href="feedback.html" class="btn" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
+    <a href="index.html#books" class="btn btn-outline">← Назад к книгам</a>
+  </div>
+
+  <div style="text-align: center; margin: 1rem 0 2rem; font-size: 0.9rem; color: #5f6c66;">
+    <p>ᚱ Райдо — первый шаг. Инженерный подход к управлению.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© Дмитрий Антонов · Руны как этапы процесса</p>
+    <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Первый шаг — самый трудный. Но без него не будет ни Кеназ, ни Вуньо.»</p>
+    <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
