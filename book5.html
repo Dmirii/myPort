@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109861723', 'ym');
+
+    ym(109861723, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109861723" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Рунический менеджмент — книга пятая | Дмитрий Антонов</title>
@@ -14,36 +27,20 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book5.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
-  <meta property="og:image" content="https://dimaa.ru/img/logo.jpeg">
+  <meta property="og:image" content="https://dimaa.ru/img/cover_book_5.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
   <link rel="shortcut icon" href="/img/logo.jpeg">
 
+  <!-- ===== ПОДКЛЮЧАЕМ ВНЕШНИЙ ФАЙЛ СТИЛЕЙ ===== -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- ===== УНИКАЛЬНЫЕ СТИЛИ ДЛЯ ЭТОЙ КНИГИ ===== -->
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #faf9f8;
-      font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', sans-serif;
-      line-height: 1.5;
-      color: #1e1e2a;
-      scroll-behavior: smooth;
-    }
-
     .container {
       max-width: 860px;
       margin: 0 auto;
       padding: 0 1.5rem;
-    }
-
-    h1, h2, h3 {
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
     }
 
     h1 {
@@ -63,66 +60,6 @@
       font-size: 1.2rem;
       margin: 1.5rem 0 0.5rem;
       color: #2c6e49;
-    }
-
-    .navbar {
-      padding: 1rem 0;
-      background: #ffffff;
-      border-bottom: 1px solid #e2e2e6;
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(10px);
-      background: rgba(255,255,255,0.94);
-      z-index: 10;
-    }
-
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    .logo {
-      font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: -0.3px;
-      text-decoration: none;
-      color: #1e3a2f;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .logo img {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-    }
-
-    .logo span span {
-      color: #2c6e49;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 500;
-      color: #2d3e3b;
-      font-size: 0.85rem;
-    }
-
-    .nav-links a:hover {
-      color: #1b5e3f;
     }
 
     .book-header {
@@ -187,44 +124,17 @@
       margin-bottom: 0.3rem;
     }
 
-    .btn {
-      display: inline-block;
-      background: #1e3a2f;
-      color: white;
-      padding: 0.7rem 1.5rem;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: 500;
-      margin: 1rem 0.5rem 0 0;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-litres {
-      background: #ff5a5f;
-    }
-
-    .btn-litres:hover {
-      background: #e04e52;
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid #1e3a2f;
-      color: #1e3a2f;
-    }
-
-    .btn-outline:hover {
-      background: #1e3a2f;
-      color: white;
-    }
-
     .btn-group {
       display: flex;
       gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
       margin: 2rem 0;
+    }
+
+    .btn-outline:hover {
+      background: #1e3a2f;
+      color: white;
     }
 
     /* ===== ТАБЛИЦЫ ===== */
@@ -335,20 +245,7 @@
       text-transform: uppercase;
     }
 
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.75rem;
-      color: #5f6c66;
-      background: #f1efe9;
-      margin-top: 3rem;
-    }
-
     @media (max-width: 640px) {
-      .nav-inner {
-        flex-direction: column;
-        text-align: center;
-      }
       h1 {
         font-size: 1.6rem;
       }
@@ -398,7 +295,7 @@
 
   <!-- ===== ОБЛОЖКА ===== -->
   <div class="book-cover">
-    <img src="img/cover_book_5.jpg" alt="Рунический менеджмент — обложка книги" onerror="this.src='https://placehold.co/300x400/eef4ed/2c6e49?text=%D0%A0%D1%83%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9+%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%BC%D0%B5%D0%BD%D1%82'">
+    <img src="/img/cover_book_5.jpg" alt="Рунический менеджмент — обложка книги" onerror="this.src='https://placehold.co/300x400/eef4ed/2c6e49?text=%D0%A0%D1%83%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9+%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%BC%D0%B5%D0%BD%D1%82'">
   </div>
 
   <div class="info-block">
@@ -540,12 +437,12 @@
         <div class="sb-status">✅ Доступна</div>
       </a>
       <a href="book25.html" class="series-book-item">
-        <div class="sb-number">Книга 2.5</div>
+        <div class="sb-number">Книга 3</div>
         <div class="sb-title">Ключ к мантике</div>
         <div class="sb-status">✅ Доступна</div>
       </a>
       <a href="book3.html" class="series-book-item">
-        <div class="sb-number">Книга 3</div>
+        <div class="sb-number">Книга 4</div>
         <div class="sb-title">Мантика без иллюзий</div>
         <div class="sb-status">✅ Доступна</div>
       </a>
