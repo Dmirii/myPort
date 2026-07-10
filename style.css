@@ -1,0 +1,560 @@
+/* ========================================
+   ОБЩИЕ СТИЛИ (для всего сайта)
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #faf9f8;
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.5;
+  color: #1e1e2a;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.section ul {
+  margin-left: 1.5rem;
+}
+
+/* ========================================
+   ХЕДЕР И НАВИГАЦИЯ
+   ======================================== */
+.navbar {
+  padding: 1rem 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e2e6;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.94);
+  z-index: 10;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.3px;
+  text-decoration: none;
+  color: #1e3a2f;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.logo span span {
+  color: #2c6e49;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #2d3e3b;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #1b5e3f;
+}
+
+/* ========================================
+   КНОПКИ
+   ======================================== */
+.btn {
+  display: inline-block;
+  background: #1e3a2f;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #0f2c22;
+}
+
+.btn-litres {
+  background: #ff5a5f;
+}
+
+.btn-litres:hover {
+  background: #e04e52;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #1e3a2f;
+  color: #1e3a2f;
+}
+
+.btn-outline:hover {
+  background: #1e3a2f;
+  color: white;
+}
+
+.btn-small {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+}
+
+/* ========================================
+   КАРТОЧКИ КНИГ
+   ======================================== */
+.books-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.book-card {
+  background: white;
+  border-radius: 24px;
+  padding: 1.3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03), 0 0 0 1px #ece8e2;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05), 0 0 0 1px #d4cfc5;
+}
+
+.book-status {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #2c6e49;
+  margin-bottom: 0.5rem;
+}
+
+.book-status.soon {
+  color: #c97e2a;
+}
+
+.book-status.idea {
+  color: #8a7f6d;
+}
+
+.book-number {
+  font-size: 0.6rem;
+  color: #8a7f6d;
+  margin-bottom: 0.25rem;
+}
+
+.book-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.25;
+}
+
+.book-subtitle {
+  font-size: 0.8rem;
+  color: #2c6e49;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.book-annotation {
+  margin: 0.75rem 0;
+  color: #2e2e3a;
+  font-size: 0.85rem;
+}
+
+.book-annotation p {
+  margin-bottom: 0.4rem;
+}
+
+/* Блок с кнопками в карточке */
+.book-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.8rem;
+  border-top: 1px dashed #ddd8cf;
+}
+
+.book-meta > span:first-child {
+  margin-right: auto;
+}
+
+/* ========================================
+   БЛОК «ДРУГИЕ КНИГИ СЕРИИ»
+   ======================================== */
+.series-books {
+  background: #f7f4ef;
+  border-radius: 24px;
+  padding: 1.5rem 1.5rem 0.5rem;
+  margin: 2.5rem 0 1rem;
+}
+
+.series-books h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #1e3a2f;
+}
+
+.series-books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.series-book-item {
+  background: white;
+  border-radius: 16px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e2ddd4;
+  text-align: center;
+}
+
+.series-book-item .sb-number {
+  font-size: 0.6rem;
+  color: #8a7f6d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.series-book-item .sb-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1e3a2f;
+  margin: 0.2rem 0;
+}
+
+.series-book-item .sb-status {
+  font-size: 0.65rem;
+  color: #2c6e49;
+}
+
+.series-book-item .sb-status.soon {
+  color: #c97e2a;
+}
+
+.series-book-item a {
+  text-decoration: none;
+  display: block;
+}
+
+.series-book-item a:hover .sb-title {
+  text-decoration: underline;
+}
+
+/* ========================================
+   ТАБЛИЦЫ (МАТРИЦЫ)
+   ======================================== */
+.matrix {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: white;
+  border: 1px solid #e2ddd4;
+  border-radius: 24px;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 0;
+}
+
+.matrix-item {
+  display: flex;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee8e0;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.matrix-item:last-child {
+  border-bottom: none;
+}
+
+.matrix-item.blank {
+  background: #f7f3ed;
+  border-radius: 12px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-bottom: none;
+  margin-top: 0.25rem;
+}
+
+.matrix-question {
+  font-weight: 600;
+  min-width: 160px;
+  color: #1e3a2f;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   ФОРМЫ
+   ======================================== */
+.form-section {
+  background: white;
+  border-radius: 32px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #e2ddd4;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+}
+
+.form-section h1 {
+  font-size: 1.8rem;
+  color: #1e3a2f;
+  margin-bottom: 0.5rem;
+}
+
+.form-section .description {
+  color: #5f6c66;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1e3a2f;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd8cf;
+  border-radius: 60px;
+  font-size: 1rem;
+  background: #fefaf5;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2c6e49;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-group input {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  font-size: 0.85rem;
+  color: #4a5b55;
+  line-height: 1.4;
+}
+
+.checkbox-group a {
+  color: #1e3a2f;
+  text-decoration: underline;
+}
+
+.btn:disabled {
+  background: #b0c0b8;
+  cursor: not-allowed;
+}
+
+.message {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 60px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.success {
+  background: #eef4ed;
+  color: #2c6e49;
+}
+
+.error {
+  background: #fff6e8;
+  color: #c97e2a;
+}
+
+/* ========================================
+   ИНФОБЛОКИ И ЦИТАТЫ
+   ======================================== */
+.info-block {
+  background: #eef4ed;
+  padding: 1rem 1.2rem;
+  border-radius: 20px;
+  margin: 1rem 0;
+}
+
+.info-block.warning {
+  background: #fdf2f0;
+  border-left: 4px solid #b84a3a;
+}
+
+.warning-box {
+  background: #fff6e8;
+  border-left: 4px solid #c97e2a;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 16px;
+}
+
+.warning-box strong {
+  color: #c97e2a;
+}
+
+.quote {
+  font-style: italic;
+  padding: 1.2rem 1.8rem;
+  background: #f1efe9;
+  border-radius: 24px;
+  margin: 1.5rem 0;
+  color: #2d3e3b;
+  font-size: 1.1rem;
+}
+
+.highlight-box {
+  background: #f7f4ef;
+  border-left: 4px solid #b87c4f;
+  padding: 1.2rem 1.5rem;
+  border-radius: 16px;
+  margin: 1rem 0;
+}
+
+.highlight-box strong {
+  color: #1e3a2f;
+}
+
+/* ========================================
+   ФУТЕР
+   ======================================== */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.75rem;
+  color: #5f6c66;
+  background: #f1efe9;
+  margin-top: 1rem;
+}
+
+/* ========================================
+   АДАПТИВНОСТЬ
+   ======================================== */
+
+/* Планшеты и мобильные */
+@media (max-width: 640px) {
+  .nav-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .form-section {
+    padding: 1.5rem;
+  }
+  .form-section h1 {
+    font-size: 1.5rem;
+  }
+  .series-books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .matrix-item {
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.9rem 0;
+  }
+  .matrix-question {
+    min-width: auto;
+    font-size: 0.9rem;
+  }
+}
+
+/* Очень маленькие экраны (телефоны < 550px) */
+@media (max-width: 550px) {
+  .book-meta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+  .book-meta > span:first-child {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+  .book-meta .btn,
+  .book-meta .btn-outline {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .book-meta > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Планшеты и выше */
+@media (min-width: 640px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Десктоп */
+@media (min-width: 1024px) {
+  .books-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
