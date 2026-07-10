@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109861723', 'ym');
+
+    ym(109861723, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109861723" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Инженерный бэкграунд — Дмитрий Антонов</title>
@@ -19,97 +32,21 @@
   <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
   <link rel="shortcut icon" href="/img/logo.jpeg">
 
+  <!-- ===== ПОДКЛЮЧАЕМ ВНЕШНИЙ ФАЙЛ СТИЛЕЙ ===== -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- ===== УНИКАЛЬНЫЕ СТИЛИ ТОЛЬКО ДЛЯ ЛАБОРАТОРИИ ===== -->
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #faf9f8;
-      font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', sans-serif;
-      line-height: 1.5;
-      color: #1e1e2a;
-      scroll-behavior: smooth;
-    }
-
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }
 
-    h1, h2, h3 {
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-
     h1 {
       font-size: 2.2rem;
       margin-bottom: 0.5rem;
       color: #1e3a2f;
-    }
-
-    .navbar {
-      padding: 1rem 0;
-      background: #ffffff;
-      border-bottom: 1px solid #e2e2e6;
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(10px);
-      background: rgba(255,255,255,0.94);
-      z-index: 10;
-    }
-
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    .logo {
-      font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: -0.3px;
-      text-decoration: none;
-      color: #1e3a2f;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .logo img {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-    }
-
-    .logo span span {
-      color: #2c6e49;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 500;
-      color: #2d3e3b;
-      font-size: 0.85rem;
-    }
-
-    .nav-links a:hover {
-      color: #1b5e3f;
     }
 
     .lab-header {
@@ -241,20 +178,7 @@
       margin-top: 0.2rem;
     }
 
-    footer {
-      text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.75rem;
-      color: #5f6c66;
-      background: #f1efe9;
-      margin-top: 2rem;
-    }
-
     @media (max-width: 640px) {
-      .nav-inner {
-        flex-direction: column;
-        text-align: center;
-      }
       .lab-grid {
         grid-template-columns: 1fr;
       }
@@ -294,11 +218,11 @@
 
   <div class="lab-grid">
 
-    <!-- ===== УМНЫЙ ДОМ ВЫХОДНОГО ДНЯ (КОМПАКТНАЯ ВЕРСИЯ) ===== -->
+    <!-- ===== УМНЫЙ ДОМ ВЫХОДНОГО ДНЯ ===== -->
     <div class="lab-card" style="border-left: 4px solid #1e3a2f;">
       <div class="lab-card-title">🏠 Умный дом выходного дня</div>
       <div class="lab-card-tech">IoT · Xiaomi/Aqara · ZigBee · Автоматизация</div>
-      <img src="./img/smart.webp" alt="Умный дом — автоматизация дачи" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22169%22%3E%3Crect width=%22300%22 height=%22169%22 fill=%22%23eef4ed%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22 fill=%22%234a6a5c%22 font-size=%2216%22 font-family=%22system-ui%22%3E🏠 Умный дом%3C/text%3E%3C/svg%3E'">
+      <img src="/img/smart.webp" alt="Умный дом — автоматизация дачи" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22169%22%3E%3Crect width=%22300%22 height=%22169%22 fill=%22%23eef4ed%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22 fill=%22%234a6a5c%22 font-size=%2216%22 font-family=%22system-ui%22%3E🏠 Умный дом%3C/text%3E%3C/svg%3E'">
       <div class="project-desc">
         <p><strong>Задача:</strong> Удалённый контроль, экономия отопления и автоматическая вентиляция дачи.</p>
         <p><strong>Результат:</strong> Экономия до 40% в будни, мгновенные уведомления о протечках.</p>
@@ -313,7 +237,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Телеграм бот</div>
       <div class="lab-card-tech">JS · NODE.JS · @Dimaaru</div>
-      <img src="./img/bot.webp" alt="Телеграм бот" loading="lazy">
+      <img src="/img/bot.webp" alt="Телеграм бот" loading="lazy">
       <div class="lab-card-links">
         <a href="https://github.com/Dmirii/TelegramBot" target="_blank" class="github">🐙 Код</a>
       </div>
@@ -323,7 +247,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Интернет магазин</div>
       <div class="lab-card-tech">JS · SCSS · HTML</div>
-      <img src="./img/fl.webp" alt="Интернет магазин" loading="lazy">
+      <img src="/img/fl.webp" alt="Интернет магазин" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/flmarafon/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/flmarafon" target="_blank" class="github">🐙 Код</a>
@@ -334,7 +258,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Hunter game</div>
       <div class="lab-card-tech">Чистый JS</div>
-      <img src="./img/hunter.webp" alt="Hunter game" loading="lazy">
+      <img src="/img/hunter.webp" alt="Hunter game" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/hunter/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/hunter" target="_blank" class="github">🐙 Код</a>
@@ -345,7 +269,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Ikea</div>
       <div class="lab-card-tech">Чистый JS</div>
-      <img src="./img/ikea.webp" alt="Ikea" loading="lazy">
+      <img src="/img/ikea.webp" alt="Ikea" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/ikea/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/ikea" target="_blank" class="github">🐙 Код</a>
@@ -356,7 +280,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Flappy</div>
       <div class="lab-card-tech">Чистый JS</div>
-      <img src="./img/flappy.webp" alt="Flappy" loading="lazy">
+      <img src="/img/flappy.webp" alt="Flappy" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/Flappy/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/Flappy" target="_blank" class="github">🐙 Код</a>
@@ -367,7 +291,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Need for JS</div>
       <div class="lab-card-tech">Чистый JS</div>
-      <img src="./img/nfjs.webp" alt="Need for JS" loading="lazy">
+      <img src="/img/nfjs.webp" alt="Need for JS" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/nfjs/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/nfjs" target="_blank" class="github">🐙 Код</a>
@@ -378,7 +302,7 @@
     <div class="lab-card">
       <div class="lab-card-title">MERN (только src)</div>
       <div class="lab-card-tech">Mongo · Express · React · Node · Fetch</div>
-      <img src="./img/surl.webp" alt="MERN" loading="lazy">
+      <img src="/img/surl.webp" alt="MERN" loading="lazy">
       <div class="lab-card-links">
         <a href="https://github.com/Dmirii/mern" target="_blank" class="github">🐙 Код</a>
       </div>
@@ -388,7 +312,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Todo React</div>
       <div class="lab-card-tech">React · Fetch · lazyLoad</div>
-      <img src="./img/reacttodo.webp" alt="Todo React" loading="lazy">
+      <img src="/img/reacttodo.webp" alt="Todo React" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/reactTodo/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/reactTodo" target="_blank" class="github">🐙 Код</a>
@@ -399,7 +323,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Money calc</div>
       <div class="lab-card-tech">React</div>
-      <img src="./img/monycalcreact.webp" alt="Money calc" loading="lazy">
+      <img src="/img/monycalcreact.webp" alt="Money calc" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/reactCalc/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/reactCalc" target="_blank" class="github">🐙 Код</a>
@@ -410,7 +334,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Ya Tunes</div>
       <div class="lab-card-tech">JS</div>
-      <img src="./img/yatuns.webp" alt="Ya Tunes" loading="lazy">
+      <img src="/img/yatuns.webp" alt="Ya Tunes" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/yatuns/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/yatuns" target="_blank" class="github">🐙 Код</a>
@@ -421,7 +345,7 @@
     <div class="lab-card">
       <div class="lab-card-title">UI Компоненты</div>
       <div class="lab-card-tech">JS · SCSS · Webpack · Динамический HTML</div>
-      <img src="./img/js.webp" alt="UI Компоненты" loading="lazy">
+      <img src="/img/js.webp" alt="UI Компоненты" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/DIM/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/DIM" target="_blank" class="github">🐙 Код</a>
@@ -432,7 +356,7 @@
     <div class="lab-card">
       <div class="lab-card-title">FireBase App</div>
       <div class="lab-card-tech">JS · MUI · Webpack · Firebase</div>
-      <img src="./img/vnode.webp" alt="FireBase App" loading="lazy">
+      <img src="/img/vnode.webp" alt="FireBase App" loading="lazy">
       <div class="lab-card-links">
         <a href="https://vnode-app.firebaseapp.com/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/vNode" target="_blank" class="github">🐙 Код</a>
@@ -443,7 +367,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Framework (Excel)</div>
       <div class="lab-card-tech">JS · SCSS · Webpack</div>
-      <img src="./img/excel.webp" alt="Framework" loading="lazy">
+      <img src="/img/excel.webp" alt="Framework" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/Framework/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/ExelCourse" target="_blank" class="github">🐙 Код</a>
@@ -454,7 +378,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Awito</div>
       <div class="lab-card-tech">JS</div>
-      <img src="./img/awito.webp" alt="Awito" loading="lazy">
+      <img src="/img/awito.webp" alt="Awito" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/Awito/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/Awito" target="_blank" class="github">🐙 Код</a>
@@ -465,7 +389,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Yoga туры</div>
       <div class="lab-card-tech">JS · Webpack</div>
-      <img src="./img/yoga.webp" alt="Yoga туры" loading="lazy">
+      <img src="/img/yoga.webp" alt="Yoga туры" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/yoga/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/yoga" target="_blank" class="github">🐙 Код</a>
@@ -476,7 +400,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Ghostbusters</div>
       <div class="lab-card-tech">HTML · SCSS · JS</div>
-      <img src="./img/gb.webp" alt="Ghostbusters" loading="lazy">
+      <img src="/img/gb.webp" alt="Ghostbusters" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/ghost/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/ghost" target="_blank" class="github">🐙 Код</a>
@@ -487,7 +411,7 @@
     <div class="lab-card">
       <div class="lab-card-title">MoneyKeeper</div>
       <div class="lab-card-tech">JS · Flex · Media</div>
-      <img src="./img/monye.webp" alt="MoneyKeeper" loading="lazy">
+      <img src="/img/monye.webp" alt="MoneyKeeper" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/monyekeeper/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/monyekeeper" target="_blank" class="github">🐙 Код</a>
@@ -498,7 +422,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Портфолио</div>
       <div class="lab-card-tech">PUG · SASS · JS · Flex · Media</div>
-      <img src="./img/porto.webp" alt="Портфолио" loading="lazy">
+      <img src="/img/porto.webp" alt="Портфолио" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dimaa.ru" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/myPort" target="_blank" class="github">🐙 Код</a>
@@ -509,7 +433,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Netclicks</div>
       <div class="lab-card-tech">JS</div>
-      <img src="./img/net.webp" alt="Netclicks" loading="lazy">
+      <img src="/img/net.webp" alt="Netclicks" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/netclicks/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/netclicks" target="_blank" class="github">🐙 Код</a>
@@ -520,7 +444,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Пульсометр</div>
       <div class="lab-card-tech">Bootstrap · SASS · JS · БЭМ</div>
-      <img src="./img/puls.webp" alt="Пульсометр" loading="lazy">
+      <img src="/img/puls.webp" alt="Пульсометр" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/puls_p/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/puls" target="_blank" class="github">🐙 Код</a>
@@ -531,7 +455,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Uber Partners</div>
       <div class="lab-card-tech">HTML · Bootstrap · SASS</div>
-      <img src="./img/uber.webp" alt="Uber" loading="lazy">
+      <img src="/img/uber.webp" alt="Uber" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/uber/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/uber" target="_blank" class="github">🐙 Код</a>
@@ -542,7 +466,7 @@
     <div class="lab-card">
       <div class="lab-card-title">WordPress Интенсив</div>
       <div class="lab-card-tech">HTML · SASS</div>
-      <img src="./img/wpi.webp" alt="WordPress" loading="lazy">
+      <img src="/img/wpi.webp" alt="WordPress" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/Scss/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/Scss" target="_blank" class="github">🐙 Код</a>
@@ -553,7 +477,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Mountain</div>
       <div class="lab-card-tech">HTML · CSS</div>
-      <img src="./img/mount.webp" alt="Mountain" loading="lazy">
+      <img src="/img/mount.webp" alt="Mountain" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/Mountain/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/Mountain" target="_blank" class="github">🐙 Код</a>
@@ -564,7 +488,7 @@
     <div class="lab-card">
       <div class="lab-card-title">Новости культуры</div>
       <div class="lab-card-tech">HTML · CSS</div>
-      <img src="./img/cnp.webp" alt="Новости культуры" loading="lazy">
+      <img src="/img/cnp.webp" alt="Новости культуры" loading="lazy">
       <div class="lab-card-links">
         <a href="https://dmirii.github.io/Culture_News/" target="_blank">🌐 Демо</a>
         <a href="https://github.com/Dmirii/Culture_News" target="_blank" class="github">🐙 Код</a>
