@@ -35,31 +35,15 @@
   <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
   <link rel="shortcut icon" href="/img/logo.jpeg">
 
+  <!-- ===== ПОДКЛЮЧАЕМ ВНЕШНИЙ ФАЙЛ СТИЛЕЙ ===== -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- ===== УНИКАЛЬНЫЕ СТИЛИ ТОЛЬКО ДЛЯ ГЛАВНОЙ СТРАНИЦЫ ===== -->
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #faf9f8;
-      font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', sans-serif;
-      line-height: 1.5;
-      color: #1e1e2a;
-      scroll-behavior: smooth;
-    }
-
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 1.5rem;
-    }
-
-    h1, h2, h3 {
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
     }
 
     h1 {
@@ -81,67 +65,6 @@
 
     .section:last-of-type {
       border-bottom: none;
-    }
-
-    .navbar {
-      padding: 1rem 0;
-      background: #ffffff;
-      border-bottom: 1px solid #e2e2e6;
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(10px);
-      background: rgba(255,255,255,0.94);
-      z-index: 10;
-    }
-
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    .logo {
-      font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: -0.3px;
-      text-decoration: none;
-      color: #1e3a2f;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .logo img {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-    }
-
-    .logo span span {
-      color: #2c6e49;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 500;
-      color: #2d3e3b;
-      font-size: 0.85rem;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: #1b5e3f;
     }
 
     .hero {
@@ -203,122 +126,6 @@
       margin-bottom: 1rem;
     }
 
-    .books-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    .book-card {
-      background: white;
-      border-radius: 24px;
-      padding: 1.3rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03), 0 0 0 1px #ece8e2;
-      transition: all 0.2s;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .book-card:hover {
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05), 0 0 0 1px #d4cfc5;
-    }
-
-    .book-status {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 600;
-      color: #2c6e49;
-      margin-bottom: 0.5rem;
-    }
-
-    .book-status.soon {
-      color: #c97e2a;
-    }
-
-    .book-status.idea {
-      color: #8a7f6d;
-    }
-
-    .book-number {
-      font-size: 0.6rem;
-      color: #8a7f6d;
-      margin-bottom: 0.25rem;
-    }
-
-    .book-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-      line-height: 1.25;
-    }
-
-    .book-subtitle {
-      font-size: 0.8rem;
-      color: #2c6e49;
-      font-weight: 500;
-      margin-bottom: 0.75rem;
-    }
-
-    .book-annotation {
-      margin: 0.75rem 0;
-      color: #2e2e3a;
-      font-size: 0.85rem;
-    }
-
-    .book-annotation p {
-      margin-bottom: 0.4rem;
-    }
-
-    /* ===== КНОПКИ — АККУРАТНО НА МОБИЛЬНЫХ ===== */
-    .book-meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: auto;
-      padding-top: 0.8rem;
-      border-top: 1px dashed #ddd8cf;
-    }
-
-    .book-meta > span:first-child {
-      margin-right: auto;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      background: #1e3a2f;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: background 0.2s;
-      font-size: 0.8rem;
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid #1e3a2f;
-      color: #1e3a2f;
-    }
-
-    .btn-outline:hover {
-      background: #1e3a2f0c;
-    }
-
-    .btn-small {
-      padding: 0.3rem 0.8rem;
-      font-size: 0.75rem;
-    }
-
-    .btn:hover {
-      background: #0f2c22;
-    }
-
     .contacts-list {
       display: flex;
       flex-direction: column;
@@ -352,15 +159,6 @@
       text-decoration: underline;
     }
 
-    footer {
-      text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.75rem;
-      color: #5f6c66;
-      background: #f1efe9;
-      margin-top: 1rem;
-    }
-
     .rune-line {
       font-family: monospace;
       font-size: 0.9rem;
@@ -389,35 +187,6 @@
       }
       .section {
         padding: 4rem 0;
-      }
-    }
-
-    /* ===== МОБИЛЬНЫЕ — ВСЁ В КОЛОНКУ, РОВНО ===== */
-    @media (max-width: 550px) {
-      .book-meta {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0.6rem;
-      }
-      .book-meta > span:first-child {
-        margin-right: 0;
-        text-align: center;
-        margin-bottom: 0.2rem;
-      }
-      .book-meta .btn,
-      .book-meta .btn-outline {
-        display: block;
-        text-align: center;
-        width: 100%;
-      }
-      .book-meta > div {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-      .nav-inner {
-        flex-direction: column;
-        text-align: center;
       }
     }
   </style>
@@ -459,7 +228,7 @@
         </div>
 
         <div class="author-photo">
-          <img src="img/DimaA.webp" alt="Дмитрий Антонов" style="width: 180px; height: 180px; border-radius: 24px; object-fit: cover; margin: 0 auto 1rem auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img src="/img/DimaA.webp" alt="Дмитрий Антонов" style="width: 180px; height: 180px; border-radius: 24px; object-fit: cover; margin: 0 auto 1rem auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
           <div style="font-size: 1.2rem; font-weight: 600;">Дмитрий Антонов</div>
           <div style="font-size: 0.8rem; margin-top: 0.3rem;">инженер-программист, управленец, рунолог</div>
           <hr style="margin: 1rem 0; border-color:#cbd5c3; width: 40px; margin-left: auto; margin-right: auto;">
@@ -474,7 +243,7 @@
       <h2>📚 Серия «Руны как этапы процесса»</h2>
 
       <!-- БЛОК 1. ВНУТРЕННИЙ ЦИКЛ -->
-      <h2 style="margin-top: 2rem; border-left-color: #1e3a2f;">🧭 Блок 1. Внутренний цикл</h2>
+      <h2 style="margin-top: 2rem; border-left-color: #1e3a2f;">🧭 Блок 1. Зарождение</h2>
       <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.9rem;">Дать систему, научить видеть, сделать выбор, войти в диалог</p>
 
       <div class="books-grid">
@@ -514,9 +283,9 @@
           </div>
         </div>
 
-        <!-- КНИГА 2.5 -->
+        <!-- КНИГА 3 -->
         <div class="book-card">
-          <div class="book-number">Книга 2.5</div>
+          <div class="book-number">Книга третья</div>
           <div class="book-status">✅ Доступна</div>
           <div class="book-title">Ключ к мантике</div>
           <div class="book-subtitle">7-дневный переход от навигации к диалогу с рунами</div>
@@ -532,9 +301,9 @@
           </div>
         </div>
 
-        <!-- КНИГА 3 -->
+        <!-- КНИГА 4 -->
         <div class="book-card">
-          <div class="book-number">Книга третья</div>
+          <div class="book-number">Книга четвёртая</div>
           <div class="book-status">✅ Доступна</div>
           <div class="book-title">Мантика без иллюзий</div>
           <div class="book-subtitle">Гадание как диагностика, а не только магия</div>
@@ -552,7 +321,7 @@
       </div> <!-- /books-grid -->
 
       <!-- БЛОК 2. ДВИЖЕНИЕ И РАСКРЫТИЕ -->
-      <h2 style="margin-top: 3rem; border-left-color: #c97e2a;">🚀 Блок 2. Движение и раскрытие</h2>
+      <h2 style="margin-top: 3rem; border-left-color: #c97e2a;">🚀 Блок 2. Движение</h2>
       <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.9rem;">Вынести систему во внешний мир: толчок, проявление, гармония, завершение</p>
 
       <div class="books-grid">
@@ -630,7 +399,7 @@
       </div> <!-- /books-grid -->
 
       <!-- БЛОК 3. ЗРЕЛОСТЬ -->
-      <h2 style="margin-top: 3rem; border-left-color: #8a7f6d;">🌿 Блок 3. Зрелость</h2>
+      <h2 style="margin-top: 3rem; border-left-color: #8a7f6d;">🌿 Блок 3. Трансформация</h2>
       <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.9rem;">Жизнь с результатом и трансформация: рутина, кризис, пауза, озарение</p>
 
       <div class="books-grid">
@@ -786,7 +555,7 @@
       </div> <!-- /books-grid -->
 
       <!-- БЛОК 5. ФИНАЛ -->
-      <h2 style="margin-top: 3rem; border-left-color: #1e3a2f;">⭐ Блок 5. Финал</h2>
+      <h2 style="margin-top: 3rem; border-left-color: #1e3a2f;">⭐ Блок 5. Завершение</h2>
       <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.9rem;">Принятие и завершение: воля, рост, синхронизация, интеграция</p>
 
       <div class="books-grid">
