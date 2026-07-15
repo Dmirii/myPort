@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109861723', 'ym');
+
+    ym(109861723, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109861723" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Где я сейчас? Руническая диагностика за 2 минуты | Дмитрий Антонов</title>
+  <meta name="description" content="Бесплатная руническая диагностика: узнайте, на каком из 24 этапов процесса вы находитесь прямо сейчас, почему застряли и что делать дальше. По методике книги «Психология рун».">
+  <meta name="keywords" content="руническая диагностика, тест руны, на каком этапе я нахожусь, руническая навигация, Дмитрий Антонов, психология рун">
+  <meta name="author" content="Дмитрий Антонов">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dimaa.ru/test.html">
+  <meta property="og:title" content="Где я сейчас? Руническая диагностика за 2 минуты">
+  <meta property="og:description" content="Узнайте, на каком из 24 этапов процесса вы находитесь, почему застряли и что делать дальше.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dimaa.ru/test.html">
+  <meta property="og:site_name" content="Инженерная модель реальности">
+  <meta property="og:image" content="https://dimaa.ru/img/logo.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
+  <link rel="shortcut icon" href="/img/logo.jpeg">
+
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    :root{
+      --ink:#1e1e2a;
+      --forest:#1e3a2f;
+      --leaf:#2c6e49;
+      --terracotta:#b87c4f;
+      --paper:#faf9f8;
+      --card:#ffffff;
+      --muted:#5f6c66;
+      --line:#e2ddd4;
+    }
+
+    .container{ max-width: 900px; margin:0 auto; padding: 0 1.5rem; }
+
+    h1{ font-size: 2rem; margin-bottom: .5rem; color: var(--forest); }
+    h2{ font-size: 1.5rem; margin: 0 0 1rem; color: var(--forest); }
+
+    /* ===== HERO ===== */
+    .test-hero{
+      background: linear-gradient(180deg,#eef4ed 0%, var(--paper) 100%);
+      padding: 2.5rem 0 2rem;
+      text-align:center;
+    }
+    .test-hero .kicker{
+      display:inline-block;
+      background:#ffffffcc;
+      border:1px solid var(--line);
+      color: var(--terracotta);
+      font-size:.72rem;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+      padding:.35rem .9rem;
+      border-radius:40px;
+      margin-bottom:1rem;
+      font-weight:600;
+    }
+    .test-hero p{ color:#3d4d47; max-width: 620px; margin: 0 auto 1.5rem; font-size:1.02rem; }
+    .nav-formula{
+      display:flex; justify-content:center; align-items:center; gap:.6rem;
+      flex-wrap:wrap; font-size:.85rem; color: var(--forest); font-weight:600;
+      margin-bottom: 1.75rem;
+    }
+    .nav-formula span{
+      background:#fff; border:1px solid var(--line); padding:.4rem .9rem; border-radius:30px;
+    }
+    .nav-formula .arrow{ color: var(--terracotta); font-weight:400; background:none; border:none; padding:0; }
+
+    .entry-choices{ display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+    .entry-card{
+      background: var(--card); border:1px solid var(--line); border-radius:28px;
+      padding:1.5rem 1.6rem; max-width:320px; text-align:left; cursor:pointer;
+      box-shadow:0 2px 10px rgba(0,0,0,.03); transition:.15s;
+    }
+    .entry-card:hover{ box-shadow:0 10px 24px rgba(0,0,0,.06); border-color:#cfc7ba; transform: translateY(-2px); }
+    .entry-card .ec-emoji{ font-size:1.6rem; margin-bottom:.5rem; display:block; }
+    .entry-card h3{ font-size:1.05rem; color:var(--forest); margin-bottom:.35rem; }
+    .entry-card p{ font-size:.85rem; color:var(--muted); margin:0; }
+
+    /* ===== QUIZ SHELL ===== */
+    #quizApp{ padding: 2rem 0 3rem; }
+    .progress-wrap{ display:flex; align-items:center; gap:.8rem; margin-bottom:1.6rem; }
+    .progress-bar{ flex:1; height:6px; background:#ece8e0; border-radius:6px; overflow:hidden; }
+    .progress-fill{ height:100%; background: var(--leaf); border-radius:6px; transition: width .25s ease; width:0%; }
+    .progress-step{ font-size:.75rem; color:var(--muted); white-space:nowrap; }
+    .back-link{
+      display:inline-flex; align-items:center; gap:.3rem; font-size:.82rem; color:var(--muted);
+      text-decoration:none; margin-bottom:1rem; cursor:pointer; background:none; border:none; font-family:inherit;
+    }
+    .back-link:hover{ color:var(--forest); }
+
+    .step-title{ font-size:1.3rem; color:var(--forest); margin-bottom:.3rem; }
+    .step-sub{ color:var(--muted); font-size:.92rem; margin-bottom:1.5rem; }
+
+    /* group / state cards */
+    .choice-grid{ display:grid; grid-template-columns: 1fr; gap: .9rem; }
+    @media (min-width:700px){ .choice-grid.g2{ grid-template-columns: 1fr 1fr; } }
+
+    .choice-card{
+      background:var(--card); border:1px solid var(--line); border-radius:22px;
+      padding:1.1rem 1.3rem; text-align:left; cursor:pointer; transition:.15s;
+      display:flex; gap:.9rem; align-items:flex-start;
+    }
+    .choice-card:hover{ border-color:var(--leaf); box-shadow:0 6px 16px rgba(44,110,73,.08); transform: translateY(-1px); }
+    .choice-card .cc-symbol{
+      font-size:1.5rem; color:var(--terracotta); background:#fdf6ef; border-radius:14px;
+      width:44px; height:44px; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+      border:1px solid #f0dfcb;
+    }
+    .choice-card .cc-body strong{ display:block; color:var(--forest); font-size:1rem; margin-bottom:.15rem; }
+    .choice-card .cc-body span{ font-size:.85rem; color:var(--muted); }
+    .choice-card .cc-phrase{ font-style:italic; font-size:.82rem; color:#7a8a82; margin-top:.35rem; display:block; }
+
+    /* yes/no questions */
+    .qn-card{
+      background:var(--card); border:1px solid var(--line); border-radius:22px;
+      padding:1.1rem 1.3rem; margin-bottom: .8rem;
+      display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;
+    }
+    .qn-text{ font-size:.95rem; color:#2d3e3b; flex:1; min-width:220px; }
+    .qn-toggle{ display:flex; gap:.5rem; }
+    .qn-btn{
+      border:1px solid var(--line); background:#fbfaf8; padding:.45rem 1.1rem; border-radius:30px;
+      font-size:.85rem; font-weight:600; cursor:pointer; color:var(--forest); transition:.12s;
+    }
+    .qn-btn.yes.active{ background: var(--leaf); border-color: var(--leaf); color:#fff; }
+    .qn-btn.no.active{ background:#b1622c; border-color:#b1622c; color:#fff; }
+
+    .primary-btn{
+      display:inline-block; background: var(--forest); color:#fff; border:none;
+      padding:.8rem 1.7rem; border-radius:60px; font-size:.95rem; font-weight:600;
+      cursor:pointer; margin-top: .5rem;
+    }
+    .primary-btn:hover{ background:#0f2c22; }
+    .primary-btn:disabled{ background:#b0c0b8; cursor:not-allowed; }
+    .ghost-btn{
+      display:inline-block; background:transparent; color:var(--forest); border:1px solid var(--forest);
+      padding:.75rem 1.6rem; border-radius:60px; font-size:.9rem; font-weight:500; cursor:pointer; text-decoration:none;
+    }
+
+    /* result screen */
+    .result-card{
+      background:#fff; border:1px solid var(--line); border-radius:32px; padding:2rem;
+      box-shadow:0 4px 18px rgba(0,0,0,.04); margin-bottom:1.5rem;
+    }
+    .result-head{ display:flex; align-items:center; gap:1rem; margin-bottom:1.2rem; flex-wrap:wrap; }
+    .result-symbol{
+      font-size:2.4rem; color:var(--terracotta); background:#fdf6ef; border:1px solid #f0dfcb;
+      width:76px; height:76px; border-radius:22px; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    }
+    .result-head h2{ margin:0; }
+    .result-head .r-name{ color:var(--terracotta); font-size:.9rem; font-weight:600; letter-spacing:.5px; }
+    .result-feel{ font-size:1.02rem; color:#2d3e3b; line-height:1.55; margin-bottom:1.3rem; }
+    .result-block{
+      border-radius:18px; padding:1rem 1.2rem; margin-bottom:1rem; font-size:.92rem; line-height:1.5;
+    }
+    .result-block.warn{ background:#fff6e8; border-left:4px solid #c97e2a; }
+    .result-block.warn strong{ color:#a2611c; }
+    .result-block.steps{ background:#eef4ed; }
+    .result-block.steps strong{ color:var(--leaf); }
+    .result-block.steps ol{ margin: .5rem 0 0 1.1rem; padding:0; }
+    .result-block.steps li{ margin-bottom:.35rem; }
+    .result-block.next{ background:#f7f4ef; border-left:4px solid var(--terracotta); }
+    .result-block.next strong{ color:var(--terracotta); }
+
+    .confidence-note{
+      background:#fdf2f0; border-left:4px solid #b84a3a; border-radius:16px; padding:1rem 1.2rem;
+      font-size:.88rem; margin-bottom:1.2rem; color:#5c2c22;
+    }
+    .confidence-note .cn-links{ margin-top:.6rem; display:flex; gap:.6rem; flex-wrap:wrap; }
+    .confidence-note .cn-links button{
+      background:#fff; border:1px solid #e2c9c1; color:#8a3b2c; padding:.35rem .9rem; border-radius:30px;
+      font-size:.8rem; cursor:pointer;
+    }
+
+    .book-cta{
+      background: linear-gradient(135deg,#1e3a2f,#0f2c22); color:#fff; border-radius:24px;
+      padding:1.4rem 1.6rem; margin-bottom:1.2rem;
+    }
+    .book-cta .bc-label{ font-size:.7rem; text-transform:uppercase; letter-spacing:1.5px; color:#9fc2ac; margin-bottom:.4rem; }
+    .book-cta h4{ font-size:1.15rem; margin-bottom:.4rem; }
+    .book-cta p{ font-size:.87rem; color:#d7e6dd; margin-bottom: .9rem; }
+    .book-cta a.btn-litres{
+      display:inline-block; background:#ff5a5f; color:#fff; padding:.6rem 1.3rem; border-radius:40px;
+      text-decoration:none; font-weight:600; font-size:.87rem;
+    }
+    .book-cta a.btn-idea{
+      display:inline-block; background:#fff; color:var(--forest); padding:.6rem 1.3rem; border-radius:40px;
+      text-decoration:none; font-weight:600; font-size:.87rem;
+    }
+
+    /* email capture */
+    .email-capture{
+      background:var(--card); border:1px solid var(--line); border-radius:28px; padding:1.6rem;
+    }
+    .email-capture h4{ color:var(--forest); font-size:1.05rem; margin-bottom:.3rem; }
+    .email-capture .ec-sub{ font-size:.85rem; color:var(--muted); margin-bottom:1rem; }
+    .email-capture form{ display:flex; flex-direction:column; gap:.9rem; }
+    .email-capture input[type=email]{
+      width:100%; padding:.75rem 1rem; border:1px solid var(--line); border-radius:60px;
+      font-size:.95rem; background:#fefaf5; font-family:inherit;
+    }
+    .email-capture .ec-checkline{ display:flex; gap:.6rem; align-items:flex-start; font-size:.78rem; color:#5c6862; }
+    .email-capture .ec-checkline input{ width:18px; height:18px; margin-top:2px; }
+    .email-capture .ec-checkline a{ color:var(--forest); text-decoration:underline; }
+    .email-capture .ec-msg{ font-size:.85rem; padding:.6rem .9rem; border-radius:40px; text-align:center; display:none; }
+    .email-capture .ec-msg.show{ display:block; }
+    .email-capture .ec-msg.ok{ background:#eef4ed; color:var(--leaf); }
+    .email-capture .ec-msg.err{ background:#fff6e8; color:#c97e2a; }
+
+    .result-actions{ display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1.4rem; }
+
+    .diary-hint{
+      font-size:.78rem; color:var(--muted); text-align:center; margin-top:1.5rem; font-style:italic;
+    }
+
+    @media (max-width:640px){
+      h1{ font-size:1.55rem; }
+      .test-hero{ padding:1.8rem 0 1.5rem; }
+      .result-card{ padding:1.3rem; }
+      .result-symbol{ width:60px; height:60px; font-size:1.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="/img/logo.jpeg" alt="Логотип">
+      <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#about">👤 Об авторе</a>
+      <a href="index.html#books">📚 Книги</a>
+      <a href="test.html">🧭 Диагностика</a>
+      <a href="methodology.html">📐 Методология</a>
+      <a href="rune-map.html">🗺️ Карта рун</a>
+    </div>
+  </div>
+</nav>
+
+<header class="test-hero">
+  <div class="container">
+    <div class="kicker">🧭 Бесплатная руническая диагностика · 2 минуты</div>
+    <h1>Где я сейчас — и что делать дальше?</h1>
+    <p>Не гадание. Наблюдение. Три вопроса заменяют 24 руны: где я, почему застрял, что делать дальше. Ответьте честно — и получите конкретный этап процесса, типичную ошибку на нём и три шага вперёд.</p>
+    <div class="nav-formula">
+      <span>📍 Где я</span><span class="arrow">→</span><span>❓ Почему застрял</span><span class="arrow">→</span><span>⚡ Что делать</span>
+    </div>
+    <div class="entry-choices" id="entryChoices">
+      <div class="entry-card" data-mode="quiz">
+        <span class="ec-emoji">🧭</span>
+        <h3>Пройти диагностику</h3>
+        <p>6 коротких шагов. Определим ваш этап точно — по методике книги «Психология рун».</p>
+      </div>
+      <div class="entry-card" data-mode="deadlock">
+        <span class="ec-emoji">🚧</span>
+        <h3>Я явно застрял(а)</h3>
+        <p>Не хочу разбираться — просто узнать, в каком типичном тупике я нахожусь и как из него выйти.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container" id="quizApp"></main>
+
+<footer>
+  <div class="container">
+    <p>© Дмитрий Антонов · Руны как этапы процесса</p>
+    <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Руны не делают за вас — они показывают этап.»</p>
+    <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
+  </div>
+</footer>
+
+<script type="application/json" id="statesData">__STATES_JSON__</script>
+<script type="application/json" id="deadlocksData">__DEADLOCKS_JSON__</script>
+<script type="application/json" id="groupsData">__GROUPS_JSON__</script>
+
+<script>
+(function(){
+  const STATES = JSON.parse(document.getElementById('statesData').textContent);
+  const DEADLOCKS = JSON.parse(document.getElementById('deadlocksData').textContent);
+  const GROUPS = JSON.parse(document.getElementById('groupsData').textContent);
+  const app = document.getElementById('quizApp');
+  const entry = document.getElementById('entryChoices');
+
+  const byNum = n => STATES.find(s => s.num === n);
+
+  const FORM_ACTION = "https://formspree.io/f/meewldoe";
+
+  let answers = {}; // qIndex -> bool
+
+  function esc(s){
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  function scrollToApp(){
+    window.scrollTo({top: app.offsetTop - 20, behavior:'smooth'});
+  }
+
+  function progressBar(step, total){
+    return `<div class="progress-wrap">
+      <div class="progress-bar"><div class="progress-fill" style="width:${Math.round(step/total*100)}%"></div></div>
+      <div class="progress-step">Шаг ${step} из ${total}</div>
+    </div>`;
+  }
+
+  // ---------- ENTRY ----------
+  document.querySelectorAll('.entry-card').forEach(card=>{
+    card.addEventListener('click', ()=>{
+      const mode = card.getAttribute('data-mode');
+      if(mode === 'quiz') renderGroupStep();
+      else renderDeadlockList();
+      scrollToApp();
+    });
+  });
+
+  // ---------- MAIN QUIZ: STEP 1 — choose group ----------
+  function renderGroupStep(){
+    let html = `<button class="back-link" onclick="location.reload()">← Начать заново</button>`;
+    html += progressBar(1,3);
+    html += `<div class="step-title">Что из этого сейчас ближе всего к вам?</div>`;
+    html += `<div class="step-sub">Выберите сценарий, который сегодня звучит как ваша жизнь.</div>`;
+    html += `<div class="choice-grid g2">`;
+    GROUPS.forEach(g=>{
+      html += `<div class="choice-card" data-group="${g.id}">
+        <div class="cc-symbol">${g.id}</div>
+        <div class="cc-body">
+          <strong>${esc(g.title)}</strong>
+          <span>${esc(g.range)}</span>
+          <span class="cc-phrase">«${esc(g.vibe)}»</span>
+        </div>
+      </div>`;
+    });
+    html += `</div>`;
+    app.innerHTML = html;
+    app.querySelectorAll('.choice-card').forEach(el=>{
+      el.addEventListener('click', ()=>{
+        const gid = parseInt(el.getAttribute('data-group'));
+        renderStateStep(GROUPS.find(g=>g.id===gid));
+        scrollToApp();
+      });
+    });
+  }
+
+  // ---------- STEP 2 — choose exact state within group ----------
+  function renderStateStep(group){
+    let html = `<button class="back-link" data-act="back-group">← Назад</button>`;
+    html += progressBar(2,3);
+    html += `<div class="step-title">Какая фраза сейчас больше всего про вас?</div>`;
+    html += `<div class="step-sub">${esc(group.title)} · ${esc(group.range)}</div>`;
+    html += `<div class="choice-grid">`;
+    group.states.forEach(n=>{
+      const s = byNum(n);
+      html += `<div class="choice-card" data-state="${s.num}">
+        <div class="cc-symbol">${esc(s.symbol)}</div>
+        <div class="cc-body">
+          <strong>${esc(s.name)} — ${esc(s.title)}</strong>
+          <span class="cc-phrase">${s.phrases[0] ? esc(s.phrases[0]) : ''}</span>
+        </div>
+      </div>`;
+    });
+    html += `</div>`;
+    app.innerHTML = html;
+    app.querySelector('[data-act="back-group"]').addEventListener('click', renderGroupStep);
+    app.querySelectorAll('.choice-card').forEach(el=>{
+      el.addEventListener('click', ()=>{
+        const num = parseInt(el.getAttribute('data-state'));
+        renderQuestionsStep(byNum(num), group);
+        scrollToApp();
+      });
+    });
+  }
+
+  // ---------- STEP 3 — confirm with 3 diagnostic questions ----------
+  function renderQuestionsStep(state, group){
+    answers = {};
+    let html = `<button class="back-link" data-act="back-state">← Назад</button>`;
+    html += progressBar(3,3);
+    html += `<div class="step-title">Проверим точнее: ${esc(state.symbol)} ${esc(state.name)}</div>`;
+    html += `<div class="step-sub">Ответьте честно на три вопроса из книги «Психология рун».</div>`;
+    state.questions.forEach((q,i)=>{
+      html += `<div class="qn-card" data-q="${i}">
+        <div class="qn-text">${i+1}. ${esc(q)}</div>
+        <div class="qn-toggle">
+          <button class="qn-btn yes" data-v="1">Да</button>
+          <button class="qn-btn no" data-v="0">Нет</button>
+        </div>
+      </div>`;
+    });
+    html += `<button class="primary-btn" id="showResultBtn" disabled>Показать результат</button>`;
+    app.innerHTML = html;
+    app.querySelector('[data-act="back-state"]').addEventListener('click', ()=>renderStateStep(group));
+
+    const btn = document.getElementById('showResultBtn');
+    app.querySelectorAll('.qn-card').forEach(card=>{
+      const qi = card.getAttribute('data-q');
+      card.querySelectorAll('.qn-btn').forEach(b=>{
+        b.addEventListener('click', ()=>{
+          card.querySelectorAll('.qn-btn').forEach(x=>x.classList.remove('active'));
+          b.classList.add('active');
+          answers[qi] = b.getAttribute('v') === '1';
+          if(Object.keys(answers).length === state.questions.length){
+            btn.disabled = false;
+          }
+        });
+      });
+    });
+    btn.addEventListener('click', ()=>{
+      const yesCount = Object.values(answers).filter(Boolean).length;
+      renderResult(state, yesCount, group);
+      scrollToApp();
+    });
+  }
+
+  // ---------- RESULT ----------
+  function renderResult(state, confidence, group){
+    let html = '';
+    if(group !== null && confidence < 2){
+      const prevN = state.num - 1 >= 0 ? state.num - 1 : null;
+      const nextN = state.num + 1 <= 24 ? state.num + 1 : null;
+      html += `<div class="confidence-note">
+        <strong>Похоже, это не совсем ваш этап.</strong> Из трёх вопросов подтвердились только ${confidence}. По методике навигации это значит — вы, возможно, на соседнем этапе. Можно посмотреть его, либо всё равно открыть этот результат — иногда рано ещё видеть себя чётко, и это тоже нормально.
+        <div class="cn-links">
+          ${prevN!==null ? `<button data-jump="${prevN}">← ${byNum(prevN).symbol} ${esc(byNum(prevN).name)}</button>` : ''}
+          ${nextN!==null ? `<button data-jump="${nextN}">${byNum(nextN).symbol} ${esc(byNum(nextN).name)} →</button>` : ''}
+        </div>
+      </div>`;
+    }
+
+    html += `<div class="result-card">
+      <div class="result-head">
+        <div class="result-symbol">${esc(state.symbol)}</div>
+        <div>
+          <div class="r-name">${esc(state.name)}</div>
+          <h2>${esc(state.title)}</h2>
+        </div>
+      </div>
+      <div class="result-feel">${esc(state.feel)}</div>
+
+      <div class="result-block warn"><strong>⚠️ Типичная ошибка здесь:</strong> ${esc(state.error)}</div>
+
+      <div class="result-block steps">
+        <strong>✅ Что делать прямо сейчас:</strong>
+        <ol>${state.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol>
+      </div>
+
+      <div class="result-block next"><strong>➡️ Куда это ведёт:</strong> ${esc(state.next)}</div>
+    </div>`;
+
+    // book CTA
+    if(state.book.status === 'available'){
+      html += `<div class="book-cta">
+        <div class="bc-label">Разобрано подробно в книге</div>
+        <h4>${esc(state.book.title)}</h4>
+        <p>Этот этап и ещё 23 других — с полной картой тупиков и дневником навигации.</p>
+        <a class="btn-litres" href="${state.book.link}" target="_blank">📘 Читать на Литрес</a>
+      </div>`;
+    } else {
+      html += `<div class="book-cta">
+        <div class="bc-label">Об этом этапе пишется отдельная книга</div>
+        <h4>${esc(state.book.title)}</h4>
+        <p>Книга ещё не вышла. Подпишитесь — сообщим первыми, как только она будет готова.</p>
+        <a class="btn-idea" href="${state.book.link}">📬 Сообщить о выходе</a>
+      </div>`;
+    }
+
+    // email capture — personalized PDF
+    html += `<div class="email-capture">
+      <h4>📄 Получить разбор этого этапа на почту</h4>
+      <div class="ec-sub">Пришлём этот результат + краткую памятку по этапу «${esc(state.symbol)} ${esc(state.name)}», чтобы не потерять. Без спама.</div>
+      <form id="resultForm" action="${FORM_ACTION}" method="POST">
+        <input type="hidden" name="source" value="rune-test">
+        <input type="hidden" name="diagnosed_state" value="${esc(state.symbol)} ${esc(state.name)} — ${esc(state.title)}">
+        <input type="email" name="email" required placeholder="example@mail.ru">
+        <div class="ec-checkline">
+          <input type="checkbox" id="consentR" name="consent" required>
+          <label for="consentR">Согласен(на) на обработку персональных данных в соответствии с <a href="/privacy.html" target="_blank">Политикой конфиденциальности</a></label>
+        </div>
+        <button type="submit" class="primary-btn" id="resultSubmit">Прислать разбор</button>
+        <div class="ec-msg" id="resultMsg"></div>
+      </form>
+    </div>`;
+
+    html += `<div class="result-actions">
+      <button class="ghost-btn" id="restartBtn">🔄 Пройти диагностику заново</button>
+      <a class="ghost-btn" href="rune-map.html">🗺️ Открыть карту всех 24 рун</a>
+    </div>`;
+
+    html += `<div class="diary-hint">💡 Хотите фиксировать такие диагностики каждый день? В книге «Психология рун» есть шаблон Дневника рунической навигации.</div>`;
+
+    app.innerHTML = html;
+
+    app.querySelectorAll('[data-jump]').forEach(b=>{
+      b.addEventListener('click', ()=>{
+        const n = parseInt(b.getAttribute('data-jump'));
+        renderResult(byNum(n), 3, null);
+        scrollToApp();
+      });
+    });
+    const restartBtn = document.getElementById('restartBtn');
+    if(restartBtn) restartBtn.addEventListener('click', renderGroupStep);
+
+    wireForm('resultForm', 'resultMsg', 'resultSubmit');
+  }
+
+  // ---------- DEADLOCK PATH ----------
+  function renderDeadlockList(){
+    let html = `<button class="back-link" onclick="location.reload()">← Начать заново</button>`;
+    html += `<div class="step-title">В каком тупике вы себя узнаёте?</div>`;
+    html += `<div class="step-sub">Это шесть самых частых застреваний из книги «Психология рун». Выберите то, что похоже на вас.</div>`;
+    html += `<div class="choice-grid">`;
+    DEADLOCKS.forEach(d=>{
+      html += `<div class="choice-card" data-dl="${d.num}">
+        <div class="cc-symbol">🚧</div>
+        <div class="cc-body">
+          <strong>${esc(d.title)}</strong>
+          <span class="cc-phrase">${esc(d.signs[0]||'')}</span>
+        </div>
+      </div>`;
+    });
+    html += `</div>`;
+    app.innerHTML = html;
+    app.querySelectorAll('.choice-card').forEach(el=>{
+      el.addEventListener('click', ()=>{
+        const num = parseInt(el.getAttribute('data-dl'));
+        renderDeadlockResult(DEADLOCKS.find(d=>d.num===num));
+        scrollToApp();
+      });
+    });
+  }
+
+  function renderDeadlockResult(d){
+    const target = byNum(d.target);
+    let html = `<button class="back-link" data-act="back-dl">← Другой тупик</button>`;
+    html += `<div class="result-card">
+      <div class="result-head">
+        <div class="result-symbol">🚧</div>
+        <div>
+          <div class="r-name">Типичный тупик</div>
+          <h2>${esc(d.title)}</h2>
+        </div>
+      </div>
+      <div class="result-block warn">
+        <strong>Признаки:</strong>
+        <ul style="margin:.5rem 0 0 1.1rem; padding:0;">
+          ${d.signs.map(s=>`<li>${esc(s)}</li>`).join('')}
+        </ul>
+      </div>
+      <div class="result-block warn"><strong>⚠️ Ошибка:</strong> ${esc(d.error)}</div>
+      <div class="result-block steps">
+        <strong>✅ Выход:</strong>
+        <ol>${d.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol>
+      </div>
+      <div class="result-block next"><strong>➡️ Это соответствует этапу:</strong> ${esc(target.symbol)} ${esc(target.name)} — ${esc(target.title)}</div>
+    </div>`;
+    html += `<div class="result-actions">
+      <button class="primary-btn" id="openStateBtn">Открыть полный разбор этапа →</button>
+      <button class="ghost-btn" id="backToListBtn">← К другим тупикам</button>
+    </div>`;
+    app.innerHTML = html;
+    app.querySelector('[data-act="back-dl"]').addEventListener('click', renderDeadlockList);
+    document.getElementById('backToListBtn').addEventListener('click', renderDeadlockList);
+    document.getElementById('openStateBtn').addEventListener('click', ()=>{
+      renderResult(target, 3, null);
+      scrollToApp();
+    });
+  }
+
+  // ---------- FORM WIRING (Formspree, same pattern as feedback.html) ----------
+  function wireForm(formId, msgId, btnId){
+    const form = document.getElementById(formId);
+    const msg = document.getElementById(msgId);
+    const btn = document.getElementById(btnId);
+    if(!form) return;
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const consent = form.querySelector('input[name="consent"]');
+      if(consent && !consent.checked){
+        msg.textContent = '❌ Подтвердите согласие на обработку данных.';
+        msg.className = 'ec-msg show err';
+        return;
+      }
+      msg.textContent = '⏳ Отправка...';
+      msg.className = 'ec-msg show';
+      btn.disabled = true;
+      const formData = new FormData(form);
+      try{
+        const response = await fetch(form.action, { method:'POST', body: formData, headers:{'Accept':'application/json'} });
+        if(response.ok){
+          msg.textContent = '✅ Спасибо! Разбор придёт вам на почту.';
+          msg.className = 'ec-msg show ok';
+          form.reset();
+        } else {
+          throw new Error('fail');
+        }
+      } catch(err){
+        msg.textContent = '❌ Что-то пошло не так. Попробуйте позже или напишите: dimaa@dimaa.ru';
+        msg.className = 'ec-msg show err';
+        btn.disabled = false;
+      }
+    });
+  }
+
+})();
+</script>
+
+</body>
+</html>
