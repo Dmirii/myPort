@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109861723', 'ym');
-
-    ym(109861723, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109861723" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Где я сейчас? Руническая диагностика за 2 минуты | Дмитрий Антонов</title>
@@ -51,7 +38,6 @@
     h1{ font-size: 2rem; margin-bottom: .5rem; color: var(--forest); }
     h2{ font-size: 1.5rem; margin: 0 0 1rem; color: var(--forest); }
 
-    /* ===== HERO ===== */
     .test-hero{
       background: linear-gradient(180deg,#eef4ed 0%, var(--paper) 100%);
       padding: 2.5rem 0 2rem;
@@ -92,7 +78,6 @@
     .entry-card h3{ font-size:1.05rem; color:var(--forest); margin-bottom:.35rem; }
     .entry-card p{ font-size:.85rem; color:var(--muted); margin:0; }
 
-    /* ===== QUIZ SHELL ===== */
     #quizApp{ padding: 2rem 0 3rem; }
     .progress-wrap{ display:flex; align-items:center; gap:.8rem; margin-bottom:1.6rem; }
     .progress-bar{ flex:1; height:6px; background:#ece8e0; border-radius:6px; overflow:hidden; }
@@ -107,7 +92,6 @@
     .step-title{ font-size:1.3rem; color:var(--forest); margin-bottom:.3rem; }
     .step-sub{ color:var(--muted); font-size:.92rem; margin-bottom:1.5rem; }
 
-    /* group / state cards */
     .choice-grid{ display:grid; grid-template-columns: 1fr; gap: .9rem; }
     @media (min-width:700px){ .choice-grid.g2{ grid-template-columns: 1fr 1fr; } }
 
@@ -126,7 +110,6 @@
     .choice-card .cc-body span{ font-size:.85rem; color:var(--muted); }
     .choice-card .cc-phrase{ font-style:italic; font-size:.82rem; color:#7a8a82; margin-top:.35rem; display:block; }
 
-    /* yes/no questions */
     .qn-card{
       background:var(--card); border:1px solid var(--line); border-radius:22px;
       padding:1.1rem 1.3rem; margin-bottom: .8rem;
@@ -153,7 +136,6 @@
       padding:.75rem 1.6rem; border-radius:60px; font-size:.9rem; font-weight:500; cursor:pointer; text-decoration:none;
     }
 
-    /* result screen */
     .result-card{
       background:#fff; border:1px solid var(--line); border-radius:32px; padding:2rem;
       box-shadow:0 4px 18px rgba(0,0,0,.04); margin-bottom:1.5rem;
@@ -178,16 +160,6 @@
     .result-block.next{ background:#f7f4ef; border-left:4px solid var(--terracotta); }
     .result-block.next strong{ color:var(--terracotta); }
 
-    .confidence-note{
-      background:#fdf2f0; border-left:4px solid #b84a3a; border-radius:16px; padding:1rem 1.2rem;
-      font-size:.88rem; margin-bottom:1.2rem; color:#5c2c22;
-    }
-    .confidence-note .cn-links{ margin-top:.6rem; display:flex; gap:.6rem; flex-wrap:wrap; }
-    .confidence-note .cn-links button{
-      background:#fff; border:1px solid #e2c9c1; color:#8a3b2c; padding:.35rem .9rem; border-radius:30px;
-      font-size:.8rem; cursor:pointer;
-    }
-
     .book-cta{
       background: linear-gradient(135deg,#1e3a2f,#0f2c22); color:#fff; border-radius:24px;
       padding:1.4rem 1.6rem; margin-bottom:1.2rem;
@@ -204,7 +176,6 @@
       text-decoration:none; font-weight:600; font-size:.87rem;
     }
 
-    /* email capture */
     .email-capture{
       background:var(--card); border:1px solid var(--line); border-radius:28px; padding:1.6rem;
     }
@@ -259,7 +230,7 @@
   <div class="container">
     <div class="kicker">🧭 Бесплатная руническая диагностика · 2 минуты</div>
     <h1>Где я сейчас — и что делать дальше?</h1>
-    <p>Не гадание. Наблюдение. Три вопроса заменяют 24 руны: где я, почему застрял, что делать дальше. Ответьте честно — и получите конкретный этап процесса, типичную ошибку на нём и три шага вперёд.</p>
+    <p>Не гадание. Наблюдение. Три вопроса из книги «Психология рун» помогут определить ваш этап, причину застревания и следующий шаг.</p>
     <div class="nav-formula">
       <span>📍 Где я</span><span class="arrow">→</span><span>❓ Почему застрял</span><span class="arrow">→</span><span>⚡ Что делать</span>
     </div>
@@ -268,11 +239,6 @@
         <span class="ec-emoji">🧭</span>
         <h3>Пройти диагностику</h3>
         <p>6 коротких шагов. Определим ваш этап точно — по методике книги «Психология рун».</p>
-      </div>
-      <div class="entry-card" data-mode="deadlock">
-        <span class="ec-emoji">🚧</span>
-        <h3>Я явно застрял(а)</h3>
-        <p>Не хочу разбираться — просто узнать, в каком типичном тупике я нахожусь и как из него выйти.</p>
       </div>
     </div>
   </div>
@@ -288,15 +254,57 @@
   </div>
 </footer>
 
-<script type="application/json" id="statesData">__STATES_JSON__</script>
-<script type="application/json" id="deadlocksData">__DEADLOCKS_JSON__</script>
-<script type="application/json" id="groupsData">__GROUPS_JSON__</script>
-
 <script>
 (function(){
-  const STATES = JSON.parse(document.getElementById('statesData').textContent);
-  const DEADLOCKS = JSON.parse(document.getElementById('deadlocksData').textContent);
-  const GROUPS = JSON.parse(document.getElementById('groupsData').textContent);
+  // ===== ДАННЫЕ ИЗ ВАШИХ КНИГ (24 РУНЫ) =====
+  // Основано на книге «Психология рун. Руническая навигация»
+  const STATES = [
+    { num: 1, symbol: "ᚠ", name: "Феху", title: "Начало", feel: "Появилась новая мысль, идея, искра. Ещё не понятно, куда она приведёт, но она уже есть.", error: "Сразу начать действовать, не пройдя этапы выбора и подтверждения.", steps: ["Запиши идею", "Не действуй сразу", "Дай мысли пройти дальше"], next: "Уруз — выбор пути", book: { status: "available", title: "Инженерная модель реальности", link: "https://www.litres.ru/73990393/" } },
+    { num: 2, symbol: "ᚢ", name: "Уруз", title: "Многообразие", feel: "В голове каша. Сто вариантов, и глаза разбегаются. Ты в вихре возможностей.", error: "Пытаться выбрать прямо сейчас, не собрав достаточно данных.", steps: ["Собирай информацию", "Не принимай решение", "Дай себе время"], next: "Турисаз — выбор", book: { status: "available", title: "Инженерная модель реальности", link: "https://www.litres.ru/73990393/" } },
+    { num: 3, symbol: "ᚦ", name: "Турисаз", title: "Выбор", feel: "Ты говоришь «да» одному и «нет» остальным. Отсекаешь лишнее.", error: "Бояться отсечь варианты, остаться в Уруз.", steps: ["Сделай выбор", "Не оглядывайся", "Прими неизбежность отказа"], next: "Ансуз — подтверждение", book: { status: "available", title: "Инженерная модель реальности", link: "https://www.litres.ru/73990393/" } },
+    { num: 4, symbol: "ᚨ", name: "Ансуз", title: "Подтверждение", feel: "Внутренний или внешний знак, что решение верно. «Зелёный свет».", error: "Игнорировать знак, не получить одобрения от себя или мира.", steps: ["Подтверди выбор", "Скажи вслух", "Получи обратную связь"], next: "Райдо — первый шаг", book: { status: "available", title: "Инженерная модель реальности", link: "https://www.litres.ru/73990393/" } },
+    { num: 5, symbol: "ᚱ", name: "Райдо", title: "Первый шаг", feel: "Страх позади. Ты начал движение. Самый трудный шаг сделан.", error: "Ждать идеального момента, откладывать старт.", steps: ["Сделай одно маленькое действие", "Не жди вдохновения", "Начни с любого шага"], next: "Кеназ — проявление", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 6, symbol: "ᚲ", name: "Кеназ", title: "Проявление", feel: "Идея стала видимой. Её можно потрогать. Результат появился.", error: "Не показывать результат, держать в себе.", steps: ["Покажи миру", "Выведи из тени", "Зафиксируй результат"], next: "Гебо — гармония", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 7, symbol: "ᚷ", name: "Гебо", title: "Гармония", feel: "Новое и старое договорились. Баланс достигнут.", error: "Разрушать старые связи, сжигать мосты.", steps: ["Сохрани связи", "Найди баланс", "Подари и прими"], next: "Вуньо — радость", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 8, symbol: "ᚹ", name: "Вуньо", title: "Радость", feel: "Короткое счастье. Сделано. Завершённый этап.", error: "Застрять в радости, не двигаться дальше.", steps: ["Порадуйся", "Отметь завершение", "Не застревай"], next: "Хагалаз — жизнь с результатом", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 9, symbol: "ᚺ", name: "Хагалаз", title: "Рутина", feel: "Эйфория прошла. Начались будни. Машина пачкается и требует бензина.", error: "Паниковать, считать это катастрофой.", steps: ["Прими рутину", "Увидь зеркало", "Продолжай жить с результатом"], next: "Наутиз — сигнал", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 10, symbol: "ᚾ", name: "Наутиз", title: "Сигнал", feel: "Что-то жмёт, трет, беспокоит. Ещё не катастрофа, но уже не то.", error: "Игнорировать дискомфорт.", steps: ["Услышь сигнал", "Не терпи", "Сделай вывод"], next: "Иса — пауза", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 11, symbol: "ᛁ", name: "Иса", title: "Пауза", feel: "Ты остановился. Думаешь. Не бежишь.", error: "Застыть в паузе навсегда.", steps: ["Возьми паузу", "Собери внимание", "Не действуй"], next: "Йера — озарение", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 12, symbol: "ᛃ", name: "Йера", title: "Озарение", feel: "Вспышка. «Точно!». Решение пришло само.", error: "Не записать, не использовать озарение.", steps: ["Запиши озарение", "Доверься", "Используй как награду"], next: "Перт — второй шанс", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 13, symbol: "ᛈ", name: "Перт", title: "Второй шанс", feel: "Ты не с нуля. Используешь старый опыт для нового результата.", error: "Начинать заново, игнорируя опыт.", steps: ["Используй опыт", "Не начинай с нуля", "Используй старое по-новому"], next: "Эйваз — опыт в действии", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 14, symbol: "ᛇ", name: "Эйваз", title: "Опыт в действии", feel: "Ты чинишь старую машину новым способом. Не покупаешь новую.", error: "Игнорировать накопленный опыт.", steps: ["Используй то, что уже есть", "Не добывай новое", "Действуй с опорой"], next: "Альгиз — защита", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 15, symbol: "ᛉ", name: "Альгиз", title: "Защита", feel: "Ты чувствуешь опасность заранее. Внутренний голос говорит «стой».", error: "Игнорировать внутренний голос.", steps: ["Доверься", "Проверь", "Будь внимателен"], next: "Соулу — победа", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 16, symbol: "ᛋ", name: "Соулу", title: "Победа", feel: "Цикл пройден. Ты стал другим. Опыт остался с тобой.", error: "Не зафиксировать опыт.", steps: ["Зафиксируй опыт", "Осознай целостность", "Используй как фундамент"], next: "Тейваз — воля", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 17, symbol: "ᛏ", name: "Тейваз", title: "Воля", feel: "Ты бросаешь копьё в цель. Вкладываешь весь накопленный опыт в одно движение.", error: "Действовать без опыта.", steps: ["Действуй без сомнений", "Используй опыт", "Будь решителен"], next: "Беркана — рост", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 18, symbol: "ᛒ", name: "Беркана", title: "Рост", feel: "Из действия рождается новое. Беременность, запуск продукта, ежедневная забота.", error: "Торопиться, не дать времени на рост.", steps: ["Не торопись", "Взращивай", "Дай время"], next: "Эваз — движение", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 19, symbol: "ᛖ", name: "Эваз", title: "Движение", feel: "Ты обмениваешь старое на новое. Продаёшь машину, синхронизируешься с миром.", error: "Пытаться двигаться в одиночку.", steps: ["Найди пару", "Синхронизируйся", "Обменивайся"], next: "Маназ — интеграция", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 20, symbol: "ᛗ", name: "Маназ", title: "Интеграция", feel: "Ты узнаёшь себя — но другого. Общество приняло твою новую роль.", error: "Отвергать себя нового.", steps: ["Прими себя нового", "Позволь миру подтвердить", "Интегрируйся"], next: "Лагуз — поток", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 21, symbol: "ᛚ", name: "Лагуз", title: "Поток", feel: "Ответ приходит во сне. Вода сама находит путь.", error: "Контролировать, не доверять.", steps: ["Перестань контролировать", "Доверься", "Плыви по течению"], next: "Ингуз — семя", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 22, symbol: "ᛜ", name: "Ингуз", title: "Семя", feel: "Результат уже есть, но не проявлен. Книга сдана в печать, но ещё не вышла.", error: "Торопиться, «раскапывать» семя.", steps: ["Жди", "Не торопись", "Дай время проявиться"], next: "Отал — наследие", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 23, symbol: "ᛟ", name: "Отал", title: "Наследие", feel: "Ты передаёшь плоды тем, кто придёт после. Бизнес — сыну. Знания — ученику.", error: "Забыть о том, что ты не первый и не последний.", steps: ["Передай дальше", "Осознай связь", "Прими наследие"], next: "Дагаз — трансформация", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } },
+    { num: 24, symbol: "ᛞ", name: "Дагаз", title: "Трансформация", feel: "Старое ушло. Новое пришло. Бабочка вышла из кокона.", error: "Бояться открытой двери.", steps: ["Открой дверь", "Прими трансформацию", "Начни новый цикл"], next: "Новая Феху — новое начало", book: { status: "available", title: "Психология рун", link: "https://www.litres.ru/74056056/" } }
+  ];
+
+  // ===== МАТРИЦА ТУПИКОВ (из книги 2) =====
+  const DEADLOCKS = [
+    { num: 1, title: "Не могу начать", signs: ["Нет идеи", "Страх первого шага", "Жду идеального момента"], error: "Ты застрял до Феху или после Уруз — нет выбора.", steps: ["Найди искру — задай вопрос: чего я хочу?", "Сделай первый шаг — любой"], target: 1 },
+    { num: 2, title: "Завис в выборе", signs: ["Страх ошибиться", "Смотрю на варианты и не могу выбрать", "Меняю решения"], error: "Уруз без Турисаз — ты не отсекаешь лишнее.", steps: ["Сделай выбор", "Прими, что часть вариантов исчезнет"], target: 3 },
+    { num: 3, title: "Сделал, но нет радости", signs: ["Результат есть, но пустота", "Не чувствую удовлетворения", "Сомневаюсь"], error: "Пропустил Кеназ (не показал миру) или Гебо (нет баланса).", steps: ["Покажи результат другим", "Найди баланс между старым и новым"], target: 6 },
+    { num: 4, title: "Результат есть, но выматывает", signs: ["Устал от того, что создал", "Рутина убивает", "Потерял смысл"], error: "Застрял в Хагалаз — не вижу Наутиз.", steps: ["Услышь дискомфорт", "Найди, что можно улучшить"], target: 9 },
+    { num: 5, title: "Всё надоело, ничего не хочу", signs: ["Апатия", "Тяжело вставать утром", "Потеря интереса"], error: "Иса без Йера — пауза без озарения.", steps: ["Разреши себе паузу", "Верь, что озарение придёт"], target: 11 },
+    { num: 6, title: "Знаю, что надо, но не делаю", signs: ["Понимаю, что нужно действовать", "Но не могу заставить себя", "Откладываю"], error: "Нет Райдо — страх первого шага.", steps: ["Сделай самое маленькое действие", "Не жди вдохновения"], target: 5 }
+  ];
+
+  // ===== ГРУППЫ ДЛЯ ТЕСТА (сгруппированы по блокам) =====
+  const GROUPS = [
+    { id: "A", title: "Зарождение", range: "1–4", vibe: "У меня есть идея, но я не знаю, с чего начать", states: [1,2,3,4] },
+    { id: "B", title: "Движение", range: "5–8", vibe: "Я уже начал, но что-то идёт не так", states: [5,6,7,8] },
+    { id: "C", title: "Трансформация", range: "9–12", vibe: "Я живу с результатом, но чувствую дискомфорт", states: [9,10,11,12] },
+    { id: "D", title: "Перерождение", range: "13–16", vibe: "Я перезапускаюсь на основе опыта", states: [13,14,15,16] },
+    { id: "E", title: "Завершение", range: "17–20", vibe: "Я завершаю большой этап", states: [17,18,19,20] },
+    { id: "F", title: "Наследие", range: "21–24", vibe: "Я передаю опыт и завершаю цикл", states: [21,22,23,24] }
+  ];
+
   const app = document.getElementById('quizApp');
   const entry = document.getElementById('entryChoices');
 
@@ -304,7 +312,7 @@
 
   const FORM_ACTION = "https://formspree.io/f/meewldoe";
 
-  let answers = {}; // qIndex -> bool
+  let answers = {};
 
   function esc(s){
     const d = document.createElement('div');
@@ -333,7 +341,7 @@
     });
   });
 
-  // ---------- MAIN QUIZ: STEP 1 — choose group ----------
+  // ---------- STEP 1 — choose group ----------
   function renderGroupStep(){
     let html = `<button class="back-link" onclick="location.reload()">← Начать заново</button>`;
     html += progressBar(1,3);
@@ -354,14 +362,15 @@
     app.innerHTML = html;
     app.querySelectorAll('.choice-card').forEach(el=>{
       el.addEventListener('click', ()=>{
-        const gid = parseInt(el.getAttribute('data-group'));
-        renderStateStep(GROUPS.find(g=>g.id===gid));
+        const gid = el.getAttribute('data-group');
+        const group = GROUPS.find(g=>g.id===gid);
+        if(group) renderStateStep(group);
         scrollToApp();
       });
     });
   }
 
-  // ---------- STEP 2 — choose exact state within group ----------
+  // ---------- STEP 2 — choose state ----------
   function renderStateStep(group){
     let html = `<button class="back-link" data-act="back-group">← Назад</button>`;
     html += progressBar(2,3);
@@ -370,11 +379,12 @@
     html += `<div class="choice-grid">`;
     group.states.forEach(n=>{
       const s = byNum(n);
+      if(!s) return;
       html += `<div class="choice-card" data-state="${s.num}">
         <div class="cc-symbol">${esc(s.symbol)}</div>
         <div class="cc-body">
           <strong>${esc(s.name)} — ${esc(s.title)}</strong>
-          <span class="cc-phrase">${s.phrases[0] ? esc(s.phrases[0]) : ''}</span>
+          <span class="cc-phrase">${esc(s.feel)}</span>
         </div>
       </div>`;
     });
@@ -384,20 +394,26 @@
     app.querySelectorAll('.choice-card').forEach(el=>{
       el.addEventListener('click', ()=>{
         const num = parseInt(el.getAttribute('data-state'));
-        renderQuestionsStep(byNum(num), group);
+        const state = byNum(num);
+        if(state) renderQuestionsStep(state, group);
         scrollToApp();
       });
     });
   }
 
-  // ---------- STEP 3 — confirm with 3 diagnostic questions ----------
+  // ---------- STEP 3 — confirm with diagnostic questions ----------
   function renderQuestionsStep(state, group){
     answers = {};
+    const qs = [
+      `Вы чувствуете, что это состояние длится уже несколько дней?`,
+      `Вы знаете, что нужно делать, но не делаете?`,
+      `Вам кажется, что этот этап затянулся?`
+    ];
     let html = `<button class="back-link" data-act="back-state">← Назад</button>`;
     html += progressBar(3,3);
     html += `<div class="step-title">Проверим точнее: ${esc(state.symbol)} ${esc(state.name)}</div>`;
     html += `<div class="step-sub">Ответьте честно на три вопроса из книги «Психология рун».</div>`;
-    state.questions.forEach((q,i)=>{
+    qs.forEach((q,i)=>{
       html += `<div class="qn-card" data-q="${i}">
         <div class="qn-text">${i+1}. ${esc(q)}</div>
         <div class="qn-toggle">
@@ -417,8 +433,8 @@
         b.addEventListener('click', ()=>{
           card.querySelectorAll('.qn-btn').forEach(x=>x.classList.remove('active'));
           b.classList.add('active');
-          answers[qi] = b.getAttribute('v') === '1';
-          if(Object.keys(answers).length === state.questions.length){
+          answers[qi] = b.getAttribute('data-v') === '1';
+          if(Object.keys(answers).length === qs.length){
             btn.disabled = false;
           }
         });
@@ -434,8 +450,10 @@
   // ---------- RESULT ----------
   function renderResult(state, confidence, group){
     let html = '';
+
+    // confidence note
     if(group !== null && confidence < 2){
-      const prevN = state.num - 1 >= 0 ? state.num - 1 : null;
+      const prevN = state.num - 1 >= 1 ? state.num - 1 : null;
       const nextN = state.num + 1 <= 24 ? state.num + 1 : null;
       html += `<div class="confidence-note">
         <strong>Похоже, это не совсем ваш этап.</strong> Из трёх вопросов подтвердились только ${confidence}. По методике навигации это значит — вы, возможно, на соседнем этапе. Можно посмотреть его, либо всё равно открыть этот результат — иногда рано ещё видеть себя чётко, и это тоже нормально.
@@ -512,7 +530,8 @@
     app.querySelectorAll('[data-jump]').forEach(b=>{
       b.addEventListener('click', ()=>{
         const n = parseInt(b.getAttribute('data-jump'));
-        renderResult(byNum(n), 3, null);
+        const state = byNum(n);
+        if(state) renderResult(state, 3, null);
         scrollToApp();
       });
     });
@@ -542,7 +561,8 @@
     app.querySelectorAll('.choice-card').forEach(el=>{
       el.addEventListener('click', ()=>{
         const num = parseInt(el.getAttribute('data-dl'));
-        renderDeadlockResult(DEADLOCKS.find(d=>d.num===num));
+        const deadlock = DEADLOCKS.find(d=>d.num===num);
+        if(deadlock) renderDeadlockResult(deadlock);
         scrollToApp();
       });
     });
@@ -550,6 +570,7 @@
 
   function renderDeadlockResult(d){
     const target = byNum(d.target);
+    if(!target) return;
     let html = `<button class="back-link" data-act="back-dl">← Другой тупик</button>`;
     html += `<div class="result-card">
       <div class="result-head">
@@ -585,7 +606,7 @@
     });
   }
 
-  // ---------- FORM WIRING (Formspree, same pattern as feedback.html) ----------
+  // ---------- FORM WIRING ----------
   function wireForm(formId, msgId, btnId){
     const form = document.getElementById(formId);
     const msg = document.getElementById(msgId);
@@ -622,6 +643,5 @@
 
 })();
 </script>
-
 </body>
 </html>
