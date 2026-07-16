@@ -1,822 +1,576 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109861723', 'ym');
-
-    ym(109861723, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109861723" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Инженерная модель реальности — руны как этапы процессов | Дмитрий Антонов</title>
-  <meta name="description" content="Руны — это не магия, а этапы любого процесса. Инженерная модель реальности Дмитрия Антонова. Узнай, где ты находишься и что делать дальше. Книги, карта рун, руническая навигация.">
-  <meta name="keywords" content="инженерная модель реальности, руны, этапы процессов, руническая навигация, Дмитрий Антонов, футарк, руны значение, прикладная рунология">
-  <meta name="author" content="Дмитрий Антонов">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://dimaa.ru/">
-  <meta property="og:title" content="Инженерная модель реальности — руны как этапы процессов">
-  <meta property="og:description" content="Руны — это не магия, а этапы любого процесса. Инженерная модель реальности Дмитрия Антонова. Книги, карта рун, руническая навигация.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dimaa.ru/">
-  <meta property="og:site_name" content="Инженерная модель реальности">
-  <meta property="og:image" content="https://dimaa.ru/img/logo.jpeg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Инженерная модель реальности — руны как этапы процессов">
-  <meta name="twitter:description" content="Руны — это не магия, а этапы любого процесса. Инженерная модель реальности Дмитрия Антонова.">
-  <meta name="twitter:image" content="https://dimaa.ru/img/logo.jpeg">
-  <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
-  <link rel="shortcut icon" href="/img/logo.jpeg">
-
-  <!-- ===== ПОДКЛЮЧАЕМ ВНЕШНИЙ ФАЙЛ СТИЛЕЙ ===== -->
-  <link rel="stylesheet" href="/style.css">
-
-  <!-- ===== УНИКАЛЬНЫЕ СТИЛИ ТОЛЬКО ДЛЯ ГЛАВНОЙ СТРАНИЦЫ ===== -->
-  <style>
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 1.6rem;
-      margin-bottom: 1.5rem;
-      border-left: 4px solid #2c6e49;
-      padding-left: 1rem;
-    }
-
-    .section {
-      padding: 3rem 0;
-      border-bottom: 1px solid #e6e4e0;
-    }
-
-    .section:last-of-type {
-      border-bottom: none;
-    }
-
-    .hero {
-      padding: 2rem 0 1rem 0;
-    }
-
-    .author-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .author-text {
-      flex: 2;
-    }
-
-    .author-text p {
-      margin-bottom: 1rem;
-      font-size: 1rem;
-      color: #2c2c34;
-    }
-
-    .author-badge {
-      background: #eef4ed;
-      padding: 0.4rem 1rem;
-      border-radius: 32px;
-      font-weight: 500;
-      display: inline-block;
-      margin-bottom: 1rem;
-      font-size: 0.75rem;
-      color: #1b4d2e;
-    }
-
-    .principle-tag {
-      font-family: monospace;
-      background: #2c6e4910;
-      border-left: 3px solid #2c6e49;
-      padding: 0.2rem 0.6rem;
-      border-radius: 12px;
-      font-size: 0.85rem;
-      display: inline-block;
-      margin: 0.2rem 0;
-    }
-
-    .author-photo {
-      flex: 1;
-      text-align: center;
-      background: #eef2e9;
-      border-radius: 48px;
-      padding: 1.8rem 1rem;
-    }
-
-    .author-photo img {
-      width: 100%;
-      max-width: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-    }
-
-    .contacts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-      background: #ffffffd9;
-      border-radius: 1.5rem;
-      padding: 1.3rem;
-      border: 1px solid #e2ddd4;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-    }
-
-    .contact-icon {
-      font-size: 1.3rem;
-      min-width: 1.8rem;
-    }
-
-    .contact-link {
-      text-decoration: none;
-      color: #1e3a2f;
-      font-weight: 500;
-      font-size: 0.9rem;
-    }
-
-    .contact-link:hover {
-      text-decoration: underline;
-    }
-
-    .rune-line {
-      font-family: monospace;
-      font-size: 0.9rem;
-      background: #ece8e0;
-      padding: 0.2rem 0.6rem;
-      border-radius: 40px;
-      display: inline-block;
-    }
-
-    @media (min-width: 640px) {
-      .books-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .books-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .author-wrap {
-        flex-direction: row;
-        align-items: flex-start;
-      }
-      h1 {
-        font-size: 2.5rem;
-      }
-      .section {
-        padding: 4rem 0;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<nav class="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <img src="/img/logo.jpeg" alt="Логотип">
-      <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
-    </a>
-    <div class="nav-links">
-      <a href="#about">👤 Об авторе</a>
-      <a href="#books">📚 Книги</a>
-      <a href="#contacts">📬 Контакты</a>
-      <a href="methodology.html">📐 Методология</a>
-      <a href="port.html">🧪 Лаборатория</a>
-    </div>
-  </div>
-</nav>
-
-<main>
-  <section id="about" class="section hero">
-    <div class="container">
-      <div class="author-wrap">
-        <div class="author-text">
-          <div class="author-badge">⚙️ РУНЫ — ЭТО БОЛЬШЕ, ЧЕМ МАГИЯ. ЭТО ЭТАПЫ ПРОЦЕССА.</div>
-          <h1>Дмитрий Антонов</h1>
-          <p>Инженер-программист, управленец, практикующий рунолог. Соединил логику системного анализа с древним знанием.</p>
-          <p><strong>Главный тезис:</strong> Руны — это не просто мистические знаки, <strong>а в первую очередь это язык описания этапа любого процесса.</strong></p>
-          <p>
-            <span class="principle-tag">ᚠ Феху — начало</span>
-            <span class="principle-tag">ᚺ Хагалаз — жизнь с результатом</span>
-            <span class="principle-tag">ᚦ Турисаз — выбор</span>
-            <span class="principle-tag">ᚱ Райдо — первый шаг</span>
-          </p>
-          <p>В основе метода — структура, наблюдение и управление этапами: от мытья посуды до смены профессии.</p>
-
-          <!-- ===== КНОПКИ CTA (НОВЫЙ ДИЗАЙН) ===== -->
-          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1.5rem;">
-            <!-- Кнопка 1: Читать книгу (яркий, как Литрес) -->
-            <a href="book1.html" class="btn" style="background: #ff5a5f; font-size: 0.9rem; padding: 0.5rem 1.2rem; border-radius: 60px; border: none; color: white;">
-              📖 Читать книгу
-            </a>
-            <!-- Кнопка 2: Диагностика (темный, фирменный) -->
-            <a href="diagnostics.html" class="btn" style="background: #1e3a2f; font-size: 0.9rem; padding: 0.5rem 1.2rem; border-radius: 60px; border: none; color: white;">
-              🧭 Пройти диагностику
-            </a>
-            <!-- Кнопка 3: Карта рун (теплый/желтый) -->
-            <a href="rune-map.html" class="btn" style="background: #b87c4f; font-size: 0.9rem; padding: 0.5rem 1.2rem; border-radius: 60px; border: none; color: white;">
-              🗺️ Карта рун
-            </a>
-          </div>
-          <!-- ===== КОНЕЦ КНОПОК CTA ===== -->
-
-        </div>
-
-        <div class="author-photo">
-          <img src="/img/DimaA.webp" alt="Дмитрий Антонов" style="width: 180px; height: 180px; border-radius: 24px; object-fit: cover; margin: 0 auto 1rem auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-          <div style="font-size: 1.2rem; font-weight: 600;">Дмитрий Антонов</div>
-          <div style="font-size: 0.8rem; margin-top: 0.3rem;">инженер-программист, управленец, рунолог</div>
-          <hr style="margin: 1rem 0; border-color:#cbd5c3; width: 40px; margin-left: auto; margin-right: auto;">
-          <div style="font-size: 0.85rem;">РУНЫ — это больше, чем магия. <br>Это этапы процесса.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="books" class="section">
-    <div class="container">
-      <h2>📚 Серия «Руны как этапы процесса»</h2>
-
-      <!-- БЛОК 1. ВНУТРЕННИЙ ЦИКЛ -->
-      <h2 style="margin-top: 2rem; border-left-color: #1e3a2f;">🧭 Блок 1. Зарождение</h2>
-      <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.9rem;">Дать систему, научить видеть, сделать выбор, войти в диалог</p>
-
-      <div class="books-grid">
-        <!-- КНИГА 1 -->
-        <div class="book-card">
-          <div class="book-number">Книга первая</div>
-          <div class="book-status">✅ Доступна</div>
-          <div class="book-title">Инженерная модель реальности</div>
-          <div class="book-subtitle">Прикладная рунология для рационалистов и управленцев</div>
-          <div class="book-annotation">
-            <p>Вы держите в руках не «книгу тайн». Это инженерная модель реальности. Руна Феху — это не «деньги». Это «начало». Руна Хагалаз — это не «разрушение». Это «жизнь с результатом».</p>
-          </div>
-          <div class="book-meta">
-            <span>📖 Система</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="book1.html" class="btn btn-small">Подробнее →</a>
-              <a href="https://www.litres.ru/73990393/" class="btn btn-small btn-litres" target="_blank">Литрес</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 2 -->
-        <div class="book-card">
-          <div class="book-number">Книга вторая</div>
-          <div class="book-status">✅ Доступна</div>
-          <div class="book-title">Психология рун</div>
-          <div class="book-subtitle">Руническая навигация: как понять, где вы находитесь, и что делать дальше</div>
-          <div class="book-annotation">
-            <p>Как определить своё состояние без гадания. 24 состояния — от «искры» до «просветления». Три вопроса навигации: Где я? Почему застрял? Что делать?</p>
-          </div>
-          <div class="book-meta">
-            <span>🧭 Навигация</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="book2.html" class="btn btn-small">Подробнее →</a>
-              <a href="https://www.litres.ru/74056056/" class="btn btn-small  btn-litres" target="_blank">Литрес</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 3 -->
-        <div class="book-card">
-          <div class="book-number">Книга третья</div>
-          <div class="book-status">✅ Доступна</div>
-          <div class="book-title">Ключ к мантике</div>
-          <div class="book-subtitle">7-дневный переход от навигации к диалогу с рунами</div>
-          <div class="book-annotation">
-            <p>Тренинг для подготовки к книге «Мантика без иллюзий». За 7 дней вы научитесь формулировать вопросы, входить в состояние «чистого листа» и интерпретировать ответы без страха. Без физических рун — только Дневник и внимание.</p>
-          </div>
-          <div class="book-meta">
-            <span>🗝️ Ключ</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="book25.html" class="btn btn-small">Подробнее →</a>
-              <a href="https://www.litres.ru/74065998/" class="btn btn-small  btn-litres" target="_blank">Литрес</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 4 -->
-        <div class="book-card">
-          <div class="book-number">Книга четвёртая</div>
-          <div class="book-status">✅ Доступна</div>
-          <div class="book-title">Мантика без иллюзий</div>
-          <div class="book-subtitle">Гадание как диагностика, а не только магия</div>
-          <div class="book-annotation">
-            <p>Как задавать вопросы рунам, не впадая в магическое мышление. Гадание как диагностика текущего этапа. Анализ раскладов через «три времени».</p>
-          </div>
-          <div class="book-meta">
-            <span>🔮 Практика</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="book3.html" class="btn btn-small">Подробнее →</a>
-              <a href="https://www.litres.ru/74093559/" class="btn btn-small  btn-litres" target="_blank">Литрес</a>
-            </div>
-          </div>
-        </div>
-      </div> <!-- /books-grid -->
-
-      <!-- БЛОК 2. ДВИЖЕНИЕ И РАСКРЫТИЕ -->
-      <h2 style="margin-top: 3rem; border-left-color: #c97e2a;">🚀 Блок 2. Движение</h2>
-      <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.9rem;">Вынести систему во внешний мир: толчок, проявление, гармония, завершение</p>
-
-      <div class="books-grid">
-        <!-- КНИГА 5 -->
-        <div class="book-card">
-          <div class="book-number">Книга пятая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Рунический менеджмент</div>
-          <div class="book-subtitle">Почему мы стоим на месте, хотя толчок уже был?</div>
-          <div class="book-annotation">
-            <p>Первый шаг. Но проблема не в том, чтобы начать. Проблема в том, что мы часто не замечаем, что уже начали. Или стоим на месте, хотя толчок уже был дан.</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о диагностике застревания на старте. О том, как распознать «волшебный пендель» от Создателя.</p>
-          </div>
-          <div class="book-meta">
-            <span>🏭 Управление</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <a href="book5.html" class="btn btn-small">Подробнее →</a>              
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 6 -->
-        <div class="book-card">
-          <div class="book-number">Книга шестая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны в действии</div>
-          <div class="book-subtitle">Как увидеть то, что уже есть?</div>
-          <div class="book-annotation">
-            <p>Проявление. Ты уже начал двигаться. Ты уже делаешь шаги. Но ты не видишь результата. Или видишь, но не замечаешь.</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: об осознанности. О том, как заметить изменения в себе и вокруг.</p>
-          </div>
-          <div class="book-meta">
-            <span>🔍 Осознанность</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 7 -->
-        <div class="book-card">
-          <div class="book-number">Книга седьмая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны как язык</div>
-          <div class="book-subtitle">Как жить в гармонии, когда всё вокруг требует внимания?</div>
-          <div class="book-annotation">
-            <p>Баланс. Гармония с миром, с собой, с людьми, с мыслями. Ты уже начал, ты уже видишь результаты. Но внутри — дисбаланс.</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о равновесии. О том, как находить баланс. О практиках гармонии.</p>
-          </div>
-          <div class="book-meta">
-            <span>⚖️ Гармония</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 8 -->
-        <div class="book-card">
-          <div class="book-number">Книга восьмая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны в итоге</div>
-          <div class="book-subtitle">Как завершить и начать заново?</div>
-          <div class="book-annotation">
-            <p>Завершение. Ты прошёл путь. Теперь — завершение. Но завершение — это не конец. Это переход к новому.</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о том, как заканчивать. Как отпускать. Как прожить радость завершения и не застрять в ней.</p>
-          </div>
-          <div class="book-meta">
-            <span>🌀 Завершение</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-      </div> <!-- /books-grid -->
-
-      <!-- БЛОК 3. ЗРЕЛОСТЬ -->
-      <h2 style="margin-top: 3rem; border-left-color: #8a7f6d;">🌿 Блок 3. Трансформация</h2>
-      <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.9rem;">Жизнь с результатом и трансформация: рутина, кризис, пауза, озарение</p>
-
-      <div class="books-grid">
-        <!-- КНИГА 9 -->
-        <div class="book-card">
-          <div class="book-number">Книга девятая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны в жизни</div>
-          <div class="book-subtitle">Как не потерять смысл в рутине</div>
-          <div class="book-annotation">
-            <p>Жизнь с результатом. Ты построил систему, но каждый день — это одно и то же. Как не выгореть и сохранить смысл?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о том, как жить с системой и не потерять себя.</p>
-          </div>
-          <div class="book-meta">
-            <span>🌿 Рутина</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 10 -->
-        <div class="book-card">
-          <div class="book-number">Книга десятая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны и кризис</div>
-          <div class="book-subtitle">Как услышать сигнал до того, как станет поздно</div>
-          <div class="book-annotation">
-            <p>Дискомфорт. Ты чувствуешь, что что-то не так, но не можешь понять, что именно. Как распознать сигнал и вовремя среагировать?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о том, как слышать себя и мир.</p>
-          </div>
-          <div class="book-meta">
-            <span>⚠️ Сигналы</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 11 -->
-        <div class="book-card">
-          <div class="book-number">Книга одиннадцатая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны и пауза</div>
-          <div class="book-subtitle">Ценность остановки</div>
-          <div class="book-annotation">
-            <p>Заморозка. Ты остановился. Это не тупик, а момент сбора сил. Как правильно взять паузу и не застрять в ней?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о силе осознанного бездействия.</p>
-          </div>
-          <div class="book-meta">
-            <span>❄️ Пауза</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 12 -->
-        <div class="book-card">
-          <div class="book-number">Книга двенадцатая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны и озарение</div>
-          <div class="book-subtitle">Как не пропустить ответ</div>
-          <div class="book-annotation">
-            <p>Эврика! Вдохновение приходит внезапно. Как его поймать, запомнить и превратить в действие?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о моментах прозрения и их силе.</p>
-          </div>
-          <div class="book-meta">
-            <span>💡 Озарение</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-      </div> <!-- /books-grid -->
-
-      <!-- БЛОК 4. ПЕРЕРОЖДЕНИЕ -->
-      <h2 style="margin-top: 3rem; border-left-color: #c97e2a;">🔄 Блок 4. Перерождение</h2>
-      <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.9rem;">Опыт и новый цикл: шанс, опыт, защита, победа</p>
-
-      <div class="books-grid">
-        <!-- КНИГА 13 -->
-        <div class="book-card">
-          <div class="book-number">Книга тринадцатая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Второй шанс</div>
-          <div class="book-subtitle">Как начать заново на старом месте</div>
-          <div class="book-annotation">
-            <p>Ты уже пробовал. Не получилось. Теперь у тебя есть опыт и новый взгляд. Как перезапустить процесс?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о перезапуске и втором дыхании.</p>
-          </div>
-          <div class="book-meta">
-            <span>🔄 Шанс</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 14 -->
-        <div class="book-card">
-          <div class="book-number">Книга четырнадцатая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны и опыт</div>
-          <div class="book-subtitle">Как прошлое становится опорой</div>
-          <div class="book-annotation">
-            <p>Прошлое — это не груз, а фундамент. Как использовать накопленный опыт для новых свершений?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о силе прожитого.</p>
-          </div>
-          <div class="book-meta">
-            <span>📜 Опыт</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 15 -->
-        <div class="book-card">
-          <div class="book-number">Книга пятнадцатая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны и защита</div>
-          <div class="book-subtitle">Как укрепить созданное</div>
-          <div class="book-annotation">
-            <p>Ты построил систему. Теперь её нужно защитить. Как сохранить результаты и не дать им разрушиться?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: об укреплении и устойчивости.</p>
-          </div>
-          <div class="book-meta">
-            <span>🛡️ Защита</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 16 -->
-        <div class="book-card">
-          <div class="book-number">Книга шестнадцатая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны и победа</div>
-          <div class="book-subtitle">Как выглядит завершённый цикл</div>
-          <div class="book-annotation">
-            <p>Ты прошёл путь. Ты стал целостным. Как осознать свою победу и не останавливаться на достигнутом?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о целостности и завершённости.</p>
-          </div>
-          <div class="book-meta">
-            <span>🏆 Победа</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-      </div> <!-- /books-grid -->
-
-      <!-- БЛОК 5. ФИНАЛ -->
-      <h2 style="margin-top: 3rem; border-left-color: #1e3a2f;">⭐ Блок 5. Завершение</h2>
-      <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.9rem;">Принятие и завершение: воля, рост, синхронизация, интеграция</p>
-
-      <div class="books-grid">
-        <!-- КНИГА 17 -->
-        <div class="book-card">
-          <div class="book-number">Книга семнадцатая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны и воля</div>
-          <div class="book-subtitle">Как сделать смелый шаг</div>
-          <div class="book-annotation">
-            <p>Решение. Ты знаешь, что нужно сделать, но боишься. Как собрать волю в кулак и действовать?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о принятии решений.</p>
-          </div>
-          <div class="book-meta">
-            <span>⚔️ Воля</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 18 -->
-        <div class="book-card">
-          <div class="book-number">Книга восемнадцатая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Возрождение</div>
-          <div class="book-subtitle">Как рождается новое</div>
-          <div class="book-annotation">
-            <p>Из действия рождается новая форма. Ты меняешься. Как принять себя нового и идти дальше?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о росте и обновлении.</p>
-          </div>
-          <div class="book-meta">
-            <span>🌱 Рост</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 19 -->
-        <div class="book-card">
-          <div class="book-number">Книга девятнадцатая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны и движение</div>
-          <div class="book-subtitle">Как синхронизироваться с миром</div>
-          <div class="book-annotation">
-            <p>Ты двигаешься, но не один. Как чувствовать ритм мира и двигаться в ногу с ним?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о синхронизации и партнёрстве.</p>
-          </div>
-          <div class="book-meta">
-            <span>🤝 Синхронизация</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 20 -->
-        <div class="book-card">
-          <div class="book-number">Книга двадцатая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны и интеграция</div>
-          <div class="book-subtitle">Как стать собой новым</div>
-          <div class="book-annotation">
-            <p>Ты изменился. Мир тоже. Как вписаться в новую реальность и быть принятым?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о принятии и интеграции.</p>
-          </div>
-          <div class="book-meta">
-            <span>🧩 Интеграция</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-      </div> <!-- /books-grid -->
-
-      <!-- БЛОК 6. НАСЛЕДИЕ -->
-      <h2 style="margin-top: 3rem; border-left-color: #b87c4f;">🏛️ Блок 6. Наследие</h2>
-      <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.9rem;">Поток и трансформация: доверие, потенциал, наследие, трансформация</p>
-
-      <div class="books-grid">
-        <!-- КНИГА 21 -->
-        <div class="book-card">
-          <div class="book-number">Книга двадцать первая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны и поток</div>
-          <div class="book-subtitle">Как довериться течению</div>
-          <div class="book-annotation">
-            <p>Контроль отпущен. Ты плывёшь по течению. Как довериться миру и не потерять себя?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о доверии и принятии.</p>
-          </div>
-          <div class="book-meta">
-            <span>🌊 Поток</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 22 -->
-        <div class="book-card">
-          <div class="book-number">Книга двадцать вторая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны и семя</div>
-          <div class="book-subtitle">Что зреет внутри</div>
-          <div class="book-annotation">
-            <p>Внутри уже есть ответ. Семя проросло. Как увидеть потенциал и дать ему проявиться?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о внутреннем потенциале.</p>
-          </div>
-          <div class="book-meta">
-            <span>🌱 Потенциал</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 23 -->
-        <div class="book-card">
-          <div class="book-number">Книга двадцать третья</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны и наследие</div>
-          <div class="book-subtitle">Что остаётся после тебя</div>
-          <div class="book-annotation">
-            <p>Ты создал систему. Теперь она живёт своей жизнью. Что ты оставляешь после себя?</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о наследии и передаче опыта.</p>
-          </div>
-          <div class="book-meta">
-            <span>🏛️ Наследие</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- КНИГА 24 -->
-        <div class="book-card">
-          <div class="book-number">Книга двадцать четвёртая</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Руны и трансформация</div>
-          <div class="book-subtitle">Полный цикл завершён</div>
-          <div class="book-annotation">
-            <p>Цикл завершён. Ты прошёл путь от начала до конца. Что дальше? Дверь открыта для нового.</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о трансформации и новом начале.</p>
-          </div>
-          <div class="book-meta">
-            <span>🌀 Трансформация</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-        
-      </div> <!-- /books-grid -->
-      
-      <!-- ===== БЛОК 0. ПУСТАЯ РУНА ===== -->
-      <div style="margin: 3rem 0 1rem;">
-        <h2 style="border-left-color: #b87c4f; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-          <span style="font-size: 1.8rem;">🌀</span> 
-          <span>Точка бифуркации</span>
-          <span style="font-size: 0.8rem; font-weight: 400; color: #8a7f6d; margin-left: 4px;">— книга 0</span>
-        </h2>
-        <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.9rem;">
-          Между циклами. Тишина, пауза, переход. Не пустота — а пространство для нового.
-        </p>
-      </div>
-
-      <div class="books-grid" style="margin-top: 0;">
-        <!-- КНИГА 0. ПУСТАЯ РУНА -->
-        <div class="book-card" style="border-left: 4px solid #b87c4f; background: #fcf9f5;">
-          <div class="book-number">Книга 0</div>
-          <div class="book-status idea">🌱 Идея</div>
-          <div class="book-title">Пустая руна</div>
-          <div class="book-subtitle">Точка бифуркации</div>
-          <div class="book-annotation">
-            <p>Тишина — это не пустота. Это пространство, где рождается новый выбор. Книга о том, как остановиться, чтобы услышать.</p>
-            <p style="margin-top: 0.4rem; font-style: italic; color: #4a6a5c;">О чём книга: о паузе между циклами. О том, как не бояться ничего не делать. О моменте, когда всё возможно.</p>
-          </div>
-          <div class="book-meta">
-            <span>🌀 Переход</span>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <a href="feedback.html" class="btn btn-small" style="background: #b87c4f; border-color: #b87c4f;">📬 Сообщить о выходе</a>
-            </div>
-          </div>
-        </div>
-      </div> <!-- /books-grid -->
-      
-
-      <p style="margin-top: 1.5rem; background: #ece5da30; padding: 0.6rem 1rem; border-radius: 2rem; font-size: 0.8rem; text-align: center;">
-        🧠 <strong>Инженерный подход:</strong> руны не делают за вас — они показывают этап.
-      </p>
-
-    </div>
-  </section>
-
-  <section id="contacts" class="section">
-    <div class="container">
-      <h2>📫 Контакты</h2>
-      <div class="contacts-list">
-        <div class="contact-item">
-          <div class="contact-icon">📧</div>
-          <div>
-            <a href="mailto:dimaa@dimaa.ru" class="contact-link">dimaa@dimaa.ru</a>
-            <div style="font-size: 0.75rem; color: #7a8a82;">Для вопросов по книгам, предложений и обратной связи</div>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">📞</div>
-          <div>
-            <a href="tel:+79117335515" class="contact-link">+7 (911) 733-55-15</a>
-            <div style="font-size: 0.75rem; color: #7a8a82;">Только для срочных вопросов и связи по издательским делам</div>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">⚡</div>
-          <div>
-            <a href="https://vk.com/dimaa_ru" target="_blank" class="contact-link">ВКонтакте / @dimaa_ru</a>
-            <div style="font-size: 0.75rem; color: #7a8a82;">Для общения и новостей</div>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">📘</div>
-          <div>
-            <a href="https://www.litres.ru/73990393/" target="_blank" class="contact-link">Книга на Литрес</a>
-            <div style="font-size: 0.75rem; color: #7a8a82;">Приобрести книги</div>
-          </div>
-        </div>
-      </div>
-      <div style="margin-top: 1.5rem; text-align: center;">
-        <span class="rune-line">ᚠ ᚱ ᚨ ᛗ ᛖ ᛉ ᚲ ᛃ</span>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <p>© Дмитрий Антонов · Руны как этапы процесса</p>
-    <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Мир устроен системно. Руны — это способ увидеть и настроить его процессы»</p>
-    <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
-  </div>
-</footer>
-
-</body>
-</html>
+/* ========================================
+   ОБЩИЕ СТИЛИ (для всего сайта)
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #faf9f8;
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.5;
+  color: #1e1e2a;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.section ul {
+  margin-left: 1.5rem;
+}
+
+/* ========================================
+   ХЕДЕР И НАВИГАЦИЯ
+   ======================================== */
+.navbar {
+  padding: 1rem 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e2e6;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.94);
+  z-index: 10;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.3px;
+  text-decoration: none;
+  color: #1e3a2f;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.logo span span {
+  color: #2c6e49;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #2d3e3b;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #1b5e3f;
+}
+
+/* ========================================
+   КНОПКИ
+   ======================================== */
+.btn {
+  display: inline-block;
+  background: #1e3a2f;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background: #0f2c22;
+}
+
+.btn-litres {
+  background: #ff5a5f;
+}
+
+.btn-litres:hover {
+  background: #e04e52;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #1e3a2f;
+  color: #1e3a2f;
+}
+
+.btn-outline:hover {
+  background: #1e3a2f;
+  color: white;
+}
+
+.btn-small {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+}
+
+/* ========================================
+   ФИКС КНОПОК (перебивает инлайн-стили)
+   ======================================== */
+.btn:hover {
+  background: #0f2c22 !important;
+}
+
+.btn-litres:hover {
+  background: #e04e52 !important;
+}
+
+.btn-outline:hover {
+  background: #1e3a2f !important;
+  color: white !important;
+}
+
+/* ========================================
+   КАРТОЧКИ КНИГ
+   ======================================== */
+.books-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.book-card {
+  background: white;
+  border-radius: 24px;
+  padding: 1.3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03), 0 0 0 1px #ece8e2;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05), 0 0 0 1px #d4cfc5;
+}
+
+.book-status {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #2c6e49;
+  margin-bottom: 0.5rem;
+}
+
+.book-status.soon {
+  color: #c97e2a;
+}
+
+.book-status.idea {
+  color: #8a7f6d;
+}
+
+.book-number {
+  font-size: 0.6rem;
+  color: #8a7f6d;
+  margin-bottom: 0.25rem;
+}
+
+.book-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.25;
+}
+
+.book-subtitle {
+  font-size: 0.8rem;
+  color: #2c6e49;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.book-annotation {
+  margin: 0.75rem 0;
+  color: #2e2e3a;
+  font-size: 0.85rem;
+}
+
+.book-annotation p {
+  margin-bottom: 0.4rem;
+}
+
+/* Блок с кнопками в карточке */
+.book-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.8rem;
+  border-top: 1px dashed #ddd8cf;
+}
+
+.book-meta > span:first-child {
+  margin-right: auto;
+}
+
+/* ========================================
+   БЛОК «ДРУГИЕ КНИГИ СЕРИИ»
+   ======================================== */
+.series-books {
+  background: #f7f4ef;
+  border-radius: 24px;
+  padding: 1.5rem 1.5rem 0.5rem;
+  margin: 2.5rem 0 1rem;
+}
+
+.series-books h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #1e3a2f;
+}
+
+.series-books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.series-book-item {
+  background: white;
+  border-radius: 16px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e2ddd4;
+  text-align: center;
+}
+
+.series-book-item .sb-number {
+  font-size: 0.6rem;
+  color: #8a7f6d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.series-book-item .sb-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1e3a2f;
+  margin: 0.2rem 0;
+}
+
+.series-book-item .sb-status {
+  font-size: 0.65rem;
+  color: #2c6e49;
+}
+
+.series-book-item .sb-status.soon {
+  color: #c97e2a;
+}
+
+.series-book-item a {
+  text-decoration: none;
+  display: block;
+}
+
+.series-book-item a:hover .sb-title {
+  text-decoration: underline;
+}
+
+/* ========================================
+   ТАБЛИЦЫ (МАТРИЦЫ)
+   ======================================== */
+.matrix {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: white;
+  border: 1px solid #e2ddd4;
+  border-radius: 24px;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 0;
+}
+
+.matrix-item {
+  display: flex;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee8e0;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.matrix-item:last-child {
+  border-bottom: none;
+}
+
+.matrix-item.blank {
+  background: #f7f3ed;
+  border-radius: 12px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-bottom: none;
+  margin-top: 0.25rem;
+}
+
+.matrix-question {
+  font-weight: 600;
+  min-width: 160px;
+  color: #1e3a2f;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   ФОРМЫ
+   ======================================== */
+.form-section {
+  background: white;
+  border-radius: 32px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #e2ddd4;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+}
+
+.form-section h1 {
+  font-size: 1.8rem;
+  color: #1e3a2f;
+  margin-bottom: 0.5rem;
+}
+
+.form-section .description {
+  color: #5f6c66;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1e3a2f;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd8cf;
+  border-radius: 60px;
+  font-size: 1rem;
+  background: #fefaf5;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2c6e49;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-group input {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  font-size: 0.85rem;
+  color: #4a5b55;
+  line-height: 1.4;
+}
+
+.checkbox-group a {
+  color: #1e3a2f;
+  text-decoration: underline;
+}
+
+.btn:disabled {
+  background: #b0c0b8;
+  cursor: not-allowed;
+}
+
+.message {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 60px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.success {
+  background: #eef4ed;
+  color: #2c6e49;
+}
+
+.error {
+  background: #fff6e8;
+  color: #c97e2a;
+}
+
+/* ========================================
+   ИНФОБЛОКИ И ЦИТАТЫ
+   ======================================== */
+.info-block {
+  background: #eef4ed;
+  padding: 1rem 1.2rem;
+  border-radius: 20px;
+  margin: 1rem 0;
+}
+
+.info-block.warning {
+  background: #fdf2f0;
+  border-left: 4px solid #b84a3a;
+}
+
+.warning-box {
+  background: #fff6e8;
+  border-left: 4px solid #c97e2a;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 16px;
+}
+
+.warning-box strong {
+  color: #c97e2a;
+}
+
+.quote {
+  font-style: italic;
+  padding: 1.2rem 1.8rem;
+  background: #f1efe9;
+  border-radius: 24px;
+  margin: 1.5rem 0;
+  color: #2d3e3b;
+  font-size: 1.1rem;
+}
+
+.highlight-box {
+  background: #f7f4ef;
+  border-left: 4px solid #b87c4f;
+  padding: 1.2rem 1.5rem;
+  border-radius: 16px;
+  margin: 1rem 0;
+}
+
+.highlight-box strong {
+  color: #1e3a2f;
+}
+
+/* ========================================
+   ФУТЕР
+   ======================================== */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.75rem;
+  color: #5f6c66;
+  background: #f1efe9;
+  margin-top: 1rem;
+}
+
+/* ========================================
+   АДАПТИВНОСТЬ
+   ======================================== */
+
+/* Планшеты и мобильные */
+@media (max-width: 640px) {
+  .nav-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .form-section {
+    padding: 1.5rem;
+  }
+  .form-section h1 {
+    font-size: 1.5rem;
+  }
+  .series-books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .matrix-item {
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.9rem 0;
+  }
+  .matrix-question {
+    min-width: auto;
+    font-size: 0.9rem;
+  }
+}
+
+/* Очень маленькие экраны (телефоны < 550px) */
+@media (max-width: 550px) {
+  .book-meta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+  .book-meta > span:first-child {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+  .book-meta .btn,
+  .book-meta .btn-outline {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .book-meta > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Планшеты и выше */
+@media (min-width: 640px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Десктоп */
+@media (min-width: 1024px) {
+  .books-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
