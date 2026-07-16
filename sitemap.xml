@@ -56,6 +56,14 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- ДИАГНОСТИКА (НОВЫЙ БЛОК) -->
+    <url>
+        <loc>https://dimaa.ru/diagnostics.html</loc>
+        <lastmod>2025-07-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- ИНЖЕНЕРНЫЙ БЭКГРАУНД -->
     <url>
         <loc>https://dimaa.ru/port.html</loc>
