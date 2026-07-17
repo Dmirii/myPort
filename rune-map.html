@@ -285,58 +285,55 @@
     </div>
 </div>
 
-<script>
-    const runes = [
-        { id: 1, name: "ᚠ Феху", energy: "начало, искра, зарождение", where: "Мысль появилась — её не было минуту назад.", what: "Запиши. Не действуй сразу. Дай идее пройти дальше.", group: 1 },
-        { id: 2, name: "ᚢ Уруз", energy: "многообразие, вихрь вариантов", where: "Голова идёт кругом, 100 возможностей.", what: "Собирай данные. Не выбирай. Просто смотри.", group: 1 },
-        { id: 3, name: "ᚦ Турисаз", energy: "выбор, отсечение лишнего", where: "Ты говоришь 'да' одному и 'нет' остальным.", what: "Сделай выбор. Без него застрянешь в Уруз.", group: 1 },
-        { id: 4, name: "ᚨ Ансуз", energy: "подтверждение, зелёный свет", where: "Внутренний или внешний знак: решение верно.", what: "Закрепи. Скажи вслух: 'Да, я выбрал это'.", group: 1 },
-        { id: 5, name: "ᚱ Райдо", energy: "первый шаг, старт", where: "Страх позади. Ты начал движение.", what: "Сделай самое маленькое действие. Не жди идеального момента.", group: 2 },
-        { id: 6, name: "ᚲ Кеназ", energy: "проявление, свет", where: "Идея стала видимой. Её можно потрогать.", what: "Покажи миру. Выведи из тени.", group: 2 },
-        { id: 7, name: "ᚷ Гебо", energy: "гармония, равновесие", where: "Новое и старое договорились.", what: "Сохрани связи. Не сжигай мосты.", group: 2 },
-        { id: 8, name: "ᚹ Вуньо", energy: "радость, завершение этапа", where: "Короткое счастье. Сделано.", what: "Порадуйся. Но не застревай — дальше Хагалаз.", group: 2 },
-        { id: 9, name: "ᚺ Хагалаз", energy: "жизнь с результатом", where: "Эйфория прошла. Рутина. Машина пачкается.", what: "Не паникуй. Это норма. Хагалаз — зеркало качества.", group: 3 },
-        { id: 10, name: "ᚾ Наутиз", energy: "потребность, сигнал", where: "Что-то трет, беспокоит. Ещё не катастрофа.", what: "Услышь. Не игнорируй маленькую боль.", group: 3 },
-        { id: 11, name: "ᛁ Иса", energy: "пауза, концентрация", where: "Ты остановился. Думаешь.", what: "Возьми паузу. Не действуй. Собери внимание.", group: 3 },
-        { id: 12, name: "ᛃ Йера", energy: "озарение, эврика", where: "Вспышка. 'Точно!'", what: "Запиши озарение. Оно не повторится.", group: 3 },
-        { id: 13, name: "ᛈ Перт", energy: "второй шанс", where: "Ты не с нуля. Используешь старый опыт.", what: "Не беги за новым. Посмотри на старое свежим взглядом.", group: 4 },
-        { id: 14, name: "ᛇ Эйваз", energy: "опыт в действии", where: "Чинишь старую машину новым способом.", what: "Используй то, что уже есть. Не добывай новое.", group: 4 },
-        { id: 15, name: "ᛉ Альгиз", energy: "интуиция, защита", where: "Чувствуешь опасность заранее. Внутренний голос.", what: "Доверься. Проверь. Это осознанность.", group: 4 },
-        { id: 16, name: "ᛋ Соулу", energy: "опыт как форма", where: "Цикл пройден. Ты стал другим.", what: "Зафиксируй: чему научился. Это твой свет.", group: 4 },
-        { id: 17, name: "ᛏ Тейваз", energy: "воля, начало конца", where: "Бросаешь копьё в цель.", what: "Действуй без сомнений. Но только если опыт есть.", group: 5 },
-        { id: 18, name: "ᛒ Беркана", energy: "рост, взращивание", where: "Новое растёт. Беременность, запуск.", what: "Не торопись. Рост требует времени.", group: 5 },
-        { id: 19, name: "ᛖ Эваз", energy: "обмен, партнёрство", where: "Обмениваешь старое на новое.", what: "Найди пару. В одиночку Эваз не идёт.", group: 5 },
-        { id: 20, name: "ᛗ Маназ", energy: "интеграция, социум", where: "Ты узнаёшь себя — но другого.", what: "Прими себя нового. Позволь миру подтвердить.", group: 5 },
-        { id: 21, name: "ᛚ Лагуз", energy: "поток, доверие", where: "Ответ приходит во сне. Вода санаходит путь.", what: "Перестань контролировать. Доверься.", group: 6 },
-        { id: 22, name: "ᛜ Ингуз", energy: "семя, потенциал", where: "Результат уже есть, но не проявлен.", what: "Жди. Не раскапывай семя.", group: 6 },
-        { id: 23, name: "ᛟ Отал", energy: "наследство, связь", where: "Передаёшь плоды тем, кто после.", what: "Ты не первый и не последний. Передай дальше.", group: 6 },
-        { id: 24, name: "ᛞ Дагаз", energy: "перерождение", where: "Старое ушло. Новое пришло.", what: "Открой дверь. Дагаз — начало нового Феху.", group: 6 }
-    ];
+<!-- ===== ПОДГРУЗКА ДАННЫХ О РУНАХ ИЗ JSON ===== -->
+<script src="/load-runes.js" defer></script>
 
-    function renderRunes(filterGroup = "all") {
+<script>
+    // ===== ФУНКЦИЯ РЕНДЕРИНГА РУН (использует load-runes.js) =====
+    async function renderRunes(filterGroup = "all") {
         const container = document.getElementById("runeList");
         if (!container) return;
-        let filtered = filterGroup === "all" ? runes : runes.filter(r => r.group === parseInt(filterGroup));
-        let html = "";
-        for (let r of filtered) {
-            html += `
-                <div class="rune-card">
-                    <div class="rune-img">
-                        <img src="/img/${r.id}.jpeg" alt="${r.name}" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22%23fefaf5%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23b87c4f%22%20font-size%3D%2232%22%3E${r.name.charAt(2)}%3C%2Ftext%3E%3C%2Fsvg%3E'">
+
+        try {
+            const runes = await loadRunesData();
+
+            if (!runes || runes.length === 0) {
+                container.innerHTML = '<p style="text-align:center; color:#8a7f6d; padding:2rem;">⚠️ Не удалось загрузить данные о рунах.</p>';
+                return;
+            }
+
+            let filtered = filterGroup === "all" ? runes : runes.filter(r => r.group === parseInt(filterGroup));
+
+            let html = "";
+            for (let r of filtered) {
+                // Определяем группу для отображения
+                const groupNames = ["", "1–4 Зарождение", "5–8 Движение", "9–12 Трансформация", "13–16 Перерождение", "17–20 Завершение", "21–24 Наследие"];
+                const groupName = groupNames[r.group] || "";
+
+                html += `
+                    <div class="rune-card">
+                        <div class="rune-img">
+                            <img src="/img/${r.num}.jpeg" alt="${r.symbol} ${r.name}" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2080%2080%22%3E%3Crect%20width%3D%2280%22%20height%3D%2280%22%20fill%3D%22%23fefaf5%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23b87c4f%22%20font-size%3D%2232%22%3E${r.symbol}%3C%2Ftext%3E%3C%2Fsvg%3E'">
+                        </div>
+                        <div class="rune-content">
+                            <div class="rune-name">${r.symbol} ${r.name}</div>
+                            <div class="rune-energy">${r.energy || ''}</div>
+                            <div class="where-block"><span>📍 где ты:</span> ${r.where || ''}</div>
+                            <div class="what-block"><span>⚡ что делать дальше:</span> ${r.what || ''}</div>
+                            <div class="rune-meta">#${r.num} · ${groupName}</div>
+                        </div>
                     </div>
-                    <div class="rune-content">
-                        <div class="rune-name">${r.name}</div>
-                        <div class="rune-energy">${r.energy}</div>
-                        <div class="where-block"><span>📍 где ты:</span> ${r.where}</div>
-                        <div class="what-block"><span>⚡ что делать дальше:</span> ${r.what}</div>
-                        <div class="rune-meta">#${r.id} · ${["", "1–4 Зарождение", "5–8 Движение", "9–12 Трансформация", "13–16 Перерождение", "17–20 Завершение", "21–24 Наследие"][r.group]}</div>
-                    </div>
-                </div>
-            `;
+                `;
+            }
+
+            container.innerHTML = html;
+        } catch (error) {
+            console.warn('Ошибка при загрузке рун:', error);
+            container.innerHTML = '<p style="text-align:center; color:#8a7f6d; padding:2rem;">⚠️ Не удалось загрузить данные о рунах.</p>';
         }
-        container.innerHTML = html;
     }
 
+    // ---------- НАВЕШИВАЕМ ФИЛЬТРЫ ----------
     document.querySelectorAll(".filter-chip").forEach(btn => {
         btn.addEventListener("click", function() {
             document.querySelectorAll(".filter-chip").forEach(b => b.classList.remove("active"));
@@ -344,7 +341,10 @@
             renderRunes(this.getAttribute("data-group"));
         });
     });
+
+    // ---------- ЗАПУСКАЕМ ----------
     renderRunes("all");
 </script>
+
 </body>
 </html>
