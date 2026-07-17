@@ -34,6 +34,27 @@
   <!-- ===== ПОДКЛЮЧАЕМ ВНЕШНИЙ ФАЙЛ СТИЛЕЙ ===== -->
   <link rel="stylesheet" href="/style.css">
 
+  <!-- ===== JSON-LD СТРУКТУРИРОВАННЫЕ ДАННЫЕ (Book) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Рунический менеджмент",
+    "author": {
+      "@type": "Person",
+      "name": "Дмитрий Антонов"
+    },
+    "description": "Управление проектами, командами и разработкой через этапы Футарка. Диагностика застревания, первый шаг, практические инструменты.",
+    "url": "https://dimaa.ru/book5.html",
+    "image": "https://dimaa.ru/img/cover_book_5.jpg",
+    "datePublished": "2026",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Литрес"
+    }
+  }
+  </script>
+
   <!-- ===== УНИКАЛЬНЫЕ СТИЛИ ДЛЯ ЭТОЙ КНИГИ ===== -->
   <style>
     .container {
@@ -140,15 +161,6 @@
       text-decoration: none;
       font-weight: 500;
       transition: background 0.2s;
-    }
-
-    .book-actions .btn-idea {
-      background: #c97e2a;
-      color: white;
-    }
-
-    .book-actions .btn-idea:hover {
-      background: #b87c1f;
     }
 
     h2 {
@@ -355,10 +367,10 @@
         <span>📖 2026</span> · <span>📚 Серия: Руны как этапы процесса</span> · <span class="rune-tag">ᚱ Райдо</span>
       </div>
       <div class="book-actions">
-        <a href="feedback.html" class="btn btn-idea" style="background: #c97e2a; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+        <a href="feedback.html" class="btn btn-orange" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px;">
           📬 Сообщить о выходе
         </a>
-        <a href="index.html#books" class="btn" style="background: #1e3a2f; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+        <a href="index.html#books" class="btn" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px;">
           ← Назад
         </a>
       </div>
@@ -480,10 +492,10 @@
 
     <!-- ===== НИЖНИЕ КНОПКИ ===== -->
     <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1rem 0 2rem;">
-      <a href="feedback.html" class="btn" style="background: #c97e2a; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+      <a href="feedback.html" class="btn btn-orange" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px;">
         📬 Сообщить о выходе
       </a>
-      <a href="index.html#books" class="btn" style="background: #1e3a2f; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+      <a href="index.html#books" class="btn" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px;">
         ← Назад к книгам
       </a>
     </div>
