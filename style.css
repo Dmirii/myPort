@@ -779,3 +779,39 @@ h2 {
     50% { content: '..'; }
     75% { content: '...'; }
 }
+
+/* ========================================
+   КНОПКИ CTA (цветные варианты)
+   ======================================== */
+.btn-red {
+  background: #ff5a5f;
+  color: white;
+  border: none;
+}
+
+.btn-red:hover {
+  background: #e04e52;
+  color: white;
+}
+
+.btn-terracotta {
+  background: #b87c4f;
+  color: white;
+  border: none;
+}
+
+.btn-terracotta:hover {
+  background: #a06a3f;
+  color: white;
+}
+
+.btn-orange {
+  background: #c97e2a;
+  color: white;
+  border: none;
+}
+
+.btn-orange:hover {
+  background: #b87c1f;
+  color: white;
+}
