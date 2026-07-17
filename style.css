@@ -752,3 +752,30 @@ h2 {
     padding: 4rem 0;
   }
 }
+
+
+/* ========================================
+   БЛОК «ДРУГИЕ КНИГИ СЕРИИ» (динамический)
+   ======================================== */
+.series-books-placeholder {
+    min-height: 150px;
+}
+
+.series-books-placeholder .loading {
+    text-align: center;
+    color: #8a7f6d;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.series-books-placeholder .loading::after {
+    content: '...';
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0% { content: ''; }
+    25% { content: '.'; }
+    50% { content: '..'; }
+    75% { content: '...'; }
+}
