@@ -1,0 +1,326 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "🏠 Умный дом выходного дня",
+      "tech": "IoT · Xiaomi/Aqara · ZigBee · Автоматизация",
+      "image": "/img/smart.webp",
+      "desc": "Удалённый контроль, экономия отопления и автоматическая вентиляция дачи.",
+      "links": [
+        { "label": "📄 Подробнее", "url": "https://pikabu.ru/story/umnyiy_dom_vyikhodnogo_dnya_xiaomi_7690972", "style": "background: #c97e2a;" }
+      ],
+      "note": "Актуальный проект · 2020 — настоящее время",
+      "highlight": true
+    },
+    {
+      "id": 2,
+      "title": "Телеграм бот",
+      "tech": "JS · NODE.JS · @Dimaaru",
+      "image": "/img/bot.webp",
+      "desc": "",
+      "links": [
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/TelegramBot", "class": "github" }
+      ],
+      "note": "#24",
+      "highlight": false
+    },
+    {
+      "id": 3,
+      "title": "Интернет магазин",
+      "tech": "JS · SCSS · HTML",
+      "image": "/img/fl.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/flmarafon/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/flmarafon", "class": "github" }
+      ],
+      "note": "#23",
+      "highlight": false
+    },
+    {
+      "id": 4,
+      "title": "Hunter game",
+      "tech": "Чистый JS",
+      "image": "/img/hunter.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/hunter/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/hunter", "class": "github" }
+      ],
+      "note": "#22",
+      "highlight": false
+    },
+    {
+      "id": 5,
+      "title": "Ikea",
+      "tech": "Чистый JS",
+      "image": "/img/ikea.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/ikea/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/ikea", "class": "github" }
+      ],
+      "note": "#21",
+      "highlight": false
+    },
+    {
+      "id": 6,
+      "title": "Flappy",
+      "tech": "Чистый JS",
+      "image": "/img/flappy.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/Flappy/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/Flappy", "class": "github" }
+      ],
+      "note": "#20",
+      "highlight": false
+    },
+    {
+      "id": 7,
+      "title": "Need for JS",
+      "tech": "Чистый JS",
+      "image": "/img/nfjs.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/nfjs/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/nfjs", "class": "github" }
+      ],
+      "note": "#19",
+      "highlight": false
+    },
+    {
+      "id": 8,
+      "title": "MERN (только src)",
+      "tech": "Mongo · Express · React · Node · Fetch",
+      "image": "/img/surl.webp",
+      "desc": "",
+      "links": [
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/mern", "class": "github" }
+      ],
+      "note": "#18",
+      "highlight": false
+    },
+    {
+      "id": 9,
+      "title": "Todo React",
+      "tech": "React · Fetch · lazyLoad",
+      "image": "/img/reacttodo.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/reactTodo/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/reactTodo", "class": "github" }
+      ],
+      "note": "#17",
+      "highlight": false
+    },
+    {
+      "id": 10,
+      "title": "Money calc",
+      "tech": "React",
+      "image": "/img/monycalcreact.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/reactCalc/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/reactCalc", "class": "github" }
+      ],
+      "note": "#16",
+      "highlight": false
+    },
+    {
+      "id": 11,
+      "title": "Ya Tunes",
+      "tech": "JS",
+      "image": "/img/yatuns.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/yatuns/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/yatuns", "class": "github" }
+      ],
+      "note": "#15",
+      "highlight": false
+    },
+    {
+      "id": 12,
+      "title": "UI Компоненты",
+      "tech": "JS · SCSS · Webpack · Динамический HTML",
+      "image": "/img/js.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/DIM/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/DIM", "class": "github" }
+      ],
+      "note": "#14",
+      "highlight": false
+    },
+    {
+      "id": 13,
+      "title": "FireBase App",
+      "tech": "JS · MUI · Webpack · Firebase",
+      "image": "/img/vnode.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://vnode-app.firebaseapp.com/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/vNode", "class": "github" }
+      ],
+      "note": "#13",
+      "highlight": false
+    },
+    {
+      "id": 14,
+      "title": "Framework (Excel)",
+      "tech": "JS · SCSS · Webpack",
+      "image": "/img/excel.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/Framework/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/ExelCourse", "class": "github" }
+      ],
+      "note": "#12",
+      "highlight": false
+    },
+    {
+      "id": 15,
+      "title": "Awito",
+      "tech": "JS",
+      "image": "/img/awito.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/Awito/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/Awito", "class": "github" }
+      ],
+      "note": "#11",
+      "highlight": false
+    },
+    {
+      "id": 16,
+      "title": "Yoga туры",
+      "tech": "JS · Webpack",
+      "image": "/img/yoga.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/yoga/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/yoga", "class": "github" }
+      ],
+      "note": "#10",
+      "highlight": false
+    },
+    {
+      "id": 17,
+      "title": "Ghostbusters",
+      "tech": "HTML · SCSS · JS",
+      "image": "/img/gb.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/ghost/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/ghost", "class": "github" }
+      ],
+      "note": "#9",
+      "highlight": false
+    },
+    {
+      "id": 18,
+      "title": "MoneyKeeper",
+      "tech": "JS · Flex · Media",
+      "image": "/img/monye.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/monyekeeper/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/monyekeeper", "class": "github" }
+      ],
+      "note": "#8",
+      "highlight": false
+    },
+    {
+      "id": 19,
+      "title": "Портфолио",
+      "tech": "PUG · SASS · JS · Flex · Media",
+      "image": "/img/porto.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dimaa.ru" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/myPort", "class": "github" }
+      ],
+      "note": "#7",
+      "highlight": false
+    },
+    {
+      "id": 20,
+      "title": "Netclicks",
+      "tech": "JS",
+      "image": "/img/net.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/netclicks/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/netclicks", "class": "github" }
+      ],
+      "note": "#6",
+      "highlight": false
+    },
+    {
+      "id": 21,
+      "title": "Пульсометр",
+      "tech": "Bootstrap · SASS · JS · БЭМ",
+      "image": "/img/puls.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/puls_p/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/puls", "class": "github" }
+      ],
+      "note": "#5",
+      "highlight": false
+    },
+    {
+      "id": 22,
+      "title": "Uber Partners",
+      "tech": "HTML · Bootstrap · SASS",
+      "image": "/img/uber.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/uber/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/uber", "class": "github" }
+      ],
+      "note": "#4",
+      "highlight": false
+    },
+    {
+      "id": 23,
+      "title": "WordPress Интенсив",
+      "tech": "HTML · SASS",
+      "image": "/img/wpi.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/Scss/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/Scss", "class": "github" }
+      ],
+      "note": "#3",
+      "highlight": false
+    },
+    {
+      "id": 24,
+      "title": "Mountain",
+      "tech": "HTML · CSS",
+      "image": "/img/mount.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/Mountain/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/Mountain", "class": "github" }
+      ],
+      "note": "#2",
+      "highlight": false
+    },
+    {
+      "id": 25,
+      "title": "Новости культуры",
+      "tech": "HTML · CSS",
+      "image": "/img/cnp.webp",
+      "desc": "",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://dmirii.github.io/Culture_News/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/Culture_News", "class": "github" }
+      ],
+      "note": "#1",
+      "highlight": false
+    }
+  ]
+}
