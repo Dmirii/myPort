@@ -1,44 +1,29 @@
 {
   "books": [
-    {
-      "id": 1,
-      "number": "Книга 1",
-      "title": "Инженерная модель реальности",
-      "status": "available",
-      "statusText": "✅ Доступна",
-      "url": "book1.html"
-    },
-    {
-      "id": 2,
-      "number": "Книга 2",
-      "title": "Психология рун",
-      "status": "available",
-      "statusText": "✅ Доступна",
-      "url": "book2.html"
-    },
-    {
-      "id": 3,
-      "number": "Книга 3",
-      "title": "Ключ к мантике",
-      "status": "available",
-      "statusText": "✅ Доступна",
-      "url": "book25.html"
-    },
-    {
-      "id": 4,
-      "number": "Книга 4",
-      "title": "Мантика без иллюзий",
-      "status": "available",
-      "statusText": "✅ Доступна",
-      "url": "book3.html"
-    },
-    {
-      "id": 5,
-      "number": "Книга 5",
-      "title": "Рунический менеджмент",
-      "status": "planned",
-      "statusText": "📝 Планируется",
-      "url": "book5.html"
-    }
+    { "id": 1, "number": "Книга 1", "title": "Инженерная модель реальности", "status": "available", "statusText": "✅ Доступна", "url": "book1.html" },
+    { "id": 2, "number": "Книга 2", "title": "Психология рун", "status": "available", "statusText": "✅ Доступна", "url": "book2.html" },
+    { "id": 3, "number": "Книга 3", "title": "Ключ к мантике", "status": "available", "statusText": "✅ Доступна", "url": "book25.html" },
+    { "id": 4, "number": "Книга 4", "title": "Мантика без иллюзий", "status": "available", "statusText": "✅ Доступна", "url": "book3.html" },
+    { "id": 5, "number": "Книга 5", "title": "Рунический менеджмент", "status": "planned", "statusText": "📝 Планируется", "url": "book5.html" },
+    { "id": 6, "number": "Книга 6", "title": "Руны в действии", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 7, "number": "Книга 7", "title": "Руны как язык", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 8, "number": "Книга 8", "title": "Руны в итоге", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 9, "number": "Книга 9", "title": "Руны в жизни", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 10, "number": "Книга 10", "title": "Руны и кризис", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 11, "number": "Книга 11", "title": "Руны и пауза", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 12, "number": "Книга 12", "title": "Руны и озарение", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 13, "number": "Книга 13", "title": "Второй шанс", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 14, "number": "Книга 14", "title": "Руны и опыт", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 15, "number": "Книга 15", "title": "Руны и защита", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 16, "number": "Книга 16", "title": "Руны и победа", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 17, "number": "Книга 17", "title": "Руны и воля", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 18, "number": "Книга 18", "title": "Возрождение", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 19, "number": "Книга 19", "title": "Руны и движение", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 20, "number": "Книга 20", "title": "Руны и интеграция", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 21, "number": "Книга 21", "title": "Руны и поток", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 22, "number": "Книга 22", "title": "Руны и семя", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 23, "number": "Книга 23", "title": "Руны и наследие", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 24, "number": "Книга 24", "title": "Руны и трансформация", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" },
+    { "id": 0, "number": "Книга 0", "title": "Пустая руна", "status": "planned", "statusText": "📝 Планируется", "url": "feedback.html" }
   ]
 }
