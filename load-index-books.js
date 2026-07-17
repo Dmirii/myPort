@@ -7,7 +7,6 @@
 async function loadIndexBooks() {
     const container = document.getElementById('booksContainer');
     if (!container) {
-        // Если контейнера нет — выходим
         return;
     }
 
@@ -18,7 +17,7 @@ async function loadIndexBooks() {
         const data = await response.json();
         const books = data.books || [];
 
-        // Группируем книги по блокам (1-4, 5-8, 9-12, 13-16, 17-20, 21-24, 0)
+        // Группируем книги по блокам
         const blocks = {
             1: { title: '🧭 Блок 1. Зарождение', desc: 'Дать систему, научить видеть, сделать выбор, войти в диалог', books: [] },
             2: { title: '🚀 Блок 2. Движение', desc: 'Вынести систему во внешний мир: толчок, проявление, гармония, завершение', books: [] },
@@ -31,7 +30,6 @@ async function loadIndexBooks() {
 
         // Распределяем книги по блокам
         books.forEach(book => {
-            // Определяем блок по id
             let blockId = 0;
             if (book.id >= 1 && book.id <= 4) blockId = 1;
             else if (book.id >= 5 && book.id <= 8) blockId = 2;
@@ -54,13 +52,16 @@ async function loadIndexBooks() {
         // Строим HTML
         let html = '';
 
-        // Блоки 1-6 (основные)
+        // Блоки 1-6
         for (let i = 1; i <= 6; i++) {
             const block = blocks[i];
             if (!block || block.books.length === 0) continue;
 
+            const borderColors = ['#1e3a2f', '#c97e2a', '#8a7f6d', '#c97e2a', '#1e3a2f', '#b87c4f'];
+            const borderColor = borderColors[i - 1] || '#1e3a2f';
+
             html += `
-                <h2 style="margin-top: 2rem; border-left-color: ${i === 1 ? '#1e3a2f' : i === 2 ? '#c97e2a' : i === 3 ? '#8a7f6d' : i === 4 ? '#c97e2a' : i === 5 ? '#1e3a2f' : '#b87c4f'};">${block.title}</h2>
+                <h2 style="margin-top: 2rem; border-left-color: ${borderColor};">${block.title}</h2>
                 <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.9rem;">${block.desc}</p>
                 <div class="books-grid">
             `;
@@ -71,6 +72,15 @@ async function loadIndexBooks() {
                 const litresButton = book.litresLink ? 
                     `<a href="${book.litresLink}" class="btn btn-small btn-litres" target="_blank">Литрес</a>` : 
                     '';
+
+                // ===== ГЛАВНОЕ ИЗМЕНЕНИЕ =====
+                // Если книга в статусе planned и есть action: "notify" — показываем кнопку "📬 Сообщить о выходе"
+                let detailButton = '';
+                if (book.status === 'planned' && book.action === 'notify') {
+                    detailButton = `<a href="${book.url}" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>`;
+                } else {
+                    detailButton = `<a href="${book.url}" class="btn btn-small">Подробнее →</a>`;
+                }
 
                 html += `
                     <div class="book-card">
@@ -84,7 +94,7 @@ async function loadIndexBooks() {
                         <div class="book-meta">
                             <span>${book.tag || '📖'}</span>
                             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                <a href="${book.url}" class="btn btn-small">Подробнее →</a>
+                                ${detailButton}
                                 ${litresButton}
                             </div>
                         </div>
