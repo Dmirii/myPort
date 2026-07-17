@@ -1,0 +1,44 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "number": "Книга 1",
+      "title": "Инженерная модель реальности",
+      "status": "available",
+      "statusText": "✅ Доступна",
+      "url": "book1.html"
+    },
+    {
+      "id": 2,
+      "number": "Книга 2",
+      "title": "Психология рун",
+      "status": "available",
+      "statusText": "✅ Доступна",
+      "url": "book2.html"
+    },
+    {
+      "id": 3,
+      "number": "Книга 3",
+      "title": "Ключ к мантике",
+      "status": "available",
+      "statusText": "✅ Доступна",
+      "url": "book25.html"
+    },
+    {
+      "id": 4,
+      "number": "Книга 4",
+      "title": "Мантика без иллюзий",
+      "status": "available",
+      "statusText": "✅ Доступна",
+      "url": "book3.html"
+    },
+    {
+      "id": 5,
+      "number": "Книга 5",
+      "title": "Рунический менеджмент",
+      "status": "planned",
+      "statusText": "📝 Планируется",
+      "url": "book5.html"
+    }
+  ]
+}
