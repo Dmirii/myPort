@@ -230,21 +230,8 @@
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <img src="/img/logo.jpeg" alt="Логотип">
-      <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
-    </a>
-    <div class="nav-links">
-      <a href="index.html#about">👤 Об авторе</a>
-      <a href="index.html#books">📚 Книги</a>
-      <a href="index.html#contacts">📬 Контакты</a>
-      <a href="methodology.html">📐 Методология</a>
-      <a href="port.html">🧪 Лаборатория</a>
-    </div>
-  </div>
-</nav>
+<!-- ===== МЕНЮ (подгружается из menu.html) ===== -->
+<div id="menuPlaceholder"></div>
 
 <main class="container">
 
@@ -274,6 +261,9 @@
 
 <!-- ===== ПОДГРУЗКА ПРОЕКТОВ ИЗ JSON ===== -->
 <script src="/load-projects.js" defer></script>
-
+  
+<!-- ===== ПОДГРУЗКА МЕНЮ ===== -->
+<script src="/load-menu.js" defer></script>
+  
 </body>
 </html>
