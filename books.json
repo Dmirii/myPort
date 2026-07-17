@@ -76,7 +76,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 7,
@@ -89,7 +90,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 8,
@@ -102,7 +104,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 9,
@@ -115,7 +118,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 10,
@@ -128,7 +132,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 11,
@@ -141,7 +146,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 12,
@@ -154,7 +160,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 13,
@@ -167,7 +174,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 14,
@@ -180,7 +188,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 15,
@@ -193,7 +202,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 16,
@@ -206,7 +216,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 17,
@@ -219,7 +230,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 18,
@@ -232,7 +244,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 19,
@@ -245,7 +258,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 20,
@@ -258,7 +272,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 21,
@@ -271,7 +286,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 22,
@@ -284,7 +300,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 23,
@@ -297,7 +314,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 24,
@@ -310,7 +328,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     },
     {
       "id": 0,
@@ -323,7 +342,8 @@
       "status": "planned",
       "statusText": "📝 Планируется",
       "url": "feedback.html",
-      "litresLink": null
+      "litresLink": null,
+      "action": "notify"
     }
   ]
 }
