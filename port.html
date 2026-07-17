@@ -18,7 +18,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Инженерный бэкграунд — Дмитрий Антонов</title>
   <meta name="description" content="Инженерный бэкграунд Дмитрия Антонова: ИТ-эксперименты, IoT, системная логика, практические навыки программирования и разработки.">
-  <meta name="keywords" content="инженерный бэкграунд, ИТ-эксперименты, программирование, системная логика, Дмитрий Антонов, портфолио разработчика, умный дом, IoT">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/port.html">
@@ -35,63 +34,60 @@
   <!-- ===== ПОДКЛЮЧАЕМ ВНЕШНИЙ ФАЙЛ СТИЛЕЙ ===== -->
   <link rel="stylesheet" href="/style.css">
 
-  <!-- ===== УНИКАЛЬНЫЕ СТИЛИ ТОЛЬКО ДЛЯ ЛАБОРАТОРИИ ===== -->
+  <!-- ===== УНИКАЛЬНЫЕ СТИЛИ ДЛЯ ПОРТФОЛИО ===== -->
   <style>
     .container {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 1.2rem;
     }
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-      color: #1e3a2f;
-    }
-
-    .lab-header {
+    .page-header {
       background: #eef4ed;
-      border-radius: 32px;
-      padding: 2rem;
-      margin: 2rem 0;
+      border-radius: 24px;
+      padding: 1.5rem 2rem;
+      margin: 1.5rem 0 2rem;
       text-align: center;
     }
 
-    .lab-header h1 {
-      font-size: 2.2rem;
+    .page-header h1 {
+      font-size: 1.8rem;
+      color: #1e3a2f;
+      margin: 0;
     }
 
-    .lab-header .sub {
-      font-size: 1rem;
+    .page-header .sub {
+      font-size: 0.95rem;
       color: #4a6a5c;
-      margin-top: 0.5rem;
+      margin-top: 0.3rem;
     }
 
     .lab-intro {
       background: white;
-      border-radius: 32px;
-      padding: 1.5rem 2rem;
-      margin: 1.5rem 0;
+      border-radius: 20px;
+      padding: 1.2rem 1.5rem;
+      margin: 0 0 1.5rem 0;
       border: 1px solid #e2ddd4;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.02);
     }
 
     .lab-intro p {
-      font-size: 1.05rem;
+      font-size: 0.92rem;
       color: #2d3e3b;
+      margin: 0;
+      line-height: 1.5;
     }
 
     .lab-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.2rem;
+      margin: 1.5rem 0;
     }
 
     .lab-card {
       background: white;
-      border-radius: 24px;
-      padding: 1.2rem;
+      border-radius: 20px;
+      padding: 1rem;
       border: 1px solid #e2ddd4;
       transition: all 0.2s;
       display: flex;
@@ -99,91 +95,135 @@
     }
 
     .lab-card:hover {
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05), 0 0 0 1px #d4cfc5;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+      border-color: #d4cfc5;
+      transform: translateY(-2px);
     }
 
     .lab-card-title {
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 0.95rem;
       color: #1e3a2f;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.2rem;
     }
 
     .lab-card-tech {
-      font-size: 0.7rem;
+      font-size: 0.6rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       color: #7a8a82;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.6rem;
     }
 
     .lab-card img {
       width: 100%;
-      border-radius: 16px;
+      border-radius: 12px;
       border: 1px solid #eee8e0;
       aspect-ratio: 16/9;
       object-fit: cover;
       background: #f7f4ef;
+      margin-bottom: 0.6rem;
     }
 
     .lab-card-links {
       display: flex;
-      gap: 0.8rem;
-      margin-top: 0.8rem;
+      gap: 0.5rem;
+      margin-top: 0.4rem;
       flex-wrap: wrap;
     }
 
     .lab-card-links a {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.3rem;
       background: #1e3a2f;
       color: white;
-      padding: 0.3rem 0.8rem;
+      padding: 0.2rem 0.7rem;
       border-radius: 40px;
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.75rem;
+      font-size: 0.65rem;
+      transition: background 0.2s;
+    }
+
+    .lab-card-links a:hover {
+      background: #0f2c22;
     }
 
     .lab-card-links a.github {
       background: #24292e;
     }
 
-    .lab-card-links a:hover {
-      opacity: 0.85;
+    .lab-card-links a.github:hover {
+      background: #1a1d22;
     }
 
     .lab-card-num {
-      font-size: 0.65rem;
+      font-size: 0.55rem;
       color: #8a7f6d;
-      margin-top: 0.5rem;
+      margin-top: 0.4rem;
       text-align: right;
     }
 
     .lab-card .project-desc {
-      font-size: 0.85rem;
+      font-size: 0.78rem;
       color: #2d3e3b;
-      margin: 0.5rem 0;
+      margin: 0.3rem 0 0.2rem;
     }
 
     .lab-card .project-desc p {
-      margin-bottom: 0.2rem;
+      margin: 0;
     }
 
-    .lab-card .insight {
-      font-style: italic;
-      color: #7a8a82;
-      font-size: 0.8rem;
-      margin-top: 0.2rem;
+    .loading-projects {
+      text-align: center;
+      color: #8a7f6d;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .loading-projects::after {
+      content: '...';
+      animation: dots 1.5s steps(4, end) infinite;
+    }
+
+    @keyframes dots {
+      0% { content: ''; }
+      25% { content: '.'; }
+      50% { content: '..'; }
+      75% { content: '...'; }
     }
 
     @media (max-width: 640px) {
       .lab-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+      }
+
+      .page-header h1 {
+        font-size: 1.4rem;
+      }
+
+      .lab-card {
+        padding: 0.7rem;
+      }
+
+      .lab-card-title {
+        font-size: 0.8rem;
+      }
+
+      .lab-card img {
+        aspect-ratio: 16/9;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .lab-grid {
         grid-template-columns: 1fr;
       }
-      .lab-header h1 {
-        font-size: 1.6rem;
+
+      .page-header {
+        padding: 1rem 1.2rem;
       }
     }
   </style>
@@ -197,17 +237,18 @@
       <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
     </a>
     <div class="nav-links">
-        <a href="index.html#about">👤 Об авторе</a>
-        <a href="index.html#books">📚 Книги</a>
-        <a href="index.html#contacts">📬 Контакты</a>
-        <a href="methodology.html">📐 Методология</a>
-        <a href="port.html">🧪 Лаборатория</a>
+      <a href="index.html#about">👤 Об авторе</a>
+      <a href="index.html#books">📚 Книги</a>
+      <a href="index.html#contacts">📬 Контакты</a>
+      <a href="methodology.html">📐 Методология</a>
+      <a href="port.html">🧪 Лаборатория</a>
     </div>
   </div>
 </nav>
 
 <main class="container">
-  <div class="lab-header">
+
+  <div class="page-header">
     <h1>🧪 Инженерный бэкграунд</h1>
     <div class="sub">Цифровая лаборатория Дмитрия Антонова</div>
   </div>
@@ -216,287 +257,11 @@
     <p>Здесь я храню свои практические ИТ-эксперименты, которые помогают мне поддерживать навыки программирования и изучать системную логику. Каждый проект — это шаг в понимании того, как устроены процессы, алгоритмы и взаимодействие систем.</p>
   </div>
 
-  <div class="lab-grid">
-
-    <!-- ===== УМНЫЙ ДОМ ВЫХОДНОГО ДНЯ ===== -->
-    <div class="lab-card" style="border-left: 4px solid #1e3a2f;">
-      <div class="lab-card-title">🏠 Умный дом выходного дня</div>
-      <div class="lab-card-tech">IoT · Xiaomi/Aqara · ZigBee · Автоматизация</div>
-      <img src="/img/smart.webp" alt="Умный дом — автоматизация дачи" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22169%22%3E%3Crect width=%22300%22 height=%22169%22 fill=%22%23eef4ed%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22 fill=%22%234a6a5c%22 font-size=%2216%22 font-family=%22system-ui%22%3E🏠 Умный дом%3C/text%3E%3C/svg%3E'">
-      <div class="project-desc">
-        <p><strong>Задача:</strong> Удалённый контроль, экономия отопления и автоматическая вентиляция дачи.</p>
-        <p><strong>Результат:</strong> Экономия до 40% в будни, мгновенные уведомления о протечках.</p>
-      </div>
-      <div class="lab-card-links">
-        <a href="https://pikabu.ru/story/umnyiy_dom_vyikhodnogo_dnya_xiaomi_7690972" target="_blank" style="background: #c97e2a;">📄 Подробнее</a>
-      </div>
-      <div class="lab-card-num">Актуальный проект · 2020 — настоящее время</div>
-    </div>
-
-    <!-- ===== ОСТАЛЬНЫЕ ПРОЕКТЫ ===== -->
-    <div class="lab-card">
-      <div class="lab-card-title">Телеграм бот</div>
-      <div class="lab-card-tech">JS · NODE.JS · @Dimaaru</div>
-      <img src="/img/bot.webp" alt="Телеграм бот" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://github.com/Dmirii/TelegramBot" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#24</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Интернет магазин</div>
-      <div class="lab-card-tech">JS · SCSS · HTML</div>
-      <img src="/img/fl.webp" alt="Интернет магазин" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/flmarafon/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/flmarafon" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#23</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Hunter game</div>
-      <div class="lab-card-tech">Чистый JS</div>
-      <img src="/img/hunter.webp" alt="Hunter game" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/hunter/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/hunter" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#22</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Ikea</div>
-      <div class="lab-card-tech">Чистый JS</div>
-      <img src="/img/ikea.webp" alt="Ikea" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/ikea/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/ikea" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#21</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Flappy</div>
-      <div class="lab-card-tech">Чистый JS</div>
-      <img src="/img/flappy.webp" alt="Flappy" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/Flappy/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/Flappy" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#20</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Need for JS</div>
-      <div class="lab-card-tech">Чистый JS</div>
-      <img src="/img/nfjs.webp" alt="Need for JS" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/nfjs/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/nfjs" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#19</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">MERN (только src)</div>
-      <div class="lab-card-tech">Mongo · Express · React · Node · Fetch</div>
-      <img src="/img/surl.webp" alt="MERN" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://github.com/Dmirii/mern" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#18</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Todo React</div>
-      <div class="lab-card-tech">React · Fetch · lazyLoad</div>
-      <img src="/img/reacttodo.webp" alt="Todo React" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/reactTodo/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/reactTodo" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#17</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Money calc</div>
-      <div class="lab-card-tech">React</div>
-      <img src="/img/monycalcreact.webp" alt="Money calc" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/reactCalc/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/reactCalc" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#16</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Ya Tunes</div>
-      <div class="lab-card-tech">JS</div>
-      <img src="/img/yatuns.webp" alt="Ya Tunes" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/yatuns/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/yatuns" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#15</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">UI Компоненты</div>
-      <div class="lab-card-tech">JS · SCSS · Webpack · Динамический HTML</div>
-      <img src="/img/js.webp" alt="UI Компоненты" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/DIM/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/DIM" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#14</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">FireBase App</div>
-      <div class="lab-card-tech">JS · MUI · Webpack · Firebase</div>
-      <img src="/img/vnode.webp" alt="FireBase App" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://vnode-app.firebaseapp.com/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/vNode" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#13</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Framework (Excel)</div>
-      <div class="lab-card-tech">JS · SCSS · Webpack</div>
-      <img src="/img/excel.webp" alt="Framework" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/Framework/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/ExelCourse" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#12</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Awito</div>
-      <div class="lab-card-tech">JS</div>
-      <img src="/img/awito.webp" alt="Awito" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/Awito/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/Awito" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#11</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Yoga туры</div>
-      <div class="lab-card-tech">JS · Webpack</div>
-      <img src="/img/yoga.webp" alt="Yoga туры" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/yoga/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/yoga" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#10</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Ghostbusters</div>
-      <div class="lab-card-tech">HTML · SCSS · JS</div>
-      <img src="/img/gb.webp" alt="Ghostbusters" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/ghost/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/ghost" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#9</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">MoneyKeeper</div>
-      <div class="lab-card-tech">JS · Flex · Media</div>
-      <img src="/img/monye.webp" alt="MoneyKeeper" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/monyekeeper/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/monyekeeper" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#8</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Портфолио</div>
-      <div class="lab-card-tech">PUG · SASS · JS · Flex · Media</div>
-      <img src="/img/porto.webp" alt="Портфолио" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dimaa.ru" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/myPort" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#7</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Netclicks</div>
-      <div class="lab-card-tech">JS</div>
-      <img src="/img/net.webp" alt="Netclicks" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/netclicks/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/netclicks" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#6</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Пульсометр</div>
-      <div class="lab-card-tech">Bootstrap · SASS · JS · БЭМ</div>
-      <img src="/img/puls.webp" alt="Пульсометр" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/puls_p/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/puls" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#5</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Uber Partners</div>
-      <div class="lab-card-tech">HTML · Bootstrap · SASS</div>
-      <img src="/img/uber.webp" alt="Uber" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/uber/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/uber" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#4</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">WordPress Интенсив</div>
-      <div class="lab-card-tech">HTML · SASS</div>
-      <img src="/img/wpi.webp" alt="WordPress" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/Scss/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/Scss" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#3</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Mountain</div>
-      <div class="lab-card-tech">HTML · CSS</div>
-      <img src="/img/mount.webp" alt="Mountain" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/Mountain/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/Mountain" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#2</div>
-    </div>
-
-    <div class="lab-card">
-      <div class="lab-card-title">Новости культуры</div>
-      <div class="lab-card-tech">HTML · CSS</div>
-      <img src="/img/cnp.webp" alt="Новости культуры" loading="lazy">
-      <div class="lab-card-links">
-        <a href="https://dmirii.github.io/Culture_News/" target="_blank">🌐 Демо</a>
-        <a href="https://github.com/Dmirii/Culture_News" target="_blank" class="github">🐙 Код</a>
-      </div>
-      <div class="lab-card-num">#1</div>
-    </div>
-
+  <!-- ===== КОНТЕЙНЕР ДЛЯ ПРОЕКТОВ (заполняется из JSON) ===== -->
+  <div id="projectsGrid" class="lab-grid">
+    <div class="loading-projects">Загрузка проектов</div>
   </div>
+
 </main>
 
 <footer>
@@ -506,6 +271,9 @@
     <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
   </div>
 </footer>
+
+<!-- ===== ПОДГРУЗКА ПРОЕКТОВ ИЗ JSON ===== -->
+<script src="/load-projects.js" defer></script>
 
 </body>
 </html>
