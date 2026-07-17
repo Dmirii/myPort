@@ -232,7 +232,7 @@
             text-align: right;
         }
 
-        .footer {
+        .footer-text {
             text-align: center;
             font-size: 0.75rem;
             color: #b19b86;
@@ -261,6 +261,9 @@
 <!-- ===== МЕНЮ (подгружается из menu.html) ===== -->
 <div id="menuPlaceholder"></div>
 
+<!-- ===== ПОДГРУЗКА МЕНЮ (сразу после плейсхолдера) ===== -->
+<script src="/load-menu.js"></script>
+
 <div class="container">
     <div class="hero">
         <div class="rune-symbol">ᚱ ᚢ ᚾ ᛖ</div>
@@ -284,17 +287,16 @@
 
     <div id="runeList"></div>
 
-    <div class="footer">
+    <div class="footer-text">
         ᚦ по книге «Инженерная модель реальности» · руны описывают этапы, а не заклинания
     </div>
 </div>
 
-<!-- ===== СНАЧАЛА ЗАГРУЖАЕМ load-runes.js ===== -->
+<!-- ===== ЗАГРУЖАЕМ load-runes.js ===== -->
 <script src="/load-runes.js"></script>
 
-<!-- ===== ПОТОМ ВЫЗЫВАЕМ РЕНДЕРИНГ ===== -->
+<!-- ===== РЕНДЕРИНГ РУН ===== -->
 <script>
-    // ===== ФУНКЦИЯ РЕНДЕРИНГА РУН (использует load-runes.js) =====
     async function renderRunes(filterGroup = "all") {
         const container = document.getElementById("runeList");
         if (!container) return;
@@ -307,7 +309,6 @@
                 return;
             }
 
-            // ФИЛЬТРУЕМ ПО block
             let filtered = filterGroup === "all" ? runes : runes.filter(r => r.block === parseInt(filterGroup));
 
             let html = "";
@@ -338,7 +339,6 @@
         }
     }
 
-    // ---------- НАВЕШИВАЕМ ФИЛЬТРЫ ----------
     document.querySelectorAll(".filter-chip").forEach(btn => {
         btn.addEventListener("click", function() {
             document.querySelectorAll(".filter-chip").forEach(b => b.classList.remove("active"));
@@ -347,12 +347,8 @@
         });
     });
 
-    // ---------- ЗАПУСКАЕМ ----------
     renderRunes("all");
 </script>
-
-<!-- ===== ПОДГРУЗКА МЕНЮ ===== -->
-<script src="/load-menu.js" defer></script>
 
 </body>
 </html>
