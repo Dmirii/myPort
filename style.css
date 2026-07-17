@@ -108,7 +108,7 @@ h1, h2, h3 {
   font-weight: 500;
   border: none;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.1s;
 }
 
 .btn:hover {
@@ -137,6 +137,46 @@ h1, h2, h3 {
 .btn-small {
   padding: 0.3rem 0.8rem;
   font-size: 0.75rem;
+}
+
+/* ========================================
+   КНОПКИ В КАРТОЧКАХ КНИГ (явные стили)
+   ======================================== */
+.book-meta .btn {
+  background: #1e3a2f;
+  color: white;
+  border: none;
+}
+
+.book-meta .btn:hover {
+  background: #0f2c22;
+  color: white;
+}
+
+.book-meta .btn-litres {
+  background: #ff5a5f;
+  color: white;
+}
+
+.book-meta .btn-litres:hover {
+  background: #e04e52;
+  color: white;
+}
+
+/* ========================================
+   ФИКС КНОПОК (перебивает инлайн-стили)
+   ======================================== */
+.btn:hover {
+  background: #0f2c22 !important;
+}
+
+.btn-litres:hover {
+  background: #e04e52 !important;
+}
+
+.btn-outline:hover {
+  background: #1e3a2f !important;
+  color: white !important;
 }
 
 /* ========================================
@@ -557,21 +597,4 @@ footer {
   .books-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-
-/* ========================================
-   ФИКС КНОПОК (перебивает инлайн-стили)
-   ======================================== */
-.btn:hover {
-  background: #0f2c22 !important;
-}
-
-.btn-litres:hover {
-  background: #e04e52 !important;
-}
-
-.btn-outline:hover {
-  background: #1e3a2f !important;
-  color: white !important;
 }
