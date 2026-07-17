@@ -18,7 +18,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Мантика без иллюзий — книга четвёртая | Дмитрий Антонов</title>
   <meta name="description" content="Книга «Мантика без иллюзий». Гадание как диалог с Создателем через диагностику себя. Руны, Таро, честный разговор без страха и зависимости.">
-  <meta name="keywords" content="мантика, гадание на рунах, диалог с создателем, руны без иллюзий, Дмитрий Антонов, четвёртая книга, руны и таро">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book3.html">
@@ -35,98 +34,173 @@
   <!-- ===== ПОДКЛЮЧАЕМ ВНЕШНИЙ ФАЙЛ СТИЛЕЙ ===== -->
   <link rel="stylesheet" href="/style.css">
 
+  <!-- ===== JSON-LD СТРУКТУРИРОВАННЫЕ ДАННЫЕ (Book) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Мантика без иллюзий",
+    "author": {
+      "@type": "Person",
+      "name": "Дмитрий Антонов"
+    },
+    "description": "Гадание как диалог с Создателем через диагностику себя. Руны, Таро, честный разговор без страха и зависимости.",
+    "url": "https://dimaa.ru/book3.html",
+    "image": "https://dimaa.ru/img/cover_book_3.jpg",
+    "datePublished": "2025",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Литрес"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.litres.ru/74093559/"
+    }
+  }
+  </script>
+
   <!-- ===== УНИКАЛЬНЫЕ СТИЛИ ДЛЯ ЭТОЙ КНИГИ ===== -->
   <style>
     .container {
-      max-width: 860px;
+      max-width: 760px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 1.2rem;
     }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+    .book-header {
+      display: flex;
+      gap: 1.8rem;
+      align-items: flex-start;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .book-cover-small {
+      flex-shrink: 0;
+      width: 160px;
+    }
+
+    .book-cover-small img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      display: block;
+    }
+
+    .book-info {
+      flex: 1;
+    }
+
+    .book-info .book-number {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #8a7f6d;
+      margin-bottom: 0.2rem;
+    }
+
+    .book-info h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
       color: #1e3a2f;
+      margin: 0 0 0.2rem 0;
+      line-height: 1.2;
+    }
+
+    .book-info .book-subtitle {
+      font-size: 0.9rem;
+      color: #2c6e49;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-info .book-meta-line {
+      font-size: 0.8rem;
+      color: #5f6c66;
+      margin-bottom: 0.8rem;
+    }
+
+    .book-info .book-meta-line span {
+      background: #eef4ed;
+      padding: 0.1rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+    }
+
+    .book-actions {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-top: 0.2rem;
+    }
+
+    .book-actions .btn {
+      font-size: 0.8rem;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
     }
 
     h2 {
-      font-size: 1.6rem;
-      margin: 2rem 0 1rem;
-      border-left: 4px solid #2c6e49;
-      padding-left: 1rem;
+      font-size: 1.2rem;
+      margin: 1.5rem 0 0.6rem;
+      border-left: 3px solid #2c6e49;
+      padding-left: 0.8rem;
+      color: #1e3a2f;
     }
 
-    .book-cover {
-      text-align: center;
-      margin: 2rem 0;
+    .book-content p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #2d3e3b;
+      margin-bottom: 0.6rem;
     }
 
-    .book-cover img {
-      max-width: 280px;
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    .book-content ul {
+      margin: 0.3rem 0 0.8rem 1.2rem;
+      padding: 0;
+      list-style: none;
     }
 
-    .book-subtitle {
-      font-size: 1.1rem;
-      color: #2c6e49;
-      margin-bottom: 1rem;
+    .book-content ul li {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: #2d3e3b;
+      padding: 0.15rem 0 0.15rem 1.2rem;
+      position: relative;
+    }
+
+    .book-content ul li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #b87c4f;
     }
 
     .info-block {
-      background: #eef4ed;
-      padding: 1rem 1.2rem;
-      border-radius: 20px;
+      background: #f7f4ef;
+      padding: 0.8rem 1.2rem;
+      border-radius: 16px;
       margin: 1rem 0;
+      font-size: 0.9rem;
+      border-left: 3px solid #b87c4f;
     }
 
-    .info-block.warning {
-      background: #fdf2f0;
-      border-left: 4px solid #b84a3a;
-    }
-
-    .section {
-      margin: 2rem 0;
-    }
-
-    .section ul {
-      margin-left: 1.5rem;
-    }
-
-    .section li {
-      margin-bottom: 0.3rem;
-    }
-
-    .btn-group {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 2rem 0;
-    }
-
-    .btn-outline:hover {
-      background: #1e3a2f;
-      color: white;
-    }
-
-    .quote {
+    .info-block p {
+      margin: 0;
       font-style: italic;
-      padding: 1.2rem 1.8rem;
-      background: #f1efe9;
-      border-radius: 24px;
-      margin: 1.5rem 0;
-      color: #2d3e3b;
-      font-size: 1.1rem;
+      color: #3d4d47;
     }
 
     .warning-box {
       background: #fff6e8;
       border-left: 4px solid #c97e2a;
-      padding: 1.2rem 1.5rem;
-      margin: 1.5rem 0;
+      padding: 0.8rem 1.2rem;
+      margin: 1rem 0;
       border-radius: 16px;
+      font-size: 0.88rem;
     }
 
     .warning-box strong {
@@ -136,137 +210,136 @@
     .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin: 1rem 0;
+      gap: 1rem;
+      margin: 0.8rem 0 1.2rem;
     }
 
     .col-box {
       background: #f7f4ef;
-      border-radius: 24px;
-      padding: 1.2rem 1.5rem;
+      border-radius: 16px;
+      padding: 0.8rem 1rem;
     }
 
     .col-box h4 {
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
       color: #1e3a2f;
+      font-size: 0.95rem;
     }
 
     .col-box ul {
-      margin-left: 1.2rem;
+      margin-left: 0.8rem;
     }
 
     .col-box li {
-      margin-bottom: 0.3rem;
-      font-size: 0.9rem;
+      font-size: 0.82rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .col-box:last-child {
+      background: #fff6f0;
     }
 
     .red-flags {
       background: #fff6f0;
-      border-radius: 24px;
-      padding: 1.2rem 1.5rem;
+      border-radius: 16px;
+      padding: 0.8rem 1.2rem;
       margin: 1rem 0;
       border: 1px solid #f0d5c5;
     }
 
     .red-flags h4 {
       color: #b1622c;
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
     }
 
-    .series-books {
-      background: #f7f4ef;
-      border-radius: 24px;
-      padding: 1.5rem 1.5rem 0.5rem;
-      margin: 2.5rem 0 1rem;
+    .red-flags ul {
+      margin-left: 0.8rem;
     }
 
-    .series-books h3 {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      color: #1e3a2f;
+    .red-flags li {
+      font-size: 0.82rem;
+      margin-bottom: 0.2rem;
     }
 
-    .series-books-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 1rem;
-    }
-
-    .series-book-item {
-      background: white;
+    .quote {
+      font-style: italic;
+      padding: 0.8rem 1.2rem;
+      background: #f1efe9;
       border-radius: 16px;
-      padding: 0.8rem 1rem;
-      border: 1px solid #e2ddd4;
+      margin: 1rem 0;
+      color: #2d3e3b;
+      font-size: 0.95rem;
       text-align: center;
     }
 
-    .series-book-item .sb-number {
-      font-size: 0.6rem;
+    .series-books-placeholder {
+      min-height: 120px;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .series-books-placeholder .loading {
+      text-align: center;
       color: #8a7f6d;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      padding: 1rem;
+      font-size: 0.85rem;
     }
 
-    .series-book-item .sb-title {
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: #1e3a2f;
-      margin: 0.2rem 0;
+    .series-books-placeholder .loading::after {
+      content: '...';
+      animation: dots 1.5s steps(4, end) infinite;
     }
 
-    .series-book-item .sb-status {
-      font-size: 0.65rem;
-      color: #2c6e49;
-    }
-
-    .series-book-item .sb-status.soon {
-      color: #c97e2a;
-    }
-
-    .series-book-item a {
-      text-decoration: none;
-      display: block;
-    }
-
-    .series-book-item a:hover .sb-title {
-      text-decoration: underline;
-    }
-
-    .spread-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-    }
-
-    .spread-table th,
-    .spread-table td {
-      border: 1px solid #e2ddd4;
-      padding: 0.7rem 1rem;
-      text-align: left;
-    }
-
-    .spread-table th {
-      background: #eef4ed;
-      font-weight: 600;
-      color: #1e3a2f;
-    }
-
-    .spread-table tr:nth-child(even) td {
-      background: #faf9f8;
+    @keyframes dots {
+      0% { content: ''; }
+      25% { content: '.'; }
+      50% { content: '..'; }
+      75% { content: '...'; }
     }
 
     @media (max-width: 640px) {
-      h1 {
-        font-size: 1.6rem;
+      .book-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.8rem;
+        margin: 1rem 0 1.5rem;
       }
-      h2 {
+
+      .book-cover-small {
+        width: 140px;
+      }
+
+      .book-info h1 {
         font-size: 1.3rem;
       }
+
+      .book-actions {
+        justify-content: center;
+      }
+
+      .book-info .book-meta-line {
+        font-size: 0.75rem;
+      }
+
       .two-col {
         grid-template-columns: 1fr;
       }
-      .series-books-grid {
-        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 400px) {
+      .book-cover-small {
+        width: 110px;
+      }
+
+      .book-info h1 {
+        font-size: 1.1rem;
+      }
+
+      .book-actions .btn {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
       }
     }
   </style>
@@ -291,33 +364,38 @@
 
 <main class="container">
 
-  <!-- ===== ОБЛОЖКА ===== -->
-  <div class="book-cover">
-    <img src="/img/cover_book_3.jpg" alt="Мантика без иллюзий — обложка книги" onerror="this.src='https://placehold.co/300x400/eef4ed/2c6e49?text=%D0%9C%D0%B0%D0%BD%D1%82%D0%B8%D0%BA%D0%B0+%D0%B1%D0%B5%D0%B7+%D0%B8%D0%BB%D0%BB%D1%8E%D0%B7%D0%B8%D0%B9'">
+  <!-- ===== ШАПКА КНИГИ ===== -->
+  <div class="book-header">
+    <div class="book-cover-small">
+      <img src="/img/cover_book_3.jpg" alt="Мантика без иллюзий" onerror="this.src='https://placehold.co/160x220/eef4ed/2c6e49?text=%D0%9C%D0%B0%D0%BD%D1%82%D0%B8%D0%BA%D0%B0+%D0%B1%D0%B5%D0%B7+%D0%B8%D0%BB%D0%BB%D1%8E%D0%B7%D0%B8%D0%B9'">
+    </div>
+    <div class="book-info">
+      <div class="book-number">Книга четвёртая</div>
+      <h1>Мантика без иллюзий</h1>
+      <div class="book-subtitle">Гадание как диалог с Создателем через диагностику себя</div>
+      <div class="book-meta-line">
+        <span>📖 2025</span> · <span>📚 Серия: Руны как этапы процесса</span>
+      </div>
+      <div class="book-actions">
+        <a href="https://www.litres.ru/74093559/" class="btn btn-litres" target="_blank" style="background: #ff5a5f; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+          📘 Читать на Литрес
+        </a>
+        <a href="index.html#books" class="btn" style="background: #1e3a2f; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+          ← Назад
+        </a>
+      </div>
+    </div>
   </div>
 
-  <h1>Мантика без иллюзий</h1>
-  <div class="book-subtitle">Гадание как диалог с Создателем через диагностику себя</div>
+  <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
+  <div class="book-content">
 
-  <div class="info-block">
-    <p><strong>📖 Год:</strong> 2025</p>
-    <p><strong>📚 Серия:</strong> Руны как этапы процесса — книга 4</p>
-  </div>
+    <div class="warning-box">
+      <strong>⚠️ Почему эту книгу нельзя читать просто так</strong><br><br>
+      Мантику легко превратить в зависимость. Если вы не прошли первые две книги — закройте третью. Сначала научитесь видеть этапы. Потом спрашивайте.<br><br>
+      Никаких «откатов», «кармы», «магических атак». Но магия и тайна здесь есть. Я их не отрицаю. Я просто не даю им отменять вашу свободу и действие.
+    </div>
 
-  <div style="margin-bottom: 1rem;">
-    <a href="https://www.litres.ru/74093559/" class="btn btn-litres" target="_blank">📘 Читать на Литрес</a>
-    <a href="index.html#books" class="btn">← Назад к книгам</a>
-  </div>
-
-  <!-- ПРЕДУПРЕЖДЕНИЕ -->
-  <div class="warning-box">
-    <strong>⚠️ Почему эту книгу нельзя читать просто так</strong><br><br>
-    Мантику легко превратить в зависимость. Если вы не прошли первые две книги — закройте третью. Сначала научитесь видеть этапы. Потом спрашивайте.<br><br>
-    Никаких «откатов», «кармы», «магических атак». Но магия и тайна здесь есть. Я их не отрицаю. Я просто не даю им отменять вашу свободу и действие.
-  </div>
-
-  <!-- О ЧЁМ КНИГА -->
-  <div class="section">
     <h2>О чём эта книга</h2>
     <p>Вы прошли путь:</p>
     <ul>
@@ -348,15 +426,11 @@
         </ul>
       </div>
     </div>
-  </div>
 
-  <!-- КЛЮЧЕВАЯ ЦИТАТА -->
-  <div class="quote">
-    «Вы не вытягиваете руну, чтобы узнать будущее. Вы вытягиваете руну, чтобы понять, на каком этапе вы находитесь сейчас, и что делать дальше.»
-  </div>
+    <div class="quote">
+      «Вы не вытягиваете руну, чтобы узнать будущее. Вы вытягиваете руну, чтобы понять, на каком этапе вы находитесь сейчас, и что делать дальше.»
+    </div>
 
-  <!-- ДЛЯ КОГО -->
-  <div class="section">
     <h2>Для кого эта книга</h2>
     <div class="two-col">
       <div class="col-box" style="background: #eef4ed;">
@@ -379,10 +453,7 @@
         </ul>
       </div>
     </div>
-  </div>
 
-  <!-- ОГЛАВЛЕНИЕ -->
-  <div class="section">
     <h2>Оглавление</h2>
     <p><strong>Предисловие.</strong> Почему четвёртая книга — самая опасная</p>
     <p><strong>Часть 1.</strong> Что такое мантика на самом деле</p>
@@ -454,139 +525,49 @@
       <li>Приложение 4. Глоссарий (короткий)</li>
       <li>Приложение 5. Таблица соответствий Руны ↔ Таро</li>
     </ul>
-  </div>
 
-  <!-- ПРИМЕР РАСКЛАДА -->
-  <div class="section">
-    <h2>Пример расклада из книги</h2>
-    <p><strong>Вопрос:</strong> <em>«Что мне делать с проектом, который застопорился?»</em></p>
-    <table class="spread-table">
-      <thead>
-        <tr>
-          <th>Позиция</th>
-          <th>Руна</th>
-          <th>Интерпретация</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>То, что есть</strong></td>
-          <td>ᛁ Иса</td>
-          <td>Проект заморожен. Факт.</td>
-        </tr>
-        <tr>
-          <td><strong>То, что происходит</strong></td>
-          <td>ᚾ Наутиз</td>
-          <td>Я терплю дискомфорт, но не действую.</td>
-        </tr>
-        <tr>
-          <td><strong>То, что должно быть</strong></td>
-          <td>ᚱ Райдо</td>
-          <td>Нужен первый шаг. Начать с малого.</td>
-        </tr>
-      </tbody>
-    </table>
-    <p><strong>Вывод:</strong> Не ждать вдохновения. Сделать одно маленькое действие сегодня.</p>
-  </div>
-
-  <!-- ЧТО ВЫ УЗНАЕТЕ -->
-  <div class="section">
-    <h2>Что вы узнаете из этой книги</h2>
-    <ul>
-      <li>✅ Как отличить голос Создателя от голоса собственного страха</li>
-      <li>✅ Как формулировать вопросы так, чтобы ответ был полезным</li>
-      <li>✅ Почему руны не говорят «да» или «нет» — и что они говорят на самом деле</li>
-      <li>✅ Как делать расклады, которые ведут к действию, а не к зависимостям</li>
-      <li>✅ Как руны связаны с Таро и другими гадательными системами</li>
-      <li>✅ Когда лучше вообще не спрашивать, а просто помолчать</li>
-      <li>✅ Как не стать «гадалкой» в плохом смысле — зависимым, тревожным, магически мыслящим</li>
-      <li>✅ Что делать, если ответ не понравился</li>
-    </ul>
-  </div>
-
-  <!-- КРАСНЫЕ ФЛАГИ -->
-  <div class="red-flags">
-    <h4>🚩 Красные флаги зависимости</h4>
-    <ul>
-      <li>Перетягивание рун («не та выпала»)</li>
-      <li>Страх перед ответом</li>
-      <li>Ритуалы без смысла</li>
-      <li>«А вдруг порча?»</li>
-      <li>«Надо почистить карму»</li>
-      <li>«Откат» после каждого расклада</li>
-      <li>«Защита» от плохих рун</li>
-    </ul>
-    <p style="margin-top: 0.8rem;"><strong>Здоровый диалог:</strong></p>
-    <ul>
-      <li>Задал вопрос</li>
-      <li>Получил ответ</li>
-      <li>Подумал</li>
-      <li>Сделал вывод</li>
-      <li>Без страха</li>
-      <li>Без истерики</li>
-    </ul>
-  </div>
-
-  <!-- КНИГИ СЕРИИ -->
-  <div class="section">
-    <h2>Книги серии</h2>
-    <p><strong>Книга 1.</strong> Инженерная модель реальности<br>
-    <span style="font-size: 0.9rem; color: #5f6c66;">Прикладная рунология для рационалистов и управленцев</span></p>
-    <p><strong>Книга 2.</strong> Психология рун<br>
-    <span style="font-size: 0.9rem; color: #5f6c66;">Руническая навигация. Как понять, где вы находитесь, и что делать дальше</span></p>
-    <p><strong>Книга 3.</strong> Ключ к мантике<br>
-    <span style="font-size: 0.9rem; color: #5f6c66;">7-дневный переход от навигации к диалогу</span></p>
-    <p><strong>Книга 4.</strong> Мантика без иллюзий<br>
-    <span style="font-size: 0.9rem; color: #5f6c66;">Гадание как диалог с Создателем через диагностику себя</span></p>
-  </div>
-
-  <!-- ЦИТАТА-ЗАКРЫВАЛКА -->
-  <div class="quote" style="text-align: center;">
-    «Диалог с Создателем не отменяет вашу свободу — он даёт подсказку»
-  </div>
-
-  <!-- ===== ДРУГИЕ КНИГИ СЕРИИ ===== -->
-  <div class="series-books">
-    <h3>📚 Другие книги серии</h3>
-    <div class="series-books-grid">
-      <a href="book1.html" class="series-book-item">
-        <div class="sb-number">Книга 1</div>
-        <div class="sb-title">Инженерная модель реальности</div>
-        <div class="sb-status">✅ Доступна</div>
-      </a>
-      <a href="book2.html" class="series-book-item">
-        <div class="sb-number">Книга 2</div>
-        <div class="sb-title">Психология рун</div>
-        <div class="sb-status">✅ Доступна</div>
-      </a>
-      <a href="book25.html" class="series-book-item">
-        <div class="sb-number">Книга 3</div>
-        <div class="sb-title">Ключ к мантике</div>
-        <div class="sb-status">✅ Доступна</div>
-      </a>
-      <div class="series-book-item" style="opacity:0.5;">
-        <div class="sb-number">Книга 5</div>
-        <div class="sb-title">Рунический менеджмент</div>
-        <div class="sb-status soon">📝 Планируется</div>
-      </div>
+    <div class="red-flags">
+      <h4>🚩 Красные флаги зависимости</h4>
+      <ul>
+        <li>Перетягивание рун («не та выпала»)</li>
+        <li>Страх перед ответом</li>
+        <li>Ритуалы без смысла</li>
+        <li>«А вдруг порча?»</li>
+        <li>«Надо почистить карму»</li>
+        <li>«Откат» после каждого расклада</li>
+        <li>«Защита» от плохих рун</li>
+      </ul>
+      <p style="margin-top: 0.6rem;"><strong>Здоровый диалог:</strong></p>
+      <ul>
+        <li>Задал вопрос</li>
+        <li>Получил ответ</li>
+        <li>Подумал</li>
+        <li>Сделал вывод</li>
+        <li>Без страха</li>
+        <li>Без истерики</li>
+      </ul>
     </div>
-  </div>
 
-  <!-- ПРИЗЫВ -->
-  <div style="text-align: center; padding: 1rem 0 2rem;">
-    <h2 style="border: none; font-size: 1.4rem;">Начните диалог сегодня</h2>
-    <p style="max-width: 600px; margin: 0 auto 1.5rem; color: #4a6a5c;">
-      Если вы устали от поверхностных гаданий и хотите честного разговора с собой и миром — эта книга для вас. Она не даст ответов на все вопросы. Но она научит вас правильно их задавать.
-    </p>
-    <p style="font-weight: 600; color: #1e3a2f;">Гадание — это не способ узнать будущее.<br>
-    Это способ услышать подсказку, которую вы уже получили, но не заметили.</p>
-
-    <div class="btn-group">
-      <a href="https://www.litres.ru/74093559/" class="btn btn-litres" target="_blank">📖 Читать на Литрес</a>
-      <a href="index.html#books" class="btn btn-outline">← Назад к книгам</a>
+    <div class="quote" style="text-align: center;">
+      «Диалог с Создателем не отменяет вашу свободу — он даёт подсказку»
     </div>
-  </div>
 
+    <!-- ===== ДРУГИЕ КНИГИ СЕРИИ ===== -->
+    <div id="seriesBooksPlaceholder" class="series-books-placeholder">
+      <div class="loading">Загрузка книг</div>
+    </div>
+
+    <!-- ===== НИЖНИЕ КНОПКИ ===== -->
+    <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1rem 0 2rem;">
+      <a href="https://www.litres.ru/74093559/" class="btn btn-litres" target="_blank" style="background: #ff5a5f; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+        📘 Купить на Литрес
+      </a>
+      <a href="index.html#books" class="btn" style="background: #1e3a2f; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+        ← Назад к книгам
+      </a>
+    </div>
+
+  </div>
 </main>
 
 <footer>
@@ -596,6 +577,9 @@
     <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
   </div>
 </footer>
+
+<!-- ===== ПОДГРУЗКА БЛОКА «ДРУГИЕ КНИГИ СЕРИИ» ===== -->
+<script src="/load-books.js" defer></script>
 
 </body>
 </html>
