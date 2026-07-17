@@ -285,9 +285,10 @@
     </div>
 </div>
 
-<!-- ===== ПОДГРУЗКА ДАННЫХ О РУНАХ ИЗ JSON ===== -->
-<script src="/load-runes.js" defer></script>
+<!-- ===== СНАЧАЛА ЗАГРУЖАЕМ load-runes.js (БЕЗ defer) ===== -->
+<script src="/load-runes.js"></script>
 
+<!-- ===== ПОТОМ ВЫЗЫВАЕМ РЕНДЕРИНГ ===== -->
 <script>
     // ===== ФУНКЦИЯ РЕНДЕРИНГА РУН (использует load-runes.js) =====
     async function renderRunes(filterGroup = "all") {
@@ -306,7 +307,6 @@
 
             let html = "";
             for (let r of filtered) {
-                // Определяем группу для отображения
                 const groupNames = ["", "1–4 Зарождение", "5–8 Движение", "9–12 Трансформация", "13–16 Перерождение", "17–20 Завершение", "21–24 Наследие"];
                 const groupName = groupNames[r.group] || "";
 
