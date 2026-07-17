@@ -303,12 +303,13 @@
                 return;
             }
 
-            let filtered = filterGroup === "all" ? runes : runes.filter(r => r.group === parseInt(filterGroup));
+            // ФИЛЬТРУЕМ ПО block (а не group)
+            let filtered = filterGroup === "all" ? runes : runes.filter(r => r.block === parseInt(filterGroup));
 
             let html = "";
             for (let r of filtered) {
                 const groupNames = ["", "1–4 Зарождение", "5–8 Движение", "9–12 Трансформация", "13–16 Перерождение", "17–20 Завершение", "21–24 Наследие"];
-                const groupName = groupNames[r.group] || "";
+                const groupName = groupNames[r.block] || "";
 
                 html += `
                     <div class="rune-card">
