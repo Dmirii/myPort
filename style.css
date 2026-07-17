@@ -598,3 +598,157 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ========================================
+   УНИКАЛЬНЫЕ СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ
+   ======================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #2c6e49;
+  padding-left: 1rem;
+}
+
+.section {
+  padding: 3rem 0;
+  border-bottom: 1px solid #e6e4e0;
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.hero {
+  padding: 2rem 0 1rem 0;
+}
+
+.author-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.author-text {
+  flex: 2;
+}
+
+.author-text p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #2c2c34;
+}
+
+.author-badge {
+  background: #eef4ed;
+  padding: 0.4rem 1rem;
+  border-radius: 32px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  color: #1b4d2e;
+}
+
+.principle-tag {
+  font-family: monospace;
+  background: #2c6e4910;
+  border-left: 3px solid #2c6e49;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin: 0.2rem 0;
+}
+
+.author-photo {
+  flex: 1;
+  text-align: center;
+  background: #eef2e9;
+  border-radius: 48px;
+  padding: 1.8rem 1rem;
+}
+
+.author-photo img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: #ffffffd9;
+  border-radius: 1.5rem;
+  padding: 1.3rem;
+  border: 1px solid #e2ddd4;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.contact-icon {
+  font-size: 1.3rem;
+  min-width: 1.8rem;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #1e3a2f;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.rune-line {
+  font-family: monospace;
+  font-size: 0.9rem;
+  background: #ece8e0;
+  padding: 0.2rem 0.6rem;
+  border-radius: 40px;
+  display: inline-block;
+}
+
+/* ===== АДАПТИВНОСТЬ ДЛЯ ГЛАВНОЙ ===== */
+@media (min-width: 640px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .books-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .author-wrap {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .section {
+    padding: 4rem 0;
+  }
+}
