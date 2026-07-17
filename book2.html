@@ -18,7 +18,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Психология рун. Руническая навигация — книга вторая | Дмитрий Антонов</title>
   <meta name="description" content="Книга «Психология рун. Руническая навигация». 24 состояния + пустая руна. Как понять, где вы находитесь, и что делать дальше.">
-  <meta name="keywords" content="руническая навигация, психология рун, 24 руны, пустая руна, Дмитрий Антонов, вторая книга">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book2.html">
@@ -35,75 +34,175 @@
   <!-- ===== ПОДКЛЮЧАЕМ ВНЕШНИЙ ФАЙЛ СТИЛЕЙ ===== -->
   <link rel="stylesheet" href="/style.css">
 
+  <!-- ===== JSON-LD СТРУКТУРИРОВАННЫЕ ДАННЫЕ (Book) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Психология рун. Руническая навигация",
+    "author": {
+      "@type": "Person",
+      "name": "Дмитрий Антонов"
+    },
+    "description": "24 состояния + пустая руна. Как понять, где вы находитесь, и что делать дальше.",
+    "url": "https://dimaa.ru/book2.html",
+    "image": "https://dimaa.ru/img/cover_book_2.jpeg",
+    "datePublished": "2025",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Литрес"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.litres.ru/74056056/"
+    }
+  }
+  </script>
+
   <!-- ===== УНИКАЛЬНЫЕ СТИЛИ ДЛЯ ЭТОЙ КНИГИ ===== -->
   <style>
     .container {
-      max-width: 860px;
+      max-width: 760px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 1.2rem;
     }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+    .book-header {
+      display: flex;
+      gap: 1.8rem;
+      align-items: flex-start;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .book-cover-small {
+      flex-shrink: 0;
+      width: 160px;
+    }
+
+    .book-cover-small img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      display: block;
+    }
+
+    .book-info {
+      flex: 1;
+    }
+
+    .book-info .book-number {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #8a7f6d;
+      margin-bottom: 0.2rem;
+    }
+
+    .book-info h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
       color: #1e3a2f;
+      margin: 0 0 0.2rem 0;
+      line-height: 1.2;
+    }
+
+    .book-info .book-subtitle {
+      font-size: 0.9rem;
+      color: #2c6e49;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-info .book-meta-line {
+      font-size: 0.8rem;
+      color: #5f6c66;
+      margin-bottom: 0.8rem;
+    }
+
+    .book-info .book-meta-line span {
+      background: #eef4ed;
+      padding: 0.1rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+    }
+
+    .book-actions {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-top: 0.2rem;
+    }
+
+    .book-actions .btn {
+      font-size: 0.8rem;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
     }
 
     h2 {
-      font-size: 1.6rem;
-      margin: 2rem 0 1rem;
-      border-left: 4px solid #2c6e49;
-      padding-left: 1rem;
+      font-size: 1.2rem;
+      margin: 1.5rem 0 0.6rem;
+      border-left: 3px solid #2c6e49;
+      padding-left: 0.8rem;
+      color: #1e3a2f;
     }
 
-    .book-cover {
-      text-align: center;
-      margin: 2rem 0;
+    .book-content p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #2d3e3b;
+      margin-bottom: 0.6rem;
     }
 
-    .book-cover img {
-      max-width: 280px;
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    .book-content ul {
+      margin: 0.3rem 0 0.8rem 1.2rem;
+      padding: 0;
+      list-style: none;
     }
 
-    .book-subtitle {
-      font-size: 1.1rem;
-      color: #2c6e49;
-      margin-bottom: 1rem;
+    .book-content ul li {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: #2d3e3b;
+      padding: 0.15rem 0 0.15rem 1.2rem;
+      position: relative;
+    }
+
+    .book-content ul li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #b87c4f;
     }
 
     .info-block {
-      background: #eef4ed;
-      padding: 1rem 1.2rem;
-      border-radius: 20px;
+      background: #f7f4ef;
+      padding: 0.8rem 1.2rem;
+      border-radius: 16px;
       margin: 1rem 0;
+      font-size: 0.9rem;
+      border-left: 3px solid #b87c4f;
+    }
+
+    .info-block p {
+      margin: 0;
+      font-style: italic;
+      color: #3d4d47;
     }
 
     .info-block.warning {
       background: #fdf2f0;
-      border-left: 4px solid #b84a3a;
+      border-left-color: #b84a3a;
     }
 
-    .section {
-      margin: 2rem 0;
+    .info-block.warning p {
+      font-style: normal;
     }
 
-    .section ul {
-      margin-left: 1.5rem;
-    }
-
-    .section li {
-      margin-bottom: 0.3rem;
-    }
-
-    .btn-outline:hover {
-      background: #1e3a2f;
-      color: white;
-    }
-
-    /* ===== ТАБЛИЦЫ (матрицы) ===== */
     .matrix {
       display: block;
       width: 100%;
@@ -113,15 +212,16 @@
       border: 1px solid #e2ddd4;
       border-radius: 24px;
       padding: 0.5rem 1rem;
-      margin: 1.5rem 0;
+      margin: 1rem 0;
     }
 
     .matrix-item {
       display: flex;
-      padding: 0.75rem 0;
+      padding: 0.6rem 0;
       border-bottom: 1px solid #eee8e0;
       gap: 1rem;
       align-items: baseline;
+      font-size: 0.85rem;
     }
 
     .matrix-item:last-child {
@@ -139,89 +239,85 @@
 
     .matrix-question {
       font-weight: 600;
-      min-width: 160px;
+      min-width: 140px;
       color: #1e3a2f;
       flex-shrink: 0;
+      font-size: 0.85rem;
     }
 
-    /* ===== БЛОК «ДРУГИЕ КНИГИ СЕРИИ» ===== */
-    .series-books {
-      background: #f7f4ef;
-      border-radius: 24px;
-      padding: 1.5rem 1.5rem 0.5rem;
-      margin: 2.5rem 0 1rem;
+    .series-books-placeholder {
+      min-height: 120px;
+      margin: 1.5rem 0 1rem;
     }
 
-    .series-books h3 {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      color: #1e3a2f;
-    }
-
-    .series-books-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 1rem;
-    }
-
-    .series-book-item {
-      background: white;
-      border-radius: 16px;
-      padding: 0.8rem 1rem;
-      border: 1px solid #e2ddd4;
+    .series-books-placeholder .loading {
       text-align: center;
-    }
-
-    .series-book-item .sb-number {
-      font-size: 0.6rem;
       color: #8a7f6d;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      padding: 1rem;
+      font-size: 0.85rem;
     }
 
-    .series-book-item .sb-title {
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: #1e3a2f;
-      margin: 0.2rem 0;
+    .series-books-placeholder .loading::after {
+      content: '...';
+      animation: dots 1.5s steps(4, end) infinite;
     }
 
-    .series-book-item .sb-status {
-      font-size: 0.65rem;
-      color: #2c6e49;
-    }
-
-    .series-book-item .sb-status.soon {
-      color: #c97e2a;
-    }
-
-    .series-book-item a {
-      text-decoration: none;
-      display: block;
-    }
-
-    .series-book-item a:hover .sb-title {
-      text-decoration: underline;
+    @keyframes dots {
+      0% { content: ''; }
+      25% { content: '.'; }
+      50% { content: '..'; }
+      75% { content: '...'; }
     }
 
     @media (max-width: 640px) {
-      h1 {
-        font-size: 1.6rem;
+      .book-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.8rem;
+        margin: 1rem 0 1.5rem;
       }
-      h2 {
+
+      .book-cover-small {
+        width: 140px;
+      }
+
+      .book-info h1 {
         font-size: 1.3rem;
       }
+
+      .book-actions {
+        justify-content: center;
+      }
+
+      .book-info .book-meta-line {
+        font-size: 0.75rem;
+      }
+
       .matrix-item {
         flex-direction: column;
         gap: 0.15rem;
-        padding: 0.9rem 0;
+        padding: 0.7rem 0;
       }
+
       .matrix-question {
         min-width: auto;
         font-size: 0.9rem;
       }
-      .series-books-grid {
-        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 400px) {
+      .book-cover-small {
+        width: 110px;
+      }
+
+      .book-info h1 {
+        font-size: 1.1rem;
+      }
+
+      .book-actions .btn {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
       }
     }
   </style>
@@ -235,43 +331,47 @@
       <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
     </a>
     <div class="nav-links">
-        <a href="index.html#about">👤 Об авторе</a>
-        <a href="index.html#books">📚 Книги</a>
-        <a href="index.html#contacts">📬 Контакты</a>
-        <a href="methodology.html">📐 Методология</a>
-        <a href="port.html">🧪 Лаборатория</a>
+      <a href="index.html#about">👤 Об авторе</a>
+      <a href="index.html#books">📚 Книги</a>
+      <a href="index.html#contacts">📬 Контакты</a>
+      <a href="methodology.html">📐 Методология</a>
+      <a href="port.html">🧪 Лаборатория</a>
     </div>
   </div>
 </nav>
 
 <main class="container">
-  <!-- ===== ОБЛОЖКА ===== -->
-  <div class="book-cover">
-    <img src="/img/cover_book_2.jpeg" alt="Психология рун. Руническая навигация — обложка книги" onerror="this.src='https://placehold.co/300x400/eef4ed/2c6e49?text=%D0%9F%D1%81%D0%B8%D1%85%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F+%D1%80%D1%83%D0%BD'">
+
+  <!-- ===== ШАПКА КНИГИ ===== -->
+  <div class="book-header">
+    <div class="book-cover-small">
+      <img src="/img/cover_book_2.jpeg" alt="Психология рун. Руническая навигация" onerror="this.src='https://placehold.co/160x220/eef4ed/2c6e49?text=%D0%9F%D1%81%D0%B8%D1%85%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F+%D1%80%D1%83%D0%BD'">
+    </div>
+    <div class="book-info">
+      <div class="book-number">Книга вторая</div>
+      <h1>Психология рун</h1>
+      <div class="book-subtitle">Руническая навигация: как понять, где вы находитесь, и что делать дальше</div>
+      <div class="book-meta-line">
+        <span>📖 2025</span> · <span>📚 Серия: Руны как этапы процесса</span>
+      </div>
+      <div class="book-actions">
+        <a href="https://www.litres.ru/74056056/" class="btn btn-litres" target="_blank" style="background: #ff5a5f; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+          📘 Читать на Литрес
+        </a>
+        <a href="index.html#books" class="btn" style="background: #1e3a2f; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+          ← Назад
+        </a>
+      </div>
+    </div>
   </div>
 
-  <h1>Психология рун</h1>
-  <div class="book-subtitle">Руническая навигация: как понять, где вы находитесь, и что делать дальше</div>
+  <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
+  <div class="book-content">
 
-  <div class="info-block">
-    <p><strong>📖 Год:</strong> 2025</p>
-    <p><strong>📚 Серия:</strong> Руны как этапы процесса — книга 2</p>
-  </div>
-
-  <div style="margin-bottom: 1rem;">
-    <a href="https://www.litres.ru/74056056/" class="btn btn-litres" target="_blank">📘 Читать на Литрес</a>
-    <a href="index.html#books" class="btn">← Назад к книгам</a>
-  </div>
-
-  <!-- ===== О КНИГЕ ===== -->
-  <div class="section">
     <h2>О книге</h2>
     <p>Вы приходите на кухню. Хотите заварить кофе. Мысль «хочу кофе» — это <strong>ᚠ Феху</strong> (начало). Дальше вы смотрите на три пачки — это <strong>ᚢ Уруз</strong> (хаос выбора). Берёте одну пачку — <strong>ᚦ Турисаз</strong> (выбор). Завариваете — <strong>ᚱ Райдо</strong> (первый шаг). Пьёте и кайфуете — <strong>ᚹ Вуньо</strong> (радость). А потом идёте мыть чашку — и это <strong>ᚺ Хагалаз</strong> (рутина жизни с результатом).</p>
     <p><strong>24 руны = 24 состояния, в которых может быть человек.</strong> Книга учит распознавать их без гадания. Просто наблюдая за собой.</p>
-  </div>
 
-  <!-- ===== ДЛЯ КОГО ===== -->
-  <div class="section">
     <h2>Для кого эта книга</h2>
     <ul>
       <li>Для тех, кто устал от хаоса</li>
@@ -280,10 +380,7 @@
       <li>Для тех, кто хочет научиться диагностировать себя без гаданий</li>
       <li>Для управленцев, продажников, предпринимателей</li>
     </ul>
-  </div>
 
-  <!-- ===== 24 СОСТОЯНИЯ ===== -->
-  <div class="section">
     <h2>24 состояния + пустая руна</h2>
     <div class="matrix">
       <div class="matrix-item"><span class="matrix-question">ᚠ Феху</span> начало, искра, идея</div>
@@ -312,10 +409,7 @@
       <div class="matrix-item"><span class="matrix-question">ᛞ Дагаз</span> перерождение, смена дня и ночи</div>
       <div class="matrix-item blank"><span class="matrix-question">➕ Пустая руна</span> тишина, потенциал, пауза перед новым циклом</div>
     </div>
-  </div>
 
-  <!-- ===== МАТРИЦА ТУПИКОВ ===== -->
-  <div class="section">
     <h2>Матрица тупиков (или «почему я застрял»)</h2>
     <div class="matrix">
       <div class="matrix-item"><span class="matrix-question">Не могу начать</span> застрял до Феху (нет идеи) или после Уруз (нет выбора)</div>
@@ -326,48 +420,30 @@
       <div class="matrix-item"><span class="matrix-question">Знаю, что надо, но не делаю</span> нет Райдо (страх первого шага)</div>
       <div class="matrix-item"><span class="matrix-question">Не могу подтвердить выбор</span> выход в книге (Ансуз, зелёный свет)</div>
     </div>
-  </div>
 
-  <!-- ===== ВАЖНОЕ ПРИМЕЧАНИЕ ===== -->
-  <div class="info-block warning">
-    <p><strong>⚠️ Важно:</strong> Книга учит <strong>диагностике себя</strong>, а не других. Вы не сможете «погадать» на другого человека. Но вы научитесь понимать, <strong>где находитесь вы сами</strong>.</p>
-  </div>
-
-  <div class="info-block">
-    <p><strong>📌 После этой книги — третья:</strong> «Мантика без иллюзий» — диалог с Создателем через руны. Если вы научились видеть свои состояния, вы готовы задавать вопросы.</p>
-  </div>
-
-  <!-- ===== ДРУГИЕ КНИГИ СЕРИИ ===== -->
-  <div class="series-books">
-    <h3>📚 Другие книги серии</h3>
-    <div class="series-books-grid">
-      <a href="book1.html" class="series-book-item">
-        <div class="sb-number">Книга 1</div>
-        <div class="sb-title">Инженерная модель реальности</div>
-        <div class="sb-status">✅ Доступна</div>
-      </a>
-      <a href="book25.html" class="series-book-item">
-        <div class="sb-number">Книга 3</div>
-        <div class="sb-title">Ключ к мантике</div>
-        <div class="sb-status">✅ Доступна</div>
-      </a>
-      <a href="book3.html" class="series-book-item">
-        <div class="sb-number">Книга 4</div>
-        <div class="sb-title">Мантика без иллюзий</div>
-        <div class="sb-status">✅ Доступна</div>
-      </a>
-      <div class="series-book-item" style="opacity:0.5;">
-        <div class="sb-number">Книга 5</div>
-        <div class="sb-title">Рунический менеджмент</div>
-        <div class="sb-status soon">📝 Планируется</div>
-      </div>
+    <div class="info-block warning">
+      <p><strong>⚠️ Важно:</strong> Книга учит <strong>диагностике себя</strong>, а не других. Вы не сможете «погадать» на другого человека. Но вы научитесь понимать, <strong>где находитесь вы сами</strong>.</p>
     </div>
-  </div>
 
-  <!-- ===== КНОПКИ ===== -->
-  <div style="margin: 1rem 0 2rem;">
-    <a href="https://www.litres.ru/74056056/" class="btn btn-litres" target="_blank">📘 Купить на Литрес</a>
-    <a href="index.html#books" class="btn">← Назад к книгам</a>
+    <div class="info-block">
+      <p><strong>📌 После этой книги — третья:</strong> «Ключ к мантике» — подготовка к диалогу с рунами. Если вы научились видеть свои состояния, вы готовы задавать вопросы.</p>
+    </div>
+
+    <!-- ===== ДРУГИЕ КНИГИ СЕРИИ ===== -->
+    <div id="seriesBooksPlaceholder" class="series-books-placeholder">
+      <div class="loading">Загрузка книг</div>
+    </div>
+
+    <!-- ===== НИЖНИЕ КНОПКИ ===== -->
+    <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1rem 0 2rem;">
+      <a href="https://www.litres.ru/74056056/" class="btn btn-litres" target="_blank" style="background: #ff5a5f; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+        📘 Купить на Литрес
+      </a>
+      <a href="index.html#books" class="btn" style="background: #1e3a2f; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+        ← Назад к книгам
+      </a>
+    </div>
+
   </div>
 </main>
 
@@ -378,6 +454,9 @@
     <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
   </div>
 </footer>
+
+<!-- ===== ПОДГРУЗКА БЛОКА «ДРУГИЕ КНИГИ СЕРИИ» ===== -->
+<script src="/load-books.js" defer></script>
 
 </body>
 </html>
