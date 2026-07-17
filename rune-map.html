@@ -257,6 +257,10 @@
     </style>
 </head>
 <body>
+
+<!-- ===== МЕНЮ (подгружается из menu.html) ===== -->
+<div id="menuPlaceholder"></div>
+
 <div class="container">
     <div class="hero">
         <div class="rune-symbol">ᚱ ᚢ ᚾ ᛖ</div>
@@ -285,7 +289,7 @@
     </div>
 </div>
 
-<!-- ===== СНАЧАЛА ЗАГРУЖАЕМ load-runes.js (БЕЗ defer) ===== -->
+<!-- ===== СНАЧАЛА ЗАГРУЖАЕМ load-runes.js ===== -->
 <script src="/load-runes.js"></script>
 
 <!-- ===== ПОТОМ ВЫЗЫВАЕМ РЕНДЕРИНГ ===== -->
@@ -303,7 +307,7 @@
                 return;
             }
 
-            // ФИЛЬТРУЕМ ПО block (а не group)
+            // ФИЛЬТРУЕМ ПО block
             let filtered = filterGroup === "all" ? runes : runes.filter(r => r.block === parseInt(filterGroup));
 
             let html = "";
@@ -346,6 +350,9 @@
     // ---------- ЗАПУСКАЕМ ----------
     renderRunes("all");
 </script>
+
+<!-- ===== ПОДГРУЗКА МЕНЮ ===== -->
+<script src="/load-menu.js" defer></script>
 
 </body>
 </html>
