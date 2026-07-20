@@ -335,21 +335,8 @@
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <img src="/img/logo.jpeg" alt="Логотип">
-      <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
-    </a>
-    <div class="nav-links">
-      <a href="index.html#about">👤 Об авторе</a>
-      <a href="index.html#books">📚 Книги</a>
-      <a href="index.html#contacts">📬 Контакты</a>
-      <a href="methodology.html">📐 Методология</a>
-      <a href="port.html">🧪 Лаборатория</a>
-    </div>
-  </div>
-</nav>
+<!-- ===== МЕНЮ (подгружается из menu.html) ===== -->
+<div id="menuPlaceholder"></div>
 
 <main class="container">
 
@@ -510,7 +497,10 @@
     <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
   </div>
 </footer>
-
+  
+<!-- ===== ПОДГРУЗКА МЕНЮ ===== -->
+<script src="/load-menu.js"></script>
+  
 <!-- ===== ПОДГРУЗКА БЛОКА «ДРУГИЕ КНИГИ СЕРИИ» ===== -->
 <script src="/load-books.js" defer></script>
 
