@@ -54,21 +54,8 @@
 }
 </script>
 
-<nav class="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <img src="/img/logo.jpeg" alt="Логотип">
-      <span>РУНЫ КАК<span> ЭТАПЫ ПРОЦЕССА</span></span>
-    </a>
-    <div class="nav-links">
-      <a href="#about">👤 Об авторе</a>
-      <a href="#books">📚 Книги</a>
-      <a href="#contacts">📬 Контакты</a>
-      <a href="methodology.html">📐 Методология</a>
-      <a href="port.html">🧪 Лаборатория</a>
-    </div>
-  </div>
-</nav>
+<!-- ===== МЕНЮ (подгружается из menu.html) ===== -->
+<div id="menuPlaceholder"></div>
 
 <main>
   <section id="about" class="section hero">
@@ -173,6 +160,9 @@
   </div>
 </footer>
 
+  <!-- ===== ПОДГРУЗКА МЕНЮ ===== -->
+<script src="/load-menu.js"></script>
+  
 <!-- ===== ПОДГРУЗКА КНИГ НА ГЛАВНОЙ ===== -->
 <script src="/load-index-books.js" defer></script>
 
