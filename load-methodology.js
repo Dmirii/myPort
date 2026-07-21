@@ -126,13 +126,20 @@ async function loadMethodologyBooks() {
                     actionButton = `<a href="${linkUrl}" class="btn-link btn-subscribe">📬 Подписаться</a>`;
                 }
 
-                // Ссылка на страницу книги (название кликабельное)
-                const bookLink = book.url ? `<a href="${book.url}" class="book-link">${book.title}</a>` : book.title;
+                // ===== ГЛАВНОЕ ИЗМЕНЕНИЕ =====
+                // Название книги: ссылка только если есть свой URL (не feedback.html)
+                const hasPage = book.url && book.url !== 'feedback.html';
+                let bookDisplay = '';
+                if (hasPage) {
+                    bookDisplay = `<a href="${book.url}" class="book-link">${book.title}</a>`;
+                } else {
+                    bookDisplay = `<span style="color: #2d3e3b; font-weight: 500;">${book.title}</span>`;
+                }
 
                 html += `
                     <tr>
                         <td>${book.id}</td>
-                        <td>${bookLink}</td>
+                        <td>${bookDisplay}</td>
                         <td class="rune-sym">${runeSymbol}</td>
                         <td class="hide-mobile">${book.tag || ''}</td>
                         <td><span class="${badgeClass}">${statusText}</span></td>
