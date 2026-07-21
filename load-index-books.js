@@ -1,6 +1,7 @@
 /**
  * Загрузка и рендеринг всех книг на главной странице
  * Использует /books.json
+ * Статусы: available, in_progress, planned
  */
 
 async function loadIndexBooks() {
@@ -59,25 +60,25 @@ async function loadIndexBooks() {
             `;
 
             block.books.forEach(book => {
-                // Определяем класс статуса
-                let statusClass = '';
-                if (book.status === 'planned' || book.status === 'in_progress') {
-                    statusClass = 'idea';
-                }
-                
                 const statusText = book.statusText || (book.status === 'available' ? '✅ Доступна' : '📝 Планируется');
                 const litresButton = book.litresLink ? 
                     `<a href="${book.litresLink}" class="btn btn-small btn-litres" target="_blank">Литрес</a>` : 
                     '';
 
-                // Определяем кнопку
+                // Класс для стилизации статуса
+                let statusClass = '';
+                if (book.status === 'planned' || book.status === 'in_progress') {
+                    statusClass = 'idea';
+                }
+
+                // ===== ГЛАВНОЕ ИЗМЕНЕНИЕ =====
+                // Если есть страница (in_progress или available) — показываем "Подробнее →"
+                // Если книга только планируется (planned) — показываем "📬 Сообщить о выходе"
                 let detailButton = '';
-                if (book.status === 'in_progress') {
-                    // В работе — страница есть, кнопка "Сообщить о выходе"
-                    detailButton = `<a href="${book.url}" class="btn btn-small" style="background: #b87c4f; border-color: #b87c4f;">📬 Сообщить о выходе</a>`;
-                } else if (book.status === 'planned' && book.action === 'notify') {
+                if (book.status === 'planned' && book.action === 'notify') {
                     detailButton = `<a href="${book.url}" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>`;
                 } else {
+                    // Для available и in_progress — показываем "Подробнее →"
                     detailButton = `<a href="${book.url}" class="btn btn-small">Подробнее →</a>`;
                 }
 
@@ -125,7 +126,7 @@ async function loadIndexBooks() {
                 html += `
                     <div class="book-card" style="border-left: 4px solid #b87c4f; background: #fcf9f5;">
                         <div class="book-number">${book.numberFull || book.number}</div>
-                        <div class="book-status idea">🌱 Идея</div>
+                        <div class="book-status idea">${book.statusText || '🌱 Идея'}</div>
                         <div class="book-title">${book.title}</div>
                         <div class="book-subtitle">${book.subtitle || ''}</div>
                         <div class="book-annotation">
