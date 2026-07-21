@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109861723', 'ym');
+
+    ym(109861723, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109861723" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Кеназ. Свет истины — книга шестая | Дмитрий Антонов</title>
+  <meta name="description" content="Книга «Кеназ. Свет истины». Иллюзия покоя и проявление себя. Руническое осознание. Как я ушёл, потому что прозрел. Деловой роман в стиле Голдратта.">
+  <meta name="author" content="Дмитрий Антонов">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dimaa.ru/book6.html">
+  <meta property="og:title" content="Кеназ. Свет истины — книга шестая | Дмитрий Антонов">
+  <meta property="og:description" content="Иллюзия покоя и проявление себя. Руническое осознание. Как я ушёл, потому что прозрел.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dimaa.ru/book6.html">
+  <meta property="og:site_name" content="Инженерная модель реальности">
+  <meta property="og:image" content="https://dimaa.ru/img/cover_book_6.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
+  <link rel="shortcut icon" href="/img/logo.jpeg">
+
+  <!-- ===== ПОДКЛЮЧАЕМ ВНЕШНИЙ ФАЙЛ СТИЛЕЙ ===== -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- ===== JSON-LD СТРУКТУРИРОВАННЫЕ ДАННЫЕ (Book) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Кеназ. Свет истины",
+    "author": {
+      "@type": "Person",
+      "name": "Дмитрий Антонов"
+    },
+    "description": "Иллюзия покоя и проявление себя. Руническое осознание. Как я ушёл, потому что прозрел.",
+    "url": "https://dimaa.ru/book6.html",
+    "image": "https://dimaa.ru/img/cover_book_6.jpg",
+    "datePublished": "2026",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Литрес"
+    }
+  }
+  </script>
+
+  <!-- ===== УНИКАЛЬНЫЕ СТИЛИ ДЛЯ ЭТОЙ КНИГИ ===== -->
+  <style>
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+
+    .book-header {
+      display: flex;
+      gap: 1.8rem;
+      align-items: flex-start;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .book-cover-small {
+      flex-shrink: 0;
+      width: 160px;
+    }
+
+    .book-cover-small img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      display: block;
+    }
+
+    .book-info {
+      flex: 1;
+    }
+
+    .book-info .book-number {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #8a7f6d;
+      margin-bottom: 0.2rem;
+    }
+
+    .book-info .book-status-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: #f1efe9;
+      color: #8a7f6d;
+      padding: 0.1rem 0.6rem;
+      border-radius: 20px;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .book-info .book-status-badge.idea {
+      background: #fff6e8;
+      color: #c97e2a;
+    }
+
+    .book-info h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1e3a2f;
+      margin: 0 0 0.2rem 0;
+      line-height: 1.2;
+    }
+
+    .book-info .book-subtitle {
+      font-size: 0.9rem;
+      color: #2c6e49;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-info .book-meta-line {
+      font-size: 0.8rem;
+      color: #5f6c66;
+      margin-bottom: 0.8rem;
+    }
+
+    .book-info .book-meta-line span {
+      background: #eef4ed;
+      padding: 0.1rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+    }
+
+    .book-info .book-meta-line .rune-tag {
+      background: #f7f4ef;
+      color: #b87c4f;
+      font-family: monospace;
+      font-size: 0.8rem;
+    }
+
+    .book-actions {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-top: 0.2rem;
+    }
+
+    .book-actions .btn {
+      font-size: 0.8rem;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin: 1.5rem 0 0.6rem;
+      border-left: 3px solid #2c6e49;
+      padding-left: 0.8rem;
+      color: #1e3a2f;
+    }
+
+    .book-content p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #2d3e3b;
+      margin-bottom: 0.6rem;
+    }
+
+    .book-content ul {
+      margin: 0.3rem 0 0.8rem 1.2rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .book-content ul li {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: #2d3e3b;
+      padding: 0.15rem 0 0.15rem 1.2rem;
+      position: relative;
+    }
+
+    .book-content ul li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #b87c4f;
+    }
+
+    .info-block {
+      background: #f7f4ef;
+      padding: 0.8rem 1.2rem;
+      border-radius: 16px;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      border-left: 3px solid #b87c4f;
+    }
+
+    .info-block p {
+      margin: 0;
+      font-style: italic;
+      color: #3d4d47;
+    }
+
+    .info-block.warning {
+      background: #fff6e8;
+      border-left-color: #c97e2a;
+    }
+
+    .info-block.warning p {
+      font-style: normal;
+    }
+
+    .series-connection {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1rem;
+      background: #f7f4ef;
+      border-radius: 16px;
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+      border: 1px solid #e2ddd4;
+    }
+
+    .series-connection .sc-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.2rem 0;
+      border-bottom: 1px dashed #e2ddd4;
+      font-size: 0.82rem;
+    }
+
+    .series-connection .sc-item:last-child {
+      border-bottom: none;
+    }
+
+    .series-connection .sc-book {
+      color: #1e3a2f;
+      font-weight: 500;
+    }
+
+    .series-connection .sc-rune {
+      color: #b87c4f;
+      font-weight: 600;
+    }
+
+    .series-connection .sc-link {
+      color: #2c6e49;
+      font-size: 0.7rem;
+    }
+
+    .series-books-placeholder {
+      min-height: 120px;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .series-books-placeholder .loading {
+      text-align: center;
+      color: #8a7f6d;
+      padding: 1rem;
+      font-size: 0.85rem;
+    }
+
+    .series-books-placeholder .loading::after {
+      content: '...';
+      animation: dots 1.5s steps(4, end) infinite;
+    }
+
+    @keyframes dots {
+      0% { content: ''; }
+      25% { content: '.'; }
+      50% { content: '..'; }
+      75% { content: '...'; }
+    }
+
+    .excerpt {
+      background: #f1efe9;
+      padding: 1.2rem 1.5rem;
+      border-radius: 16px;
+      margin: 1rem 0;
+      font-style: italic;
+      color: #2d3e3b;
+      font-size: 0.95rem;
+      border-left: 3px solid #b87c4f;
+    }
+
+    .excerpt p {
+      margin: 0;
+    }
+
+    .footer-quote {
+      font-style: italic;
+      font-size: 0.7rem;
+      margin-top: 0.3rem;
+      color: #8a7f6d;
+    }
+
+    @media (max-width: 640px) {
+      .book-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.8rem;
+        margin: 1rem 0 1.5rem;
+      }
+
+      .book-cover-small {
+        width: 140px;
+      }
+
+      .book-info h1 {
+        font-size: 1.3rem;
+      }
+
+      .book-actions {
+        justify-content: center;
+      }
+
+      .book-info .book-meta-line {
+        font-size: 0.75rem;
+      }
+
+      .series-connection {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .book-cover-small {
+        width: 110px;
+      }
+
+      .book-info h1 {
+        font-size: 1.1rem;
+      }
+
+      .book-actions .btn {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== МЕНЮ (подгружается из menu.html) ===== -->
+<div id="menuPlaceholder"></div>
+
+<main class="container">
+
+  <!-- ===== ШАПКА КНИГИ ===== -->
+  <div class="book-header">
+    <div class="book-cover-small">
+      <img id="bookCover" src="/img/cover_book_6.jpg" alt="Кеназ. Свет истины" onerror="this.src='https://placehold.co/160x220/eef4ed/2c6e49?text=%D0%9A%D0%B5%D0%BD%D0%B0%D0%B7'">
+    </div>
+    <div class="book-info">
+      <div class="book-number">Книга шестая</div>
+      <div class="book-status-badge idea">🌱 Идея</div>
+      <h1>Кеназ. Свет истины</h1>
+      <div class="book-subtitle">Иллюзия покоя и проявление себя</div>
+      <div class="book-meta-line">
+        <span>📖 2026</span> · <span>📚 Серия: Руны как этапы процесса</span> · <span class="rune-tag">ᚲ Кеназ</span>
+      </div>
+      <div class="book-actions">
+        <a href="feedback.html" class="btn btn-orange" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px;">
+          📬 Сообщить о выходе
+        </a>
+        <a href="index.html#books" class="btn" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px;">
+          ← Назад
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
+  <div class="book-content">
+
+    <div class="info-block warning">
+      <p><strong>🧭 Блок:</strong> 2. Движение и раскрытие · <strong>ᚲ Руна:</strong> Кеназ — свет, проявление, озарение</p>
+    </div>
+
+    <h2>О чём эта книга</h2>
+    <p><strong>Главный вопрос:</strong> «Почему я не вижу результат, хотя я уже начал?»</p>
+    <p>Ты уже начал. Ты делаешь. Ты вкладываешь всего себя. Но ты не видишь результата. Или тебе кажется, что его нет.</p>
+    <p><strong>Кеназ</strong> — это руна света, озарения, проявления идеи. Это момент, когда ты увидел. Когда результат стал видимым. Когда ты понял, что всё, что ты создал, — это не проекты и не деньги. Это ты сам.</p>
+    <p>Эта книга — о том, как мы ищем покой там, где его нет. И не замечаем его там, где он есть.</p>
+    <p><strong>Формат:</strong> деловой роман в стиле Голдратта. Одна история. Один человек. Кризис в работе. Рождение дочки. Алкоголь как иллюзия покоя. И прозрение, которое изменило всё.</p>
+    <p>В конце книги — руническая практика: упражнения, которые помогут тебе увидеть свой собственный свет.</p>
+
+    <h2>Для кого эта книга</h2>
+    <ul>
+      <li>Для тех, кто уже начал, но не видит своих побед</li>
+      <li>Для тех, кто устал бежать и хочет оглянуться</li>
+      <li>Для тех, кто ищет покой не в том месте</li>
+      <li>Для тех, кто готов увидеть свою настоящую ценность</li>
+      <li>Для всех, кто хочет понять, что такое Кеназ — руна света и проявления</li>
+    </ul>
+
+    <h2>О чём книга (подробно)</h2>
+    <p>Книга проведёт вас через историю человека, который:</p>
+    <ul>
+      <li>Потерял себя в рутине управления</li>
+      <li>Игнорировал сигналы (Наутиз)</li>
+      <li>Застыл в паузе, не зная, что делать (Иса)</li>
+      <li>Увидел свет через рождение дочки (Йера)</li>
+      <li>Прозрел и увидел свою ценность (Кеназ)</li>
+      <li>Сделал первый шаг к новой жизни (Райдо)</li>
+      <li>Нашёл настоящий покой (Лагуз)</li>
+    </ul>
+
+    <div class="excerpt">
+      <p>«Я искал покой в контроле. Я искал его в алкоголе. Я искал его в статусе. Я искал его везде, где его нет.</p>
+      <p>А он был здесь. В глазах моей дочери. В моей свободе. В моём выборе.</p>
+      <p>Я увидел себя. И я больше не боюсь.»</p>
+    </div>
+
+    <h2>Содержание</h2>
+
+    <p><strong>Введение.</strong> Зачем нужна эта книга</p>
+
+    <p><strong>Часть 1. Иллюзия контроля</strong></p>
+    <ul>
+      <li>Глава 1. Человек, который всё контролирует</li>
+      <li>Глава 2. Тот, кто привёл меня</li>
+      <li>Глава 3. Первая трещина</li>
+    </ul>
+
+    <p><strong>Часть 2. Кризис</strong></p>
+    <ul>
+      <li>Глава 4. Потеря</li>
+      <li>Глава 5. Исполнитель</li>
+      <li>Глава 6. Апатия</li>
+    </ul>
+
+    <p><strong>Часть 3. Тишина</strong></p>
+    <ul>
+      <li>Глава 7. Новость</li>
+      <li>Глава 8. Последние месяцы</li>
+      <li>Глава 9. Тишина</li>
+    </ul>
+
+    <p><strong>Часть 4. Свет</strong></p>
+    <ul>
+      <li>Глава 10. Рождение дочки</li>
+      <li>Глава 11. Взгляд со стороны</li>
+      <li>Глава 12. Прощание с иллюзией</li>
+    </ul>
+
+    <p><strong>Часть 5. Прозрение</strong></p>
+    <ul>
+      <li>Глава 13. Она тоже устала</li>
+      <li>Глава 14. Разговор</li>
+      <li>Глава 15. Правда</li>
+    </ul>
+
+    <p><strong>Часть 6. Первый шаг</strong></p>
+    <ul>
+      <li>Глава 16. Решение</li>
+      <li>Глава 17. Разговор с собственником</li>
+      <li>Глава 18. Первый день</li>
+    </ul>
+
+    <p><strong>Часть 7. Проявление</strong></p>
+    <ul>
+      <li>Глава 19. Оглянуться</li>
+      <li>Глава 20. Настоящий покой</li>
+      <li>Глава 21. Свет истины</li>
+    </ul>
+
+    <p><strong>Эпилог</strong></p>
+    <p><strong>Руническая практика.</strong> Свет Кеназ в твоей жизни</p>
+
+    <h2>Связь с серией</h2>
+    <div class="series-connection">
+      <div class="sc-item"><span class="sc-book">Книга 5</span><span class="sc-rune">ᚱ Райдо</span><span class="sc-link">Как сделать первый шаг</span></div>
+      <div class="sc-item"><span class="sc-book">Книга 6</span><span class="sc-rune">ᚲ Кеназ</span><span class="sc-link">Как увидеть свой результат</span></div>
+      <div class="sc-item"><span class="sc-book">Книга 7</span><span class="sc-rune">ᚷ Гебо</span><span class="sc-link">Как найти баланс</span></div>
+      <div class="sc-item"><span class="sc-book">Книга 8</span><span class="sc-rune">ᚹ Вуньо</span><span class="sc-link">Как завершить этап</span></div>
+    </div>
+
+    <!-- ===== ДРУГИЕ КНИГИ СЕРИИ (подгружается из JSON) ===== -->
+    <div id="seriesBooksPlaceholder" class="series-books-placeholder">
+      <div class="loading">Загрузка книг</div>
+    </div>
+
+    <!-- ===== НИЖНИЕ КНОПКИ ===== -->
+    <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1rem 0 2rem;">
+      <a href="feedback.html" class="btn btn-orange" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px;">
+        📬 Сообщить о выходе
+      </a>
+      <a href="index.html#books" class="btn" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px;">
+        ← Назад к книгам
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© Дмитрий Антонов · Руны как этапы процесса</p>
+    <p id="footerQuote" class="footer-quote">«Кеназ — это когда результат становится видимым. Для себя. А не для других.»</p>
+    <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
+  </div>
+</footer>
+
+<!-- ===== ПОДГРУЗКА МЕНЮ ===== -->
+<script src="/load-menu.js"></script>
+
+<!-- ===== ПОДГРУЗКА БЛОКА «ДРУГИЕ КНИГИ СЕРИИ» ===== -->
+<script src="/load-books.js" defer></script>
+
+<!-- ===== ЗАГРУЗКА ДАННЫХ КНИГИ ИЗ JSON ===== -->
+<script src="/load-book.js" defer></script>
+
+</body>
+</html>
