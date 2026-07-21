@@ -189,13 +189,22 @@
     }
 
     .series-table .litres-link {
-      font-size: 0.75rem;
+      display: inline-block;
+      font-size: 0.7rem;
       color: #ff5a5f;
       text-decoration: none;
+      margin-left: 0.4rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 12px;
+      border: 1px solid #ff5a5f;
+      transition: all 0.2s;
+      white-space: nowrap;
     }
 
     .series-table .litres-link:hover {
-      text-decoration: underline;
+      background: #ff5a5f;
+      color: white;
+      text-decoration: none;
     }
 
     .badge-available {
@@ -280,6 +289,11 @@
       .series-table .hide-mobile {
         display: none;
       }
+      .series-table .litres-link {
+        font-size: 0.6rem;
+        padding: 0.05rem 0.4rem;
+        margin-left: 0.2rem;
+      }
     }
 
     @media (max-width: 500px) {
@@ -293,6 +307,12 @@
       }
       .series-table .rune-sym {
         font-size: 0.8rem;
+      }
+      .series-table .litres-link {
+        font-size: 0.55rem;
+        padding: 0.05rem 0.3rem;
+        margin-left: 0.1rem;
+        border-radius: 8px;
       }
     }
   </style>
@@ -358,28 +378,28 @@
             <td><a href="book1.html" class="book-link">Инженерная модель реальности</a></td>
             <td class="rune-sym">ᚠ</td>
             <td class="hide-mobile">Дать систему</td>
-            <td><span class="badge-available">✅ Доступна</span> <a href="https://www.litres.ru/73990393/" class="litres-link" target="_blank">Литрес</a></td>
+            <td><span class="badge-available">✅ Доступна</span> <a href="https://www.litres.ru/73990393/" class="litres-link" target="_blank">📘 Литрес</a></td>
           </tr>
           <tr style="background: #f0f7f2;">
             <td>2</td>
             <td><a href="book2.html" class="book-link">Психология рун</a></td>
             <td class="rune-sym">ᚢ</td>
             <td class="hide-mobile">Научить видеть</td>
-            <td><span class="badge-available">✅ Доступна</span> <a href="https://www.litres.ru/74056056/" class="litres-link" target="_blank">Литрес</a></td>
+            <td><span class="badge-available">✅ Доступна</span> <a href="https://www.litres.ru/74056056/" class="litres-link" target="_blank">📘 Литрес</a></td>
           </tr>
           <tr style="background: #f0f7f2;">
             <td>3</td>
             <td><a href="book25.html" class="book-link">Ключ к мантике</a></td>
             <td class="rune-sym">ᚦ</td>
             <td class="hide-mobile">Сделать выбор</td>
-            <td><span class="badge-training">🗝️ Тренинг</span> <a href="https://www.litres.ru/74065998/" class="litres-link" target="_blank">Литрес</a></td>
+            <td><span class="badge-training">🗝️ Тренинг</span> <a href="https://www.litres.ru/74065998/" class="litres-link" target="_blank">📘 Литрес</a></td>
           </tr>
           <tr style="background: #f0f7f2;">
             <td>4</td>
             <td><a href="book3.html" class="book-link">Мантика без иллюзий</a></td>
             <td class="rune-sym">ᚨ</td>
             <td class="hide-mobile">Дать диалог</td>
-            <td><span class="badge-available">✅ Доступна</span> <a href="https://www.litres.ru/74093559/" class="litres-link" target="_blank">Литрес</a></td>
+            <td><span class="badge-available">✅ Доступна</span> <a href="https://www.litres.ru/74093559/" class="litres-link" target="_blank">📘 Литрес</a></td>
           </tr>
           <tr style="background: #f0f7f2;">
             <td colspan="5" style="border-bottom: 2px solid #2c6e49; padding: 0.5rem 1rem; font-size: 0.8rem; color: #4a6a5c;">
@@ -394,7 +414,10 @@
             <td><a href="book5.html" class="book-link">Рунический менеджмент</a></td>
             <td class="rune-sym">ᚱ</td>
             <td class="hide-mobile">Дать толчок</td>
-            <td><span class="badge-available">✅ Доступна</span> <a href="https://www.litres.ru/74093560/" class="litres-link" target="_blank">Литрес</a></td>
+            <td>
+              <span class="badge-available">✅ Доступна</span>
+              <a href="https://www.litres.ru/74093560/" class="litres-link" target="_blank">📘 Литрес</a>
+            </td>
           </tr>
           <tr>
             <td>6</td>
