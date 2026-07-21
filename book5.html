@@ -94,24 +94,6 @@
       margin-bottom: 0.2rem;
     }
 
-    .book-info .book-status-badge {
-      display: inline-block;
-      font-size: 0.6rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      background: #f1efe9;
-      color: #8a7f6d;
-      padding: 0.1rem 0.6rem;
-      border-radius: 20px;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-
-    .book-info .book-status-badge.idea {
-      background: #fff6e8;
-      color: #c97e2a;
-    }
-
     .book-info h1 {
       font-size: 1.5rem;
       font-weight: 700;
@@ -280,6 +262,13 @@
       75% { content: '...'; }
     }
 
+    .footer-quote {
+      font-style: italic;
+      font-size: 0.7rem;
+      margin-top: 0.3rem;
+      color: #8a7f6d;
+    }
+
     @media (max-width: 640px) {
       .book-header {
         flex-direction: column;
@@ -343,19 +332,18 @@
   <!-- ===== ШАПКА КНИГИ ===== -->
   <div class="book-header">
     <div class="book-cover-small">
-      <img src="/img/cover_book_5.jpg" alt="Рунический менеджмент" onerror="this.src='https://placehold.co/160x220/eef4ed/2c6e49?text=%D0%A0%D1%83%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9+%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%BC%D0%B5%D0%BD%D1%82'">
+      <img id="bookCover" src="/img/cover_book_5.jpg" alt="Рунический менеджмент" onerror="this.src='https://placehold.co/160x220/eef4ed/2c6e49?text=%D0%A0%D1%83%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9+%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%BC%D0%B5%D0%BD%D1%82'">
     </div>
     <div class="book-info">
       <div class="book-number">Книга пятая</div>
-      <div class="book-status-badge idea">🌱 Идея</div>
       <h1>Рунический менеджмент</h1>
       <div class="book-subtitle">Почему мы стоим на месте, хотя толчок уже был?</div>
       <div class="book-meta-line">
         <span>📖 2026</span> · <span>📚 Серия: Руны как этапы процесса</span> · <span class="rune-tag">ᚱ Райдо</span>
       </div>
       <div class="book-actions">
-        <a href="feedback.html" class="btn btn-orange" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px;">
-          📬 Сообщить о выходе
+        <a id="litresBtnTop" href="https://www.litres.ru/74093560/" class="btn btn-litres" target="_blank" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+          📘 Читать на Литрес
         </a>
         <a href="index.html#books" class="btn" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px;">
           ← Назад
@@ -364,7 +352,7 @@
     </div>
   </div>
 
-  <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
+  <!-- ===== ОСНОВНОЙ КОНТЕНТ (SEO — в HTML) ===== -->
   <div class="book-content">
 
     <div class="info-block warning">
@@ -472,15 +460,15 @@
       <p><strong>«Райдо — это не конец. Это начало. Первый шаг — самый трудный, но именно он запускает весь процесс.»</strong></p>
     </div>
 
-    <!-- ===== ДРУГИЕ КНИГИ СЕРИИ ===== -->
+    <!-- ===== ДРУГИЕ КНИГИ СЕРИИ (подгружается из JSON) ===== -->
     <div id="seriesBooksPlaceholder" class="series-books-placeholder">
       <div class="loading">Загрузка книг</div>
     </div>
 
     <!-- ===== НИЖНИЕ КНОПКИ ===== -->
     <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1rem 0 2rem;">
-      <a href="feedback.html" class="btn btn-orange" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px;">
-        📬 Сообщить о выходе
+      <a id="litresBtnBottom" href="https://www.litres.ru/74093560/" class="btn btn-litres" target="_blank" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+        📘 Купить на Литрес
       </a>
       <a href="index.html#books" class="btn" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px;">
         ← Назад к книгам
@@ -493,16 +481,54 @@
 <footer>
   <div class="container">
     <p>© Дмитрий Антонов · Руны как этапы процесса</p>
-    <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Первый шаг — самый трудный. Но без него не будет ни Кеназ, ни Вуньо.»</p>
+    <p id="footerQuote" class="footer-quote">«Первый шаг — самый трудный. Но без него не будет ни Кеназ, ни Вуньо.»</p>
     <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
   </div>
 </footer>
-  
+
 <!-- ===== ПОДГРУЗКА МЕНЮ ===== -->
 <script src="/load-menu.js"></script>
-  
+
 <!-- ===== ПОДГРУЗКА БЛОКА «ДРУГИЕ КНИГИ СЕРИИ» ===== -->
 <script src="/load-books.js" defer></script>
+
+<!-- ===== ЗАГРУЗКА ДАННЫХ КНИГИ ИЗ JSON (гибрид) ===== -->
+<script>
+  // Загружаем данные для книги 5
+  fetch('/books.json')
+    .then(response => {
+      if (!response.ok) throw new Error('Network error');
+      return response.json();
+    })
+    .then(data => {
+      const book = data.books.find(b => b.id === 5);
+      if (!book) return;
+
+      // 1. Обновляем обложку
+      const coverImg = document.querySelector('.book-cover-small img');
+      if (coverImg && book.cover) {
+        coverImg.src = book.cover;
+      }
+
+      // 2. Обновляем ссылки на Литрес
+      const litresLinks = document.querySelectorAll('.btn-litres');
+      litresLinks.forEach(link => {
+        if (book.litresLink) {
+          link.href = book.litresLink;
+        }
+      });
+
+      // 3. Обновляем цитату в футере
+      const footerQuote = document.getElementById('footerQuote');
+      if (footerQuote && book.footerQuote) {
+        footerQuote.textContent = book.footerQuote;
+      }
+    })
+    .catch(error => {
+      console.warn('Не удалось загрузить данные книги:', error);
+      // Если данные не загрузились — остаются дефолтные значения (уже в HTML)
+    });
+</script>
 
 </body>
 </html>
