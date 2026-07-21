@@ -266,7 +266,7 @@ h1, h2, h3 {
 }
 
 /* ========================================
-   БЛОК «ДРУГИЕ КНИГИ СЕРИИ»
+   БЛОК «ДРУГИЕ КНИГИ СЕРИИ» (НОВЫЙ, КОМПАКТНЫЙ)
    ======================================== */
 .series-books {
   background: #f7f4ef;
@@ -283,20 +283,52 @@ h1, h2, h3 {
 
 .series-books-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.8rem;
 }
 
 .series-book-item {
   background: white;
-  border-radius: 16px;
-  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  padding: 0.6rem;
   border: 1px solid #e2ddd4;
   text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.series-book-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  border-color: #b87c4f;
+}
+
+.series-book-item .sb-cover {
+  width: 80px;
+  height: 120px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+  background: #eef4ed;
+  flex-shrink: 0;
+}
+
+.series-book-item .sb-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.series-book-item .sb-info {
+  width: 100%;
 }
 
 .series-book-item .sb-number {
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   color: #8a7f6d;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -304,13 +336,14 @@ h1, h2, h3 {
 
 .series-book-item .sb-title {
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: #1e3a2f;
-  margin: 0.2rem 0;
+  margin: 0.15rem 0;
+  line-height: 1.2;
 }
 
 .series-book-item .sb-status {
-  font-size: 0.65rem;
+  font-size: 0.55rem;
   color: #2c6e49;
 }
 
@@ -318,13 +351,75 @@ h1, h2, h3 {
   color: #c97e2a;
 }
 
-.series-book-item a {
-  text-decoration: none;
-  display: block;
+.series-book-item .sb-buy {
+  display: inline-block;
+  margin-top: 0.3rem;
+  background: #ff5a5f;
+  color: white;
+  font-size: 0.5rem;
+  font-weight: 600;
+  padding: 0.15rem 0.6rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
 }
 
-.series-book-item a:hover .sb-title {
-  text-decoration: underline;
+.series-book-item .sb-buy:hover {
+  background: #e04e52;
+}
+
+.series-book-item.series-all {
+  background: #f7f4ef;
+  border-style: dashed;
+  min-height: 160px;
+  justify-content: center;
+}
+
+.series-book-item.series-all:hover {
+  border-color: #b87c4f;
+}
+
+/* ========================================
+   ПАГИНАЦИЯ ДЛЯ БЛОКА «ДРУГИЕ КНИГИ»
+   ======================================== */
+.series-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid #ece8e0;
+}
+
+.page-btn {
+    background: #1e3a2f;
+    color: white;
+    border: none;
+    padding: 0.4rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: #0f2c22;
+}
+
+.page-btn:disabled {
+    background: #d4cfc5;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.page-info {
+    font-size: 0.8rem;
+    color: #5f6c66;
+    font-weight: 500;
+    min-width: 50px;
+    text-align: center;
 }
 
 /* ========================================
@@ -753,9 +848,8 @@ h2 {
   }
 }
 
-
 /* ========================================
-   БЛОК «ДРУГИЕ КНИГИ СЕРИИ» (динамический)
+   БЛОК «ДРУГИЕ КНИГИ СЕРИИ» (плейсхолдер)
    ======================================== */
 .series-books-placeholder {
     min-height: 150px;
@@ -814,47 +908,4 @@ h2 {
 .btn-orange:hover {
   background: #b87c1f;
   color: white;
-}
-
-/* ========================================
-   ПАГИНАЦИЯ ДЛЯ БЛОКА «ДРУГИЕ КНИГИ»
-   ======================================== */
-.series-pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1.2rem;
-    padding-top: 0.8rem;
-    border-top: 1px solid #ece8e0;
-}
-
-.page-btn {
-    background: #1e3a2f;
-    color: white;
-    border: none;
-    padding: 0.4rem 1.2rem;
-    border-radius: 30px;
-    font-size: 0.75rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.page-btn:hover:not(:disabled) {
-    background: #0f2c22;
-}
-
-.page-btn:disabled {
-    background: #d4cfc5;
-    cursor: not-allowed;
-    opacity: 0.5;
-}
-
-.page-info {
-    font-size: 0.8rem;
-    color: #5f6c66;
-    font-weight: 500;
-    min-width: 50px;
-    text-align: center;
 }
