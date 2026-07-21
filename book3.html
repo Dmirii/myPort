@@ -298,6 +298,13 @@
       75% { content: '...'; }
     }
 
+    .footer-quote {
+      font-style: italic;
+      font-size: 0.7rem;
+      margin-top: 0.3rem;
+      color: #8a7f6d;
+    }
+
     @media (max-width: 640px) {
       .book-header {
         flex-direction: column;
@@ -354,7 +361,7 @@
   <!-- ===== ШАПКА КНИГИ ===== -->
   <div class="book-header">
     <div class="book-cover-small">
-      <img src="/img/cover_book_3.jpg" alt="Мантика без иллюзий" onerror="this.src='https://placehold.co/160x220/eef4ed/2c6e49?text=%D0%9C%D0%B0%D0%BD%D1%82%D0%B8%D0%BA%D0%B0+%D0%B1%D0%B5%D0%B7+%D0%B8%D0%BB%D0%BB%D1%8E%D0%B7%D0%B8%D0%B9'">
+      <img id="bookCover" src="/img/cover_book_3.jpg" alt="Мантика без иллюзий">
     </div>
     <div class="book-info">
       <div class="book-number">Книга четвёртая</div>
@@ -364,10 +371,10 @@
         <span>📖 2025</span> · <span>📚 Серия: Руны как этапы процесса</span>
       </div>
       <div class="book-actions">
-        <a href="https://www.litres.ru/74093559/" class="btn btn-litres" target="_blank" style="background: #ff5a5f; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+        <a id="litresBtnTop" href="https://www.litres.ru/74093559/" class="btn btn-litres" target="_blank" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
           📘 Читать на Литрес
         </a>
-        <a href="index.html#books" class="btn" style="background: #1e3a2f; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+        <a href="index.html#books" class="btn" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px;">
           ← Назад
         </a>
       </div>
@@ -539,17 +546,17 @@
       «Диалог с Создателем не отменяет вашу свободу — он даёт подсказку»
     </div>
 
-    <!-- ===== ДРУГИЕ КНИГИ СЕРИИ ===== -->
+    <!-- ===== ДРУГИЕ КНИГИ СЕРИИ (подгружается из JSON) ===== -->
     <div id="seriesBooksPlaceholder" class="series-books-placeholder">
       <div class="loading">Загрузка книг</div>
     </div>
 
     <!-- ===== НИЖНИЕ КНОПКИ ===== -->
     <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1rem 0 2rem;">
-      <a href="https://www.litres.ru/74093559/" class="btn btn-litres" target="_blank" style="background: #ff5a5f; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+      <a id="litresBtnBottom" href="https://www.litres.ru/74093559/" class="btn btn-litres" target="_blank" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
         📘 Купить на Литрес
       </a>
-      <a href="index.html#books" class="btn" style="background: #1e3a2f; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px; border: none; color: white; text-decoration: none;">
+      <a href="index.html#books" class="btn" style="font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 40px;">
         ← Назад к книгам
       </a>
     </div>
@@ -560,7 +567,7 @@
 <footer>
   <div class="container">
     <p>© Дмитрий Антонов · Руны как этапы процесса</p>
-    <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Диалог с Создателем не отменяет вашу свободу — он даёт подсказку»</p>
+    <p id="footerQuote" class="footer-quote">«Диалог с Создателем не отменяет вашу свободу — он даёт подсказку»</p>
     <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
   </div>
 </footer>
@@ -570,6 +577,9 @@
 
 <!-- ===== ПОДГРУЗКА БЛОКА «ДРУГИЕ КНИГИ СЕРИИ» ===== -->
 <script src="/load-books.js" defer></script>
+
+<!-- ===== ЗАГРУЗКА ДАННЫХ КНИГИ ИЗ JSON (универсальный скрипт) ===== -->
+<script src="/load-book.js" defer></script>
 
 </body>
 </html>
