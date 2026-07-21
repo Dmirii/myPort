@@ -1,18 +1,28 @@
 /**
  * Загрузка данных книги из books.json
  * Универсальный скрипт для всех страниц книг
- * Определяет книгу по URL и подгружает данные
  */
 
 async function loadBookData() {
-    // Получаем имя текущего файла
     const currentPage = window.location.pathname.split('/').pop();
     
-    // Извлекаем номер книги из URL (book1.html → 1, book25.html → 25)
-    let bookId = null;
-    const match = currentPage.match(/book(\d+)\.html/);
-    if (match) {
-        bookId = parseInt(match[1]);
+    // Маппинг для файлов с нестандартными именами
+    const bookIdMap = {
+        'book1.html': 1,
+        'book2.html': 2,
+        'book25.html': 3,   // ← книга 3
+        'book3.html': 4,    // ← книга 4
+        'book5.html': 5
+    };
+    
+    let bookId = bookIdMap[currentPage];
+    
+    // Если не нашли в маппинге — пробуем извлечь из URL
+    if (!bookId) {
+        const match = currentPage.match(/book(\d+)\.html/);
+        if (match) {
+            bookId = parseInt(match[1]);
+        }
     }
     
     if (!bookId) return;
