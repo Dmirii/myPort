@@ -11,7 +11,9 @@
       "status": "available",
       "statusText": "✅ Доступна",
       "url": "book1.html",
-      "litresLink": "https://www.litres.ru/73990393/"
+      "litresLink": "https://www.litres.ru/73990393/",
+      "cover": "/img/cover_book_1.jpeg",
+      "footerQuote": "«Начало — это не просто шаг. Это выбор системы.»"
     },
     {
       "id": 2,
@@ -24,7 +26,9 @@
       "status": "available",
       "statusText": "✅ Доступна",
       "url": "book2.html",
-      "litresLink": "https://www.litres.ru/74056056/"
+      "litresLink": "https://www.litres.ru/74056056/",
+      "cover": "/img/cover_book_2.jpeg",
+      "footerQuote": "«Руническая навигация — это умение спросить себя: где я сейчас?»"
     },
     {
       "id": 3,
@@ -37,7 +41,9 @@
       "status": "available",
       "statusText": "✅ Доступна",
       "url": "book25.html",
-      "litresLink": "https://www.litres.ru/74065998/"
+      "litresLink": "https://www.litres.ru/74065998/",
+      "cover": "/img/cover_book_2_5.jpg",
+      "footerQuote": "«Путь от хаоса к ясности начинается с одного шага.»"
     },
     {
       "id": 4,
@@ -50,7 +56,9 @@
       "status": "available",
       "statusText": "✅ Доступна",
       "url": "book3.html",
-      "litresLink": "https://www.litres.ru/74093559/"
+      "litresLink": "https://www.litres.ru/74093559/",
+      "cover": "/img/cover_book_3.jpg",
+      "footerQuote": "«Диалог с Создателем не отменяет вашу свободу — он даёт подсказку.»"
     },
     {
       "id": 5,
@@ -60,10 +68,12 @@
       "subtitle": "Почему мы стоим на месте, хотя толчок уже был?",
       "annotation": "Первый шаг. Но проблема не в том, чтобы начать. Проблема в том, что мы часто не замечаем, что уже начали. Или стоим на месте, хотя толчок уже был дан. О чём книга: о диагностике застревания на старте. О том, как распознать «волшебный пендель» от Создателя.",
       "tag": "🏭 Управление",
-      "status": "planned",
-      "statusText": "📝 Планируется",
+      "status": "available",
+      "statusText": "✅ Доступна",
       "url": "book5.html",
-      "litresLink": null
+      "litresLink": "https://www.litres.ru/74093560/",
+      "cover": "/img/cover_book_5.jpg",
+      "footerQuote": "«Первый шаг — самый трудный. Но без него не будет ни Кеназ, ни Вуньо.»"
     },
     {
       "id": 6,
@@ -77,6 +87,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Осознанность — это умение заметить, что ты уже начал.»",
       "action": "notify"
     },
     {
@@ -91,6 +103,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Гармония — это не тишина, а равновесие между звуками.»",
       "action": "notify"
     },
     {
@@ -105,6 +119,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Завершение — это не конец. Это дверь в новый цикл.»",
       "action": "notify"
     },
     {
@@ -119,6 +135,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Рутина — это не скука. Это ежедневное утверждение выбора.»",
       "action": "notify"
     },
     {
@@ -133,6 +151,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Сигнал — это не проблема. Это подсказка, что пора менять курс.»",
       "action": "notify"
     },
     {
@@ -147,6 +167,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Пауза — это не остановка. Это перезарядка.»",
       "action": "notify"
     },
     {
@@ -161,6 +183,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Озарение — это награда за то, что ты не переставал искать.»",
       "action": "notify"
     },
     {
@@ -175,6 +199,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Второй шанс — это не повторение. Это новый старт с опытом.»",
       "action": "notify"
     },
     {
@@ -189,6 +215,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Опыт — это не груз. Это фундамент для нового.»",
       "action": "notify"
     },
     {
@@ -203,6 +231,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Защита — это не стена. Это умение сохранять созданное.»",
       "action": "notify"
     },
     {
@@ -217,6 +247,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Победа — это не финиш. Это осознание пройденного пути.»",
       "action": "notify"
     },
     {
@@ -231,6 +263,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Воля — это не сила. Это умение выбрать, несмотря на страх.»",
       "action": "notify"
     },
     {
@@ -245,6 +279,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Возрождение — это не начало. Это продолжение после паузы.»",
       "action": "notify"
     },
     {
@@ -259,6 +295,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Движение — это не скорость. Это умение быть в потоке.»",
       "action": "notify"
     },
     {
@@ -273,6 +311,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Интеграция — это не подстройка. Это соединение нового и старого.»",
       "action": "notify"
     },
     {
@@ -287,6 +327,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Поток — это не пассивность. Это доверие к течению жизни.»",
       "action": "notify"
     },
     {
@@ -301,6 +343,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Семя — это не обещание. Это уже существующий потенциал.»",
       "action": "notify"
     },
     {
@@ -315,6 +359,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Наследие — это не вещи. Это то, что остаётся после твоего выбора.»",
       "action": "notify"
     },
     {
@@ -329,6 +375,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Трансформация — это не конец. Это рождение нового себя.»",
       "action": "notify"
     },
     {
@@ -343,6 +391,8 @@
       "statusText": "📝 Планируется",
       "url": "feedback.html",
       "litresLink": null,
+      "cover": "/img/cover_placeholder.jpg",
+      "footerQuote": "«Пустая руна — это не отсутствие. Это пространство для нового.»",
       "action": "notify"
     }
   ]
