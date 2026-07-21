@@ -1,14 +1,11 @@
 /**
  * Загрузка и рендеринг всех книг на главной странице
  * Использует /books.json
- * Версия для index.html
  */
 
 async function loadIndexBooks() {
     const container = document.getElementById('booksContainer');
-    if (!container) {
-        return;
-    }
+    if (!container) return;
 
     try {
         const response = await fetch('/books.json');
@@ -17,7 +14,6 @@ async function loadIndexBooks() {
         const data = await response.json();
         const books = data.books || [];
 
-        // Группируем книги по блокам
         const blocks = {
             1: { title: '🧭 Блок 1. Зарождение', desc: 'Дать систему, научить видеть, сделать выбор, войти в диалог', books: [] },
             2: { title: '🚀 Блок 2. Движение', desc: 'Вынести систему во внешний мир: толчок, проявление, гармония, завершение', books: [] },
@@ -25,10 +21,9 @@ async function loadIndexBooks() {
             4: { title: '🔄 Блок 4. Перерождение', desc: 'Опыт и новый цикл: шанс, опыт, защита, победа', books: [] },
             5: { title: '⭐ Блок 5. Завершение', desc: 'Принятие и завершение: воля, рост, синхронизация, интеграция', books: [] },
             6: { title: '🏛️ Блок 6. Наследие', desc: 'Поток и трансформация: доверие, потенциал, наследие, трансформация', books: [] },
-            0: { title: '🌀 Точка бифуркации', desc: 'Между циклами. Тишина, пауза, переход. Не пустота — а пространство для нового.', books: [] }
+            0: { title: '🌀 Точка бифуркации', desc: 'Между циклами. Тишина, пауза, переход.', books: [] }
         };
 
-        // Распределяем книги по блокам
         books.forEach(book => {
             let blockId = 0;
             if (book.id >= 1 && book.id <= 4) blockId = 1;
@@ -44,15 +39,12 @@ async function loadIndexBooks() {
             }
         });
 
-        // Сортируем книги внутри каждого блока по id
         Object.keys(blocks).forEach(key => {
             blocks[key].books.sort((a, b) => a.id - b.id);
         });
 
-        // Строим HTML
         let html = '';
 
-        // Блоки 1-6
         for (let i = 1; i <= 6; i++) {
             const block = blocks[i];
             if (!block || block.books.length === 0) continue;
@@ -67,16 +59,23 @@ async function loadIndexBooks() {
             `;
 
             block.books.forEach(book => {
-                const statusClass = book.status === 'planned' ? 'idea' : '';
+                // Определяем класс статуса
+                let statusClass = '';
+                if (book.status === 'planned' || book.status === 'in_progress') {
+                    statusClass = 'idea';
+                }
+                
                 const statusText = book.statusText || (book.status === 'available' ? '✅ Доступна' : '📝 Планируется');
                 const litresButton = book.litresLink ? 
                     `<a href="${book.litresLink}" class="btn btn-small btn-litres" target="_blank">Литрес</a>` : 
                     '';
 
-                // ===== ГЛАВНОЕ ИЗМЕНЕНИЕ =====
-                // Если книга в статусе planned и есть action: "notify" — показываем кнопку "📬 Сообщить о выходе"
+                // Определяем кнопку
                 let detailButton = '';
-                if (book.status === 'planned' && book.action === 'notify') {
+                if (book.status === 'in_progress') {
+                    // В работе — страница есть, кнопка "Сообщить о выходе"
+                    detailButton = `<a href="${book.url}" class="btn btn-small" style="background: #b87c4f; border-color: #b87c4f;">📬 Сообщить о выходе</a>`;
+                } else if (book.status === 'planned' && book.action === 'notify') {
                     detailButton = `<a href="${book.url}" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>`;
                 } else {
                     detailButton = `<a href="${book.url}" class="btn btn-small">Подробнее →</a>`;
@@ -102,12 +101,10 @@ async function loadIndexBooks() {
                 `;
             });
 
-            html += `
-                </div>
-            `;
+            html += `</div>`;
         }
 
-        // Блок 0 (Пустая руна)
+        // Блок 0
         const block0 = blocks[0];
         if (block0 && block0.books.length > 0) {
             html += `
@@ -144,12 +141,9 @@ async function loadIndexBooks() {
                 `;
             });
 
-            html += `
-                </div>
-            `;
+            html += `</div>`;
         }
 
-        // Футер
         html += `
             <p style="margin-top: 1.5rem; background: #ece5da30; padding: 0.6rem 1rem; border-radius: 2rem; font-size: 0.8rem; text-align: center;">
                 🧠 <strong>Инженерный подход:</strong> руны не делают за вас — они показывают этап.
@@ -168,7 +162,6 @@ async function loadIndexBooks() {
     }
 }
 
-// Запускаем загрузку, когда DOM готов
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', loadIndexBooks);
 } else {
