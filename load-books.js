@@ -19,7 +19,6 @@ async function loadSeriesBooks() {
         const data = await response.json();
         const books = data.books || [];
 
-        // Исключаем текущую книгу
         const currentPageFile = window.location.pathname.split('/').pop();
         allBooks = books.filter(b => b.url !== currentPageFile);
 
@@ -87,7 +86,6 @@ function renderBooksPage(placeholder) {
             </div>
     `;
 
-    // ===== ПАГИНАЦИЯ =====
     if (totalPages > 1) {
         html += `
             <div class="series-pagination">
@@ -108,7 +106,6 @@ function renderBooksPage(placeholder) {
 
     placeholder.innerHTML = html;
 
-    // ===== ОБРАБОТЧИКИ КНОПОК =====
     const prevBtn = document.getElementById('prevPage');
     const nextBtn = document.getElementById('nextPage');
 
@@ -131,7 +128,6 @@ function renderBooksPage(placeholder) {
     }
 }
 
-// Запускаем загрузку, когда DOM готов
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', loadSeriesBooks);
 } else {
