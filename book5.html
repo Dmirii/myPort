@@ -21,7 +21,7 @@
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book5.html">
-  <meta property="og:title" content="Рунический менеджмент — книга пятая | Дмитрий Антонов">
+  <meta property="og:title" content="Райдо. Первый шаг сквозь Футарк: рунический менеджмент для тех, кто застрял">
   <meta property="og:description" content="Управление проектами, командами и разработкой через этапы Футарка. Диагностика застревания, первый шаг, практические инструменты.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book5.html">
@@ -186,6 +186,50 @@
       color: #b87c4f;
     }
 
+    /* Таблица для Три вида застревания */
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 0.8rem 0 1.2rem;
+      border-radius: 12px;
+      border: 1px solid #e2ddd4;
+      background: white;
+    }
+
+    .mini-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      min-width: 400px;
+    }
+
+    .mini-table th {
+      background: #eef4ed;
+      text-align: left;
+      padding: 0.5rem 0.8rem;
+      border-bottom: 2px solid #2c6e49;
+      font-weight: 600;
+      color: #1e3a2f;
+    }
+
+    .mini-table td {
+      padding: 0.5rem 0.8rem;
+      border-bottom: 1px solid #ece8e0;
+      color: #2d3e3b;
+    }
+
+    .mini-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .mini-table .rune-cell {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #b87c4f;
+      text-align: center;
+      white-space: nowrap;
+    }
+
     .info-block {
       background: #f7f4ef;
       padding: 0.8rem 1.2rem;
@@ -309,6 +353,20 @@
         min-width: auto;
         font-size: 0.85rem;
       }
+
+      .mini-table {
+        font-size: 0.75rem;
+        min-width: 320px;
+      }
+
+      .mini-table th,
+      .mini-table td {
+        padding: 0.3rem 0.5rem;
+      }
+
+      .mini-table .rune-cell {
+        font-size: 1rem;
+      }
     }
 
     @media (max-width: 400px) {
@@ -323,6 +381,11 @@
       .book-actions .btn {
         font-size: 0.7rem;
         padding: 0.3rem 0.8rem;
+      }
+
+      .mini-table {
+        font-size: 0.65rem;
+        min-width: 280px;
       }
     }
   </style>
@@ -357,7 +420,7 @@
     </div>
   </div>
 
-  <!-- ===== ОСНОВНОЙ КОНТЕНТ (SEO — в HTML) ===== -->
+  <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
   <div class="book-content">
 
     <div class="info-block warning">
@@ -386,10 +449,34 @@
 
     <h2>Три вида застревания</h2>
     <p>Книга начинается с диагностики. Вот три основных типа застревания, которые мы разбираем:</p>
-    <div class="matrix">
-      <div class="matrix-item"><span class="matrix-question">Не начинают вообще</span> До ᚠ Феху — инерция, страх, отсутствие толчка</div>
-      <div class="matrix-item"><span class="matrix-question">Начинают и бросают</span> После ᚱ Райдо — нет подтверждения (Ансуз), нет баланса (Гебо)</div>
-      <div class="matrix-item"><span class="matrix-question">Начинают, но не видят результата</span> Пропущен ᚲ Кеназ — не замечают своих шагов</div>
+
+    <div class="table-wrap">
+      <table class="mini-table">
+        <thead>
+          <tr>
+            <th>Тип</th>
+            <th>Руна</th>
+            <th>Признаки</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Не начинают вообще</strong></td>
+            <td class="rune-cell">ᚠ Феху</td>
+            <td>Инерция, страх, отсутствие толчка</td>
+          </tr>
+          <tr>
+            <td><strong>Начинают и бросают</strong></td>
+            <td class="rune-cell">ᚱ Райдо</td>
+            <td>Нет подтверждения (Ансуз), нет баланса (Гебо)</td>
+          </tr>
+          <tr>
+            <td><strong>Начинают, но не видят результата</strong></td>
+            <td class="rune-cell">ᚲ Кеназ</td>
+            <td>Не замечают своих шагов</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <h2>Содержание</h2>
@@ -398,37 +485,45 @@
 
     <p><strong>Часть 1. Диагностика застревания</strong></p>
     <ul>
-      <li>Глава 1.1. Три вида застревания (руническая диагностика)</li>
-      <li>Глава 1.2. Жизненный цикл корпорации по Адизесу</li>
-      <li>Глава 1.3. Теория ограничений Голдратта</li>
+      <li>Глава 1.1. Три вида застревания</li>
+      <li>Глава 1.2. Кейс «Гипермаркет Х»</li>
+      <li>Глава 1.3. Адизес и руны</li>
+      <li>Глава 1.4. Мои ошибки — честно</li>
+      <li>Глава 1.5. Голдратт и руны</li>
+      <li>Глава 1.6. Agile и руны</li>
+      <li>Глава 1.7. Шесть управленческих триад</li>
     </ul>
 
-    <p><strong>Часть 2. Как распознать толчок от Создателя</strong></p>
+    <p><strong>Часть 2. Как услышать сигнал до катастрофы</strong></p>
     <ul>
-      <li>Глава 2.1. Откуда приходит толчок</li>
-      <li>Глава 2.2. Почему мы игнорируем толчки</li>
-      <li>Глава 2.3. Как перестать ждать и начать действовать</li>
+      <li>Глава 2.1. Сигнал, который я пропустил</li>
+      <li>Глава 2.2. Как научиться слышать</li>
+      <li>Глава 2.3. Сигнал, который я всё-таки услышал</li>
     </ul>
 
     <p><strong>Часть 3. Райдо в управлении проектами</strong></p>
     <ul>
       <li>Глава 3.1. Жизненный цикл проекта и руны</li>
-      <li>Глава 3.2. Ретроспектива через руны</li>
-      <li>Глава 3.3. Управление бэклогом через этапы</li>
+      <li>Глава 3.2. Кейс «Стройтех»</li>
+      <li>Глава 3.3. Кейс «Дальний филиал»</li>
+      <li>Глава 3.4. Кейс «Подрядчик»</li>
     </ul>
 
     <p><strong>Часть 4. Райдо в управлении командой</strong></p>
     <ul>
       <li>Глава 4.1. Диагностика состояния команды</li>
-      <li>Глава 4.2. Как переключать команду между этапами</li>
-      <li>Глава 4.3. Найм, адаптация и обучение через руны</li>
+      <li>Глава 4.2. Кейс «Меридиан»</li>
+      <li>Глава 4.3. Кейс «Директор, который орал»</li>
+      <li>Глава 4.4. Ошибка, которую я не забуду</li>
+      <li>Глава 4.5. Как я учился прощать себя</li>
+      <li>Глава 4.6. Найм через доверие</li>
     </ul>
 
     <p><strong>Часть 5. Райдо в продажах</strong></p>
     <ul>
-      <li>Глава 5.1. От контакта до закрытия: путь клиента</li>
-      <li>Глава 5.2. Ошибки продажников с точки зрения этапов</li>
-      <li>Глава 5.3. Теория ограничений в продажах</li>
+      <li>Глава 5.1. Путь клиента через руны</li>
+      <li>Глава 5.2. Кейс «Сладкая долина»</li>
+      <li>Глава 5.3. Три ошибки продажников</li>
     </ul>
 
     <p><strong>Часть 6. Райдо в жизни</strong></p>
@@ -441,24 +536,71 @@
     <p><strong>Часть 7. Практические инструменты</strong></p>
     <ul>
       <li>Глава 7.1. Чек-лист диагностики застревания</li>
-      <li>Глава 7.2. Упражнение «Мой толчок»</li>
-      <li>Глава 7.3. Дневник Райдо</li>
-      <li>Глава 7.4. Таблица соответствий</li>
+      <li>Глава 7.2. Упражнение «Карта страха»</li>
+      <li>Глава 7.3. Упражнение «Диалог»</li>
+      <li>Глава 7.4. Дневник Райдо</li>
     </ul>
 
     <p><strong>Заключение.</strong> Райдо как начало пути</p>
 
+    <p><strong>Приложение А.</strong> Краткий справочник 24 рун Футарка</p>
+    <p><strong>Приложение Б.</strong> Глоссарий</p>
+
     <h2>От контакта до закрытия: путь клиента</h2>
     <p>В книге вы найдёте подробную карту пути клиента через руны:</p>
-    <div class="matrix">
-      <div class="matrix-item"><span class="matrix-question">ᚠ Феху</span> Первый контакт</div>
-      <div class="matrix-item"><span class="matrix-question">ᚢ Уруз</span> Клиент рассматривает варианты</div>
-      <div class="matrix-item"><span class="matrix-question">ᚦ Турисаз</span> Клиент выбрал вас</div>
-      <div class="matrix-item"><span class="matrix-question">ᚨ Ансуз</span> Получение оффера</div>
-      <div class="matrix-item"><span class="matrix-question">ᚱ Райдо</span> Оплата, договор</div>
-      <div class="matrix-item"><span class="matrix-question">ᚲ Кеназ</span> Сделка закрыта</div>
-      <div class="matrix-item"><span class="matrix-question">ᚷ Гебо</span> Клиент доволен</div>
-      <div class="matrix-item"><span class="matrix-question">ᚹ Вуньо</span> Радость завершения</div>
+
+    <div class="table-wrap">
+      <table class="mini-table">
+        <thead>
+          <tr>
+            <th>Этап</th>
+            <th>Руна</th>
+            <th>Что происходит</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Первый контакт</strong></td>
+            <td class="rune-cell">ᚠ Феху</td>
+            <td>Клиент узнал о вас</td>
+          </tr>
+          <tr>
+            <td><strong>Рассматривает варианты</strong></td>
+            <td class="rune-cell">ᚢ Уруз</td>
+            <td>Клиент в хаосе выбора</td>
+          </tr>
+          <tr>
+            <td><strong>Выбрал</strong></td>
+            <td class="rune-cell">ᚦ Турисаз</td>
+            <td>Клиент остановился на вас</td>
+          </tr>
+          <tr>
+            <td><strong>Получил подтверждение</strong></td>
+            <td class="rune-cell">ᚨ Ансуз</td>
+            <td>Клиент получил оффер</td>
+          </tr>
+          <tr>
+            <td><strong>Первый шаг</strong></td>
+            <td class="rune-cell">ᚱ Райдо</td>
+            <td>Оплата, договор</td>
+          </tr>
+          <tr>
+            <td><strong>Сделка закрыта</strong></td>
+            <td class="rune-cell">ᚲ Кеназ</td>
+            <td>Результат виден</td>
+          </tr>
+          <tr>
+            <td><strong>Баланс отношений</strong></td>
+            <td class="rune-cell">ᚷ Гебо</td>
+            <td>Клиент доволен</td>
+          </tr>
+          <tr>
+            <td><strong>Радость</strong></td>
+            <td class="rune-cell">ᚹ Вуньо</td>
+            <td>Сделка завершена</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="info-block warning">
@@ -497,7 +639,7 @@
 <!-- ===== ПОДГРУЗКА БЛОКА «ДРУГИЕ КНИГИ СЕРИИ» ===== -->
 <script src="/load-books.js" defer></script>
 
-<!-- ===== ЗАГРУЗКА ДАННЫХ КНИГИ ИЗ JSON (универсальный скрипт) ===== -->
+<!-- ===== ЗАГРУЗКА ДАННЫХ КНИГИ ИЗ JSON ===== -->
 <script src="/load-book.js" defer></script>
 
 </body>
