@@ -51,6 +51,11 @@
     "publisher": {
       "@type": "Organization",
       "name": "Литрес"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.litres.ru/74093560/"
     }
   }
   </script>
@@ -332,7 +337,7 @@
   <!-- ===== ШАПКА КНИГИ ===== -->
   <div class="book-header">
     <div class="book-cover-small">
-      <img id="bookCover" src="/img/cover_book_5.jpg" alt="Рунический менеджмент" onerror="this.src='https://placehold.co/160x220/eef4ed/2c6e49?text=%D0%A0%D1%83%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9+%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%BC%D0%B5%D0%BD%D1%82'">
+      <img id="bookCover" src="/img/cover_book_5.jpg" alt="Рунический менеджмент">
     </div>
     <div class="book-info">
       <div class="book-number">Книга пятая</div>
@@ -492,43 +497,8 @@
 <!-- ===== ПОДГРУЗКА БЛОКА «ДРУГИЕ КНИГИ СЕРИИ» ===== -->
 <script src="/load-books.js" defer></script>
 
-<!-- ===== ЗАГРУЗКА ДАННЫХ КНИГИ ИЗ JSON (гибрид) ===== -->
-<script>
-  // Загружаем данные для книги 5
-  fetch('/books.json')
-    .then(response => {
-      if (!response.ok) throw new Error('Network error');
-      return response.json();
-    })
-    .then(data => {
-      const book = data.books.find(b => b.id === 5);
-      if (!book) return;
-
-      // 1. Обновляем обложку
-      const coverImg = document.querySelector('.book-cover-small img');
-      if (coverImg && book.cover) {
-        coverImg.src = book.cover;
-      }
-
-      // 2. Обновляем ссылки на Литрес
-      const litresLinks = document.querySelectorAll('.btn-litres');
-      litresLinks.forEach(link => {
-        if (book.litresLink) {
-          link.href = book.litresLink;
-        }
-      });
-
-      // 3. Обновляем цитату в футере
-      const footerQuote = document.getElementById('footerQuote');
-      if (footerQuote && book.footerQuote) {
-        footerQuote.textContent = book.footerQuote;
-      }
-    })
-    .catch(error => {
-      console.warn('Не удалось загрузить данные книги:', error);
-      // Если данные не загрузились — остаются дефолтные значения (уже в HTML)
-    });
-</script>
+<!-- ===== ЗАГРУЗКА ДАННЫХ КНИГИ ИЗ JSON (универсальный скрипт) ===== -->
+<script src="/load-book.js" defer></script>
 
 </body>
 </html>
