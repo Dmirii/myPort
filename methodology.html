@@ -139,11 +139,21 @@
       color: #1e3a2f;
     }
 
+    /* ===== ОБЕРТКА ДЛЯ ТАБЛИЦЫ (скролл на мобильных) ===== */
+    .series-table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1rem 0;
+      border-radius: 16px;
+      border: 1px solid #e2ddd4;
+      background: white;
+    }
+
     .series-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 1rem 0;
       font-size: 0.9rem;
+      min-width: 600px;
     }
 
     .series-table th {
@@ -152,17 +162,20 @@
       padding: 0.7rem 1rem;
       border-bottom: 2px solid #2c6e49;
       font-weight: 600;
+      white-space: nowrap;
     }
 
     .series-table td {
       padding: 0.7rem 1rem;
       border-bottom: 1px solid #ece8e2;
+      vertical-align: middle;
     }
 
     .series-table .rune-sym {
       font-size: 1.3rem;
       font-weight: 700;
       color: #1e3a2f;
+      text-align: center;
     }
 
     .series-table .book-link {
@@ -245,46 +258,41 @@
       margin: 2rem 0;
     }
 
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 1.5rem 0;
-      font-size: 0.85rem;
-    }
-
-    .footer-links a {
-      color: #1e3a2f;
-      text-decoration: none;
-    }
-
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
-
+    /* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
     @media (max-width: 720px) {
-      .series-table {
-        font-size: 0.75rem;
-      }
-      .series-table th,
-      .series-table td {
-        padding: 0.4rem 0.5rem;
-      }
-      .series-table .rune-sym {
-        font-size: 1rem;
-      }
       .section {
         padding: 1.2rem;
       }
       .page-header h1 {
         font-size: 1.6rem;
       }
+      .series-table {
+        font-size: 0.75rem;
+        min-width: 500px;
+      }
+      .series-table th,
+      .series-table td {
+        padding: 0.4rem 0.6rem;
+      }
+      .series-table .rune-sym {
+        font-size: 1rem;
+      }
+      .series-table .hide-mobile {
+        display: none;
+      }
     }
 
     @media (max-width: 500px) {
-      .series-table .hide-mobile {
-        display: none;
+      .series-table {
+        font-size: 0.65rem;
+        min-width: 400px;
+      }
+      .series-table th,
+      .series-table td {
+        padding: 0.3rem 0.4rem;
+      }
+      .series-table .rune-sym {
+        font-size: 0.8rem;
       }
     }
   </style>
@@ -330,238 +338,240 @@
     <h2>Книги серии</h2>
     <p style="color: #5f6c66; margin-bottom: 1rem;">6 блоков × 4 книги = 24 руны → полный цикл от Феху до Дагаз</p>
 
-    <table class="series-table">
-      <thead>
-        <tr>
-          <th>Блок</th>
-          <th>№</th>
-          <th>Книга</th>
-          <th>Руна</th>
-          <th class="hide-mobile">Задача</th>
-          <th>Статус</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Блок 1 -->
-        <tr style="background: #f0f7f2;">
-          <td rowspan="5" style="vertical-align: middle; font-weight: 700; color: #1e3a2f;">Блок 1<br>Зарождение</td>
-          <td>1</td>
-          <td><a href="book1.html" class="book-link">Инженерная модель реальности</a></td>
-          <td class="rune-sym">ᚠ</td>
-          <td class="hide-mobile">Дать систему</td>
-          <td><span class="badge-available">✅ Доступна</span> <a href="https://www.litres.ru/73990393/" class="litres-link" target="_blank">Литрес</a></td>
-        </tr>
-        <tr style="background: #f0f7f2;">
-          <td>2</td>
-          <td><a href="book2.html" class="book-link">Психология рун</a></td>
-          <td class="rune-sym">ᚢ</td>
-          <td class="hide-mobile">Научить видеть</td>
-          <td><span class="badge-available">✅ Доступна</span> <a href="https://www.litres.ru/74056056/" class="litres-link" target="_blank">Литрес</a></td>
-        </tr>
-        <tr style="background: #f0f7f2;">
-          <td>3</td>
-          <td><a href="book25.html" class="book-link">Ключ к мантике</a></td>
-          <td class="rune-sym">ᚦ</td>
-          <td class="hide-mobile">Сделать выбор</td>
-          <td><span class="badge-training">🗝️ Тренинг</span> <a href="https://www.litres.ru/74065998/" class="litres-link" target="_blank">Литрес</a></td>
-        </tr>
-        <tr style="background: #f0f7f2;">
-          <td>4</td>
-          <td><a href="book3.html" class="book-link">Мантика без иллюзий</a></td>
-          <td class="rune-sym">ᚨ</td>
-          <td class="hide-mobile">Дать диалог</td>
-          <td><span class="badge-available">✅ Доступна</span> <a href="https://www.litres.ru/74093559/" class="litres-link" target="_blank">Литрес</a></td>
-        </tr>
-        <tr style="background: #f0f7f2;">
-          <td colspan="5" style="border-bottom: 2px solid #2c6e49; padding: 0.5rem 1rem; font-size: 0.8rem; color: #4a6a5c;">
-            <strong>Итог блока:</strong> Система → Видение → Выбор → Диалог
-          </td>
-        </tr>
+    <div class="series-table-wrapper">
+      <table class="series-table">
+        <thead>
+          <tr>
+            <th>Блок</th>
+            <th>№</th>
+            <th>Книга</th>
+            <th>Руна</th>
+            <th class="hide-mobile">Задача</th>
+            <th>Статус</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Блок 1 -->
+          <tr style="background: #f0f7f2;">
+            <td rowspan="5" style="vertical-align: middle; font-weight: 700; color: #1e3a2f;">Блок 1<br>Зарождение</td>
+            <td>1</td>
+            <td><a href="book1.html" class="book-link">Инженерная модель реальности</a></td>
+            <td class="rune-sym">ᚠ</td>
+            <td class="hide-mobile">Дать систему</td>
+            <td><span class="badge-available">✅ Доступна</span> <a href="https://www.litres.ru/73990393/" class="litres-link" target="_blank">Литрес</a></td>
+          </tr>
+          <tr style="background: #f0f7f2;">
+            <td>2</td>
+            <td><a href="book2.html" class="book-link">Психология рун</a></td>
+            <td class="rune-sym">ᚢ</td>
+            <td class="hide-mobile">Научить видеть</td>
+            <td><span class="badge-available">✅ Доступна</span> <a href="https://www.litres.ru/74056056/" class="litres-link" target="_blank">Литрес</a></td>
+          </tr>
+          <tr style="background: #f0f7f2;">
+            <td>3</td>
+            <td><a href="book25.html" class="book-link">Ключ к мантике</a></td>
+            <td class="rune-sym">ᚦ</td>
+            <td class="hide-mobile">Сделать выбор</td>
+            <td><span class="badge-training">🗝️ Тренинг</span> <a href="https://www.litres.ru/74065998/" class="litres-link" target="_blank">Литрес</a></td>
+          </tr>
+          <tr style="background: #f0f7f2;">
+            <td>4</td>
+            <td><a href="book3.html" class="book-link">Мантика без иллюзий</a></td>
+            <td class="rune-sym">ᚨ</td>
+            <td class="hide-mobile">Дать диалог</td>
+            <td><span class="badge-available">✅ Доступна</span> <a href="https://www.litres.ru/74093559/" class="litres-link" target="_blank">Литрес</a></td>
+          </tr>
+          <tr style="background: #f0f7f2;">
+            <td colspan="5" style="border-bottom: 2px solid #2c6e49; padding: 0.5rem 1rem; font-size: 0.8rem; color: #4a6a5c;">
+              <strong>Итог блока:</strong> Система → Видение → Выбор → Диалог
+            </td>
+          </tr>
 
-        <!-- Блок 2 -->
-        <tr>
-          <td rowspan="5" style="vertical-align: middle; font-weight: 700; color: #1e3a2f;">Блок 2<br>Движение</td>
-          <td>5</td>
-          <td><a href="book5.html" class="book-link">РАЙДО. Первый шаг сквозь Футарк</a></td>
-          <td class="rune-sym">ᚱ</td>
-          <td class="hide-mobile">Сделать первый шаг</td>
-          <td><span class="badge-planned">✅ Доступна</span>  <a href="https://www.litres.ru/74198889/" class="litres-link" target="_blank">Литрес</a> </td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Руны в действии</td>
-          <td class="rune-sym">ᚲ</td>
-          <td class="hide-mobile">Показать результат</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>Руны как язык</td>
-          <td class="rune-sym">ᚷ</td>
-          <td class="hide-mobile">Найти баланс</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Руны в итоге</td>
-          <td class="rune-sym">ᚹ</td>
-          <td class="hide-mobile">Завершить этап</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr>
-          <td colspan="5" style="border-bottom: 2px solid #c97e2a; padding: 0.5rem 1rem; font-size: 0.8rem; color: #4a6a5c;">
-            <strong>Итог блока:</strong> Толчок → Результат → Баланс → Завершение
-          </td>
-        </tr>
+          <!-- Блок 2 -->
+          <tr>
+            <td rowspan="5" style="vertical-align: middle; font-weight: 700; color: #1e3a2f;">Блок 2<br>Движение</td>
+            <td>5</td>
+            <td><a href="book5.html" class="book-link">Рунический менеджмент</a></td>
+            <td class="rune-sym">ᚱ</td>
+            <td class="hide-mobile">Дать толчок</td>
+            <td><span class="badge-available">✅ Доступна</span> <a href="https://www.litres.ru/74093560/" class="litres-link" target="_blank">Литрес</a></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Руны в действии</td>
+            <td class="rune-sym">ᚲ</td>
+            <td class="hide-mobile">Показать результат</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Руны как язык</td>
+            <td class="rune-sym">ᚷ</td>
+            <td class="hide-mobile">Найти баланс</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Руны в итоге</td>
+            <td class="rune-sym">ᚹ</td>
+            <td class="hide-mobile">Завершить этап</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr>
+            <td colspan="5" style="border-bottom: 2px solid #c97e2a; padding: 0.5rem 1rem; font-size: 0.8rem; color: #4a6a5c;">
+              <strong>Итог блока:</strong> Толчок → Результат → Баланс → Завершение
+            </td>
+          </tr>
 
-        <!-- Блок 3 -->
-        <tr style="background: #f7f4ef;">
-          <td rowspan="5" style="vertical-align: middle; font-weight: 700; color: #1e3a2f;">Блок 3<br>Трансформация</td>
-          <td>9</td>
-          <td>Руны в жизни</td>
-          <td class="rune-sym">ᚺ</td>
-          <td class="hide-mobile">Жить с результатом</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr style="background: #f7f4ef;">
-          <td>10</td>
-          <td>Руны и кризис</td>
-          <td class="rune-sym">ᚾ</td>
-          <td class="hide-mobile">Слышать сигналы</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr style="background: #f7f4ef;">
-          <td>11</td>
-          <td>Руны и пауза</td>
-          <td class="rune-sym">ᛁ</td>
-          <td class="hide-mobile">Останавливаться</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr style="background: #f7f4ef;">
-          <td>12</td>
-          <td>Руны и озарение</td>
-          <td class="rune-sym">ᛃ</td>
-          <td class="hide-mobile">Видеть ответы</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr style="background: #f7f4ef;">
-          <td colspan="5" style="border-bottom: 2px solid #8a7f6d; padding: 0.5rem 1rem; font-size: 0.8rem; color: #4a6a5c;">
-            <strong>Итог блока:</strong> Рутина → Сигнал → Пауза → Озарение
-          </td>
-        </tr>
+          <!-- Блок 3 -->
+          <tr style="background: #f7f4ef;">
+            <td rowspan="5" style="vertical-align: middle; font-weight: 700; color: #1e3a2f;">Блок 3<br>Трансформация</td>
+            <td>9</td>
+            <td>Руны в жизни</td>
+            <td class="rune-sym">ᚺ</td>
+            <td class="hide-mobile">Жить с результатом</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr style="background: #f7f4ef;">
+            <td>10</td>
+            <td>Руны и кризис</td>
+            <td class="rune-sym">ᚾ</td>
+            <td class="hide-mobile">Слышать сигналы</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr style="background: #f7f4ef;">
+            <td>11</td>
+            <td>Руны и пауза</td>
+            <td class="rune-sym">ᛁ</td>
+            <td class="hide-mobile">Останавливаться</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr style="background: #f7f4ef;">
+            <td>12</td>
+            <td>Руны и озарение</td>
+            <td class="rune-sym">ᛃ</td>
+            <td class="hide-mobile">Видеть ответы</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr style="background: #f7f4ef;">
+            <td colspan="5" style="border-bottom: 2px solid #8a7f6d; padding: 0.5rem 1rem; font-size: 0.8rem; color: #4a6a5c;">
+              <strong>Итог блока:</strong> Рутина → Сигнал → Пауза → Озарение
+            </td>
+          </tr>
 
-        <!-- Блок 4 -->
-        <tr>
-          <td rowspan="5" style="vertical-align: middle; font-weight: 700; color: #1e3a2f;">Блок 4<br>Перерождение</td>
-          <td>13</td>
-          <td>Второй шанс</td>
-          <td class="rune-sym">ᛈ</td>
-          <td class="hide-mobile">Перезапускаться</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td>Руны и опыт</td>
-          <td class="rune-sym">ᛇ</td>
-          <td class="hide-mobile">Использовать прошлое</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td>Руны и защита</td>
-          <td class="rune-sym">ᛉ</td>
-          <td class="hide-mobile">Укреплять</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr>
-          <td>16</td>
-          <td>Руны и победа</td>
-          <td class="rune-sym">ᛋ</td>
-          <td class="hide-mobile">Видеть целостность</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr>
-          <td colspan="5" style="border-bottom: 2px solid #c97e2a; padding: 0.5rem 1rem; font-size: 0.8rem; color: #4a6a5c;">
-            <strong>Итог блока:</strong> Шанс → Опыт → Защита → Победа
-          </td>
-        </tr>
+          <!-- Блок 4 -->
+          <tr>
+            <td rowspan="5" style="vertical-align: middle; font-weight: 700; color: #1e3a2f;">Блок 4<br>Перерождение</td>
+            <td>13</td>
+            <td>Второй шанс</td>
+            <td class="rune-sym">ᛈ</td>
+            <td class="hide-mobile">Перезапускаться</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>Руны и опыт</td>
+            <td class="rune-sym">ᛇ</td>
+            <td class="hide-mobile">Использовать прошлое</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>Руны и защита</td>
+            <td class="rune-sym">ᛉ</td>
+            <td class="hide-mobile">Укреплять</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>Руны и победа</td>
+            <td class="rune-sym">ᛋ</td>
+            <td class="hide-mobile">Видеть целостность</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr>
+            <td colspan="5" style="border-bottom: 2px solid #c97e2a; padding: 0.5rem 1rem; font-size: 0.8rem; color: #4a6a5c;">
+              <strong>Итог блока:</strong> Шанс → Опыт → Защита → Победа
+            </td>
+          </tr>
 
-        <!-- Блок 5 -->
-        <tr style="background: #f0f7f2;">
-          <td rowspan="5" style="vertical-align: middle; font-weight: 700; color: #1e3a2f;">Блок 5<br>Завершение</td>
-          <td>17</td>
-          <td>Руны и воля</td>
-          <td class="rune-sym">ᛏ</td>
-          <td class="hide-mobile">Принимать решения</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr style="background: #f0f7f2;">
-          <td>18</td>
-          <td>Возрождение</td>
-          <td class="rune-sym">ᛒ</td>
-          <td class="hide-mobile">Расти</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr style="background: #f0f7f2;">
-          <td>19</td>
-          <td>Руны и движение</td>
-          <td class="rune-sym">ᛖ</td>
-          <td class="hide-mobile">Синхронизироваться</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr style="background: #f0f7f2;">
-          <td>20</td>
-          <td>Руны и интеграция</td>
-          <td class="rune-sym">ᛗ</td>
-          <td class="hide-mobile">Интегрироваться</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr style="background: #f0f7f2;">
-          <td colspan="5" style="border-bottom: 2px solid #2c6e49; padding: 0.5rem 1rem; font-size: 0.8rem; color: #4a6a5c;">
-            <strong>Итог блока:</strong> Воля → Рост → Синхронизация → Интеграция
-          </td>
-        </tr>
+          <!-- Блок 5 -->
+          <tr style="background: #f0f7f2;">
+            <td rowspan="5" style="vertical-align: middle; font-weight: 700; color: #1e3a2f;">Блок 5<br>Завершение</td>
+            <td>17</td>
+            <td>Руны и воля</td>
+            <td class="rune-sym">ᛏ</td>
+            <td class="hide-mobile">Принимать решения</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr style="background: #f0f7f2;">
+            <td>18</td>
+            <td>Возрождение</td>
+            <td class="rune-sym">ᛒ</td>
+            <td class="hide-mobile">Расти</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr style="background: #f0f7f2;">
+            <td>19</td>
+            <td>Руны и движение</td>
+            <td class="rune-sym">ᛖ</td>
+            <td class="hide-mobile">Синхронизироваться</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr style="background: #f0f7f2;">
+            <td>20</td>
+            <td>Руны и интеграция</td>
+            <td class="rune-sym">ᛗ</td>
+            <td class="hide-mobile">Интегрироваться</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr style="background: #f0f7f2;">
+            <td colspan="5" style="border-bottom: 2px solid #2c6e49; padding: 0.5rem 1rem; font-size: 0.8rem; color: #4a6a5c;">
+              <strong>Итог блока:</strong> Воля → Рост → Синхронизация → Интеграция
+            </td>
+          </tr>
 
-        <!-- Блок 6 -->
-        <tr>
-          <td rowspan="5" style="vertical-align: middle; font-weight: 700; color: #1e3a2f;">Блок 6<br>Наследие</td>
-          <td>21</td>
-          <td>Руны и поток</td>
-          <td class="rune-sym">ᛚ</td>
-          <td class="hide-mobile">Доверять</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr>
-          <td>22</td>
-          <td>Руны и семя</td>
-          <td class="rune-sym">ᛜ</td>
-          <td class="hide-mobile">Видеть потенциал</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr>
-          <td>23</td>
-          <td>Руны и наследие</td>
-          <td class="rune-sym">ᛟ</td>
-          <td class="hide-mobile">Передавать</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr>
-          <td>24</td>
-          <td>Руны и трансформация</td>
-          <td class="rune-sym">ᛞ</td>
-          <td class="hide-mobile">Завершать цикл</td>
-          <td><span class="badge-planned">📝 Планируется</span></td>
-        </tr>
-        <tr>
-          <td colspan="5" style="border-bottom: 2px solid #c97e2a; padding: 0.5rem 1rem; font-size: 0.8rem; color: #4a6a5c;">
-            <strong>Итог блока:</strong> Доверие → Потенциал → Наследие → Трансформация
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          <!-- Блок 6 -->
+          <tr>
+            <td rowspan="5" style="vertical-align: middle; font-weight: 700; color: #1e3a2f;">Блок 6<br>Наследие</td>
+            <td>21</td>
+            <td>Руны и поток</td>
+            <td class="rune-sym">ᛚ</td>
+            <td class="hide-mobile">Доверять</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>Руны и семя</td>
+            <td class="rune-sym">ᛜ</td>
+            <td class="hide-mobile">Видеть потенциал</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>Руны и наследие</td>
+            <td class="rune-sym">ᛟ</td>
+            <td class="hide-mobile">Передавать</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>Руны и трансформация</td>
+            <td class="rune-sym">ᛞ</td>
+            <td class="hide-mobile">Завершать цикл</td>
+            <td><span class="badge-planned">📝 Планируется</span></td>
+          </tr>
+          <tr>
+            <td colspan="5" style="border-bottom: 2px solid #c97e2a; padding: 0.5rem 1rem; font-size: 0.8rem; color: #4a6a5c;">
+              <strong>Итог блока:</strong> Доверие → Потенциал → Наследие → Трансформация
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="highlight-box" style="margin-top: 1.5rem;">
-      <strong>✅ 4 книги уже доступны на Литрес.</strong> Остальные — в работе.
+      <strong>✅ 5 книг уже доступны на Литрес.</strong> Остальные — в работе.
     </div>
   </div>
 
@@ -592,10 +602,11 @@
     <p>© Дмитрий Антонов · Руны как этапы процесса</p>
     <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Код и руны — это просто разные языки для описания одного и того же: структуры, процессов и логики.»</p>
      <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
-    
   </div>
 </footer>
+
 <!-- ===== ПОДГРУЗКА МЕНЮ ===== -->
-<script src="/load-menu.js" defer></script>
+<script src="/load-menu.js"></script>
+
 </body>
 </html>
