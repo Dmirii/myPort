@@ -38,11 +38,10 @@ h1, h2, h3 {
   padding: 1rem 0;
   background: #ffffff;
   border-bottom: 1px solid #e2e2e6;
-  position: sticky;
-  top: 0;
   backdrop-filter: blur(10px);
   background: rgba(255,255,255,0.94);
   z-index: 10;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-inner {
@@ -93,6 +92,48 @@ h1, h2, h3 {
 
 .nav-links a:hover {
   color: #1b5e3f;
+}
+
+/* ========================================
+   ФИКС МЕНЮ (sticky для динамической загрузки)
+   ======================================== */
+#menuPlaceholder {
+  display: block;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#menuPlaceholder .navbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  background: rgba(255,255,255,0.94) !important;
+  backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid #e2e2e6 !important;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ========================================
+   МЕНЮ ПРИ СКРОЛЛЕ (компактное на мобильных)
+   ======================================== */
+#menuPlaceholder .navbar.scrolled {
+  padding: 0.3rem 0 !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
+}
+
+#menuPlaceholder .navbar.scrolled .logo {
+  font-size: 0.85rem;
+}
+
+#menuPlaceholder .navbar.scrolled .logo img {
+  width: 28px;
+  height: 28px;
+}
+
+#menuPlaceholder .navbar.scrolled .nav-links a {
+  font-size: 0.75rem;
 }
 
 /* ========================================
@@ -177,6 +218,42 @@ h1, h2, h3 {
 .btn-outline:hover {
   background: #1e3a2f !important;
   color: white !important;
+}
+
+/* ========================================
+   КНОПКИ CTA (цветные варианты)
+   ======================================== */
+.btn-red {
+  background: #ff5a5f;
+  color: white;
+  border: none;
+}
+
+.btn-red:hover {
+  background: #e04e52;
+  color: white;
+}
+
+.btn-terracotta {
+  background: #b87c4f;
+  color: white;
+  border: none;
+}
+
+.btn-terracotta:hover {
+  background: #a06a3f;
+  color: white;
+}
+
+.btn-orange {
+  background: #c97e2a;
+  color: white;
+  border: none;
+}
+
+.btn-orange:hover {
+  background: #b87c1f;
+  color: white;
 }
 
 /* ========================================
@@ -266,7 +343,7 @@ h1, h2, h3 {
 }
 
 /* ========================================
-   БЛОК «ДРУГИЕ КНИГИ СЕРИИ» (НОВЫЙ, КОМПАКТНЫЙ)
+   БЛОК «ДРУГИЕ КНИГИ СЕРИИ» (компактный)
    ======================================== */
 .series-books {
   background: #f7f4ef;
@@ -383,43 +460,43 @@ h1, h2, h3 {
    ПАГИНАЦИЯ ДЛЯ БЛОКА «ДРУГИЕ КНИГИ»
    ======================================== */
 .series-pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1.2rem;
-    padding-top: 0.8rem;
-    border-top: 1px solid #ece8e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #ece8e0;
 }
 
 .page-btn {
-    background: #1e3a2f;
-    color: white;
-    border: none;
-    padding: 0.4rem 1.2rem;
-    border-radius: 30px;
-    font-size: 0.75rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s;
+  background: #1e3a2f;
+  color: white;
+  border: none;
+  padding: 0.4rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
 .page-btn:hover:not(:disabled) {
-    background: #0f2c22;
+  background: #0f2c22;
 }
 
 .page-btn:disabled {
-    background: #d4cfc5;
-    cursor: not-allowed;
-    opacity: 0.5;
+  background: #d4cfc5;
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .page-info {
-    font-size: 0.8rem;
-    color: #5f6c66;
-    font-weight: 500;
-    min-width: 50px;
-    text-align: center;
+  font-size: 0.8rem;
+  color: #5f6c66;
+  font-weight: 500;
+  min-width: 50px;
+  text-align: center;
 }
 
 /* ========================================
@@ -626,75 +703,6 @@ footer {
 }
 
 /* ========================================
-   АДАПТИВНОСТЬ
-   ======================================== */
-
-/* Планшеты и мобильные */
-@media (max-width: 640px) {
-  .nav-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-  .form-section {
-    padding: 1.5rem;
-  }
-  .form-section h1 {
-    font-size: 1.5rem;
-  }
-  .series-books-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .matrix-item {
-    flex-direction: column;
-    gap: 0.15rem;
-    padding: 0.9rem 0;
-  }
-  .matrix-question {
-    min-width: auto;
-    font-size: 0.9rem;
-  }
-}
-
-/* Очень маленькие экраны (телефоны < 550px) */
-@media (max-width: 550px) {
-  .book-meta {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.6rem;
-  }
-  .book-meta > span:first-child {
-    margin-right: 0;
-    text-align: center;
-    margin-bottom: 0.2rem;
-  }
-  .book-meta .btn,
-  .book-meta .btn-outline {
-    display: block;
-    text-align: center;
-    width: 100%;
-  }
-  .book-meta > div {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-
-/* Планшеты и выше */
-@media (min-width: 640px) {
-  .books-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Десктоп */
-@media (min-width: 1024px) {
-  .books-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ========================================
    УНИКАЛЬНЫЕ СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ
    ======================================== */
 .container {
@@ -852,60 +860,163 @@ h2 {
    БЛОК «ДРУГИЕ КНИГИ СЕРИИ» (плейсхолдер)
    ======================================== */
 .series-books-placeholder {
-    min-height: 150px;
+  min-height: 150px;
 }
 
 .series-books-placeholder .loading {
-    text-align: center;
-    color: #8a7f6d;
-    padding: 1.5rem;
-    font-size: 0.9rem;
+  text-align: center;
+  color: #8a7f6d;
+  padding: 1.5rem;
+  font-size: 0.9rem;
 }
 
 .series-books-placeholder .loading::after {
-    content: '...';
-    animation: dots 1.5s steps(4, end) infinite;
+  content: '...';
+  animation: dots 1.5s steps(4, end) infinite;
 }
 
 @keyframes dots {
-    0% { content: ''; }
-    25% { content: '.'; }
-    50% { content: '..'; }
-    75% { content: '...'; }
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
 }
 
 /* ========================================
-   КНОПКИ CTA (цветные варианты)
+   АДАПТИВНОСТЬ (общая)
    ======================================== */
-.btn-red {
-  background: #ff5a5f;
-  color: white;
-  border: none;
+
+/* Планшеты и мобильные */
+@media (max-width: 768px) {
+  #menuPlaceholder .navbar {
+    padding: 0.6rem 0 !important;
+  }
+
+  #menuPlaceholder .navbar .logo {
+    font-size: 0.85rem;
+  }
+
+  #menuPlaceholder .navbar .logo img {
+    width: 28px;
+    height: 28px;
+  }
+
+  #menuPlaceholder .navbar .nav-links a {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.3rem;
+  }
+
+  #menuPlaceholder .navbar.scrolled {
+    padding: 0.2rem 0 !important;
+  }
+
+  #menuPlaceholder .navbar.scrolled .logo {
+    font-size: 0.7rem;
+  }
+
+  #menuPlaceholder .navbar.scrolled .logo img {
+    width: 22px;
+    height: 22px;
+  }
+
+  #menuPlaceholder .navbar.scrolled .nav-links a {
+    font-size: 0.6rem;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.3rem;
+    padding: 0 0.8rem;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .form-section {
+    padding: 1.5rem;
+  }
+  .form-section h1 {
+    font-size: 1.5rem;
+  }
+  .series-books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .matrix-item {
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.9rem 0;
+  }
+  .matrix-question {
+    min-width: auto;
+    font-size: 0.9rem;
+  }
 }
 
-.btn-red:hover {
-  background: #e04e52;
-  color: white;
+/* Очень маленькие экраны (телефоны < 550px) */
+@media (max-width: 550px) {
+  #menuPlaceholder .navbar .logo {
+    font-size: 0.75rem;
+  }
+
+  #menuPlaceholder .navbar .logo img {
+    width: 24px;
+    height: 24px;
+  }
+
+  #menuPlaceholder .navbar .nav-links a {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.25rem;
+  }
+
+  #menuPlaceholder .navbar.scrolled .logo {
+    font-size: 0.65rem;
+  }
+
+  #menuPlaceholder .navbar.scrolled .logo img {
+    width: 20px;
+    height: 20px;
+  }
+
+  #menuPlaceholder .navbar.scrolled .nav-links a {
+    font-size: 0.55rem;
+  }
+
+  .book-meta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+  .book-meta > span:first-child {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+  .book-meta .btn,
+  .book-meta .btn-outline {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .book-meta > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
-.btn-terracotta {
-  background: #b87c4f;
-  color: white;
-  border: none;
+/* Планшеты и выше */
+@media (min-width: 640px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.btn-terracotta:hover {
-  background: #a06a3f;
-  color: white;
-}
-
-.btn-orange {
-  background: #c97e2a;
-  color: white;
-  border: none;
-}
-
-.btn-orange:hover {
-  background: #b87c1f;
-  color: white;
+/* Десктоп */
+@media (min-width: 1024px) {
+  .books-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
