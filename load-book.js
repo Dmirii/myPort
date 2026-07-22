@@ -90,20 +90,7 @@ async function loadBookData() {
             }
         }
 
-    } catch (error) {
-        console.warn('Не удалось загрузить данные книги:', error);
-    }
-}
-
-// Запускаем загрузку, когда DOM готов
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadBookData);
-} else {
-    loadBookData();
-}
-
-
- // 8. Обновляем статус книги
+        // ✅ 8. ОБНОВЛЯЕМ СТАТУС КНИГИ (внутри try, после JSON-LD)
         const statusBadge = document.getElementById('bookStatusBadge');
         if (statusBadge && book.statusText) {
             // Очищаем все классы статусов
@@ -118,3 +105,15 @@ if (document.readyState === 'loading') {
             // Устанавливаем текст
             statusBadge.textContent = book.statusText;
         }
+
+    } catch (error) {
+        console.warn('Не удалось загрузить данные книги:', error);
+    }
+}
+
+// Запускаем загрузку, когда DOM готов
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadBookData);
+} else {
+    loadBookData();
+}
