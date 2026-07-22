@@ -99,6 +99,24 @@
       margin-bottom: 0.2rem;
     }
 
+    .book-info .book-status-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: #f1efe9;
+      color: #8a7f6d;
+      padding: 0.1rem 0.6rem;
+      border-radius: 20px;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .book-info .book-status-badge.available {
+      background: #eef4ed;
+      color: #2c6e49;
+    }
+
     .book-info h1 {
       font-size: 1.5rem;
       font-weight: 700;
@@ -343,6 +361,8 @@
     </div>
     <div class="book-info">
       <div class="book-number">Книга вторая</div>
+      <!-- ===== СТАТУС ЗАГРУЖАЕТСЯ ИЗ JSON ===== -->
+      <div id="bookStatusBadge" class="book-status-badge"></div>
       <h1>Психология рун</h1>
       <div class="book-subtitle">Руническая навигация: как понять, где вы находитесь, и что делать дальше</div>
       <div class="book-meta-line">
