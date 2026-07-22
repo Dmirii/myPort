@@ -101,3 +101,20 @@ if (document.readyState === 'loading') {
 } else {
     loadBookData();
 }
+
+
+ // 8. Обновляем статус книги
+        const statusBadge = document.getElementById('bookStatusBadge');
+        if (statusBadge && book.statusText) {
+            // Очищаем все классы статусов
+            statusBadge.className = 'book-status-badge';
+            // Добавляем класс для стилизации
+            if (book.status === 'planned') {
+                statusBadge.classList.add('idea');
+            }
+            if (book.status === 'training') {
+                statusBadge.classList.add('training');
+            }
+            // Устанавливаем текст
+            statusBadge.textContent = book.statusText;
+        }
