@@ -90,18 +90,26 @@ async function loadBookData() {
             }
         }
 
-        // ✅ 8. ОБНОВЛЯЕМ СТАТУС КНИГИ (внутри try, после JSON-LD)
+        // 8. Обновляем статус книги
         const statusBadge = document.getElementById('bookStatusBadge');
         if (statusBadge && book.statusText) {
             // Очищаем все классы статусов
             statusBadge.className = 'book-status-badge';
-            // Добавляем класс для стилизации
+            
+            // Добавляем класс для стилизации в зависимости от статуса
+            if (book.status === 'available') {
+                statusBadge.classList.add('available');
+            }
             if (book.status === 'planned') {
-                statusBadge.classList.add('idea');
+                statusBadge.classList.add('planned');
+            }
+            if (book.status === 'in_progress') {
+                statusBadge.classList.add('in-progress');
             }
             if (book.status === 'training') {
                 statusBadge.classList.add('training');
             }
+            
             // Устанавливаем текст
             statusBadge.textContent = book.statusText;
         }
