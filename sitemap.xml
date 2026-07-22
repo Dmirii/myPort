@@ -3,72 +3,91 @@
     <!-- ГЛАВНАЯ -->
     <url>
         <loc>https://dimaa.ru/</loc>
-        <lastmod>2025-07-03</lastmod>
+        <lastmod>2025-07-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     
-    <!-- КНИГИ -->
+    <!-- ===== КНИГИ (доступны) ===== -->
     <url>
         <loc>https://dimaa.ru/book1.html</loc>
-        <lastmod>2025-07-03</lastmod>
+        <lastmod>2025-07-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://dimaa.ru/book2.html</loc>
-        <lastmod>2025-07-03</lastmod>
+        <lastmod>2025-07-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://dimaa.ru/book25.html</loc>
-        <lastmod>2025-07-03</lastmod>
+        <lastmod>2025-07-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://dimaa.ru/book3.html</loc>
-        <lastmod>2025-07-03</lastmod>
+        <lastmod>2025-07-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://dimaa.ru/book5.html</loc>
-        <lastmod>2025-07-03</lastmod>
+        <lastmod>2025-07-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
-    <!-- МЕТОДОЛОГИЯ -->
+    <!-- ===== КНИГИ (в работе / планируются) ===== -->
+    <url>
+        <loc>https://dimaa.ru/book6.html</loc>
+        <lastmod>2025-07-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- ===== СТРАНИЦЫ САЙТА ===== -->
     <url>
         <loc>https://dimaa.ru/methodology.html</loc>
-        <lastmod>2025-07-03</lastmod>
+        <lastmod>2025-07-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- КАРТА РУН -->
     <url>
         <loc>https://dimaa.ru/rune-map.html</loc>
-        <lastmod>2025-07-03</lastmod>
+        <lastmod>2025-07-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- ДИАГНОСТИКА (НОВЫЙ БЛОК) -->
     <url>
         <loc>https://dimaa.ru/diagnostics.html</loc>
-        <lastmod>2025-07-03</lastmod>
+        <lastmod>2025-07-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
-    <!-- ИНЖЕНЕРНЫЙ БЭКГРАУНД -->
     <url>
         <loc>https://dimaa.ru/port.html</loc>
-        <lastmod>2025-07-03</lastmod>
+        <lastmod>2025-07-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+    
+    <!-- ===== СЛУЖЕБНЫЕ СТРАНИЦЫ (не индексируются) ===== -->
+    <!-- feedback.html и privacy.html закрыты в robots.txt -->
+    
+    <!-- ===== ВЕРИФИКАЦИЯ ===== -->
+    <url>
+        <loc>https://dimaa.ru/googlef7d14631a2ebdb08.html</loc>
+        <lastmod>2025-07-03</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.1</priority>
+    </url>
+    <url>
+        <loc>https://dimaa.ru/yandex_e4baccd125b5b10b.html</loc>
+        <lastmod>2025-07-03</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.1</priority>
     </url>
 </urlset>
