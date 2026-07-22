@@ -99,6 +99,24 @@
       margin-bottom: 0.2rem;
     }
 
+    .book-info .book-status-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: #f1efe9;
+      color: #8a7f6d;
+      padding: 0.1rem 0.6rem;
+      border-radius: 20px;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .book-info .book-status-badge.training {
+      background: #fff6e8;
+      color: #c97e2a;
+    }
+
     .book-info h1 {
       font-size: 1.5rem;
       font-weight: 700;
@@ -320,6 +338,8 @@
     </div>
     <div class="book-info">
       <div class="book-number">Книга третья</div>
+      <!-- ===== СТАТУС ЗАГРУЖАЕТСЯ ИЗ JSON ===== -->
+      <div id="bookStatusBadge" class="book-status-badge"></div>
       <h1>Ключ к мантике</h1>
       <div class="book-subtitle">7-дневный переход от навигации к диалогу с рунами</div>
       <div class="book-meta-line">
