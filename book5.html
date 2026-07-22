@@ -99,6 +99,24 @@
       margin-bottom: 0.2rem;
     }
 
+    .book-info .book-status-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: #f1efe9;
+      color: #8a7f6d;
+      padding: 0.1rem 0.6rem;
+      border-radius: 20px;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .book-info .book-status-badge.available {
+      background: #eef4ed;
+      color: #2c6e49;
+    }
+
     .book-info h1 {
       font-size: 1.5rem;
       font-weight: 700;
@@ -186,7 +204,6 @@
       color: #b87c4f;
     }
 
-    /* Таблица для Три вида застревания */
     .table-wrap {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
@@ -404,6 +421,8 @@
     </div>
     <div class="book-info">
       <div class="book-number">Книга пятая</div>
+      <!-- ===== СТАТУС ЗАГРУЖАЕТСЯ ИЗ JSON ===== -->
+      <div id="bookStatusBadge" class="book-status-badge"></div>
       <h1>Райдо. Первый шаг сквозь Футарк: рунический менеджмент для тех, кто застрял</h1>
       <div class="book-subtitle">Почему мы стоим на месте, хотя толчок уже был?</div>
       <div class="book-meta-line">
