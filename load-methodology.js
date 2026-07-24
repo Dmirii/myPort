@@ -1,6 +1,5 @@
 /**
  * Загрузка и рендеринг таблицы книг на странице методологии
- * Использует /books.json для получения всех данных
  */
 
 async function loadMethodologyBooks() {
@@ -14,7 +13,6 @@ async function loadMethodologyBooks() {
         const data = await response.json();
         const books = data.books || [];
 
-        // Маппинг рун по ID книги
         const runeMap = {
             1: 'ᚠ', 2: 'ᚢ', 3: 'ᚦ', 4: 'ᚨ',
             5: 'ᚱ', 6: 'ᚲ', 7: 'ᚷ', 8: 'ᚹ',
@@ -24,7 +22,6 @@ async function loadMethodologyBooks() {
             21: 'ᛚ', 22: 'ᛜ', 23: 'ᛟ', 24: 'ᛞ'
         };
 
-        // Определяем блок для книги по ID
         function getBlockId(id) {
             if (id >= 1 && id <= 4) return 1;
             if (id >= 5 && id <= 8) return 2;
@@ -35,41 +32,15 @@ async function loadMethodologyBooks() {
             return 0;
         }
 
-        // Данные по блокам
         const blocks = {
-            1: {
-                title: '🧭 Блок 1. Зарождение',
-                summary: 'Система → Видение → Выбор → Диалог',
-                books: []
-            },
-            2: {
-                title: '🚀 Блок 2. Движение',
-                summary: 'Толчок → Результат → Баланс → Завершение',
-                books: []
-            },
-            3: {
-                title: '🌿 Блок 3. Трансформация',
-                summary: 'Рутина → Сигнал → Пауза → Озарение',
-                books: []
-            },
-            4: {
-                title: '🔄 Блок 4. Перерождение',
-                summary: 'Шанс → Опыт → Защита → Победа',
-                books: []
-            },
-            5: {
-                title: '⭐ Блок 5. Завершение',
-                summary: 'Воля → Рост → Синхронизация → Интеграция',
-                books: []
-            },
-            6: {
-                title: '🏛️ Блок 6. Наследие',
-                summary: 'Доверие → Потенциал → Наследие → Трансформация',
-                books: []
-            }
+            1: { title: '🧭 Блок 1. Зарождение', summary: 'Система → Видение → Выбор → Диалог', books: [] },
+            2: { title: '🚀 Блок 2. Движение', summary: 'Толчок → Результат → Баланс → Завершение', books: [] },
+            3: { title: '🌿 Блок 3. Трансформация', summary: 'Рутина → Сигнал → Пауза → Озарение', books: [] },
+            4: { title: '🔄 Блок 4. Перерождение', summary: 'Шанс → Опыт → Защита → Победа', books: [] },
+            5: { title: '⭐ Блок 5. Завершение', summary: 'Воля → Рост → Синхронизация → Интеграция', books: [] },
+            6: { title: '🏛️ Блок 6. Наследие', summary: 'Доверие → Потенциал → Наследие → Трансформация', books: [] }
         };
 
-        // Распределяем книги по блокам
         books.forEach(book => {
             const blockId = getBlockId(book.id);
             if (blockId > 0 && blocks[blockId]) {
@@ -77,12 +48,10 @@ async function loadMethodologyBooks() {
             }
         });
 
-        // Сортируем книги внутри каждого блока по id
         Object.values(blocks).forEach(block => {
             block.books.sort((a, b) => a.id - b.id);
         });
 
-        // Строим HTML
         let html = `
             <div class="series-table-wrapper">
                 <table class="series-table">
@@ -99,35 +68,30 @@ async function loadMethodologyBooks() {
                     <tbody>
         `;
 
-        // Проходим по блокам 1-6
         for (let i = 1; i <= 6; i++) {
             const block = blocks[i];
             if (!block || block.books.length === 0) continue;
 
-            // Заголовок блока
             html += `<tr><td colspan="6" class="block-header">${block.title}</td></tr>`;
 
-            // Книги в блоке
             block.books.forEach(book => {
                 const runeSymbol = runeMap[book.id] || '';
                 const statusText = book.statusText || (book.status === 'available' ? '✅ Доступна' : '📝 Планируется');
                 
-                // Бейдж статуса
                 let badgeClass = 'badge-planned';
                 if (book.status === 'available') badgeClass = 'badge-available';
                 if (book.status === 'training') badgeClass = 'badge-training';
 
-                // Кнопка действия
+                // ===== ЕДИНЫЙ СТИЛЬ ДЛЯ ВСЕХ КНОПОК =====
                 let actionButton = '';
+                const linkUrl = book.url || 'feedback.html';
+                
                 if (book.status === 'available' && book.litresLink) {
-                    actionButton = `<a href="${book.litresLink}" class="btn-link btn-litres-table" target="_blank">📘 Литрес</a>`;
+                    actionButton = `<a href="${book.litresLink}" class="btn-action litres" target="_blank">📘 Литрес</a>`;
                 } else {
-                    const linkUrl = book.url || 'feedback.html';
-                    actionButton = `<a href="${linkUrl}" class="btn-link btn-subscribe">📬 Подписаться</a>`;
+                    actionButton = `<a href="${linkUrl}" class="btn-action subscribe">📬 Подписаться</a>`;
                 }
 
-                // ===== ГЛАВНОЕ ИЗМЕНЕНИЕ =====
-                // Название книги: ссылка только если есть свой URL (не feedback.html)
                 const hasPage = book.url && book.url !== 'feedback.html';
                 let bookDisplay = '';
                 if (hasPage) {
@@ -148,7 +112,6 @@ async function loadMethodologyBooks() {
                 `;
             });
 
-            // Итог блока
             html += `
                 <tr>
                     <td colspan="6" class="block-summary"><strong>Итог:</strong> ${block.summary}</td>
@@ -174,7 +137,6 @@ async function loadMethodologyBooks() {
     }
 }
 
-// Запускаем загрузку, когда DOM готов
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', loadMethodologyBooks);
 } else {
