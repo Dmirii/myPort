@@ -1056,3 +1056,41 @@ h2 {
   background: #fff6e8;
   color: #c97e2a;
 }
+
+/* ===== КНОПКИ В ТАБЛИЦЕ МЕТОДОЛОГИИ (единый стиль) ===== */
+.series-table .btn-action {
+    --bg: #5f6c66;
+    display: inline-block;
+    font-size: 0.6rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    min-width: 80px;
+    text-align: center;
+    background: var(--bg);
+    transition: opacity 0.2s;
+    font-family: inherit;
+}
+
+.series-table .btn-action:hover {
+    opacity: 0.8;
+    color: #fff;
+}
+
+/* Цвета через CSS-переменные */
+.series-table .btn-action.litres {
+    --bg: #ff5a5f;
+}
+
+.series-table .btn-action.subscribe {
+    --bg: #c97e2a;
+}
+
+.series-table .btn-action.soon {
+    --bg: #8a7f6d;
+}
