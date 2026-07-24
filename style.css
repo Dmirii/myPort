@@ -1081,6 +1081,25 @@ h2 {
     line-height: 1.4 !important;
 }
 
+/* ========================================
+   СТАТУСЫ В ТАБЛИЦЕ МЕТОДОЛОГИИ (единая ширина)
+   ======================================== */
+.series-table .badge-available,
+.series-table .badge-training,
+.series-table .badge-planned {
+    display: inline-block !important;
+    min-width: 100px !important;
+    max-width: 100px !important;
+    width: 100px !important;
+    text-align: center !important;
+    font-size: 0.6rem !important;
+    padding: 0.1rem 0.4rem !important;
+    border-radius: 20px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+}
+
 .series-table .btn-action:hover {
     opacity: 0.8 !important;
     color: #fff !important;
