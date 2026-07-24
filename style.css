@@ -1063,7 +1063,7 @@ h2 {
 .series-table .btn-action {
     display: inline-block !important;
     font-size: 0.6rem !important;
-    padding: 0.2rem 0.8rem !important;
+    padding: 0.2rem 0.4rem !important;
     border-radius: 20px !important;
     text-decoration: none !important;
     font-weight: 600 !important;
@@ -1071,7 +1071,9 @@ h2 {
     border: none !important;
     cursor: pointer !important;
     color: #fff !important;
-    min-width: 80px !important;
+    min-width: 90px !important;
+    width: 100px !important;
+    max-width: 100px !important;
     text-align: center !important;
     background: var(--bg, #5f6c66) !important;
     transition: opacity 0.2s !important;
