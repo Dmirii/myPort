@@ -1057,40 +1057,42 @@ h2 {
   color: #c97e2a;
 }
 
-/* ===== КНОПКИ В ТАБЛИЦЕ МЕТОДОЛОГИИ (единый стиль) ===== */
+/* ========================================
+   КНОПКИ В ТАБЛИЦЕ МЕТОДОЛОГИИ (единый стиль)
+   ======================================== */
 .series-table .btn-action {
-    --bg: #5f6c66;
-    display: inline-block;
-    font-size: 0.6rem;
-    padding: 0.2rem 0.8rem;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 600;
-    white-space: nowrap;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    min-width: 80px;
-    text-align: center;
-    background: var(--bg);
-    transition: opacity 0.2s;
-    font-family: inherit;
+    display: inline-block !important;
+    font-size: 0.6rem !important;
+    padding: 0.2rem 0.8rem !important;
+    border-radius: 20px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+    border: none !important;
+    cursor: pointer !important;
+    color: #fff !important;
+    min-width: 80px !important;
+    text-align: center !important;
+    background: var(--bg, #5f6c66) !important;
+    transition: opacity 0.2s !important;
+    font-family: inherit !important;
+    line-height: 1.4 !important;
 }
 
 .series-table .btn-action:hover {
-    opacity: 0.8;
-    color: #fff;
+    opacity: 0.8 !important;
+    color: #fff !important;
 }
 
 /* Цвета через CSS-переменные */
 .series-table .btn-action.litres {
-    --bg: #ff5a5f;
+    --bg: #ff5a5f !important;
 }
 
 .series-table .btn-action.subscribe {
-    --bg: #c97e2a;
+    --bg: #c97e2a !important;
 }
 
 .series-table .btn-action.soon {
-    --bg: #8a7f6d;
+    --bg: #8a7f6d !important;
 }
