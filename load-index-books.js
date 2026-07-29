@@ -1,6 +1,7 @@
 /**
  * Загрузка и рендеринг всех книг на главной странице
  * Использует /books.json
+ * Книга 0 — отдельный блок в самом начале
  * Статусы: available, in_progress, planned
  */
 
@@ -15,17 +16,23 @@ async function loadIndexBooks() {
         const data = await response.json();
         const books = data.books || [];
 
+        // Находим Книгу 0
+        const book0 = books.find(b => b.id === 0);
+
+        // Остальные книги (без Книги 0)
+        const otherBooks = books.filter(b => b.id !== 0);
+
+        // Блоки для книг 1–24
         const blocks = {
             1: { title: '🧭 Блок 1. Зарождение', desc: 'Дать систему, научить видеть, сделать выбор, войти в диалог', books: [] },
             2: { title: '🚀 Блок 2. Движение', desc: 'Вынести систему во внешний мир: толчок, проявление, гармония, завершение', books: [] },
             3: { title: '🌿 Блок 3. Трансформация', desc: 'Жизнь с результатом и трансформация: рутина, кризис, пауза, озарение', books: [] },
             4: { title: '🔄 Блок 4. Перерождение', desc: 'Опыт и новый цикл: шанс, опыт, защита, победа', books: [] },
             5: { title: '⭐ Блок 5. Завершение', desc: 'Принятие и завершение: воля, рост, синхронизация, интеграция', books: [] },
-            6: { title: '🏛️ Блок 6. Наследие', desc: 'Поток и трансформация: доверие, потенциал, наследие, трансформация', books: [] },
-            0: { title: '🌀 Точка бифуркации', desc: 'Между циклами. Тишина, пауза, переход.', books: [] }
+            6: { title: '🏛️ Блок 6. Наследие', desc: 'Поток и трансформация: доверие, потенциал, наследие, трансформация', books: [] }
         };
 
-        books.forEach(book => {
+        otherBooks.forEach(book => {
             let blockId = 0;
             if (book.id >= 1 && book.id <= 4) blockId = 1;
             else if (book.id >= 5 && book.id <= 8) blockId = 2;
@@ -33,7 +40,6 @@ async function loadIndexBooks() {
             else if (book.id >= 13 && book.id <= 16) blockId = 4;
             else if (book.id >= 17 && book.id <= 20) blockId = 5;
             else if (book.id >= 21 && book.id <= 24) blockId = 6;
-            else blockId = 0;
 
             if (blocks[blockId]) {
                 blocks[blockId].books.push(book);
@@ -46,6 +52,38 @@ async function loadIndexBooks() {
 
         let html = '';
 
+        // ============================================
+        // БЛОК КНИГА 0 (в самом начале)
+        // ============================================
+        if (book0) {
+            const statusText = book0.statusText || '✅ Доступна';
+            const litresButton = book0.litresLink ? 
+                `<a href="${book0.litresLink}" class="btn btn-small btn-litres" target="_blank">📘 Читать на Литрес</a>` : 
+                '';
+
+            html += `
+                <div style="margin: 1.5rem 0 2.5rem; background: #fcf9f5; border-radius: 28px; padding: 1.8rem 2rem; border-left: 6px solid #b87c4f; box-shadow: 0 2px 12px rgba(0,0,0,0.03);">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.3rem;">
+                        <span style="font-size: 1.8rem;">🌀</span>
+                        <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; color: #b87c4f; font-weight: 600;">Книга 0</span>
+                        <span style="font-size: 0.6rem; background: #eef4ed; color: #2c6e49; padding: 0.1rem 0.6rem; border-radius: 20px; font-weight: 600;">${statusText}</span>
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e3a2f; margin: 0.2rem 0 0.1rem;">${book0.title}</h3>
+                    <div style="font-size: 0.9rem; color: #2c6e49; font-weight: 500; margin-bottom: 0.8rem;">${book0.subtitle || ''}</div>
+                    <div style="font-size: 0.92rem; color: #2d3e3b; line-height: 1.6; margin-bottom: 1rem;">
+                        <p>${book0.annotation || ''}</p>
+                    </div>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                        ${litresButton}
+                        <a href="#books" class="btn btn-small" style="background: #b87c4f; border-color: #b87c4f;">🧭 Карта серии</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        // ============================================
+        // БЛОКИ 1–6
+        // ============================================
         for (let i = 1; i <= 6; i++) {
             const block = blocks[i];
             if (!block || block.books.length === 0) continue;
@@ -65,20 +103,15 @@ async function loadIndexBooks() {
                     `<a href="${book.litresLink}" class="btn btn-small btn-litres" target="_blank">Литрес</a>` : 
                     '';
 
-                // Класс для стилизации статуса
                 let statusClass = '';
                 if (book.status === 'planned' || book.status === 'in_progress') {
                     statusClass = 'idea';
                 }
 
-                // ===== ГЛАВНОЕ ИЗМЕНЕНИЕ =====
-                // Если есть страница (in_progress или available) — показываем "Подробнее →"
-                // Если книга только планируется (planned) — показываем "📬 Сообщить о выходе"
                 let detailButton = '';
                 if (book.status === 'planned' && book.action === 'notify') {
                     detailButton = `<a href="${book.url}" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>`;
                 } else {
-                    // Для available и in_progress — показываем "Подробнее →"
                     detailButton = `<a href="${book.url}" class="btn btn-small">Подробнее →</a>`;
                 }
 
@@ -96,46 +129,6 @@ async function loadIndexBooks() {
                             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
                                 ${detailButton}
                                 ${litresButton}
-                            </div>
-                        </div>
-                    </div>
-                `;
-            });
-
-            html += `</div>`;
-        }
-
-        // Блок 0
-        const block0 = blocks[0];
-        if (block0 && block0.books.length > 0) {
-            html += `
-                <div style="margin: 3rem 0 1rem;">
-                    <h2 style="border-left-color: #b87c4f; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-                        <span style="font-size: 1.8rem;">🌀</span> 
-                        <span>Точка бифуркации</span>
-                        <span style="font-size: 0.8rem; font-weight: 400; color: #8a7f6d; margin-left: 4px;">— книга 0</span>
-                    </h2>
-                    <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.9rem;">
-                        Между циклами. Тишина, пауза, переход. Не пустота — а пространство для нового.
-                    </p>
-                </div>
-                <div class="books-grid" style="margin-top: 0;">
-            `;
-
-            block0.books.forEach(book => {
-                html += `
-                    <div class="book-card" style="border-left: 4px solid #b87c4f; background: #fcf9f5;">
-                        <div class="book-number">${book.numberFull || book.number}</div>
-                        <div class="book-status idea">${book.statusText || '🌱 Идея'}</div>
-                        <div class="book-title">${book.title}</div>
-                        <div class="book-subtitle">${book.subtitle || ''}</div>
-                        <div class="book-annotation">
-                            <p>${book.annotation || ''}</p>
-                        </div>
-                        <div class="book-meta">
-                            <span>${book.tag || '🌀 Переход'}</span>
-                            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                <a href="${book.url}" class="btn btn-small" style="background: #b87c4f; border-color: #b87c4f;">📬 Сообщить о выходе</a>
                             </div>
                         </div>
                     </div>
