@@ -75,7 +75,6 @@ async function loadIndexBooks() {
                     </div>
                     <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem;">
                         ${litresButton}
-                        <a href="#books" class="btn btn-small" style="background: #b87c4f; border-color: #b87c4f;">🧭 Карта серии</a>
                     </div>
                 </div>
             `;
