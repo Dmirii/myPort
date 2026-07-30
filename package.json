@@ -1,0 +1,8 @@
+{
+  "name": "dimaa-ru",
+  "version": "1.0.0",
+  "description": "Сайт Дмитрия Антонова",
+  "scripts": {
+    "generate": "node scripts/generate-books.js"
+  }
+}
