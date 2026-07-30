@@ -1,0 +1,53 @@
+<main class="container">
+  <div class="book-header">
+    <div class="book-cover-small">
+      <img src="{{cover}}" alt="{{title}}">
+    </div>
+    <div class="book-info">
+      <div class="book-number">{{numberFull}}</div>
+      <div id="bookStatusBadge" class="book-status-badge {{#if status}}{{status}}{{/if}}">{{statusText}}</div>
+      <h1>{{title}}</h1>
+      <div class="book-subtitle">{{subtitle}}</div>
+      <div class="book-meta-line">
+        <span>📖 {{year}}</span> · <span>📚 Серия: Руны как этапы процесса</span>
+      </div>
+      <div class="book-actions">
+        <a href="{{litresLink}}" class="btn btn-litres" target="_blank">📘 Читать на Литрес</a>
+        <a href="index.html#books" class="btn">← Назад</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-content">
+    <h2>О книге</h2>
+    <p>{{page.intro}}</p>
+    <p>{{page.description}}</p>
+    
+    <h2>Для кого эта книга</h2>
+    <ul>
+      {{#each page.audience}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+    
+    <h2>Что вы узнаете</h2>
+    <ul>
+      {{#each page.learn}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+    
+    <div class="info-block">
+      <p>{{page.quote}}</p>
+    </div>
+
+    <div id="seriesBooksPlaceholder" class="series-books-placeholder">
+      <div class="loading">Загрузка книг</div>
+    </div>
+
+    <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1rem 0 2rem;">
+      <a href="{{litresLink}}" class="btn btn-litres" target="_blank">📘 Купить на Литрес</a>
+      <a href="index.html#books" class="btn">← Назад к книгам</a>
+    </div>
+  </div>
+</main>
