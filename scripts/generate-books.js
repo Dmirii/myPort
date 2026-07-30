@@ -1,7 +1,7 @@
 // scripts/generate-books.js
 const fs = require('fs');
 
-console.log('🚀 === ЗАПУСК ГЕНЕРАТОРА ===\n');
+console.log('🚀 === ЗАПУСК ГЕНЕРАТОРА С ПОДДЕРЖКОЙ {{#each}} ===\n');
 
 // ===== ЗАГРУЖАЕМ ДАННЫЕ =====
 const booksData = JSON.parse(fs.readFileSync('./books.json', 'utf8'));
@@ -12,6 +12,7 @@ const bookContentTemplate = fs.readFileSync('./templates/book-content.html', 'ut
 
 // ===== МАППИНГ ФАЙЛОВ =====
 const filenameMap = {
+  0: 'book0.html',
   1: 'book1.html',
   2: 'book2.html',
   3: 'book25.html',
@@ -20,43 +21,51 @@ const filenameMap = {
   6: 'book6.html'
 };
 
-// ===== ФУНКЦИЯ ЗАМЕНЫ С ПОДДЕРЖКОЙ ВЛОЖЕННЫХ ОБЪЕКТОВ =====
+// ===== ФУНКЦИЯ ЗАМЕНЫ С ПОДДЕРЖКОЙ {{#each}} =====
 function render(template, data) {
   let result = template;
   
-  // 1. Рекурсивная замена для вложенных объектов
-  function replaceDeep(obj, prefix = '') {
-    Object.keys(obj).forEach(key => {
-      const value = obj[key];
-      const path = prefix ? `${prefix}.${key}` : key;
-      
-      if (typeof value === 'string') {
-        // Заменяем {{path}}
-        result = result.replace(new RegExp(`{{${path}}}`, 'g'), value);
-      } else if (Array.isArray(value)) {
-        // Обработка массивов {{#each path}}...{{/each}}
-        result = result.replace(new RegExp(`\\{\\{#each ${path}\\}\\}([\\s\\S]*?)\\{\\{/each\\}\\}`, 'g'), (match, inner) => {
-          return value.map(item => {
-            let itemHtml = inner;
-            if (typeof item === 'string') {
-              itemHtml = itemHtml.replace(/\{\{this\}\}/g, item);
-            } else {
-              Object.keys(item).forEach(subKey => {
-                itemHtml = itemHtml.replace(new RegExp(`{{this\\.${subKey}}}`, 'g'), item[subKey]);
-              });
-            }
-            return itemHtml;
-          }).join('');
-        });
-      } else if (typeof value === 'object' && value !== null) {
-        // Рекурсивно обрабатываем вложенные объекты
-        replaceDeep(value, path);
+  // 1. Обработка {{#each array}}...{{/each}}
+  result = result.replace(/\{\{#each (.*?)\}\}([\s\S]*?)\{\{\/each\}\}/g, (match, arrayPath, inner) => {
+    // Получаем массив из данных по пути (например, "page.audience")
+    const parts = arrayPath.trim().split('.');
+    let current = data;
+    for (const part of parts) {
+      if (current && typeof current === 'object' && part in current) {
+        current = current[part];
+      } else {
+        current = null;
+        break;
       }
-    });
-  }
+    }
+    
+    if (!Array.isArray(current) || current.length === 0) {
+      return '';
+    }
+    
+    // Рендерим каждый элемент
+    return current.map(item => {
+      let itemHtml = inner;
+      // Заменяем {{this}} на значение элемента
+      if (typeof item === 'string') {
+        itemHtml = itemHtml.replace(/\{\{this\}\}/g, item);
+      } else {
+        // Если элемент — объект, обрабатываем его свойства
+        Object.keys(item).forEach(key => {
+          itemHtml = itemHtml.replace(new RegExp(`{{this\\.${key}}}`, 'g'), item[key]);
+        });
+      }
+      return itemHtml;
+    }).join('');
+  });
   
-  // 2. Заменяем все переменные
-  replaceDeep(data);
+  // 2. Простые замены {{key}}
+  Object.keys(data).forEach(key => {
+    const value = data[key];
+    if (typeof value === 'string') {
+      result = result.replace(new RegExp(`{{${key}}}`, 'g'), value);
+    }
+  });
   
   // 3. Вставка контента {{{content}}}
   result = result.replace(/\{\{\{content\}\}\}/g, data.content || '');
@@ -68,10 +77,7 @@ function render(template, data) {
 console.log('📚 Генерируем страницы книг...\n');
 
 booksData.books.forEach(book => {
-  if (book.id === 0) {
-    console.log(`  ⏭️ Пропускаем: ${book.title}`);
-    return;
-  }
+  if (book.id === 0) return;
   
   const filename = filenameMap[book.id] || `book${book.id}.html`;
   
