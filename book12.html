@@ -198,6 +198,10 @@
     <p>Это двенадцатая книга серии <strong>«Инженерная модель реальности»</strong>.</p>
     <p>Эврика! Вдохновение приходит внезапно. Как его поймать, запомнить и превратить в действие?</p>
     
+    {{#if page.about}}
+      <p>{{page.about}}</p>
+    {{/if}}
+    
     <h2>Для кого эта книга</h2>
     <ul>
       
@@ -218,12 +222,153 @@
       
     </ul>
     
-    <h2>Содержание</h2>
-    <ul>
-      {{#each page.chapters}}
-        <li>{{this}}</li>
-      {{/each}}
-    </ul>
+    {{#if page.states}}
+      <h2>24 состояния + пустая руна</h2>
+      <ul>
+        {{#each page.states}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    
+    {{#if page.deadlocks}}
+      <h2>Матрица тупиков</h2>
+      <ul>
+        {{#each page.deadlocks}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    
+    {{#if page.warning}}
+      <div class="info-block warning">
+        <p>{{page.warning}}</p>
+      </div>
+    {{/if}}
+    
+    {{#if page.chapters}}
+      <h2>Содержание</h2>
+      <ul>
+        {{#each page.chapters}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    
+    {{#if page.notHere}}
+      <h3>❌ Здесь нет</h3>
+      <ul>
+        {{#each page.notHere}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    
+    {{#if page.here}}
+      <h3>✅ Здесь есть</h3>
+      <ul>
+        {{#each page.here}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    
+    {{#if page.audience_yes}}
+      <h3>✅ Кому стоит читать</h3>
+      <ul>
+        {{#each page.audience_yes}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    
+    {{#if page.audience_no}}
+      <h3>❌ Кому не стоит читать</h3>
+      <ul>
+        {{#each page.audience_no}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    
+    {{#if page.redFlags}}
+      <h2>🚩 Красные флаги зависимости</h2>
+      <ul>
+        {{#each page.redFlags}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    
+    {{#if page.healthyDialogue}}
+      <h2>✅ Здоровый диалог</h2>
+      <ul>
+        {{#each page.healthyDialogue}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    
+    {{#if page.seriesConnection}}
+      <h2>Связь с серией</h2>
+      <ul>
+        {{#each page.seriesConnection}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    
+    {{#if page.clientPath}}
+      <h2>От контакта до закрытия: путь клиента</h2>
+      <ul>
+        {{#each page.clientPath}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    
+    {{#if page.stuckTypes}}
+      <h2>Три вида застревания</h2>
+      <ul>
+        {{#each page.stuckTypes}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    
+    {{#if page.aboutDetail}}
+      <h3>О чём книга (подробно)</h3>
+      <p>{{page.aboutDetail}}</p>
+    {{/if}}
+    
+    {{#if page.needRunes}}
+      <h3>Нужны ли вам руны для этого тренинга?</h3>
+      <p>{{page.needRunes}}</p>
+    {{/if}}
+    
+    {{#if page.checklist}}
+      <h3>Чек-лист готовности</h3>
+      <ul>
+        {{#each page.checklist}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    
+    {{#if page.checklistWarning}}
+      <div class="info-block warning">
+        <p>{{page.checklistWarning}}</p>
+      </div>
+    {{/if}}
+    
+    {{#if page.navigationMap}}
+      <h3>Карта перехода: навигация или мантика</h3>
+      <p>{{page.navigationMap}}</p>
+    {{/if}}
+    
+    {{#if page.block}}
+      <p><strong>{{page.block}}</strong></p>
+    {{/if}}
     
     <div class="info-block">
       <p>«Озарение — это награда за то, что ты не переставал искать.»</p>
