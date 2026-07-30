@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Рунический менеджмент — книга пятая | Дмитрий Антонов</title>
-  <meta name="description" content="Райдо. Первый шаг сквозь Футарк. Управление проектами, командами и разработкой через этапы Футарка.">
+  <title>Райдо. Первый шаг сквозь Футарк: рунический менеджмент для тех, кто застрял | Дмитрий Антонов</title>
+  <meta name="description" content="Управление проектами, командами и разработкой через этапы Футарка. Диагностика застревания, первый шаг, практические инструменты.">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book5.html">
-  <meta property="og:title" content="Рунический менеджмент — книга пятая | Дмитрий Антонов">
-  <meta property="og:description" content="Райдо. Первый шаг сквозь Футарк. Управление проектами, командами и разработкой через этапы Футарка.">
+  <meta property="og:title" content="Райдо. Первый шаг сквозь Футарк: рунический менеджмент для тех, кто застрял | Дмитрий Антонов">
+  <meta property="og:description" content="Управление проектами, командами и разработкой через этапы Футарка. Диагностика застревания, первый шаг, практические инструменты.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book5.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
@@ -176,13 +176,13 @@
 {<main class="container">
   <div class="book-header">
     <div class="book-cover-small">
-      <img src="/img/cover_book_5.jpg" alt="Рунический менеджмент">
+      <img src="/img/cover_book_5.jpg" alt="Райдо. Первый шаг сквозь Футарк: рунический менеджмент для тех, кто застрял">
     </div>
     <div class="book-info">
       <div class="book-number">Книга пятая</div>
       <div id="bookStatusBadge" class="book-status-badge {{#if status}}available{{/if}}">✅ Доступна</div>
-      <h1>Рунический менеджмент</h1>
-      <div class="book-subtitle">Райдо. Первый шаг сквозь Футарк: управление проектами и командами для тех, кто застрял</div>
+      <h1>Райдо. Первый шаг сквозь Футарк: рунический менеджмент для тех, кто застрял</h1>
+      <div class="book-subtitle">Почему мы стоим на месте, хотя толчок уже был?</div>
       <div class="book-meta-line">
         <span>📖 2026</span> · <span>📚 Серия: Руны как этапы процесса</span>
       </div>
@@ -215,19 +215,9 @@
     
     <h2>Что вы узнаете</h2>
     <ul>
-      
-        <li>Диагностика застревания: три вида</li>
-      
-        <li>Как услышать сигнал до катастрофы</li>
-      
-        <li>Райдо в управлении проектами</li>
-      
-        <li>Райдо в управлении командой</li>
-      
-        <li>Райдо в продажах</li>
-      
-        <li>Практические инструменты: чек-листы, упражнения, дневник</li>
-      
+      {{#each page.learn}}
+        <li>{{this}}</li>
+      {{/each}}
     </ul>
     
     <div class="info-block">
