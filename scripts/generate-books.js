@@ -1,7 +1,7 @@
 // scripts/generate-books.js
 const fs = require('fs');
 
-console.log('🚀 === ЗАПУСК ГЕНЕРАТОРА С ПОДДЕРЖКОЙ {{#each}} ===\n');
+console.log('🚀 === ЗАПУСК ГЕНЕРАТОРА ===\n');
 
 // ===== ЗАГРУЖАЕМ ДАННЫЕ =====
 const booksData = JSON.parse(fs.readFileSync('./books.json', 'utf8'));
@@ -21,13 +21,12 @@ const filenameMap = {
   6: 'book6.html'
 };
 
-// ===== ФУНКЦИЯ ЗАМЕНЫ С ПОДДЕРЖКОЙ {{#each}} =====
+// ===== ФУНКЦИЯ ЗАМЕНЫ (ПОДДЕРЖИВАЕТ {{#each}} И {{#if}}) =====
 function render(template, data) {
   let result = template;
   
   // 1. Обработка {{#each array}}...{{/each}}
   result = result.replace(/\{\{#each (.*?)\}\}([\s\S]*?)\{\{\/each\}\}/g, (match, arrayPath, inner) => {
-    // Получаем массив из данных по пути (например, "page.audience")
     const parts = arrayPath.trim().split('.');
     let current = data;
     for (const part of parts) {
@@ -43,14 +42,11 @@ function render(template, data) {
       return '';
     }
     
-    // Рендерим каждый элемент
     return current.map(item => {
       let itemHtml = inner;
-      // Заменяем {{this}} на значение элемента
       if (typeof item === 'string') {
         itemHtml = itemHtml.replace(/\{\{this\}\}/g, item);
       } else {
-        // Если элемент — объект, обрабатываем его свойства
         Object.keys(item).forEach(key => {
           itemHtml = itemHtml.replace(new RegExp(`{{this\\.${key}}}`, 'g'), item[key]);
         });
@@ -59,7 +55,26 @@ function render(template, data) {
     }).join('');
   });
   
-  // 2. Простые замены {{key}}
+  // 2. Обработка {{#if condition}}...{{/if}}
+  result = result.replace(/\{\{#if (.*?)\}\}([\s\S]*?)\{\{\/if\}\}/g, (match, condition, inner) => {
+    const parts = condition.trim().split('.');
+    let current = data;
+    for (const part of parts) {
+      if (current && typeof current === 'object' && part in current) {
+        current = current[part];
+      } else {
+        current = null;
+        break;
+      }
+    }
+    // Если значение существует, не пустое, не false — показываем inner
+    if (current !== null && current !== undefined && current !== false && current !== '') {
+      return inner;
+    }
+    return '';
+  });
+  
+  // 3. Простые замены {{key}}
   Object.keys(data).forEach(key => {
     const value = data[key];
     if (typeof value === 'string') {
@@ -67,7 +82,7 @@ function render(template, data) {
     }
   });
   
-  // 3. Вставка контента {{{content}}}
+  // 4. Вставка контента {{{content}}}
   result = result.replace(/\{\{\{content\}\}\}/g, data.content || '');
   
   return result;
