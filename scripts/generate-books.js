@@ -1,41 +1,5 @@
 // scripts/generate-books.js
 const fs = require('fs');
-const path = require('path');
-
-// ===== ФУНКЦИЯ ДЛЯ ЗАМЕНЫ ПЛЕЙСХОЛДЕРОВ =====
-function render(template, data) {
-  let result = template;
-  
-  // 1. Простые замены {{key}}
-  Object.keys(data).forEach(key => {
-    const value = data[key];
-    if (typeof value === 'string') {
-      result = result.replace(new RegExp(`{{${key}}}`, 'g'), value);
-    }
-  });
-  
-  // 2. Массивы {{#each key}}...{{/each}}
-  result = result.replace(/\{\{#each (.*?)\}\}([\s\S]*?)\{\{\/each\}\}/g, (match, key, inner) => {
-    const items = data[key] || [];
-    return items.map(item => {
-      let itemHtml = inner;
-      // Заменяем {{this.url}} и {{this.label}} внутри цикла
-      Object.keys(item).forEach(subKey => {
-        itemHtml = itemHtml.replace(new RegExp(`{{this\\.${subKey}}}`, 'g'), item[subKey]);
-      });
-      // Заменяем просто {{this}} для простых массивов (строки)
-      if (typeof item === 'string') {
-        itemHtml = itemHtml.replace(/\{\{this\}\}/g, item);
-      }
-      return itemHtml;
-    }).join('');
-  });
-  
-  // 3. Вставка контента {{{content}}}
-  result = result.replace(/\{\{\{content\}\}\}/g, data.content || '');
-  
-  return result;
-}
 
 // ===== ЗАГРУЖАЕМ ДАННЫЕ =====
 console.log('📖 Загружаем данные...');
@@ -44,11 +8,10 @@ const booksData = JSON.parse(fs.readFileSync('./books.json', 'utf8'));
 const menuData = JSON.parse(fs.readFileSync('./menu.json', 'utf8'));
 
 const layout = fs.readFileSync('./templates/layout.html', 'utf8');
-const bookContentTemplate = fs.readFileSync('./templates/book-content.html', 'utf8');
+const bookContent = fs.readFileSync('./templates/book-content.html', 'utf8');
 
-// ===== МАППИНГ ДЛЯ ВСЕХ КНИГ =====
+// ===== МАППИНГ ФАЙЛОВ =====
 const filenameMap = {
-  0: 'book0.html',
   1: 'book1.html',
   2: 'book2.html',
   3: 'book25.html',
@@ -57,15 +20,50 @@ const filenameMap = {
   6: 'book6.html'
 };
 
+// ===== ФУНКЦИЯ ПРОСТОЙ ЗАМЕНЫ =====
+function replaceAll(text, data) {
+  let result = text;
+  
+  // Простые замены
+  Object.keys(data).forEach(key => {
+    const value = data[key];
+    if (typeof value === 'string') {
+      result = result.replace(new RegExp(`{{${key}}}`, 'g'), value);
+    }
+  });
+  
+  // Обработка массивов
+  result = result.replace(/\{\{#each (.*?)\}\}([\s\S]*?)\{\{\/each\}\}/g, (match, key, inner) => {
+    const items = data[key] || [];
+    return items.map(item => {
+      let html = inner;
+      if (typeof item === 'string') {
+        html = html.replace(/\{\{this\}\}/g, item);
+      } else {
+        Object.keys(item).forEach(subKey => {
+          html = html.replace(new RegExp(`{{this\\.${subKey}}}`, 'g'), item[subKey]);
+        });
+      }
+      return html;
+    }).join('');
+  });
+  
+  // Вставка контента
+  result = result.replace(/\{\{\{content\}\}\}/g, data.content || '');
+  
+  return result;
+}
+
 // ===== ГЕНЕРИРУЕМ КАЖДУЮ КНИГУ =====
 console.log('📚 Генерируем страницы книг...');
 
 booksData.books.forEach(book => {
-  // Пропускаем книгу 0
   if (book.id === 0) return;
   
-  // 1. Генерируем уникальный контент для этой книги
-  const content = render(bookContentTemplate, {
+  const filename = filenameMap[book.id] || `book${book.id}.html`;
+  
+  // 1. Готовим контент книги
+  const contentHtml = replaceAll(bookContent, {
     ...book,
     year: book.year || '2025',
     litresLink: book.litresLink || '#',
@@ -73,14 +71,11 @@ booksData.books.forEach(book => {
     statusText: book.statusText || '📝 Планируется'
   });
   
-  // 2. Определяем имя файла из маппинга
-  const filename = filenameMap[book.id] || `book${book.id}.html`;
-  
-  // 3. Собираем полную страницу
-  const html = render(layout, {
+  // 2. Готовим полную страницу
+  const fullHtml = replaceAll(layout, {
     ...book,
     filename: filename,
-    content: content,
+    content: contentHtml,
     menu: menuData.menu,
     seo: book.seo || {
       title: `${book.title} | Дмитрий Антонов`,
@@ -90,10 +85,9 @@ booksData.books.forEach(book => {
     footerQuote: book.footerQuote || '«Мир устроен системно. Руны — это способ увидеть и настроить его процессы»'
   });
   
-  // 4. Сохраняем файл
-  fs.writeFileSync(filename, html);
+  // 3. Сохраняем
+  fs.writeFileSync(filename, fullHtml);
   console.log(`  ✅ ${filename} (${book.title})`);
 });
 
 console.log('🎉 Все страницы книг сгенерированы!');
-console.log('📁 Всего книг:', booksData.books.filter(b => b.id !== 0).length);
