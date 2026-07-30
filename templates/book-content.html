@@ -37,14 +37,12 @@
       {{/each}}
     </ul>
     
-    {{#if page.chapters}}
-      <h2>Содержание</h2>
-      <ul>
-        {{#each page.chapters}}
-          <li>{{this}}</li>
-        {{/each}}
-      </ul>
-    {{/if}}
+    <h2>Содержание</h2>
+    <ul>
+      {{#each page.chapters}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
     
     <div class="info-block">
       <p>{{page.quote}}</p>
