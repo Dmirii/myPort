@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Мантика без иллюзий — книга четвёртая | Дмитрий Антонов</title>
-  <meta name="description" content="Гадание как диалог с Создателем через диагностику себя. Руны, Таро, честный разговор без страха и зависимости.">
+  <title>{{seo.title}}</title>
+  <meta name="description" content="{{seo.description}}">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book3.html">
-  <meta property="og:title" content="Мантика без иллюзий — книга четвёртая | Дмитрий Антонов">
-  <meta property="og:description" content="Гадание как диалог с Создателем через диагностику себя. Руны, Таро, честный разговор без страха и зависимости.">
+  <meta property="og:title" content="{{seo.title}}">
+  <meta property="og:description" content="{{seo.description}}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book3.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
-  <meta property="og:image" content="https://dimaa.ru/img/cover_book_3.jpg">
+  <meta property="og:image" content="{{seo.ogImage}}">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
   <link rel="shortcut icon" href="/img/logo.jpeg">
@@ -83,9 +83,9 @@
 <!-- ===== МЕНЮ (из menu.json) ===== -->
 <nav class="navbar">
   <div class="nav-inner">
-    <a href="/" class="logo">
-      <img src="/img/logo.jpeg" alt="РУНЫ КАК ЭТАПЫ ПРОЦЕССА">
-      <span>РУНЫ КАК ЭТАПЫ ПРОЦЕССА</span>
+    <a href="{{menu.logo.link}}" class="logo">
+      <img src="{{menu.logo.image}}" alt="{{menu.logo.text}}">
+      <span>{{menu.logo.text}}</span>
     </a>
     <div class="nav-links">
       
@@ -195,8 +195,8 @@
 
   <div class="book-content">
     <h2>О книге</h2>
-    <p>Это четвёртая книга серии <strong>«Инженерная модель реальности»</strong>.</p>
-    <p>Вы прошли путь: Книга 1 — дала систему. Вы узнали, что руны — это этапы, а три времени — это матрица. Книга 2 — дала навигацию. Вы научились определять своё состояние без рун. Теперь вы готовы к диалогу. Книга 4 — это не про «предсказания» и не про «магические формулы». Это про честный разговор с Создателем через руны. Это про то, как задавать вопросы, слышать ответы и — главное — действовать на их основе.</p>
+    <p>{{page.intro}}</p>
+    <p>{{page.description}}</p>
     
     <h2>Для кого эта книга</h2>
     <ul>
@@ -226,7 +226,7 @@
     </ul>
     
     <div class="info-block">
-      <p>«Диалог с Создателем не отменяет вашу свободу — он даёт подсказку.»</p>
+      <p>{{page.quote}}</p>
     </div>
 
     <div id="seriesBooksPlaceholder" class="series-books-placeholder">
