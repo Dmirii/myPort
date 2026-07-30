@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Руны и поток: доверие течению — книга двадцать первая | Дмитрий Антонов</title>
-  <meta name="description" content="Как довериться течению и не потерять себя. Поток — это доверие к течению жизни.">
+  <meta name="description" content="Как довериться течению и не потерять себя.">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book21.html">
   <meta property="og:title" content="Руны и поток: доверие течению — книга двадцать первая | Дмитрий Антонов">
-  <meta property="og:description" content="Как довериться течению и не потерять себя. Поток — это доверие к течению жизни.">
+  <meta property="og:description" content="Как довериться течению и не потерять себя.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book21.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
@@ -180,7 +180,7 @@
     </div>
     <div class="book-info">
       <div class="book-number">Книга двадцать первая</div>
-      <div id="bookStatusBadge" class="book-status-badge {{#if status}}planned{{/if}}">📝 Планируется</div>
+      <div id="bookStatusBadge" class="book-status-badge">📝 Планируется</div>
       <h1>Руны и поток: доверие течению</h1>
       <div class="book-subtitle">Как довериться течению и не потерять себя</div>
       <div class="book-meta-line">
@@ -196,8 +196,9 @@
   <div class="book-content">
     <h2>О книге</h2>
     <p>Это двадцать первая книга серии <strong>«Инженерная модель реальности»</strong>.</p>
-    <p>Контроль отпущен. Ты плывёшь по течению. Как довериться миру и не потерять себя? Книга о доверии потоку. О том, как отпускать контроль.</p>
+    <p>Контроль отпущен. Ты плывёшь по течению. Как довериться миру и не потерять себя?</p>
     
+    <!-- Блок "Для кого эта книга" из JSON -->
     <h2>Для кого эта книга</h2>
     <ul>
       
@@ -205,10 +206,9 @@
       
         <li>Для тех, кто готов довериться</li>
       
-        <li>Для тех, кто ищет поток</li>
-      
     </ul>
     
+    <!-- Блок "Что вы узнаете" из JSON -->
     <h2>Что вы узнаете</h2>
     <ul>
       
@@ -219,6 +219,16 @@
         <li>Как не терять себя в потоке</li>
       
     </ul>
+    
+    <!-- Блок "Содержание" из JSON (если есть) -->
+    {{#if page.chapters}}
+      <h2>Содержание</h2>
+      <ul>
+        {{#each page.chapters}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
     
     <div class="info-block">
       <p>«Поток — это не пассивность. Это доверие к течению жизни.»</p>

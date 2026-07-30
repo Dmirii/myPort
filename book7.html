@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Руны как язык: гармония с миром — книга седьмая | Дмитрий Антонов</title>
-  <meta name="description" content="Как жить в гармонии, когда всё вокруг требует внимания? Баланс, равновесие, спокойствие.">
+  <meta name="description" content="Как жить в гармонии, когда всё вокруг требует внимания?">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book7.html">
   <meta property="og:title" content="Руны как язык: гармония с миром — книга седьмая | Дмитрий Антонов">
-  <meta property="og:description" content="Как жить в гармонии, когда всё вокруг требует внимания? Баланс, равновесие, спокойствие.">
+  <meta property="og:description" content="Как жить в гармонии, когда всё вокруг требует внимания?">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book7.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
@@ -180,7 +180,7 @@
     </div>
     <div class="book-info">
       <div class="book-number">Книга седьмая</div>
-      <div id="bookStatusBadge" class="book-status-badge {{#if status}}planned{{/if}}">📝 Планируется</div>
+      <div id="bookStatusBadge" class="book-status-badge">📝 Планируется</div>
       <h1>Руны как язык: гармония с миром</h1>
       <div class="book-subtitle">Как жить в гармонии, когда всё вокруг требует внимания?</div>
       <div class="book-meta-line">
@@ -196,8 +196,9 @@
   <div class="book-content">
     <h2>О книге</h2>
     <p>Это седьмая книга серии <strong>«Инженерная модель реальности»</strong>.</p>
-    <p>Баланс. Гармония с миром, с собой, с людьми, с мыслями. Ты уже начал, ты уже видишь результаты. Но внутри — дисбаланс. Книга о том, как найти равновесие в хаосе. О том, как перестать разрываться между делами и людьми и обрести внутреннюю опору.</p>
+    <p>Баланс. Гармония с миром, с собой, с людьми, с мыслями. Ты уже начал, ты уже видишь результаты. Но внутри — дисбаланс.</p>
     
+    <!-- Блок "Для кого эта книга" из JSON -->
     <h2>Для кого эта книга</h2>
     <ul>
       
@@ -205,20 +206,29 @@
       
         <li>Для тех, кто хочет гармонии в отношениях</li>
       
-        <li>Для тех, кто ищет равновесие между работой и жизнью</li>
-      
     </ul>
     
+    <!-- Блок "Что вы узнаете" из JSON -->
     <h2>Что вы узнаете</h2>
     <ul>
       
-        <li>Как распознать дисбаланс на ранней стадии</li>
+        <li>Как распознать дисбаланс</li>
       
         <li>Инструменты для восстановления гармонии</li>
       
-        <li>Как сохранять равновесие в кризисных ситуациях</li>
+        <li>Как сохранять равновесие</li>
       
     </ul>
+    
+    <!-- Блок "Содержание" из JSON (если есть) -->
+    {{#if page.chapters}}
+      <h2>Содержание</h2>
+      <ul>
+        {{#each page.chapters}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
     
     <div class="info-block">
       <p>«Гармония — это не тишина, а равновесие между звуками.»</p>

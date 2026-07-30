@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Руны и трансформация: полный цикл — книга двадцать четвёртая | Дмитрий Антонов</title>
-  <meta name="description" content="Полный цикл завершён. Что дальше? Трансформация — это рождение нового себя.">
+  <meta name="description" content="Полный цикл завершён. Что дальше?">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book24.html">
   <meta property="og:title" content="Руны и трансформация: полный цикл — книга двадцать четвёртая | Дмитрий Антонов">
-  <meta property="og:description" content="Полный цикл завершён. Что дальше? Трансформация — это рождение нового себя.">
+  <meta property="og:description" content="Полный цикл завершён. Что дальше?">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book24.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
@@ -180,7 +180,7 @@
     </div>
     <div class="book-info">
       <div class="book-number">Книга двадцать четвёртая</div>
-      <div id="bookStatusBadge" class="book-status-badge {{#if status}}planned{{/if}}">📝 Планируется</div>
+      <div id="bookStatusBadge" class="book-status-badge">📝 Планируется</div>
       <h1>Руны и трансформация: полный цикл</h1>
       <div class="book-subtitle">Полный цикл завершён. Что дальше?</div>
       <div class="book-meta-line">
@@ -196,8 +196,9 @@
   <div class="book-content">
     <h2>О книге</h2>
     <p>Это двадцать четвёртая книга серии <strong>«Инженерная модель реальности»</strong>.</p>
-    <p>Цикл завершён. Ты прошёл путь от начала до конца. Что дальше? Дверь открыта для нового. Книга о трансформации. О том, как завершать и начинать.</p>
+    <p>Цикл завершён. Ты прошёл путь от начала до конца. Что дальше? Дверь открыта для нового.</p>
     
+    <!-- Блок "Для кого эта книга" из JSON -->
     <h2>Для кого эта книга</h2>
     <ul>
       
@@ -205,10 +206,9 @@
       
         <li>Для тех, кто готов к новому</li>
       
-        <li>Для тех, кто хочет трансформироваться</li>
-      
     </ul>
     
+    <!-- Блок "Что вы узнаете" из JSON -->
     <h2>Что вы узнаете</h2>
     <ul>
       
@@ -219,6 +219,16 @@
         <li>Как рождаться заново</li>
       
     </ul>
+    
+    <!-- Блок "Содержание" из JSON (если есть) -->
+    {{#if page.chapters}}
+      <h2>Содержание</h2>
+      <ul>
+        {{#each page.chapters}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
     
     <div class="info-block">
       <p>«Трансформация — это не конец. Это рождение нового себя.»</p>

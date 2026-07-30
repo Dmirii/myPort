@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Руны и победа: осознание целостности — книга шестнадцатая | Дмитрий Антонов</title>
-  <meta name="description" content="Как выглядит завершённый цикл и как осознать победу. Победа — это осознание пути.">
+  <meta name="description" content="Как выглядит завершённый цикл и как осознать победу.">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book16.html">
   <meta property="og:title" content="Руны и победа: осознание целостности — книга шестнадцатая | Дмитрий Антонов">
-  <meta property="og:description" content="Как выглядит завершённый цикл и как осознать победу. Победа — это осознание пути.">
+  <meta property="og:description" content="Как выглядит завершённый цикл и как осознать победу.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book16.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
@@ -180,7 +180,7 @@
     </div>
     <div class="book-info">
       <div class="book-number">Книга шестнадцатая</div>
-      <div id="bookStatusBadge" class="book-status-badge {{#if status}}planned{{/if}}">📝 Планируется</div>
+      <div id="bookStatusBadge" class="book-status-badge">📝 Планируется</div>
       <h1>Руны и победа: осознание целостности</h1>
       <div class="book-subtitle">Как выглядит завершённый цикл и как осознать победу</div>
       <div class="book-meta-line">
@@ -196,8 +196,9 @@
   <div class="book-content">
     <h2>О книге</h2>
     <p>Это шестнадцатая книга серии <strong>«Инженерная модель реальности»</strong>.</p>
-    <p>Ты прошёл путь. Ты стал целостным. Как осознать свою победу и не останавливаться на достигнутом? Книга о победе как осознании. О том, как видеть свои достижения.</p>
+    <p>Ты прошёл путь. Ты стал целостным. Как осознать свою победу и не останавливаться на достигнутом?</p>
     
+    <!-- Блок "Для кого эта книга" из JSON -->
     <h2>Для кого эта книга</h2>
     <ul>
       
@@ -205,10 +206,9 @@
       
         <li>Для тех, кто хочет осознать свой путь</li>
       
-        <li>Для тех, кто готов праздновать</li>
-      
     </ul>
     
+    <!-- Блок "Что вы узнаете" из JSON -->
     <h2>Что вы узнаете</h2>
     <ul>
       
@@ -219,6 +219,16 @@
         <li>Как праздновать победы</li>
       
     </ul>
+    
+    <!-- Блок "Содержание" из JSON (если есть) -->
+    {{#if page.chapters}}
+      <h2>Содержание</h2>
+      <ul>
+        {{#each page.chapters}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
     
     <div class="info-block">
       <p>«Победа — это не финиш. Это осознание пройденного пути.»</p>

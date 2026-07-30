@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Возрождение: новое рождение — книга восемнадцатая | Дмитрий Антонов</title>
-  <meta name="description" content="Как рождается новое из старого. Возрождение — это продолжение после паузы.">
+  <meta name="description" content="Как рождается новое из старого.">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book18.html">
   <meta property="og:title" content="Возрождение: новое рождение — книга восемнадцатая | Дмитрий Антонов">
-  <meta property="og:description" content="Как рождается новое из старого. Возрождение — это продолжение после паузы.">
+  <meta property="og:description" content="Как рождается новое из старого.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book18.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
@@ -180,7 +180,7 @@
     </div>
     <div class="book-info">
       <div class="book-number">Книга восемнадцатая</div>
-      <div id="bookStatusBadge" class="book-status-badge {{#if status}}planned{{/if}}">📝 Планируется</div>
+      <div id="bookStatusBadge" class="book-status-badge">📝 Планируется</div>
       <h1>Возрождение: новое рождение</h1>
       <div class="book-subtitle">Как рождается новое из старого</div>
       <div class="book-meta-line">
@@ -196,8 +196,9 @@
   <div class="book-content">
     <h2>О книге</h2>
     <p>Это восемнадцатая книга серии <strong>«Инженерная модель реальности»</strong>.</p>
-    <p>Из действия рождается новая форма. Ты меняешься. Как принять себя нового и идти дальше? Книга о возрождении. О том, как рождается новое.</p>
+    <p>Из действия рождается новая форма. Ты меняешься. Как принять себя нового и идти дальше?</p>
     
+    <!-- Блок "Для кого эта книга" из JSON -->
     <h2>Для кого эта книга</h2>
     <ul>
       
@@ -205,10 +206,9 @@
       
         <li>Для тех, кто хочет принять себя нового</li>
       
-        <li>Для тех, кто готов к возрождению</li>
-      
     </ul>
     
+    <!-- Блок "Что вы узнаете" из JSON -->
     <h2>Что вы узнаете</h2>
     <ul>
       
@@ -219,6 +219,16 @@
         <li>Как идти дальше после трансформации</li>
       
     </ul>
+    
+    <!-- Блок "Содержание" из JSON (если есть) -->
+    {{#if page.chapters}}
+      <h2>Содержание</h2>
+      <ul>
+        {{#each page.chapters}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
     
     <div class="info-block">
       <p>«Возрождение — это не начало. Это продолжение после паузы.»</p>

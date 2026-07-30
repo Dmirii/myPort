@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Руны в жизни: смысл в рутине — книга девятая | Дмитрий Антонов</title>
-  <meta name="description" content="Как не потерять смысл в повседневности? Рутина — это ежедневное утверждение выбора.">
+  <meta name="description" content="Как не потерять смысл в повседневности?">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book9.html">
   <meta property="og:title" content="Руны в жизни: смысл в рутине — книга девятая | Дмитрий Антонов">
-  <meta property="og:description" content="Как не потерять смысл в повседневности? Рутина — это ежедневное утверждение выбора.">
+  <meta property="og:description" content="Как не потерять смысл в повседневности?">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book9.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
@@ -180,7 +180,7 @@
     </div>
     <div class="book-info">
       <div class="book-number">Книга девятая</div>
-      <div id="bookStatusBadge" class="book-status-badge {{#if status}}planned{{/if}}">📝 Планируется</div>
+      <div id="bookStatusBadge" class="book-status-badge">📝 Планируется</div>
       <h1>Руны в жизни: смысл в рутине</h1>
       <div class="book-subtitle">Как не потерять смысл в повседневности?</div>
       <div class="book-meta-line">
@@ -196,8 +196,9 @@
   <div class="book-content">
     <h2>О книге</h2>
     <p>Это девятая книга серии <strong>«Инженерная модель реальности»</strong>.</p>
-    <p>Жизнь с результатом. Ты построил систему, но каждый день — это одно и то же. Как не выгореть и сохранить смысл? Книга о том, как находить радость в повторяющихся действиях. О том, как превратить рутину в ритуал.</p>
+    <p>Жизнь с результатом. Ты построил систему, но каждый день — это одно и то же. Как не выгореть и сохранить смысл?</p>
     
+    <!-- Блок "Для кого эта книга" из JSON -->
     <h2>Для кого эта книга</h2>
     <ul>
       
@@ -205,10 +206,9 @@
       
         <li>Для тех, кто потерял смысл в работе</li>
       
-        <li>Для тех, кто хочет вернуть радость в повседневность</li>
-      
     </ul>
     
+    <!-- Блок "Что вы узнаете" из JSON -->
     <h2>Что вы узнаете</h2>
     <ul>
       
@@ -219,6 +219,16 @@
         <li>Как превращать обязанности в ритуалы</li>
       
     </ul>
+    
+    <!-- Блок "Содержание" из JSON (если есть) -->
+    {{#if page.chapters}}
+      <h2>Содержание</h2>
+      <ul>
+        {{#each page.chapters}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
     
     <div class="info-block">
       <p>«Рутина — это не скука. Это ежедневное утверждение выбора.»</p>

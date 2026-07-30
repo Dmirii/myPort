@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Руны в итоге: завершение цикла — книга восьмая | Дмитрий Антонов</title>
-  <meta name="description" content="Как завершить и начать заново? Завершение — это переход к новому.">
+  <meta name="description" content="Как завершить и начать заново?">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book8.html">
   <meta property="og:title" content="Руны в итоге: завершение цикла — книга восьмая | Дмитрий Антонов">
-  <meta property="og:description" content="Как завершить и начать заново? Завершение — это переход к новому.">
+  <meta property="og:description" content="Как завершить и начать заново?">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book8.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
@@ -180,7 +180,7 @@
     </div>
     <div class="book-info">
       <div class="book-number">Книга восьмая</div>
-      <div id="bookStatusBadge" class="book-status-badge {{#if status}}planned{{/if}}">📝 Планируется</div>
+      <div id="bookStatusBadge" class="book-status-badge">📝 Планируется</div>
       <h1>Руны в итоге: завершение цикла</h1>
       <div class="book-subtitle">Как завершить и начать заново?</div>
       <div class="book-meta-line">
@@ -196,8 +196,9 @@
   <div class="book-content">
     <h2>О книге</h2>
     <p>Это восьмая книга серии <strong>«Инженерная модель реальности»</strong>.</p>
-    <p>Завершение. Ты прошёл путь. Теперь — завершение. Но завершение — это не конец. Это переход к новому. Книга о том, как правильно закрывать этапы и открывать новые двери. О том, как отпускать старое и впускать новое.</p>
+    <p>Завершение. Ты прошёл путь. Теперь — завершение. Но завершение — это не конец. Это переход к новому.</p>
     
+    <!-- Блок "Для кого эта книга" из JSON -->
     <h2>Для кого эта книга</h2>
     <ul>
       
@@ -205,10 +206,9 @@
       
         <li>Для тех, кто боится отпускать старое</li>
       
-        <li>Для тех, кто готов к новому началу</li>
-      
     </ul>
     
+    <!-- Блок "Что вы узнаете" из JSON -->
     <h2>Что вы узнаете</h2>
     <ul>
       
@@ -216,9 +216,19 @@
       
         <li>Как правильно закрывать этапы</li>
       
-        <li>Как открывать новые двери без страха</li>
+        <li>Как открывать новые двери</li>
       
     </ul>
+    
+    <!-- Блок "Содержание" из JSON (если есть) -->
+    {{#if page.chapters}}
+      <h2>Содержание</h2>
+      <ul>
+        {{#each page.chapters}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
     
     <div class="info-block">
       <p>«Завершение — это не конец. Это дверь в новый цикл.»</p>

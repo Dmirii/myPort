@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Руны и защита: укрепление созданного — книга пятнадцатая | Дмитрий Антонов</title>
-  <meta name="description" content="Как укрепить созданное и сохранить результаты. Защита — это умение сохранять.">
+  <meta name="description" content="Как укрепить созданное и сохранить результаты.">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book15.html">
   <meta property="og:title" content="Руны и защита: укрепление созданного — книга пятнадцатая | Дмитрий Антонов">
-  <meta property="og:description" content="Как укрепить созданное и сохранить результаты. Защита — это умение сохранять.">
+  <meta property="og:description" content="Как укрепить созданное и сохранить результаты.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book15.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
@@ -180,7 +180,7 @@
     </div>
     <div class="book-info">
       <div class="book-number">Книга пятнадцатая</div>
-      <div id="bookStatusBadge" class="book-status-badge {{#if status}}planned{{/if}}">📝 Планируется</div>
+      <div id="bookStatusBadge" class="book-status-badge">📝 Планируется</div>
       <h1>Руны и защита: укрепление созданного</h1>
       <div class="book-subtitle">Как укрепить созданное и сохранить результаты</div>
       <div class="book-meta-line">
@@ -196,8 +196,9 @@
   <div class="book-content">
     <h2>О книге</h2>
     <p>Это пятнадцатая книга серии <strong>«Инженерная модель реальности»</strong>.</p>
-    <p>Ты построил систему. Теперь её нужно защитить. Как сохранить результаты и не дать им разрушиться? Книга о защите созданного. О том, как укреплять и сохранять.</p>
+    <p>Ты построил систему. Теперь её нужно защитить. Как сохранить результаты и не дать им разрушиться?</p>
     
+    <!-- Блок "Для кого эта книга" из JSON -->
     <h2>Для кого эта книга</h2>
     <ul>
       
@@ -205,10 +206,9 @@
       
         <li>Для тех, кто боится потерять созданное</li>
       
-        <li>Для тех, кто готов защищать</li>
-      
     </ul>
     
+    <!-- Блок "Что вы узнаете" из JSON -->
     <h2>Что вы узнаете</h2>
     <ul>
       
@@ -219,6 +219,16 @@
         <li>Как сохранять в кризисных ситуациях</li>
       
     </ul>
+    
+    <!-- Блок "Содержание" из JSON (если есть) -->
+    {{#if page.chapters}}
+      <h2>Содержание</h2>
+      <ul>
+        {{#each page.chapters}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
     
     <div class="info-block">
       <p>«Защита — это не стена. Это умение сохранять созданное.»</p>

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Руны и семя: потенциал внутри — книга двадцать вторая | Дмитрий Антонов</title>
-  <meta name="description" content="Что зреет внутри и как дать ему проявиться. Семя — это уже существующий потенциал.">
+  <meta name="description" content="Что зреет внутри и как дать ему проявиться.">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book22.html">
   <meta property="og:title" content="Руны и семя: потенциал внутри — книга двадцать вторая | Дмитрий Антонов">
-  <meta property="og:description" content="Что зреет внутри и как дать ему проявиться. Семя — это уже существующий потенциал.">
+  <meta property="og:description" content="Что зреет внутри и как дать ему проявиться.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book22.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
@@ -180,7 +180,7 @@
     </div>
     <div class="book-info">
       <div class="book-number">Книга двадцать вторая</div>
-      <div id="bookStatusBadge" class="book-status-badge {{#if status}}planned{{/if}}">📝 Планируется</div>
+      <div id="bookStatusBadge" class="book-status-badge">📝 Планируется</div>
       <h1>Руны и семя: потенциал внутри</h1>
       <div class="book-subtitle">Что зреет внутри и как дать ему проявиться</div>
       <div class="book-meta-line">
@@ -196,8 +196,9 @@
   <div class="book-content">
     <h2>О книге</h2>
     <p>Это двадцать вторая книга серии <strong>«Инженерная модель реальности»</strong>.</p>
-    <p>Внутри уже есть ответ. Семя проросло. Как увидеть потенциал и дать ему проявиться? Книга о скрытых возможностях. О том, как замечать рост.</p>
+    <p>Внутри уже есть ответ. Семя проросло. Как увидеть потенциал и дать ему проявиться?</p>
     
+    <!-- Блок "Для кого эта книга" из JSON -->
     <h2>Для кого эта книга</h2>
     <ul>
       
@@ -205,10 +206,9 @@
       
         <li>Для тех, кто хочет дать рост</li>
       
-        <li>Для тех, кто готов проявляться</li>
-      
     </ul>
     
+    <!-- Блок "Что вы узнаете" из JSON -->
     <h2>Что вы узнаете</h2>
     <ul>
       
@@ -219,6 +219,16 @@
         <li>Как проявлять скрытое</li>
       
     </ul>
+    
+    <!-- Блок "Содержание" из JSON (если есть) -->
+    {{#if page.chapters}}
+      <h2>Содержание</h2>
+      <ul>
+        {{#each page.chapters}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
     
     <div class="info-block">
       <p>«Семя — это не обещание. Это уже существующий потенциал.»</p>
