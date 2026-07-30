@@ -1,0 +1,17 @@
+{
+  "menu": {
+    "logo": {
+      "text": "РУНЫ КАК ЭТАПЫ ПРОЦЕССА",
+      "highlight": "ЭТАПЫ ПРОЦЕССА",
+      "image": "/img/logo.jpeg",
+      "link": "/"
+    },
+    "items": [
+      { "label": "👤 Об авторе", "url": "/#about" },
+      { "label": "📚 Книги", "url": "/#books" },
+      { "label": "📬 Контакты", "url": "/#contacts" },
+      { "label": "📐 Методология", "url": "/methodology.html" },
+      { "label": "🧪 Лаборатория", "url": "/port.html" }
+    ]
+  }
+}
