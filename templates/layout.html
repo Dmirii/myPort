@@ -77,10 +77,6 @@
       .book-actions { justify-content: center; }
     }
   </style>
-  
-  {{#if pageStyles}}
-    <style>{{{pageStyles}}}</style>
-  {{/if}}
 </head>
 <body>
 
@@ -89,7 +85,7 @@
   <div class="nav-inner">
     <a href="{{menu.logo.link}}" class="logo">
       <img src="{{menu.logo.image}}" alt="{{menu.logo.text}}">
-      <span>{{menu.logo.text}}<span> {{menu.logo.highlight}}</span></span>
+      <span>{{menu.logo.text}}</span>
     </a>
     <div class="nav-links">
       {{#each menu.items}}
