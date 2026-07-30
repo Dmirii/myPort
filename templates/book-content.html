@@ -28,7 +28,7 @@
     {{/if}}
     
     {{#if page.notHere}}
-      <h3>Здесь нет</h3>
+      <h3>❌ Здесь нет</h3>
       <ul>
         {{#each page.notHere}}
           <li>{{this}}</li>
@@ -37,7 +37,7 @@
     {{/if}}
     
     {{#if page.here}}
-      <h3>Здесь есть</h3>
+      <h3>✅ Здесь есть</h3>
       <ul>
         {{#each page.here}}
           <li>{{this}}</li>
@@ -193,7 +193,9 @@
     
     {{#if page.navigationMap}}
       <h3>Карта перехода: навигация или мантика</h3>
-      <p>{{page.navigationMap}}</p>
+      {{#each page.navigationMap}}
+        <p>{{this}}</p>
+      {{/each}}
     {{/if}}
     
     <div class="info-block">
