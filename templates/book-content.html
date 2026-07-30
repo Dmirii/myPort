@@ -23,7 +23,6 @@
     <p>{{page.intro}}</p>
     <p>{{page.description}}</p>
     
-    <!-- Блок "Для кого эта книга" из JSON -->
     <h2>Для кого эта книга</h2>
     <ul>
       {{#each page.audience}}
@@ -31,7 +30,6 @@
       {{/each}}
     </ul>
     
-    <!-- Блок "Что вы узнаете" из JSON -->
     <h2>Что вы узнаете</h2>
     <ul>
       {{#each page.learn}}
@@ -39,15 +37,12 @@
       {{/each}}
     </ul>
     
-    <!-- Блок "Содержание" из JSON (если есть) -->
-    {{#if page.chapters}}
-      <h2>Содержание</h2>
-      <ul>
-        {{#each page.chapters}}
-          <li>{{this}}</li>
-        {{/each}}
-      </ul>
-    {{/if}}
+    <h2>Содержание</h2>
+    <ul>
+      {{#each page.chapters}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
     
     <div class="info-block">
       <p>{{page.quote}}</p>
