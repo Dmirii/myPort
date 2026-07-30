@@ -46,16 +46,22 @@ const menuData = JSON.parse(fs.readFileSync('./menu.json', 'utf8'));
 const layout = fs.readFileSync('./templates/layout.html', 'utf8');
 const bookContentTemplate = fs.readFileSync('./templates/book-content.html', 'utf8');
 
-// ===== МАППИНГ ДЛЯ НЕСТАНДАРТНЫХ ИМЁН =====
+// ===== МАППИНГ ДЛЯ ВСЕХ КНИГ (ИСПРАВЛЕННЫЙ) =====
 const filenameMap = {
-  3: 'book25.html'   // книга 3 → book25.html
+  0: 'book0.html',   // книга 0 → book0.html (если понадобится)
+  1: 'book1.html',   // книга 1 → book1.html
+  2: 'book2.html',   // книга 2 → book2.html
+  3: 'book25.html',  // книга 3 → book25.html
+  4: 'book3.html',   // книга 4 → book3.html
+  5: 'book5.html',   // книга 5 → book5.html
+  6: 'book6.html'    // книга 6 → book6.html
 };
 
 // ===== ГЕНЕРИРУЕМ КАЖДУЮ КНИГУ =====
 console.log('📚 Генерируем страницы книг...');
 
 booksData.books.forEach(book => {
-  // Пропускаем книгу 0 (она отдельно)
+  // Пропускаем книгу 0, если она есть (можно убрать эту проверку, если хотите генерировать book0.html)
   if (book.id === 0) return;
   
   // 1. Генерируем уникальный контент для этой книги
@@ -67,7 +73,7 @@ booksData.books.forEach(book => {
     statusText: book.statusText || '📝 Планируется'
   });
   
-  // 2. Определяем имя файла
+  // 2. Определяем имя файла из маппинга
   const filename = filenameMap[book.id] || `book${book.id}.html`;
   
   // 3. Собираем полную страницу
