@@ -21,7 +21,7 @@ const filenameMap = {
   6: 'book6.html'
 };
 
-// ===== ФУНКЦИЯ ЗАМЕНЫ (ПОДДЕРЖИВАЕТ {{#each}} И {{#if}}) =====
+// ===== ФУНКЦИЯ ЗАМЕНЫ С ПОДДЕРЖКОЙ {{#each}} И {{#if}} =====
 function render(template, data) {
   let result = template;
   
@@ -67,20 +67,29 @@ function render(template, data) {
         break;
       }
     }
-    // Если значение существует, не пустое, не false — показываем inner
     if (current !== null && current !== undefined && current !== false && current !== '') {
       return inner;
     }
     return '';
   });
   
-  // 3. Простые замены {{key}}
-  Object.keys(data).forEach(key => {
-    const value = data[key];
-    if (typeof value === 'string') {
-      result = result.replace(new RegExp(`{{${key}}}`, 'g'), value);
-    }
-  });
+  // 3. Обработка вложенных объектов (например, menu.logo.text)
+  // Сначала заменяем все {{путь.к.объекту}} на значения из data
+  function replaceDeep(obj, prefix = '') {
+    Object.keys(obj).forEach(key => {
+      const value = obj[key];
+      const path = prefix ? `${prefix}.${key}` : key;
+      
+      if (typeof value === 'string') {
+        result = result.replace(new RegExp(`{{${path}}}`, 'g'), value);
+      } else if (Array.isArray(value)) {
+        // Массивы уже обработаны выше
+      } else if (typeof value === 'object' && value !== null) {
+        replaceDeep(value, path);
+      }
+    });
+  }
+  replaceDeep(data);
   
   // 4. Вставка контента {{{content}}}
   result = result.replace(/\{\{\{content\}\}\}/g, data.content || '');
