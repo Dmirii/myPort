@@ -21,7 +21,7 @@ const filenameMap = {
   6: 'book6.html'
 };
 
-// ===== ФУНКЦИЯ ЗАМЕНЫ С ПОДДЕРЖКОЙ {{#each}} И {{#if}} =====
+// ===== ФУНКЦИЯ ЗАМЕНЫ (ИСПРАВЛЕННАЯ) =====
 function render(template, data) {
   let result = template;
   
@@ -73,25 +73,17 @@ function render(template, data) {
     return '';
   });
   
-  // 3. Обработка вложенных объектов (например, menu.logo.text)
-  // Сначала заменяем все {{путь.к.объекту}} на значения из data
-  function replaceDeep(obj, prefix = '') {
-    Object.keys(obj).forEach(key => {
-      const value = obj[key];
-      const path = prefix ? `${prefix}.${key}` : key;
-      
-      if (typeof value === 'string') {
-        result = result.replace(new RegExp(`{{${path}}}`, 'g'), value);
-      } else if (Array.isArray(value)) {
-        // Массивы уже обработаны выше
-      } else if (typeof value === 'object' && value !== null) {
-        replaceDeep(value, path);
-      }
-    });
-  }
-  replaceDeep(data);
+  // 3. ПРОСТЫЕ ЗАМЕНЫ {{key}} (ТОЛЬКО для данных, НЕ для content!)
+  // Исключаем content, чтобы не трогать {{{content}}}
+  Object.keys(data).forEach(key => {
+    if (key === 'content') return;  // ← КЛЮЧЕВОЕ ИЗМЕНЕНИЕ!
+    const value = data[key];
+    if (typeof value === 'string') {
+      result = result.replace(new RegExp(`{{${key}}}`, 'g'), value);
+    }
+  });
   
-  // 4. Вставка контента {{{content}}}
+  // 4. Вставка контента {{{content}}} (ЭТО ДЕЛАЕТСЯ ПОСЛЕДНИМ!)
   result = result.replace(/\{\{\{content\}\}\}/g, data.content || '');
   
   return result;
