@@ -73,17 +73,30 @@ function render(template, data) {
     return '';
   });
   
-  // 3. ПРОСТЫЕ ЗАМЕНЫ {{key}} (ТОЛЬКО для данных, НЕ для content!)
-  // Исключаем content, чтобы не трогать {{{content}}}
-  Object.keys(data).forEach(key => {
-    if (key === 'content') return;  // ← КЛЮЧЕВОЕ ИЗМЕНЕНИЕ!
-    const value = data[key];
-    if (typeof value === 'string') {
-      result = result.replace(new RegExp(`{{${key}}}`, 'g'), value);
-    }
-  });
+  // 3. Замена вложенных объектов (menu.logo.text, seo.title и т.д.)
+  // НО НЕ ТРОГАЕМ {{{content}}} — заменяем только {{без трёх скобок}}
+  function replaceDeep(obj, prefix = '') {
+    Object.keys(obj).forEach(key => {
+      const value = obj[key];
+      const path = prefix ? `${prefix}.${key}` : key;
+      
+      // ПРОПУСКАЕМ content — он будет вставлен через {{{content}}}
+      if (path === 'content') return;
+      
+      if (typeof value === 'string') {
+        result = result.replace(new RegExp(`{{${path}}}`, 'g'), value);
+      } else if (Array.isArray(value)) {
+        // Массивы уже обработаны в {{#each}}
+      } else if (typeof value === 'object' && value !== null) {
+        replaceDeep(value, path);
+      }
+    });
+  }
   
-  // 4. Вставка контента {{{content}}} (ЭТО ДЕЛАЕТСЯ ПОСЛЕДНИМ!)
+  // Заменяем все переменные, кроме content
+  replaceDeep(data);
+  
+  // 4. Вставка контента {{{content}}} (В САМОМ КОНЦЕ!)
   result = result.replace(/\{\{\{content\}\}\}/g, data.content || '');
   
   return result;
