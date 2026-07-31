@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Инженерная модель реальности — книга первая | Дмитрий Антонов</title>
-  <meta name="description" content="Прикладная рунология для рационалистов и управленцев. Руны — это этапы процесса.">
+  <title>{{seo.title}}</title>
+  <meta name="description" content="{{seo.description}}">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/book1.html">
-  <meta property="og:title" content="Инженерная модель реальности — книга первая | Дмитрий Антонов">
-  <meta property="og:description" content="Прикладная рунология для рационалистов и управленцев. Руны — это этапы процесса.">
+  <meta property="og:title" content="{{seo.title}}">
+  <meta property="og:description" content="{{seo.description}}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/book1.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
-  <meta property="og:image" content="https://dimaa.ru/img/cover_book_1.jpeg">
+  <meta property="og:image" content="{{seo.ogImage}}">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/jpeg" href="/img/logo.jpeg">
   <link rel="shortcut icon" href="/img/logo.jpeg">
@@ -83,9 +83,9 @@
 <!-- ===== МЕНЮ (из menu.json) ===== -->
 <nav class="navbar">
   <div class="nav-inner">
-    <a href="/" class="logo">
-      <img src="/img/logo.jpeg" alt="РУНЫ КАК ЭТАПЫ ПРОЦЕССА">
-      <span>РУНЫ КАК ЭТАПЫ ПРОЦЕССА</span>
+    <a href="{{menu.logo.link}}" class="logo">
+      <img src="{{menu.logo.image}}" alt="{{menu.logo.text}}">
+      <span>{{menu.logo.text}}</span>
     </a>
     <div class="nav-links">
       
@@ -173,7 +173,7 @@
 </style>
 
 <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
-{<main class="container">
+<main class="container">
   <div class="book-header">
     <div class="book-cover-small">
       <img src="/img/cover_book_1.jpeg" alt="Инженерная модель реальности">
@@ -195,8 +195,8 @@
 
   <div class="book-content">
     <h2>О книге</h2>
-    <p>Это первая книга серии <strong>«Инженерная модель реальности»</strong>.</p>
-    <p>Вы держите в руках не «книгу тайн» и не сборник магических рецептов. Это инженерная модель реальности. Руны — это не только магия, но и язык, на котором описан любой процесс. Автор — инженер-программист по образованию, всю жизнь проработавший в продажах и управлении, а ныне практикующий рунолог — предлагает посмотреть на руны иначе: не как на «символы богатства, защиты или любви», а как на универсальный язык описания этапов любого процесса. Руна Феху — это не «деньги». Это «начало». Руна Хагалаз — это не «разрушение». Это «жизнь с результатом». Руны не делают за вас. Они показывают — на каком этапе процесса вы находитесь и что делать дальше.</p>
+    <p>{{page.intro}}</p>
+    <p>{{page.description}}</p>
     
     
     
@@ -288,7 +288,7 @@
     </ul>
     
     <div class="info-block">
-      <p>«Эта книга — первая из серии. Её задача — дать систему. Без ритуалов. Без „тайных знаний“. Только структура, логика, примеры из быта, бизнеса, продаж и отношений. Руны — это не только магия, но и инструмент анализа.»</p>
+      <p>{{page.quote}}</p>
     </div>
 
     <div id="seriesBooksPlaceholder" class="series-books-placeholder">
@@ -301,7 +301,7 @@
     </div>
   </div>
 </main>
-}
+
 
 <!-- ===== ФУТЕР ===== -->
 <footer>
