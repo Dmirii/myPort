@@ -1,6 +1,19 @@
 {
   "projects": [
     {
+      "id": 26,
+      "title": "🧠 AI Mentor Course",
+      "tech": "Python · Streamlit · GigaChat · RAG",
+      "image": "/img/ai_mentor.webp",
+      "desc": "ИИ-консультант по курсу на базе Retrieval-Augmented Generation с векторной базой знаний ChromaDB и интеграцией GigaChat.",
+      "links": [
+        { "label": "🌐 Демо", "url": "https://ai-mentor-course.streamlit.app/" },
+        { "label": "🐙 Код", "url": "https://github.com/Dmirii/ai-mentor-course", "class": "github" }
+      ],
+      "note": "Активная разработка · 2026",
+      "highlight": true
+    },
+    {
       "id": 1,
       "title": "🏠 Умный дом выходного дня",
       "tech": "IoT · Xiaomi/Aqara · ZigBee · Автоматизация",
@@ -322,5 +335,6 @@
       "note": "#1",
       "highlight": false
     }
+    
   ]
 }
