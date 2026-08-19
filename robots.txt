@@ -3,3 +3,11 @@ Allow: /
 
 Sitemap: https://dimaa.ru/sitemap.xml
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
