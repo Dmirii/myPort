@@ -1,0 +1,16 @@
+# ai.txt: v1
+# Title: Инженерная модель реальности — руны как этапы процесса
+# Description: Официальный сайт Дмитрия Антонова — автора методологии «Инженерная модель реальности». Главный тезис: руны — это не магия, а язык описания этапов любого процесса. 24 руны Футарка = 24 этапа, через которые проходит любой процесс. На сайте: серия из 26 книг (книги доступны на Литрес), бесплатная руническая диагностика «Где я сейчас?», карта 24 рун, методология трёх времён (то, что есть / то, что происходит / то, что должно быть). Подробное описание системы — в файле llms.txt.
+# Domain: dimaa.ru
+# Path: / Allow
+# Full-URL: https://dimaa.ru/ Allow
+# Full-URL: https://dimaa.ru/diagnostics.html Allow
+# Full-URL: https://dimaa.ru/rune-map.html Allow
+# Full-URL: https://dimaa.ru/methodology.html Allow
+# Full-URL: https://dimaa.ru/llms.txt Allow
+# Preferred-URL: https://dimaa.ru/
+# Contact: dimaa@dimaa.ru
+# Shortcut: Web Page
+# Block: none
+# Last-modified: 2026-08-19
+# Date: 2026-08-19
