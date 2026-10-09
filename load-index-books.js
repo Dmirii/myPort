@@ -1,8 +1,9 @@
 /**
  * Загрузка и рендеринг всех книг на главной странице
  * Использует /books.json (RU) или /books-en.json (EN, страницы в /en/)
- * Книга 0 — отдельный блок в самом начале
- * Статусы: available, in_progress, planned
+ * Книга 0 — отдельный презентационный блок с обложкой
+ * Вышедшие книги — развернуто с обложками
+ * Планируемые книги — компактно со статусом
  */
 
 async function loadIndexBooks() {
@@ -27,7 +28,9 @@ async function loadIndexBooks() {
         litres: 'Litres (RU)',
         notify: '📬 Notify me',
         details: 'Details →',
-        book0Label: 'Book 0',
+        book0Label: 'Book 0 · Introductory',
+        floatingText: '🧭 Diagnostics · 2 min',
+        floatingLink: '/en/diagnostics.html',
         footer: '🧠 <strong>The engineering approach:</strong> runes don\'t do the work for you — they show you the stage.',
         error: '⚠️ Failed to load the books. Please refresh the page.',
         dataUrl: '/books-en.json'
@@ -46,7 +49,9 @@ async function loadIndexBooks() {
         litres: 'Литрес',
         notify: '📬 Сообщить о выходе',
         details: 'Подробнее →',
-        book0Label: 'Книга 0',
+        book0Label: 'Книга 0 · Вводная',
+        floatingText: '🧭 Диагностика · 2 мин',
+        floatingLink: '/diagnostics.html',
         footer: '🧠 <strong>Инженерный подход:</strong> руны не делают за вас — они показывают этап.',
         error: '⚠️ Не удалось загрузить книги. Попробуйте обновить страницу.',
         dataUrl: '/books.json'
@@ -99,21 +104,27 @@ async function loadIndexBooks() {
             const litresButton = book0.litresLink ? 
                 `<a href="${book0.litresLink}" class="btn btn-small btn-litres" target="_blank">${T.readLitres}</a>` : 
                 '';
+            const coverImg = book0.cover || '/img/cover_book_0.jpg';
 
             html += `
-                <div style="margin: 1.5rem 0 2.5rem; background: #fcf9f5; border-radius: 28px; padding: 1.8rem 2rem; border-left: 6px solid #b87c4f; box-shadow: 0 2px 12px rgba(0,0,0,0.03);">
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.3rem;">
-                        <span style="font-size: 1.8rem;">🌀</span>
-                        <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; color: #b87c4f; font-weight: 600;">${T.book0Label}</span>
-                        <span style="font-size: 0.6rem; background: #eef4ed; color: #2c6e49; padding: 0.1rem 0.6rem; border-radius: 20px; font-weight: 600;">${statusText}</span>
+                <div class="book-zero-card">
+                    <div class="book-zero-cover">
+                        <img src="${coverImg}" alt="${book0.title}" loading="lazy">
                     </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e3a2f; margin: 0.2rem 0 0.1rem;">${book0.title}</h3>
-                    <div style="font-size: 0.9rem; color: #2c6e49; font-weight: 500; margin-bottom: 0.8rem;">${book0.subtitle || ''}</div>
-                    <div style="font-size: 0.92rem; color: #2d3e3b; line-height: 1.6; margin-bottom: 1rem;">
-                        <p>${book0.annotation || ''}</p>
-                    </div>
-                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem;">
-                        ${litresButton}
+                    <div class="book-zero-info">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.4rem; flex-wrap: wrap;">
+                            <span style="font-size: 1.4rem;">🌀</span>
+                            <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1.5px; color: #b87c4f; font-weight: 700;">${T.book0Label}</span>
+                            <span style="font-size: 0.75rem; background: #eef4ed; color: #2c6e49; padding: 0.15rem 0.65rem; border-radius: 20px; font-weight: 600;">${statusText}</span>
+                        </div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e3a2f; margin: 0.2rem 0 0.15rem;">${book0.title}</h3>
+                        <div style="font-size: 0.95rem; color: #2c6e49; font-weight: 500; margin-bottom: 0.8rem;">${book0.subtitle || ''}</div>
+                        <div style="font-size: 0.92rem; color: #2d3e3b; line-height: 1.6; margin-bottom: 1.2rem;">
+                            <p>${book0.annotation || ''}</p>
+                        </div>
+                        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                            ${litresButton}
+                        </div>
                     </div>
                 </div>
             `;
@@ -130,61 +141,88 @@ async function loadIndexBooks() {
             const borderColor = borderColors[i - 1] || '#1e3a2f';
 
             html += `
-                <h2 style="margin-top: 2rem; border-left-color: ${borderColor};">${block.title}</h2>
-                <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.9rem;">${block.desc}</p>
+                <h2 style="margin-top: 2.2rem; border-left-color: ${borderColor};">${block.title}</h2>
+                <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.92rem;">${block.desc}</p>
                 <div class="books-grid">
             `;
 
             block.books.forEach(book => {
-                const statusText = book.statusText || (book.status === 'available' ? T.statusAvailable : T.statusPlanned);
+                const isAvailable = book.status === 'available';
+                const statusText = book.statusText || (isAvailable ? T.statusAvailable : T.statusPlanned);
                 const litresButton = book.litresLink ? 
                     `<a href="${book.litresLink}" class="btn btn-small btn-litres" target="_blank">${T.litres}</a>` : 
                     '';
 
-                let statusClass = '';
-                if (book.status === 'planned' || book.status === 'in_progress') {
-                    statusClass = 'idea';
-                }
-
                 let detailButton = '';
                 if (book.url) {
-                    if (book.status === 'planned' && book.action === 'notify') {
-                        detailButton = `<a href="${book.url}" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">${T.notify}</a>`;
+                    if (!isAvailable) {
+                        detailButton = `<a href="${book.url}" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">${T.notify}</a>`;
                     } else {
-                        detailButton = `<a href="${book.url}" class="btn btn-small">${T.details}</a>`;
+                        detailButton = `<a href="${book.url}" class="btn btn-small btn-outline">${T.details}</a>`;
                     }
                 }
 
-                html += `
-                    <div class="book-card">
-                        <div class="book-number">${book.numberFull || book.number}</div>
-                        <div class="book-status ${statusClass}">${statusText}</div>
-                        <div class="book-title">${book.title}</div>
-                        <div class="book-subtitle">${book.subtitle || ''}</div>
-                        <div class="book-annotation">
-                            <p>${book.annotation || ''}</p>
-                        </div>
-                        <div class="book-meta">
-                            <span>${book.tag || '📖'}</span>
-                            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                ${detailButton}
-                                ${litresButton}
+                if (isAvailable) {
+                    // Вышедшие книги: развернуто, с обложкой и акцентом на покупку
+                    const coverHtml = book.cover ? 
+                        `<div class="book-cover-wrap"><img src="${book.cover}" alt="${book.title}" class="book-cover-img" loading="lazy"></div>` : '';
+
+                    html += `
+                        <div class="book-card book-available">
+                            ${coverHtml}
+                            <div class="book-number">${book.numberFull || book.number}</div>
+                            <div class="book-status">${statusText}</div>
+                            <div class="book-title">${book.title}</div>
+                            <div class="book-subtitle">${book.subtitle || ''}</div>
+                            <div class="book-annotation">
+                                <p>${book.annotation || ''}</p>
+                            </div>
+                            <div class="book-meta">
+                                <span>${book.tag || '📖'}</span>
+                                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                    ${detailButton}
+                                    ${litresButton}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                `;
+                    `;
+                } else {
+                    // Планируемые книги: компактный аккуратный вид
+                    html += `
+                        <div class="book-card book-planned">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                                <div class="book-number">${book.numberFull || book.number}</div>
+                                <div class="book-status idea">${statusText}</div>
+                            </div>
+                            <div class="book-title" style="font-size: 1.15rem;">${book.title}</div>
+                            <div class="book-subtitle">${book.subtitle || ''}</div>
+                            <div class="book-annotation book-annotation-compact">
+                                <p>${book.annotation || ''}</p>
+                            </div>
+                            <div class="book-meta">
+                                <span>${book.tag || '📝'}</span>
+                                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                    ${detailButton}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
             });
 
             html += `</div>`;
         }
 
         html += `
-            <p style="margin-top: 1.5rem; background: #ece5da30; padding: 0.6rem 1rem; border-radius: 2rem; font-size: 0.8rem; text-align: center;">
+            <p style="margin-top: 2rem; background: #ece5da30; padding: 0.8rem 1.2rem; border-radius: 2rem; font-size: 0.85rem; text-align: center; color: #5f6c66;">
                 ${T.footer}
             </p>
         `;
 
         container.innerHTML = html;
+
+        // Sticky CTA кнопка для быстрого перехода к диагностике
+        initFloatingCta(T.floatingText, T.floatingLink);
 
     } catch (error) {
         console.warn('Не удалось загрузить книги:', error);
@@ -194,6 +232,24 @@ async function loadIndexBooks() {
             </p>
         `;
     }
+}
+
+function initFloatingCta(text, link) {
+    if (document.getElementById('floatingCta')) return;
+    const btn = document.createElement('a');
+    btn.id = 'floatingCta';
+    btn.className = 'floating-cta';
+    btn.href = link;
+    btn.innerHTML = text;
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 450) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+    }, { passive: true });
 }
 
 if (document.readyState === 'loading') {

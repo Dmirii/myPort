@@ -91,7 +91,7 @@ function addBreadcrumbs() {
         sectionUrl = domain + (EN ? '/en/rune-map.html' : '/rune-map.html');
     } else if (path.includes('diagnostics')) {
         section = EN ? 'Diagnostics' : 'Диагностика';
-        sectionUrl = domain + '/diagnostics.html';
+        sectionUrl = domain + (EN ? '/en/diagnostics.html' : '/diagnostics.html');
     } else if (path.includes('port')) {
         section = EN ? 'Lab' : 'Лаборатория';
         sectionUrl = domain + (EN ? '/en/port.html' : '/port.html');

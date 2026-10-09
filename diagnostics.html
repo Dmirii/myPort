@@ -185,7 +185,7 @@
     .book-cta h4{ font-size:1.15rem; margin-bottom:.4rem; }
     .book-cta p{ font-size:.87rem; color:#d7e6dd; margin-bottom: .9rem; }
     .book-cta a.btn-litres{
-      display:inline-block; background:#ff5a5f; color:#fff; padding:.6rem 1.3rem; border-radius:40px;
+      display:inline-block; background:#b87c4f; color:#fff; padding:.6rem 1.3rem; border-radius:40px;
       text-decoration:none; font-weight:600; font-size:.87rem;
     }
     .book-cta a.btn-idea{
@@ -442,9 +442,19 @@
 
 <footer>
   <div class="container">
+    <div class="footer-nav" style="display: flex; justify-content: center; gap: 1.4rem; flex-wrap: wrap; margin-bottom: 1.2rem; font-size: 0.85rem;">
+      <a href="/#about" >Об авторе</a>
+      <a href="/#books" >Книги</a>
+      <a href="/methodology.html" >Методология</a>
+      <a href="/diagnostics.html" >Диагностика</a>
+      <a href="/rune-map.html" >Карта рун</a>
+      <a href="/port.html" >Лаборатория</a>
+      <a href="/#contacts" >Контакты</a>
+      <a href="/en/" >English (EN)</a>
+    </div>
     <p>© Дмитрий Антонов · Руны как этапы процесса</p>
-    <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Ты не можешь пропустить этап. Но ты можешь научиться его видеть. Диагностика — это первый шаг к осознанному движению.»</p>
-    <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
+    <p style="margin-top: 0.3rem; font-size: 0.78rem; color: #cbd5c3;">«Ты не можешь пропустить этап. Но ты можешь научиться его видеть. Диагностика — это первый шаг к осознанному движению.»</p>
+    <p style="margin-top: 0.5rem; font-size: 0.78rem;"><a href="/privacy.html" style="color: #2c6e49; text-decoration: none; border-bottom: 1px dotted #2c6e49;">Политика обработки данных</a></p>
   </div>
 </footer>
 
@@ -711,7 +721,7 @@
       <div class="br-desc">${esc(book.subtitle)}</div>`;
 
     if(book.status === 'available'){
-      html += `<a href="${book.link}" class="btn-litres" target="_blank" style="display:inline-block; background:#ff5a5f; color:#fff; padding:.6rem 1.3rem; border-radius:40px; text-decoration:none; font-weight:600; font-size:.87rem;">📘 Читать на Литрес</a>`;
+      html += `<a href="${book.link}" class="btn-litres" target="_blank" style="display:inline-block; background:#b87c4f; color:#fff; padding:.6rem 1.3rem; border-radius:40px; text-decoration:none; font-weight:600; font-size:.87rem;">📘 Читать на Литрес</a>`;
     } else {
       html += `<a href="${book.link}" class="btn-idea" style="display:inline-block; background:#c97e2a; color:#fff; padding:.6rem 1.3rem; border-radius:40px; text-decoration:none; font-weight:600; font-size:.87rem;">📬 Сообщить о выходе</a>`;
     }

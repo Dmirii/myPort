@@ -7,11 +7,13 @@
       "link": "/"
     },
     "items": [
-      { "label": "👤 Об авторе", "url": "/#about" },
-      { "label": "📚 Книги", "url": "/#books" },
-      { "label": "📬 Контакты", "url": "/#contacts" },
-      { "label": "📐 Методология", "url": "/methodology.html" },
-      { "label": "🧪 Лаборатория", "url": "/port.html" }
+      { "label": "Об авторе", "url": "/#about" },
+      { "label": "Книги", "url": "/#books" },
+      { "label": "Методология", "url": "/methodology.html" },
+      { "label": "Диагностика", "url": "/diagnostics.html" },
+      { "label": "Карта рун", "url": "/rune-map.html" },
+      { "label": "Лаборатория", "url": "/port.html" },
+      { "label": "Контакты", "url": "/#contacts" }
     ]
   }
 }
