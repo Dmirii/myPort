@@ -95,6 +95,25 @@ h1, h2, h3 {
 }
 
 /* ========================================
+   ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА (RU / EN)
+   ======================================== */
+.nav-links a.lang-switch {
+  border: 1px solid #cbd5c3;
+  border-radius: 20px;
+  padding: 0.15rem 0.7rem;
+  background: #eef4ed;
+  color: #1e3a2f;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.nav-links a.lang-switch:hover {
+  background: #1e3a2f;
+  border-color: #1e3a2f;
+  color: #fff;
+}
+
+/* ========================================
    ФИКС МЕНЮ (sticky для динамической загрузки)
    ======================================== */
 #menuPlaceholder {

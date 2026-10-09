@@ -6,8 +6,10 @@ async function loadProjects() {
     const container = document.getElementById('projectsGrid');
     if (!container) return;
 
+    const IS_EN = window.location.pathname.startsWith('/en/');
+
     try {
-        const response = await fetch('/projects.json');
+        const response = await fetch(IS_EN ? '/projects-en.json' : '/projects.json');
         if (!response.ok) throw new Error('Network error');
         
         const data = await response.json();
@@ -39,7 +41,7 @@ async function loadProjects() {
         console.warn('Не удалось загрузить проекты:', error);
         container.innerHTML = `
             <p style="text-align:center; color:#8a7f6d; padding:2rem;">
-                ⚠️ Не удалось загрузить проекты. Попробуйте обновить страницу.
+                ${IS_EN ? '⚠️ Failed to load projects. Please refresh the page.' : '⚠️ Не удалось загрузить проекты. Попробуйте обновить страницу.'}
             </p>
         `;
     }
