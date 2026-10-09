@@ -185,7 +185,7 @@
     .book-cta h4{ font-size:1.15rem; margin-bottom:.4rem; }
     .book-cta p{ font-size:.87rem; color:#d7e6dd; margin-bottom: .9rem; }
     .book-cta a.btn-litres{
-      display:inline-block; background:#ff5a5f; color:#fff; padding:.6rem 1.3rem; border-radius:40px;
+      display:inline-block; background:#b87c4f; color:#fff; padding:.6rem 1.3rem; border-radius:40px;
       text-decoration:none; font-weight:600; font-size:.87rem;
     }
     .book-cta a.btn-idea{
@@ -442,9 +442,19 @@
 
 <footer>
   <div class="container">
+    <div class="footer-nav" style="display: flex; justify-content: center; gap: 1.4rem; flex-wrap: wrap; margin-bottom: 1.2rem; font-size: 0.85rem;">
+      <a href="/en/#about" >About</a>
+      <a href="/en/#books" >Books</a>
+      <a href="/en/methodology.html" >Methodology</a>
+      <a href="/en/diagnostics.html" >Diagnostics</a>
+      <a href="/en/rune-map.html" >Rune Map</a>
+      <a href="/en/port.html" >Lab</a>
+      <a href="/en/#contacts" >Contacts</a>
+      <a href="/" >Русская версия (RU)</a>
+    </div>
     <p>© Dmitry Antonov · Runes as Process Stages</p>
-    <p style="margin-top: 0.3rem; font-size: 0.7rem;">"You cannot skip a stage. But you can learn to see it. The diagnostic is the first step towards conscious movement."</p>
-    <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Data processing policy (RU)</a></p>
+    <p style="margin-top: 0.3rem; font-size: 0.78rem; color: #cbd5c3;">"You cannot skip a stage. But you can learn to see it. The diagnostic is the first step towards conscious movement."</p>
+    <p style="margin-top: 0.5rem; font-size: 0.78rem;"><a href="/privacy.html" style="color: #2c6e49; text-decoration: none; border-bottom: 1px dotted #2c6e49;">Data processing policy (RU)</a></p>
   </div>
 </footer>
 
@@ -711,7 +721,7 @@
       <div class="br-desc">${esc(book.subtitle)}</div>`;
 
     if(book.status === 'available'){
-      html += `<a href="${book.link}" class="btn-litres" target="_blank" style="display:inline-block; background:#ff5a5f; color:#fff; padding:.6rem 1.3rem; border-radius:40px; text-decoration:none; font-weight:600; font-size:.87rem;">📘 Read on Litres (RU)</a>`;
+      html += `<a href="${book.link}" class="btn-litres" target="_blank" style="display:inline-block; background:#b87c4f; color:#fff; padding:.6rem 1.3rem; border-radius:40px; text-decoration:none; font-weight:600; font-size:.87rem;">📘 Read on Litres (RU)</a>`;
     } else {
       html += `<a href="${book.link}" class="btn-idea" style="display:inline-block; background:#c97e2a; color:#fff; padding:.6rem 1.3rem; border-radius:40px; text-decoration:none; font-weight:600; font-size:.87rem;">📬 Notify me</a>`;
     }
