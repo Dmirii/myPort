@@ -1,6 +1,6 @@
 /**
  * Загрузка и рендеринг всех книг на главной странице
- * Использует /books.json
+ * Использует /books.json (RU) или /books-en.json (EN, страницы в /en/)
  * Книга 0 — отдельный блок в самом начале
  * Статусы: available, in_progress, planned
  */
@@ -9,8 +9,51 @@ async function loadIndexBooks() {
     const container = document.getElementById('booksContainer');
     if (!container) return;
 
+    const IS_EN = window.location.pathname.startsWith('/en/');
+
+    // ===== ЛОКАЛИЗОВАННЫЕ СТРОКИ =====
+    const T = IS_EN ? {
+        blocks: {
+            1: { title: '🧭 Block 1. Inception', desc: 'Give the system, teach to see, make the choice, enter the dialogue' },
+            2: { title: '🚀 Block 2. Movement', desc: 'Take the system into the outer world: the push, manifestation, harmony, completion' },
+            3: { title: '🌿 Block 3. Transformation', desc: 'Living with the result and transformation: routine, crisis, pause, insight' },
+            4: { title: '🔄 Block 4. Rebirth', desc: 'Experience and a new cycle: chance, experience, protection, victory' },
+            5: { title: '⭐ Block 5. Completion', desc: 'Acceptance and completion: will, growth, synchronization, integration' },
+            6: { title: '🏛️ Block 6. Legacy', desc: 'Flow and transformation: trust, potential, legacy, transformation' }
+        },
+        statusAvailable: '✅ Available',
+        statusPlanned: '📝 Planned',
+        readLitres: '📘 Read on Litres (in Russian)',
+        litres: 'Litres (RU)',
+        notify: '📬 Notify me',
+        details: 'Details →',
+        book0Label: 'Book 0',
+        footer: '🧠 <strong>The engineering approach:</strong> runes don\'t do the work for you — they show you the stage.',
+        error: '⚠️ Failed to load the books. Please refresh the page.',
+        dataUrl: '/books-en.json'
+    } : {
+        blocks: {
+            1: { title: '🧭 Блок 1. Зарождение', desc: 'Дать систему, научить видеть, сделать выбор, войти в диалог' },
+            2: { title: '🚀 Блок 2. Движение', desc: 'Вынести систему во внешний мир: толчок, проявление, гармония, завершение' },
+            3: { title: '🌿 Блок 3. Трансформация', desc: 'Жизнь с результатом и трансформация: рутина, кризис, пауза, озарение' },
+            4: { title: '🔄 Блок 4. Перерождение', desc: 'Опыт и новый цикл: шанс, опыт, защита, победа' },
+            5: { title: '⭐ Блок 5. Завершение', desc: 'Принятие и завершение: воля, рост, синхронизация, интеграция' },
+            6: { title: '🏛️ Блок 6. Наследие', desc: 'Поток и трансформация: доверие, потенциал, наследие, трансформация' }
+        },
+        statusAvailable: '✅ Доступна',
+        statusPlanned: '📝 Планируется',
+        readLitres: '📘 Читать на Литрес',
+        litres: 'Литрес',
+        notify: '📬 Сообщить о выходе',
+        details: 'Подробнее →',
+        book0Label: 'Книга 0',
+        footer: '🧠 <strong>Инженерный подход:</strong> руны не делают за вас — они показывают этап.',
+        error: '⚠️ Не удалось загрузить книги. Попробуйте обновить страницу.',
+        dataUrl: '/books.json'
+    };
+
     try {
-        const response = await fetch('/books.json');
+        const response = await fetch(T.dataUrl);
         if (!response.ok) throw new Error('Network error');
         
         const data = await response.json();
@@ -23,14 +66,10 @@ async function loadIndexBooks() {
         const otherBooks = books.filter(b => b.id !== 0);
 
         // Блоки для книг 1–24
-        const blocks = {
-            1: { title: '🧭 Блок 1. Зарождение', desc: 'Дать систему, научить видеть, сделать выбор, войти в диалог', books: [] },
-            2: { title: '🚀 Блок 2. Движение', desc: 'Вынести систему во внешний мир: толчок, проявление, гармония, завершение', books: [] },
-            3: { title: '🌿 Блок 3. Трансформация', desc: 'Жизнь с результатом и трансформация: рутина, кризис, пауза, озарение', books: [] },
-            4: { title: '🔄 Блок 4. Перерождение', desc: 'Опыт и новый цикл: шанс, опыт, защита, победа', books: [] },
-            5: { title: '⭐ Блок 5. Завершение', desc: 'Принятие и завершение: воля, рост, синхронизация, интеграция', books: [] },
-            6: { title: '🏛️ Блок 6. Наследие', desc: 'Поток и трансформация: доверие, потенциал, наследие, трансформация', books: [] }
-        };
+        const blocks = {};
+        for (let i = 1; i <= 6; i++) {
+            blocks[i] = { title: T.blocks[i].title, desc: T.blocks[i].desc, books: [] };
+        }
 
         otherBooks.forEach(book => {
             let blockId = 0;
@@ -56,16 +95,16 @@ async function loadIndexBooks() {
         // БЛОК КНИГА 0 (в самом начале)
         // ============================================
         if (book0) {
-            const statusText = book0.statusText || '✅ Доступна';
+            const statusText = book0.statusText || T.statusAvailable;
             const litresButton = book0.litresLink ? 
-                `<a href="${book0.litresLink}" class="btn btn-small btn-litres" target="_blank">📘 Читать на Литрес</a>` : 
+                `<a href="${book0.litresLink}" class="btn btn-small btn-litres" target="_blank">${T.readLitres}</a>` : 
                 '';
 
             html += `
                 <div style="margin: 1.5rem 0 2.5rem; background: #fcf9f5; border-radius: 28px; padding: 1.8rem 2rem; border-left: 6px solid #b87c4f; box-shadow: 0 2px 12px rgba(0,0,0,0.03);">
                     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.3rem;">
                         <span style="font-size: 1.8rem;">🌀</span>
-                        <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; color: #b87c4f; font-weight: 600;">Книга 0</span>
+                        <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; color: #b87c4f; font-weight: 600;">${T.book0Label}</span>
                         <span style="font-size: 0.6rem; background: #eef4ed; color: #2c6e49; padding: 0.1rem 0.6rem; border-radius: 20px; font-weight: 600;">${statusText}</span>
                     </div>
                     <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e3a2f; margin: 0.2rem 0 0.1rem;">${book0.title}</h3>
@@ -97,9 +136,9 @@ async function loadIndexBooks() {
             `;
 
             block.books.forEach(book => {
-                const statusText = book.statusText || (book.status === 'available' ? '✅ Доступна' : '📝 Планируется');
+                const statusText = book.statusText || (book.status === 'available' ? T.statusAvailable : T.statusPlanned);
                 const litresButton = book.litresLink ? 
-                    `<a href="${book.litresLink}" class="btn btn-small btn-litres" target="_blank">Литрес</a>` : 
+                    `<a href="${book.litresLink}" class="btn btn-small btn-litres" target="_blank">${T.litres}</a>` : 
                     '';
 
                 let statusClass = '';
@@ -108,10 +147,12 @@ async function loadIndexBooks() {
                 }
 
                 let detailButton = '';
-                if (book.status === 'planned' && book.action === 'notify') {
-                    detailButton = `<a href="${book.url}" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">📬 Сообщить о выходе</a>`;
-                } else {
-                    detailButton = `<a href="${book.url}" class="btn btn-small">Подробнее →</a>`;
+                if (book.url) {
+                    if (book.status === 'planned' && book.action === 'notify') {
+                        detailButton = `<a href="${book.url}" class="btn btn-small" style="background: #c97e2a; border-color: #c97e2a;">${T.notify}</a>`;
+                    } else {
+                        detailButton = `<a href="${book.url}" class="btn btn-small">${T.details}</a>`;
+                    }
                 }
 
                 html += `
@@ -139,7 +180,7 @@ async function loadIndexBooks() {
 
         html += `
             <p style="margin-top: 1.5rem; background: #ece5da30; padding: 0.6rem 1rem; border-radius: 2rem; font-size: 0.8rem; text-align: center;">
-                🧠 <strong>Инженерный подход:</strong> руны не делают за вас — они показывают этап.
+                ${T.footer}
             </p>
         `;
 
@@ -149,7 +190,7 @@ async function loadIndexBooks() {
         console.warn('Не удалось загрузить книги:', error);
         container.innerHTML = `
             <p style="text-align:center; color:#8a7f6d; padding:2rem;">
-                ⚠️ Не удалось загрузить книги. Попробуйте обновить страницу.
+                ${T.error}
             </p>
         `;
     }

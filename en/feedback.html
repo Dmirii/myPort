@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -16,11 +16,11 @@
 <!-- /Yandex.Metrika counter -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Подписаться на новости — Дмитрий Антонов</title>
-  <meta name="description" content="Подпишитесь на уведомления о выходе новых книг серии «Руны как этапы процесса». Без спама. Только важные новости.">
-  <meta name="author" content="Дмитрий Антонов">
+  <title>Subscribe to Updates — Dmitry Antonov</title>
+  <meta name="description" content="Subscribe to be notified when new books of the Runes as Process Stages series are released. No spam. Only the important news.">
+  <meta name="author" content="Dmitry Antonov">
   <meta name="robots" content="noindex, follow">
-  <link rel="canonical" href="https://dimaa.ru/feedback.html">
+  <link rel="canonical" href="https://dimaa.ru/en/feedback.html">
   <link rel="alternate" hreflang="ru" href="https://dimaa.ru/feedback.html">
   <link rel="alternate" hreflang="en" href="https://dimaa.ru/en/feedback.html">
   <link rel="alternate" hreflang="x-default" href="https://dimaa.ru/feedback.html">
@@ -192,39 +192,39 @@
 
 <main class="container">
   <div class="form-section">
-    <h1>📬 Узнать о выходе книг</h1>
+    <h1>📬 Be the first to know about new books</h1>
     <div class="description">
-      Подпишитесь на уведомления о выходе всех новых книг серии «Руны как этапы процесса».<br>
-      Без спама. Только важные новости.
+      Subscribe to notifications about every new book in the "Runes as Process Stages" series.<br>
+      No spam. Only the important news.
     </div>
 
     <form id="subscribeForm" action="https://formspree.io/f/meewldoe" method="POST">
       <div class="form-group">
-        <label for="emailInput">📧 Ваш email *</label>
-        <input type="email" id="emailInput" name="email" required placeholder="example@mail.ru">
+        <label for="emailInput">📧 Your email *</label>
+        <input type="email" id="emailInput" name="email" required placeholder="example@mail.com">
       </div>
 
       <div class="checkbox-group">
         <input type="checkbox" id="consent" name="consent" required>
         <label for="consent">
-          Я соглашаюсь на обработку моих персональных данных в соответствии с 
-          <a href="/privacy.html" target="_blank">Политикой конфиденциальности</a>
+          I consent to the processing of my personal data in accordance with the
+          <a href="/privacy.html" target="_blank">Privacy Policy (RU)</a>
         </label>
       </div>
 
-      <button type="submit" class="btn-submit" id="submitBtn" disabled>📬 Подписаться</button>
+      <button type="submit" class="btn-submit" id="submitBtn" disabled>📬 Subscribe</button>
       <div id="formMessage" class="message"></div>
     </form>
 
-    <a href="index.html#books" class="back-link">← Назад к книгам</a>
+    <a href="/en/#books" class="back-link">← Back to the books</a>
   </div>
 </main>
 
 <footer>
   <div class="container">
-    <p>© Дмитрий Антонов · Руны как этапы процесса</p>
-    <p style="margin-top: 0.3rem; font-size: 0.7rem;">«Каждое уведомление — как руна. Ты не знаешь, какая выпадет, но знаешь, что она вовремя.»</p>
-    <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Политика обработки данных</a></p>
+    <p>© Dmitry Antonov · Runes as Process Stages</p>
+    <p style="margin-top: 0.3rem; font-size: 0.7rem;">"Every notification is like a rune. You don't know which one will come up, but you know it comes on time."</p>
+    <p style="margin-top: 0.5rem; font-size: 0.7rem;"><a href="/privacy.html" style="color: #5f6c66; text-decoration: none; border-bottom: 1px dotted #5f6c66;">Data processing policy (RU)</a></p>
   </div>
 </footer>
 
@@ -247,7 +247,7 @@
     e.preventDefault();
     
     if (!consentCheckbox.checked) {
-      msgDiv.textContent = '❌ Пожалуйста, подтвердите согласие на обработку данных.';
+      msgDiv.textContent = '❌ Please confirm your consent to data processing.';
       msgDiv.className = 'message show error';
       setTimeout(() => {
         msgDiv.className = 'message';
@@ -255,7 +255,7 @@
       return;
     }
 
-    msgDiv.textContent = '⏳ Отправка...';
+    msgDiv.textContent = '⏳ Sending...';
     msgDiv.className = 'message show';
     submitBtn.disabled = true;
     
@@ -269,16 +269,16 @@
       });
       
       if (response.ok) {
-        msgDiv.textContent = '✅ Спасибо! Я сообщу, когда выйдут новые книги.';
+        msgDiv.textContent = '✅ Thank you! I will let you know when new books are released.';
         msgDiv.className = 'message show success';
         form.reset();
         consentCheckbox.checked = false;
         toggleSubmitButton();
       } else {
-        throw new Error('Ошибка отправки');
+        throw new Error('Send error');
       }
     } catch (error) {
-      msgDiv.textContent = '❌ Что-то пошло не так. Попробуйте позже или напишите мне: dimaa@dimaa.ru';
+      msgDiv.textContent = '❌ Something went wrong. Try again later or email me: dimaa@dimaa.ru';
       msgDiv.className = 'message show error';
       submitBtn.disabled = false;
     }

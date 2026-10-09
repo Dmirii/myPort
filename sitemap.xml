@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
     
     <!-- ===== ГЛАВНАЯ ===== -->
     <url>
         <loc>https://dimaa.ru/</loc>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://dimaa.ru/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dimaa.ru/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://dimaa.ru/"/>
         <lastmod>2026-07-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -12,24 +16,36 @@
     <!-- ===== ОСНОВНЫЕ СТРАНИЦЫ САЙТА ===== -->
     <url>
         <loc>https://dimaa.ru/methodology.html</loc>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://dimaa.ru/methodology.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dimaa.ru/en/methodology.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://dimaa.ru/methodology.html"/>
         <lastmod>2026-07-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://dimaa.ru/rune-map.html</loc>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://dimaa.ru/rune-map.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dimaa.ru/en/rune-map.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://dimaa.ru/rune-map.html"/>
         <lastmod>2026-07-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://dimaa.ru/diagnostics.html</loc>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://dimaa.ru/diagnostics.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dimaa.ru/en/diagnostics.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://dimaa.ru/diagnostics.html"/>
         <lastmod>2026-07-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://dimaa.ru/port.html</loc>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://dimaa.ru/port.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dimaa.ru/en/port.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://dimaa.ru/port.html"/>
         <lastmod>2026-07-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -214,4 +230,62 @@
         <changefreq>never</changefreq>
         <priority>0.1</priority>
     </url>
+
+    <!-- ===== ENGLISH VERSION ===== -->
+    <url>
+        <loc>https://dimaa.ru/en/</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://dimaa.ru/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dimaa.ru/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://dimaa.ru/"/>
+    </url>
+    <url>
+        <loc>https://dimaa.ru/en/methodology.html</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://dimaa.ru/methodology.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dimaa.ru/en/methodology.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://dimaa.ru/methodology.html"/>
+    </url>
+    <url>
+        <loc>https://dimaa.ru/en/rune-map.html</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://dimaa.ru/rune-map.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dimaa.ru/en/rune-map.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://dimaa.ru/rune-map.html"/>
+    </url>
+    <url>
+        <loc>https://dimaa.ru/en/port.html</loc>
+        <lastmod>2026-10-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://dimaa.ru/port.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dimaa.ru/en/port.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://dimaa.ru/port.html"/>
+    </url>
+
+    <url>
+        <loc>https://dimaa.ru/en/diagnostics.html</loc>
+        <lastmod>2026-10-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://dimaa.ru/diagnostics.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dimaa.ru/en/diagnostics.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://dimaa.ru/diagnostics.html"/>
+    </url>
+    <url>
+        <loc>https://dimaa.ru/en/feedback.html</loc>
+        <lastmod>2026-10-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://dimaa.ru/feedback.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dimaa.ru/en/feedback.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://dimaa.ru/feedback.html"/>
+    </url>
+
 </urlset>
