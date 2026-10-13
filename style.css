@@ -1297,3 +1297,16 @@ h2 {
 .series-table .btn-action.soon {
     --bg: #8a7f6d !important;
 }
+
+/* Пояснение об обращении на «ты» (главная, методология) */
+.tone-note {
+  margin: 0.9rem 0 1.1rem;
+  padding: 0.7rem 1rem;
+  border-left: 3px solid #b87c4f;
+  background: #f6f3ee;
+  border-radius: 0 10px 10px 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #4a5a52;
+}
+.tone-note strong { color: #1e3a2f; }
