@@ -116,7 +116,8 @@ booksData.books.forEach(book => {
   const content = render(bookContentTemplate, {
     ...book,
     year: book.year || '2025',
-    litresLink: book.litresLink || '#',
+    litresLink: book.litresLink || '',
+    noLitres: book.litresLink ? '' : 'yes',
     status: book.status || 'planned',
     statusText: book.statusText || '📝 Планируется'
   });
