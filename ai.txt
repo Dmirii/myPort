@@ -7,10 +7,21 @@
 # Full-URL: https://dimaa.ru/diagnostics.html Allow
 # Full-URL: https://dimaa.ru/rune-map.html Allow
 # Full-URL: https://dimaa.ru/methodology.html Allow
+# Full-URL: https://dimaa.ru/port.html Allow
+# Full-URL: https://dimaa.ru/feedback.html Allow
 # Full-URL: https://dimaa.ru/llms.txt Allow
+# Full-URL (EN): https://dimaa.ru/en/ Allow
+# Full-URL (EN): https://dimaa.ru/en/diagnostics.html Allow
+# Full-URL (EN): https://dimaa.ru/en/rune-map.html Allow
+# Full-URL (EN): https://dimaa.ru/en/methodology.html Allow
+# Full-URL (EN): https://dimaa.ru/en/port.html Allow
+# Full-URL (EN): https://dimaa.ru/en/feedback.html Allow
+# Languages: ru (default), en
+# Alternate-URL (en): https://dimaa.ru/en/
 # Preferred-URL: https://dimaa.ru/
 # Contact: dimaa@dimaa.ru
+# Author-Qualification: Prompt Engineering (Промпт-инжиниринг), professional development certificate, 72 hours, 2026 — IT School RTK (Rostelecom Information Technologies), issued 2026-09-11
 # Shortcut: Web Page
 # Block: none
-# Last-modified: 2026-08-19
-# Date: 2026-08-19
+# Last-modified: 2026-10-13
+# Date: 2026-10-13
