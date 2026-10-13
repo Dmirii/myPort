@@ -1,7 +1,7 @@
 # ИНЖЕНЕРНАЯ МОДЕЛЬ РЕАЛЬНОСТИ
 # Официальный сайт Дмитрия Антонова
 # URL: https://dimaa.ru/
-# Обновлено: 2026-08-19
+# Обновлено: 2026-10-13
 
 ---
 
@@ -25,17 +25,30 @@
 [Методология](/methodology.html): полная карта серии и навигатор по системе
 [Лаборатория](/port.html): инженерный бэкграунд автора
 [Книги на Литрес](https://www.litres.ru/73990393/): приобрести книги серии
+[Подписка на новости](/feedback.html): подписка на новости и анонсы книг
 [Политика конфиденциальности](/privacy.html): обработка персональных данных
+
+### English mirrors (hreflang="en")
+
+[Home (EN)](/en/): introduction to the author and the book series
+[Rune diagnostics (EN)](/en/diagnostics.html): free "Where am I now?" test — 2 minutes
+[Rune map (EN)](/en/rune-map.html): all 24 Futhark runes as process stages
+[Methodology (EN)](/en/methodology.html): full series map and system navigator
+[Laboratory (EN)](/en/port.html): the author's engineering background
+[Subscribe (EN)](/en/feedback.html): news and book announcements
+
+Каждая русская страница имеет английское зеркало с тем же путём под префиксом `/en/` (hreflang ru ↔ en, x-default — русская версия). Machine-readable data: [books-en.json](/books-en.json), [runes-en.json](/runes-en.json), [projects-en.json](/projects-en.json).
 
 ---
 
 ## АВТОР
 
-**Дмитрий Антонов**
+**Дмитрий Антонов** (Dmitry Antonov)
 - Инженер-программист по образованию
 - 17+ лет в управлении продажами
 - Практикующий рунолог
 - Автор серии «Инженерная модель реальности»
+- Квалификация 2026: «Промпт-инжиниринг» (Prompt Engineering) — повышение квалификации, 72 часа, ИТ Школа РТК («Ростелеком Информационные Технологии»), удостоверение от 2026-09-11
 - Контакты: dimaa@dimaa.ru | +7 (911) 733-55-15 | vk.com/dimaa_ru
 
 ---
@@ -58,6 +71,13 @@
 | Карта рун | /rune-map.html | 24 руны Футарка с описанием |
 | Диагностика | /diagnostics.html | Бесплатный тест для определения состояния |
 | Лаборатория | /port.html | Инженерный бэкграунд автора |
+| Подписка | /feedback.html | Подписка на новости и анонсы книг |
+| Home (EN) | /en/ | English mirror of the home page |
+| Diagnostics (EN) | /en/diagnostics.html | English mirror of the diagnostics test |
+| Rune map (EN) | /en/rune-map.html | English mirror of the rune map |
+| Methodology (EN) | /en/methodology.html | English mirror of the methodology |
+| Laboratory (EN) | /en/port.html | English mirror of the laboratory page |
+| Subscribe (EN) | /en/feedback.html | English mirror of the subscription page |
 
 ---
 
@@ -285,5 +305,5 @@ https://dimaa.ru/methodology.html
 
 ---
 
-*Создано для LLM и нейросетей. Актуально на 2026-08-19.*
+*Создано для LLM и нейросетей. Актуально на 2026-10-13.*
 *Официальный сайт: https://dimaa.ru/*
