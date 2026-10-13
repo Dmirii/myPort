@@ -52,8 +52,8 @@ async function loadIndexBooks() {
         book0Label: 'Книга 0 · Вводная',
         floatingText: '🧭 Диагностика · 2 мин',
         floatingLink: '/diagnostics.html',
-        footer: '🧠 <strong>Инженерный подход:</strong> руны не делают за вас — они показывают этап.',
-        error: '⚠️ Не удалось загрузить книги. Попробуйте обновить страницу.',
+        footer: '🧠 <strong>Инженерный подход:</strong> руны не делают за тебя — они показывают этап.',
+        error: '⚠️ Не удалось загрузить книги. Попробуй обновить страницу.',
         dataUrl: '/books.json'
     };
 

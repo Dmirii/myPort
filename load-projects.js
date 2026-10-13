@@ -41,7 +41,7 @@ async function loadProjects() {
         console.warn('Не удалось загрузить проекты:', error);
         container.innerHTML = `
             <p style="text-align:center; color:#8a7f6d; padding:2rem;">
-                ${IS_EN ? '⚠️ Failed to load projects. Please refresh the page.' : '⚠️ Не удалось загрузить проекты. Попробуйте обновить страницу.'}
+                ${IS_EN ? '⚠️ Failed to load projects. Please refresh the page.' : '⚠️ Не удалось загрузить проекты. Попробуй обновить страницу.'}
             </p>
         `;
     }

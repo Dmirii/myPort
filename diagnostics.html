@@ -17,7 +17,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Где я сейчас? Руническая диагностика за 2 минуты | Дмитрий Антонов</title>
-  <meta name="description" content="Бесплатная руническая диагностика: узнайте, на каком из 24 этапов процесса вы находитесь прямо сейчас, почему застряли и что делать дальше. По методике книги «Психология рун».">
+  <meta name="description" content="Бесплатная руническая диагностика: узнай, на каком из 24 этапов процесса ты находишься прямо сейчас, почему застряли и что делать дальше. По методике книги «Психология рун».">
   <meta name="author" content="Дмитрий Антонов">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dimaa.ru/diagnostics.html">
@@ -25,7 +25,7 @@
   <link rel="alternate" hreflang="en" href="https://dimaa.ru/en/diagnostics.html">
   <link rel="alternate" hreflang="x-default" href="https://dimaa.ru/diagnostics.html">
   <meta property="og:title" content="Где я сейчас? Руническая диагностика за 2 минуты">
-  <meta property="og:description" content="Узнайте, на каком из 24 этапов процесса вы находитесь, почему застряли и что делать дальше.">
+  <meta property="og:description" content="Узнай, на каком из 24 этапов процесса ты находишься, почему застряли и что делать дальше.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dimaa.ru/diagnostics.html">
   <meta property="og:site_name" content="Инженерная модель реальности">
@@ -345,7 +345,7 @@
         "name": "Что такое руническая диагностика?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Руническая диагностика — это бесплатный тест по методике «Психология рун», который помогает определить, на каком из 24 этапов процесса вы находитесь прямо сейчас."
+          "text": "Руническая диагностика — это бесплатный тест по методике «Психология рун», который помогает определить, на каком из 24 этапов процесса ты находишься прямо сейчас."
         }
       },
       {
@@ -353,7 +353,7 @@
         "name": "Сколько времени занимает диагностика?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Диагностика занимает около 2 минут. Вы отвечаете на 3 вопроса, и система определяет ваш текущий этап по рунам Футарка."
+          "text": "Диагностика занимает около 2 минут. Ты отвечаешь на 3 вопроса, и система определяет твой текущий этап по рунам Футарка."
         }
       },
       {
@@ -361,7 +361,7 @@
         "name": "Что делать после диагностики?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "После диагностики вы получите результат с описанием вашего этапа, типичной ошибкой и конкретными шагами, что делать дальше."
+          "text": "После диагностики ты получишь результат с описанием твоего этапа, типичной ошибкой и конкретными шагами, что делать дальше."
         }
       }
     ]
@@ -377,7 +377,7 @@
   <div class="container">
     <div class="kicker">🧭 Бесплатная руническая диагностика · 2 минуты</div>
     <h1>Где я сейчас — и что делать дальше?</h1>
-    <p>Не гадание. Наблюдение. Три вопроса из книги «Психология рун» помогут определить ваш этап, причину застревания и следующий шаг.</p>
+    <p>Не гадание. Наблюдение. Три вопроса из книги «Психология рун» помогут определить твой этап, причину застревания и следующий шаг.</p>
     <div class="nav-formula">
       <span>📍 Где я</span><span class="arrow">→</span><span>❓ Почему застрял</span><span class="arrow">→</span><span>⚡ Что делать</span>
     </div>
@@ -385,7 +385,7 @@
       <div class="entry-card" data-mode="quiz">
         <span class="ec-emoji">🧭</span>
         <h3>Пройти диагностику</h3>
-        <p>6 коротких шагов. Определим ваш этап точно — по методике книги «Психология рун».</p>
+        <p>6 коротких шагов. Определим твой этап точно — по методике книги «Психология рун».</p>
       </div>
       <div class="entry-card" data-mode="deadlock">
         <span class="ec-emoji">🚧</span>
@@ -553,7 +553,7 @@
       renderGroupStep();
     } catch (error) {
       console.warn('Ошибка при загрузке данных:', error);
-      app.innerHTML = '<p style="text-align:center; color:#8a7f6d; padding:2rem;">⚠️ Не удалось загрузить данные. Попробуйте обновить страницу.</p>';
+      app.innerHTML = '<p style="text-align:center; color:#8a7f6d; padding:2rem;">⚠️ Не удалось загрузить данные. Попробуй обновить страницу.</p>';
     }
   }
 
@@ -577,8 +577,8 @@
   function renderGroupStep(){
     let html = `<button class="back-link" onclick="location.reload()">← Начать заново</button>`;
     html += progressBar(1,3);
-    html += `<div class="step-title">Что из этого сейчас ближе всего к вам?</div>`;
-    html += `<div class="step-sub">Выберите сценарий, который сегодня звучит как ваша жизнь.</div>`;
+    html += `<div class="step-title">Что из этого сейчас ближе всего к тебе?</div>`;
+    html += `<div class="step-sub">Выбери сценарий, который сегодня звучит как твоя жизнь.</div>`;
     html += `<div class="choice-grid g2">`;
     GROUPS.forEach(g=>{
       html += `<div class="choice-card" data-group="${g.id}">
@@ -606,7 +606,7 @@
   function renderStateStep(group){
     let html = `<button class="back-link" data-act="back-group">← Назад</button>`;
     html += progressBar(2,3);
-    html += `<div class="step-title">Какая фраза сейчас больше всего про вас?</div>`;
+    html += `<div class="step-title">Какая фраза сейчас больше всего про тебя?</div>`;
     html += `<div class="step-sub">${esc(group.title)} · ${esc(group.range)}</div>`;
     html += `<div class="choice-grid">`;
     group.states.forEach(n=>{
@@ -637,14 +637,14 @@
   function renderQuestionsStep(state, group){
     answers = {};
     const qs = [
-      `Вы чувствуете, что это состояние длится уже несколько дней?`,
-      `Вы знаете, что нужно делать, но не делаете?`,
-      `Вам кажется, что этот этап затянулся?`
+      `Ты чувствуешь, что это состояние длится уже несколько дней?`,
+      `Ты знаешь, что нужно делать, но не делаешь?`,
+      `Тебе кажется, что этот этап затянулся?`
     ];
     let html = `<button class="back-link" data-act="back-state">← Назад</button>`;
     html += progressBar(3,3);
     html += `<div class="step-title">Проверим точнее: ${esc(state.symbol)} ${esc(state.name)}</div>`;
-    html += `<div class="step-sub">Ответьте честно на три вопроса из книги «Психология рун».</div>`;
+    html += `<div class="step-sub">Ответь честно на три вопроса из книги «Психология рун».</div>`;
     qs.forEach((q,i)=>{
       html += `<div class="qn-card" data-q="${i}">
         <div class="qn-text">${i+1}. ${esc(q)}</div>
@@ -690,7 +690,7 @@
       const prevN = state.num - 1 >= 1 ? state.num - 1 : null;
       const nextN = state.num + 1 <= 24 ? state.num + 1 : null;
       html += `<div class="confidence-note">
-        <strong>Похоже, это не совсем ваш этап.</strong> Из трёх вопросов подтвердились только ${confidence}. По методике навигации это значит — вы, возможно, на соседнем этапе. Можно посмотреть его, либо всё равно открыть этот результат — иногда рано ещё видеть себя чётко, и это тоже нормально.
+        <strong>Похоже, это не совсем твой этап.</strong> Из трёх вопросов подтвердились только ${confidence}. По методике навигации это значит — ты, возможно, на соседнем этапе. Можно посмотреть его, либо всё равно открыть этот результат — иногда рано ещё видеть себя чётко, и это тоже нормально.
         <div class="cn-links">
           ${prevN!==null ? `<button data-jump="${prevN}">← ${byNum(prevN).symbol} ${esc(byNum(prevN).name)}</button>` : ''}
           ${nextN!==null ? `<button data-jump="${nextN}">${byNum(nextN).symbol} ${esc(byNum(nextN).name)} →</button>` : ''}
@@ -754,7 +754,7 @@
       <a class="ghost-btn" href="rune-map.html">🗺️ Открыть карту всех 24 рун</a>
     </div>`;
 
-    html += `<div class="diary-hint">💡 Хотите фиксировать такие диагностики каждый день? В книге «Психология рун» есть шаблон Дневника рунической навигации.</div>`;
+    html += `<div class="diary-hint">💡 Хочешь фиксировать такие диагностики каждый день? В книге «Психология рун» есть шаблон Дневника рунической навигации.</div>`;
 
     app.innerHTML = html;
 
@@ -775,8 +775,8 @@
   // ---------- DEADLOCK PATH ----------
   function renderDeadlockList(){
     let html = `<button class="back-link" onclick="location.reload()">← Начать заново</button>`;
-    html += `<div class="step-title">В каком тупике вы себя узнаёте?</div>`;
-    html += `<div class="step-sub">Это шесть самых частых застреваний из книги «Психология рун». Выберите то, что похоже на вас.</div>`;
+    html += `<div class="step-title">В каком тупике ты себя узнаёшь?</div>`;
+    html += `<div class="step-sub">Это шесть самых частых застреваний из книги «Психология рун». Выбери то, что похоже на тебя.</div>`;
     html += `<div class="choice-grid">`;
     DEADLOCKS.forEach(d=>{
       html += `<div class="choice-card" data-dl="${d.num}">
@@ -847,7 +847,7 @@
       e.preventDefault();
       const consent = form.querySelector('input[name="consent"]');
       if(consent && !consent.checked){
-        msg.textContent = '❌ Подтвердите согласие на обработку данных.';
+        msg.textContent = '❌ Подтверди согласие на обработку данных.';
         msg.className = 'ec-msg show err';
         return;
       }
@@ -858,14 +858,14 @@
       try{
         const response = await fetch(form.action, { method:'POST', body: formData, headers:{'Accept':'application/json'} });
         if(response.ok){
-          msg.textContent = '✅ Спасибо! Разбор придёт вам на почту.';
+          msg.textContent = '✅ Спасибо! Разбор придёт тебе на почту.';
           msg.className = 'ec-msg show ok';
           form.reset();
         } else {
           throw new Error('fail');
         }
       } catch(err){
-        msg.textContent = '❌ Что-то пошло не так. Попробуйте позже или напишите: dimaa@dimaa.ru';
+        msg.textContent = '❌ Что-то пошло не так. Попробуй позже или напиши: dimaa@dimaa.ru';
         msg.className = 'ec-msg show err';
         btn.disabled = false;
       }
