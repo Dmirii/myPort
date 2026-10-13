@@ -130,7 +130,7 @@ booksData.books.forEach(book => {
     seo: book.seo || {
       title: `${book.title} | Дмитрий Антонов`,
       description: book.annotation?.slice(0, 160) || '',
-      ogImage: `https://dimaa.ru${book.cover || '/img/logo.jpeg'}`
+      ogImage: `https://dimaa.ru${book.cover || '/img/og-image.jpg'}`
     },
     footerQuote: book.footerQuote || '«Мир устроен системно. Руны — это способ увидеть и настроить его процессы»'
   });
