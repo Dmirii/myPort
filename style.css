@@ -587,8 +587,18 @@ h1, h2, h3 {
   color: #c97e2a;
 }
 
+.series-book-item .sb-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
 .series-book-item .sb-buy {
   display: inline-block;
+  text-decoration: none;
   margin-top: 0.3rem;
   background: #b87c4f;
   color: white;

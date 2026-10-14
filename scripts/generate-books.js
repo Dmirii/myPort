@@ -106,8 +106,6 @@ function render(template, data) {
 console.log('📚 Генерируем страницы книг...\n');
 
 booksData.books.forEach(book => {
-  if (book.id === 0) return;
-  
   const filename = filenameMap[book.id] || `book${book.id}.html`;
   
   console.log(`  📖 ${book.title} → ${filename}`);
@@ -116,7 +114,8 @@ booksData.books.forEach(book => {
   const content = render(bookContentTemplate, {
     ...book,
     year: book.year || '2025',
-    litresLink: book.litresLink || '#',
+    litresLink: book.litresLink || '',
+    noLitres: book.litresLink ? '' : 'yes',
     status: book.status || 'planned',
     statusText: book.statusText || '📝 Планируется'
   });

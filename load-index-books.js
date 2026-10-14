@@ -124,6 +124,7 @@ async function loadIndexBooks() {
                         </div>
                         <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem;">
                             ${litresButton}
+                            ${book0.url ? `<a href="${book0.url}" class="btn btn-small btn-outline">${T.details}</a>` : ''}
                         </div>
                     </div>
                 </div>
