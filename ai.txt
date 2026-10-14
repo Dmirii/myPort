@@ -7,6 +7,7 @@
 # Full-URL: https://dimaa.ru/diagnostics.html Allow
 # Full-URL: https://dimaa.ru/rune-map.html Allow
 # Full-URL: https://dimaa.ru/methodology.html Allow
+# Full-URL: https://dimaa.ru/book0.html Allow
 # Full-URL: https://dimaa.ru/port.html Allow
 # Full-URL: https://dimaa.ru/feedback.html Allow
 # Full-URL: https://dimaa.ru/llms.txt Allow

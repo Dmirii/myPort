@@ -8,6 +8,7 @@ async function loadBookData() {
     
     // Маппинг для файлов с нестандартными именами
     const bookIdMap = {
+        'book0.html': 0,
         'book1.html': 1,
         'book2.html': 2,
         'book25.html': 3,   // ← книга 3
@@ -18,14 +19,14 @@ async function loadBookData() {
     let bookId = bookIdMap[currentPage];
     
     // Если не нашли в маппинге — пробуем извлечь из URL
-    if (!bookId) {
+    if (bookId === undefined) {
         const match = currentPage.match(/book(\d+)\.html/);
         if (match) {
             bookId = parseInt(match[1]);
         }
     }
     
-    if (!bookId) return;
+    if (bookId === undefined || Number.isNaN(bookId)) return;
 
     try {
         const response = await fetch('/books.json');

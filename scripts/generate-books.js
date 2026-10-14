@@ -106,8 +106,6 @@ function render(template, data) {
 console.log('📚 Генерируем страницы книг...\n');
 
 booksData.books.forEach(book => {
-  if (book.id === 0) return;
-  
   const filename = filenameMap[book.id] || `book${book.id}.html`;
   
   console.log(`  📖 ${book.title} → ${filename}`);
