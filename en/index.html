@@ -78,7 +78,26 @@
 </script>
 
 <!-- ===== MENU (loaded from en/menu.html) ===== -->
-<div id="menuPlaceholder"></div>
+<div id="menuPlaceholder">
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="/en/" class="logo">
+        <img src="/img/logo-64.png" alt="Logo">
+        <span>RUNES AS<span> PROCESS STAGES</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="/en/#about">About</a>
+        <a href="/en/#books">Books</a>
+        <a href="/en/methodology.html">Methodology</a>
+        <a href="/en/diagnostics.html">Diagnostics</a>
+        <a href="/en/rune-map.html">Rune Map</a>
+        <a href="/en/port.html">Lab</a>
+        <a href="/en/contact.html">Contacts</a>
+        <a href="/" id="langSwitch" class="lang-switch" lang="ru" hreflang="ru" title="Русская версия">🌐 RU</a>
+      </div>
+    </div>
+  </nav>
+</div>
 
 <main>
   <section id="about" class="section hero">
@@ -215,7 +234,420 @@
       </p>
 
       <!-- ===== CONTAINER FOR ALL BOOKS (filled from JSON) ===== -->
-      <div id="booksContainer"></div>
+      <div id="booksContainer">
+<!-- Static book catalog for AI crawlers (GPTBot, ClaudeBot, Perplexity) -->
+
+        <div class="book-zero-card">
+          <div class="book-zero-cover">
+            <img src="/img/cover_book_0.jpg" alt="The Engineering Model of Reality. Bifurcation Point" loading="lazy">
+          </div>
+          <div class="book-zero-info">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.4rem; flex-wrap: wrap;">
+              <span style="font-size: 1.4rem;">🌀</span>
+              <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1.5px; color: #b87c4f; font-weight: 700;">Book 0 · Introductory</span>
+              <span style="font-size: 0.75rem; background: #eef4ed; color: #2c6e49; padding: 0.15rem 0.65rem; border-radius: 20px; font-weight: 600;">✅ Available</span>
+            </div>
+            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1e3a2f; margin: 0.2rem 0 0.15rem;"><a href="/book0.html" style="color: #1e3a2f; text-decoration: none;">The Engineering Model of Reality. Bifurcation Point</a></h3>
+            <div style="font-size: 0.95rem; color: #2c6e49; font-weight: 500; margin-bottom: 0.8rem;">The Blank Rune — a pause between cycles</div>
+            <div style="font-size: 0.92rem; color: #2d3e3b; line-height: 1.6; margin-bottom: 1.2rem;"><p>You are standing still. It is not a dead end. It is a pause — between the old and the new, between what has ended and what has not yet begun. Book 0 is your entry into the system. Just 15 pages. It shows how the 26 books of the series are structured, explains the three times ("what is", "what is happening", "what should be") and gives a simple diagnostic: where you are now and what to do next. No magic. No rituals. Only structure, logic and one question to yourself. Published in Russian.</p></div>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+              <a href="/book0.html" class="btn btn-small btn-outline">Book Details</a>
+              <a href="https://www.litres.ru/74245334/" class="btn btn-small btn-litres" target="_blank" rel="noopener">Read on Litres (RU)</a>
+            </div>
+          </div>
+        </div>
+
+        <h2 style="margin-top: 2.2rem; border-left-color: #1e3a2f;">🧭 Block 1. Inception</h2>
+        <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.92rem;">Give the system, teach to see, make the choice, enter the dialogue</p>
+        <div class="books-grid">
+
+          <div class="book-card book-available">
+            <div class="book-cover-wrap"><img src="/img/cover_book_1.jpeg" alt="The Engineering Model of Reality" class="book-cover-img" loading="lazy"></div>
+            <div class="book-number">Book 1</div>
+            <div class="book-status">✅ Available</div>
+            <div class="book-title"><a href="/book1.html" style="color: #1e3a2f; text-decoration: none;">The Engineering Model of Reality</a></div>
+            <div class="book-subtitle">Applied runology for rationalists and managers</div>
+            <div class="book-annotation"><p>This is not a "book of secrets" and not a collection of magic recipes. It is an engineering model of reality. Runes are not only magic — they are a language that describes any process. The author — a software engineer...</p></div>
+            <div class="book-meta">
+              <span>📖 The system</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book1.html" class="btn btn-small btn-outline">Details</a>
+                <a href="https://www.litres.ru/73990393/" class="btn btn-small btn-litres" target="_blank" rel="noopener">Litres (RU)</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-available">
+            <div class="book-cover-wrap"><img src="/img/cover_book_2.jpeg" alt="The Psychology of Runes" class="book-cover-img" loading="lazy"></div>
+            <div class="book-number">Book 2</div>
+            <div class="book-status">✅ Available</div>
+            <div class="book-title"><a href="/book2.html" style="color: #1e3a2f; text-decoration: none;">The Psychology of Runes</a></div>
+            <div class="book-subtitle">Runic navigation: how to understand where you are and what to do next</div>
+            <div class="book-annotation"><p>You walk into the kitchen to make coffee. The thought "I want coffee" is ᚠ Fehu (beginning). You look at three packs — ᚢ Uruz (chaos of choice). You take one — ᚦ Thurisaz (choice). You brew it — ᚱ Raidho (first step)....</p></div>
+            <div class="book-meta">
+              <span>🧭 Navigation</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book2.html" class="btn btn-small btn-outline">Details</a>
+                <a href="https://www.litres.ru/74056056/" class="btn btn-small btn-litres" target="_blank" rel="noopener">Litres (RU)</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-available">
+            <div class="book-cover-wrap"><img src="/img/cover_book_2_5.jpg" alt="The Key to Mantic Practice" class="book-cover-img" loading="lazy"></div>
+            <div class="book-number">Book 3</div>
+            <div class="book-status">✅ Available</div>
+            <div class="book-title"><a href="/book25.html" style="color: #1e3a2f; text-decoration: none;">The Key to Mantic Practice</a></div>
+            <div class="book-subtitle">A 7-day transition from navigation to dialogue with the runes</div>
+            <div class="book-annotation"><p>In the first book you received knowledge: runes are stages of a process, the three times are the matrix. In the second you turned knowledge into a skill: you learned to identify your state without runes. The fourth bo...</p></div>
+            <div class="book-meta">
+              <span>🗝️ The key</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book25.html" class="btn btn-small btn-outline">Details</a>
+                <a href="https://www.litres.ru/74065998/" class="btn btn-small btn-litres" target="_blank" rel="noopener">Litres (RU)</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-available">
+            <div class="book-cover-wrap"><img src="/img/cover_book_3.jpg" alt="Mantic Practice Without Illusions" class="book-cover-img" loading="lazy"></div>
+            <div class="book-number">Book 4</div>
+            <div class="book-status">✅ Available</div>
+            <div class="book-title"><a href="/book3.html" style="color: #1e3a2f; text-decoration: none;">Mantic Practice Without Illusions</a></div>
+            <div class="book-subtitle">Divination as diagnostics, not only magic</div>
+            <div class="book-annotation"><p>You have walked the path: Book 1 gave you the system. Book 2 gave you navigation. Now you are ready for dialogue. Book 4 is not about "predictions" or "magic formulas". It is about an honest conversation with the Crea...</p></div>
+            <div class="book-meta">
+              <span>🔮 Practice</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book3.html" class="btn btn-small btn-outline">Details</a>
+                <a href="https://www.litres.ru/74093559/" class="btn btn-small btn-litres" target="_blank" rel="noopener">Litres (RU)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 style="margin-top: 2.2rem; border-left-color: #c97e2a;">🚀 Block 2. Movement</h2>
+        <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.92rem;">Take the system into the outer world: the push, manifestation, harmony, completion</p>
+        <div class="books-grid">
+
+          <div class="book-card book-available">
+            <div class="book-cover-wrap"><img src="/img/cover_book_5.jpg" alt="Runic Management" class="book-cover-img" loading="lazy"></div>
+            <div class="book-number">Book 5</div>
+            <div class="book-status">✅ Available</div>
+            <div class="book-title"><a href="/book5.html" style="color: #1e3a2f; text-decoration: none;">Runic Management</a></div>
+            <div class="book-subtitle">Raidho. The first step through the Futhark: managing projects and teams for those who are stuck</div>
+            <div class="book-annotation"><p>Managing projects, teams and development through the stages of the Futhark. Diagnosing stuckness, taking the first step, practical tools. Published in Russian.</p></div>
+            <div class="book-meta">
+              <span>🏭 Management</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book5.html" class="btn btn-small btn-outline">Details</a>
+                <a href="https://www.litres.ru/74198889/" class="btn btn-small btn-litres" target="_blank" rel="noopener">Litres (RU)</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-available">
+            <div class="book-cover-wrap"><img src="/img/cover_book_6.jpg" alt="Kenaz. The Light of Truth" class="book-cover-img" loading="lazy"></div>
+            <div class="book-number">Book 6</div>
+            <div class="book-status">✅ Available</div>
+            <div class="book-title"><a href="/book6.html" style="color: #1e3a2f; text-decoration: none;">Kenaz. The Light of Truth</a></div>
+            <div class="book-subtitle">The illusion of calm and the manifestation of the self</div>
+            <div class="book-annotation"><p>You have already started. You are doing the work. You give it everything you have. But you do not see the result — or it seems there is none. Kenaz is the rune of light, insight and the manifestation of an idea. Publi...</p></div>
+            <div class="book-meta">
+              <span>🔍 Awareness</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book6.html" class="btn btn-small btn-outline">Details</a>
+                <a href="https://www.litres.ru/74316812/" class="btn btn-small btn-litres" target="_blank" rel="noopener">Litres (RU)</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 7</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book7.html" style="color: #1e3a2f; text-decoration: none;">Runes as a Language: Harmony with the World</a></div>
+            <div class="book-subtitle">How to live in harmony when everything around demands attention</div>
+            <div class="book-annotation book-annotation-compact"><p>Gebo — the stage of balance. How to keep connections between the new and the old without burning bridges.</p></div>
+            <div class="book-meta">
+              <span>⚖️ Harmony</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book7.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 8</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book8.html" style="color: #1e3a2f; text-decoration: none;">Runes in the End: Completing the Cycle</a></div>
+            <div class="book-subtitle">How to finish and start again</div>
+            <div class="book-annotation book-annotation-compact"><p>Wunjo — the joy of a completed stage. How to mark completion and not get stuck in it.</p></div>
+            <div class="book-meta">
+              <span>🌀 Completion</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book8.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 style="margin-top: 2.2rem; border-left-color: #8a7f6d;">🌿 Block 3. Transformation</h2>
+        <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.92rem;">Living with the result and transformation: routine, crisis, pause, insight</p>
+        <div class="books-grid">
+
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 9</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book9.html" style="color: #1e3a2f; text-decoration: none;">Runes in Life: Meaning in Routine</a></div>
+            <div class="book-subtitle">How not to lose meaning in everyday life</div>
+            <div class="book-annotation book-annotation-compact"><p>Hagalaz — living with the result. How to see the routine as a mirror of quality, not a catastrophe.</p></div>
+            <div class="book-meta">
+              <span>🌿 Routine</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book9.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 10</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book10.html" style="color: #1e3a2f; text-decoration: none;">Runes and Crisis: Signals</a></div>
+            <div class="book-subtitle">How to hear the signal before it is too late</div>
+            <div class="book-annotation book-annotation-compact"><p>Nauthiz — the stage of need. How to notice small discomfort before it turns into a crisis.</p></div>
+            <div class="book-meta">
+              <span>⚠️ Signals</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book10.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 11</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book11.html" style="color: #1e3a2f; text-decoration: none;">Runes and Pause: The Art of Stopping</a></div>
+            <div class="book-subtitle">The value of stopping and rebooting</div>
+            <div class="book-annotation book-annotation-compact"><p>Isa — the conscious pause. How to stop without freezing forever.</p></div>
+            <div class="book-meta">
+              <span>❄️ Pause</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book11.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 12</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book12.html" style="color: #1e3a2f; text-decoration: none;">Runes and Insight: How Not to Miss the Answer</a></div>
+            <div class="book-subtitle">How not to miss the answer that has already arrived</div>
+            <div class="book-annotation book-annotation-compact"><p>Jera — the eureka moment. How to catch and record the insight that comes after the pause.</p></div>
+            <div class="book-meta">
+              <span>💡 Insight</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book12.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 style="margin-top: 2.2rem; border-left-color: #c97e2a;">🔄 Block 4. Rebirth</h2>
+        <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.92rem;">Experience and a new cycle: chance, experience, protection, victory</p>
+        <div class="books-grid">
+
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 13</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book13.html" style="color: #1e3a2f; text-decoration: none;">Second Chance: The Restart</a></div>
+            <div class="book-subtitle">How to start again in the same place</div>
+            <div class="book-annotation book-annotation-compact"><p>Perthro — the second chance. How to restart using old experience instead of starting from zero.</p></div>
+            <div class="book-meta">
+              <span>🔄 Chance</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book13.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 14</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book14.html" style="color: #1e3a2f; text-decoration: none;">Runes and Experience: Leaning on the Past</a></div>
+            <div class="book-subtitle">How the past becomes a foundation for the future</div>
+            <div class="book-annotation book-annotation-compact"><p>Eihwaz — experience in action. How to use what you already have instead of mining for the new.</p></div>
+            <div class="book-meta">
+              <span>📜 Experience</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book14.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 15</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book15.html" style="color: #1e3a2f; text-decoration: none;">Runes and Protection: Strengthening What You Built</a></div>
+            <div class="book-subtitle">How to strengthen what you created and keep the results</div>
+            <div class="book-annotation book-annotation-compact"><p>Algiz — intuition and protection. How to hear the inner voice and protect what has been built.</p></div>
+            <div class="book-meta">
+              <span>🛡️ Protection</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book15.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 16</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book16.html" style="color: #1e3a2f; text-decoration: none;">Runes and Victory: Realizing Wholeness</a></div>
+            <div class="book-subtitle">What a completed cycle looks like and how to recognize the victory</div>
+            <div class="book-annotation book-annotation-compact"><p>Sowilo — experience as form. How to record what the completed cycle made of you.</p></div>
+            <div class="book-meta">
+              <span>🏆 Victory</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book16.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 style="margin-top: 2.2rem; border-left-color: #1e3a2f;">⭐ Block 5. Completion</h2>
+        <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.92rem;">Acceptance and completion: will, growth, synchronization, integration</p>
+        <div class="books-grid">
+
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 17</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book17.html" style="color: #1e3a2f; text-decoration: none;">Runes and Will: The Brave Step</a></div>
+            <div class="book-subtitle">How to take a brave step when you are afraid</div>
+            <div class="book-annotation book-annotation-compact"><p>Tiwaz — the will. How to put all your experience into one decisive movement.</p></div>
+            <div class="book-meta">
+              <span>⚔️ Will</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book17.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 18</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book18.html" style="color: #1e3a2f; text-decoration: none;">Rebirth: A New Birth</a></div>
+            <div class="book-subtitle">How the new is born from the old</div>
+            <div class="book-annotation book-annotation-compact"><p>Berkana — growth. How to nurture the new without rushing it.</p></div>
+            <div class="book-meta">
+              <span>🌱 Growth</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book18.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 19</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book19.html" style="color: #1e3a2f; text-decoration: none;">Runes and Movement: Synchronization</a></div>
+            <div class="book-subtitle">How to synchronize with the world and move in the flow</div>
+            <div class="book-annotation book-annotation-compact"><p>Ehwaz — exchange and partnership. How to move together with the world instead of alone.</p></div>
+            <div class="book-meta">
+              <span>🤝 Synchronization</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book19.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 20</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book20.html" style="color: #1e3a2f; text-decoration: none;">Runes and Integration: Becoming the New You</a></div>
+            <div class="book-subtitle">How to become the new you and be accepted</div>
+            <div class="book-annotation book-annotation-compact"><p>Mannaz — integration. How to accept your new role and let the world confirm it.</p></div>
+            <div class="book-meta">
+              <span>🧩 Integration</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book20.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 style="margin-top: 2.2rem; border-left-color: #b87c4f;">🏛️ Block 6. Legacy</h2>
+        <p style="color: #5f6c66; margin-bottom: 1.5rem; font-size: 0.92rem;">Flow and transformation: trust, potential, legacy, transformation</p>
+        <div class="books-grid">
+
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 21</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book21.html" style="color: #1e3a2f; text-decoration: none;">Runes and Flow: Trusting the Current</a></div>
+            <div class="book-subtitle">How to trust the current without losing yourself</div>
+            <div class="book-annotation book-annotation-compact"><p>Laguz — the flow. How to stop controlling and let the water find its way.</p></div>
+            <div class="book-meta">
+              <span>🌊 Flow</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book21.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 22</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book22.html" style="color: #1e3a2f; text-decoration: none;">Runes and the Seed: The Potential Within</a></div>
+            <div class="book-subtitle">What is ripening inside and how to let it manifest</div>
+            <div class="book-annotation book-annotation-compact"><p>Ingwaz — the seed. How to wait for the result that already exists but has not yet manifested.</p></div>
+            <div class="book-meta">
+              <span>🌱 Potential</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book22.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 23</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book23.html" style="color: #1e3a2f; text-decoration: none;">Runes and Legacy: What Remains</a></div>
+            <div class="book-subtitle">What remains after you and how to pass it on</div>
+            <div class="book-annotation book-annotation-compact"><p>Othala — the legacy. How to pass the fruits of your cycle to those who come after.</p></div>
+            <div class="book-meta">
+              <span>🏛️ Legacy</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book23.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+          <div class="book-card book-planned">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+              <div class="book-number">Book 24</div>
+              <div class="book-status idea">📝 Planned</div>
+            </div>
+            <div class="book-title" style="font-size: 1.15rem;"><a href="/book24.html" style="color: #1e3a2f; text-decoration: none;">Runes and Transformation: The Full Cycle</a></div>
+            <div class="book-subtitle">The full cycle is complete. What next?</div>
+            <div class="book-annotation book-annotation-compact"><p>Dagaz — transformation. The old is gone, the new has come. The door to a new Fehu.</p></div>
+            <div class="book-meta">
+              <span>🌀 Transformation</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="/book24.html" class="btn btn-small btn-outline" style="background: #fdf6ec; border-color: #c97e2a; color: #8a581e;">About</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -273,7 +705,7 @@
       <a href="/en/diagnostics.html">Diagnostics</a>
       <a href="/en/rune-map.html">Rune Map</a>
       <a href="/en/port.html">Lab</a>
-      <a href="/en/#contacts">Contacts</a>
+      <a href="/en/contact.html">Contacts</a>
       <a href="/">Русская версия (RU)</a>
     </div>
     <p>© Dmitry Antonov · Runes as Process Stages</p>

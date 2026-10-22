@@ -8,7 +8,7 @@
 const SITE_LANG = window.location.pathname.startsWith('/en/') ? 'en' : 'ru';
 
 // Страницы, у которых есть английская версия (для переключателя языка)
-const TRANSLATED_PAGES = ['index.html', 'methodology.html', 'rune-map.html', 'port.html', 'diagnostics.html', 'feedback.html'];
+const TRANSLATED_PAGES = ['index.html', 'methodology.html', 'rune-map.html', 'port.html', 'diagnostics.html', 'feedback.html', 'contact.html'];
 
 async function loadMenu() {
     const placeholder = document.getElementById('menuPlaceholder');
@@ -98,6 +98,9 @@ function addBreadcrumbs() {
     } else if (path.includes('feedback')) {
         section = EN ? 'Subscribe' : 'Подписка';
         sectionUrl = domain + '/feedback.html';
+    } else if (path.includes('contact')) {
+        section = EN ? 'Contacts' : 'Контакты';
+        sectionUrl = domain + (EN ? '/en/contact.html' : '/contact.html');
     } else if (path.includes('privacy')) {
         section = EN ? 'Privacy Policy' : 'Политика';
         sectionUrl = domain + '/privacy.html';

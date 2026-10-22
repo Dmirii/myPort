@@ -59,6 +59,15 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://dimaa.ru/contact.html</loc>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://dimaa.ru/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dimaa.ru/en/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://dimaa.ru/contact.html"/>
+        <lastmod>2026-10-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
     
     <!-- ============================================================ -->
     <!-- ===== КНИГА 0 (входная точка серии) ===== -->
@@ -295,6 +304,15 @@
         <xhtml:link rel="alternate" hreflang="ru" href="https://dimaa.ru/feedback.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://dimaa.ru/en/feedback.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://dimaa.ru/feedback.html"/>
+    </url>
+    <url>
+        <loc>https://dimaa.ru/en/contact.html</loc>
+        <lastmod>2026-10-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://dimaa.ru/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dimaa.ru/en/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://dimaa.ru/contact.html"/>
     </url>
 
 </urlset>
