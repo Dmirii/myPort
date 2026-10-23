@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Руническая навигация — не в потоке</title>
+    <script>
+      (function() {
+        var p = window.location.pathname.replace(/\/+$/, '');
+        var known = {
+          '/contact': '/contact.html',
+          '/en/contact': '/en/contact.html',
+          '/diagnostics': '/diagnostics.html',
+          '/en/diagnostics': '/en/diagnostics.html',
+          '/rune-map': '/rune-map.html',
+          '/en/rune-map': '/en/rune-map.html',
+          '/methodology': '/methodology.html',
+          '/en/methodology': '/en/methodology.html',
+          '/port': '/port.html',
+          '/en/port': '/en/port.html',
+          '/feedback': '/feedback.html',
+          '/en/feedback': '/en/feedback.html'
+        };
+        if (known[p]) {
+          window.location.replace(known[p] + window.location.search + window.location.hash);
+        }
+      })();
+    </script>
     <style>
         * {
             margin: 0;
