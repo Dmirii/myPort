@@ -19,6 +19,9 @@
 # Full-URL (EN): https://dimaa.ru/en/port.html Allow
 # Full-URL (EN): https://dimaa.ru/en/feedback.html Allow
 # Full-URL (EN): https://dimaa.ru/en/contact.html Allow
+# Full-URL (EN): https://dimaa.ru/en/privacy.html Allow
+# Full-URL (EN): https://dimaa.ru/en/llms.txt Allow
+# Full-URL (EN): https://dimaa.ru/en/ai.txt Allow
 # Languages: ru (default), en
 # Alternate-URL (en): https://dimaa.ru/en/
 # Preferred-URL: https://dimaa.ru/

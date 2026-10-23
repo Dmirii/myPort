@@ -18,6 +18,83 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/img/logo.png">
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="alternate" hreflang="ru" href="https://dimaa.ru/{{filename}}">
+  <link rel="alternate" hreflang="en" href="https://dimaa.ru/en/{{filename}}">
+  <link rel="alternate" hreflang="x-default" href="https://dimaa.ru/{{filename}}">
+
+  <!-- Schema.org Book & BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Book",
+        "@id": "https://dimaa.ru/{{filename}}#book",
+        "name": "{{title}}",
+        "headline": "{{title}}",
+        "alternativeHeadline": "{{subtitle}}",
+        "description": "{{seo.description}}",
+        "image": "{{seo.ogImage}}",
+        "inLanguage": "ru",
+        "bookFormat": "EBook",
+        "author": {
+          "@type": "Person",
+          "name": "Дмитрий Антонов",
+          "jobTitle": "Автор методологии, инженер-программист, практик продаж",
+          "url": "https://dimaa.ru/",
+          "sameAs": [
+            "https://vk.com/dimaa_ru",
+            "https://github.com/Dmirii",
+            "https://www.linkedin.com/in/dimaa-ru/"
+          ]
+        },
+        "isPartOf": {
+          "@type": "BookSeries",
+          "name": "Инженерная модель реальности",
+          "url": "https://dimaa.ru/#books"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Литрес Самиздат"
+        }{{#if litresLink}},
+        "offers": {
+          "@type": "Offer",
+          "url": "{{litresLink}}",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "RUB",
+          "seller": {
+            "@type": "Organization",
+            "name": "ЛитРес",
+            "url": "https://www.litres.ru"
+          }
+        }{{/if}}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://dimaa.ru/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Книги",
+            "item": "https://dimaa.ru/#books"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "{{title}}",
+            "item": "https://dimaa.ru/{{filename}}"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   
   <!-- Yandex.Metrika -->
   <script type="text/javascript">
@@ -92,6 +169,7 @@
       {{#each menu.items}}
         <a href="{{this.url}}">{{this.label}}</a>
       {{/each}}
+      <a href="/en/{{filename}}" id="langSwitch" class="lang-switch" lang="en" hreflang="en" title="English version">🌐 EN</a>
     </div>
   </div>
 </nav>

@@ -8,7 +8,7 @@
 const SITE_LANG = window.location.pathname.startsWith('/en/') ? 'en' : 'ru';
 
 // Страницы, у которых есть английская версия (для переключателя языка)
-const TRANSLATED_PAGES = ['index.html', 'methodology.html', 'rune-map.html', 'port.html', 'diagnostics.html', 'feedback.html', 'contact.html'];
+const TRANSLATED_PAGES = ['index.html', 'methodology.html', 'rune-map.html', 'port.html', 'diagnostics.html', 'feedback.html', 'contact.html', 'privacy.html'];
 
 async function loadMenu() {
     const placeholder = document.getElementById('menuPlaceholder');
@@ -37,7 +37,7 @@ function getAlternateUrl() {
     }
     // ru -> en: только если страница переведена, иначе — английская главная
     let page = (path === '/' || path === '') ? 'index.html' : path.replace(/^\//, '');
-    if (TRANSLATED_PAGES.includes(page)) {
+    if (TRANSLATED_PAGES.includes(page) || /^book\d+\.html$/.test(page)) {
         const target = page === 'index.html' ? '/en/' : '/en/' + page;
         return target + window.location.hash;
     }

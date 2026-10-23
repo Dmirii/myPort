@@ -1,0 +1,56 @@
+<main class="container">
+  <div class="book-header">
+    <div class="book-cover-small">
+      <img src="{{cover}}" alt="{{title}} — Dmitry Antonov, Engineering Model of Reality" loading="lazy">
+    </div>
+    <div class="book-info">
+      <div class="book-number">{{numberFull}}</div>
+      <div id="bookStatusBadge" class="book-status-badge">{{statusText}}</div>
+      <h1>{{title}}</h1>
+      <div class="book-subtitle">{{subtitle}}</div>
+      <div class="book-meta-line">
+        <span>📖 {{year}}</span> · <span>📚 Series: Runes as Process Stages</span>
+      </div>
+      <div class="book-actions">
+        {{#if litresLink}}<a href="{{litresLink}}" class="btn btn-litres" target="_blank" rel="noopener">📘 Read on Litres (Russian Edition)</a>{{/if}}
+        <a href="/en/diagnostics.html" class="btn">🧭 Free Diagnostics</a>
+        <a href="/en/#books" class="btn" style="background: transparent; color: #1e3a2f; border: 1px solid #1e3a2f;">← Back to Books</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-content">
+    <div class="info-block" style="border-left: 4px solid #2c6e49; background: #eef4ed; margin: 1.5rem 0; padding: 1rem 1.4rem; border-radius: 16px;">
+      <p style="font-weight: 700; color: #1e3a2f; margin-bottom: 0.3rem; font-style: normal;">🌍 International Edition Notice</p>
+      <p style="color: #2d3e3b; margin: 0; font-size: 0.92rem; font-style: normal; line-height: 1.55;">
+        This book is currently published in Russian on Litres. The international English translation is in active preparation. 
+        You can read the original Russian publication or explore the underlying architectural methodology and diagnostics directly on this site.
+      </p>
+    </div>
+
+    <h2>About this Book</h2>
+    <p>{{annotation}}</p>
+
+    <h2>Why This Stage Matters</h2>
+    <p>In the <strong>Engineering Model of Reality</strong>, runes are stripped of esoteric dogma. Each rune in the Elder Futhark corresponds to an exact, predictable operational phase in human action, systems architecture, and business lifecycle.</p>
+    <p>Recognizing the current state allows you to navigate past deadlocks, avoid skipped steps, and make conscious architectural decisions.</p>
+
+    <div class="info-block" style="background: #f7f4ef; border-left: 4px solid #b87c4f; margin: 2rem 0; padding: 1.2rem 1.4rem; border-radius: 16px;">
+      <p style="font-weight: 700; color: #1e3a2f; font-style: normal;">🧭 Where are you in your process right now?</p>
+      <p style="color: #2d3e3b; margin: 0.4rem 0 0.8rem; font-style: normal; font-size: 0.92rem;">
+        Take our free 2-minute diagnostic questionnaire to identify your current stage across the 24 process phases.
+      </p>
+      <a href="/en/diagnostics.html" class="btn" style="background: #1e3a2f; color: white; padding: 0.5rem 1.2rem; border-radius: 30px; text-decoration: none; font-size: 0.85rem; display: inline-block;">Start 2-Minute Diagnostic</a>
+    </div>
+
+    <div id="seriesBooksPlaceholder" class="series-books-placeholder">
+      <div class="loading">Loading books...</div>
+    </div>
+
+    <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1.5rem 0 2rem;">
+      {{#if litresLink}}<a href="{{litresLink}}" class="btn btn-litres" target="_blank" rel="noopener">📘 Read on Litres (RU)</a>{{/if}}
+      <a href="/en/rune-map.html" class="btn">🗺️ Explore 24-Rune Map</a>
+      <a href="/en/#books" class="btn" style="background: transparent; color: #1e3a2f; border: 1px solid #1e3a2f;">← Back to Books</a>
+    </div>
+  </div>
+</main>

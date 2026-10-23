@@ -18,6 +18,83 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/img/logo.png">
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="alternate" hreflang="ru" href="https://dimaa.ru/book1.html">
+  <link rel="alternate" hreflang="en" href="https://dimaa.ru/en/book1.html">
+  <link rel="alternate" hreflang="x-default" href="https://dimaa.ru/book1.html">
+
+  <!-- Schema.org Book & BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Book",
+        "@id": "https://dimaa.ru/book1.html#book",
+        "name": "Инженерная модель реальности",
+        "headline": "Инженерная модель реальности",
+        "alternativeHeadline": "Прикладная рунология для рационалистов и управленцев",
+        "description": "Прикладная рунология для рационалистов и управленцев. Руны — это этапы процесса.",
+        "image": "https://dimaa.ru/img/cover_book_1.jpeg",
+        "inLanguage": "ru",
+        "bookFormat": "EBook",
+        "author": {
+          "@type": "Person",
+          "name": "Дмитрий Антонов",
+          "jobTitle": "Автор методологии, инженер-программист, практик продаж",
+          "url": "https://dimaa.ru/",
+          "sameAs": [
+            "https://vk.com/dimaa_ru",
+            "https://github.com/Dmirii",
+            "https://www.linkedin.com/in/dimaa-ru/"
+          ]
+        },
+        "isPartOf": {
+          "@type": "BookSeries",
+          "name": "Инженерная модель реальности",
+          "url": "https://dimaa.ru/#books"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Литрес Самиздат"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.litres.ru/73990393/",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "RUB",
+          "seller": {
+            "@type": "Organization",
+            "name": "ЛитРес",
+            "url": "https://www.litres.ru"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://dimaa.ru/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Книги",
+            "item": "https://dimaa.ru/#books"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Инженерная модель реальности",
+            "item": "https://dimaa.ru/book1.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   
   <!-- Yandex.Metrika -->
   <script type="text/javascript">
@@ -104,6 +181,7 @@
       
         <a href="/contact.html">Контакты</a>
       
+      <a href="/en/book1.html" id="langSwitch" class="lang-switch" lang="en" hreflang="en" title="English version">🌐 EN</a>
     </div>
   </div>
 </nav>
@@ -181,7 +259,7 @@
 <main class="container">
   <div class="book-header">
     <div class="book-cover-small">
-      <img src="/img/cover_book_1.jpeg" alt="Инженерная модель реальности">
+      <img src="/img/cover_book_1.jpeg" alt="Инженерная модель реальности — Дмитрий Антонов, серия «Инженерная модель реальности»" loading="lazy">
     </div>
     <div class="book-info">
       <div class="book-number">Книга первая</div>
@@ -194,7 +272,7 @@
       <div class="book-actions">
         <a href="https://www.litres.ru/73990393/" class="btn btn-litres" target="_blank" rel="noopener">📘 Читать на Литрес</a>
         
-        <a href="index.html#books" class="btn">← Назад</a>
+        <a href="/#books" class="btn">← Назад</a>
       </div>
     </div>
   </div>
@@ -304,7 +382,7 @@
     <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1rem 0 2rem;">
       <a href="https://www.litres.ru/73990393/" class="btn btn-litres" target="_blank" rel="noopener">📘 Купить на Литрес</a>
       
-      <a href="index.html#books" class="btn">← Назад к книгам</a>
+      <a href="/#books" class="btn">← Назад к книгам</a>
     </div>
   </div>
 </main>

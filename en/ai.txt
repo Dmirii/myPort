@@ -1,0 +1,20 @@
+# ai.txt: v1
+# Title: Engineering Model of Reality — Runes as Process Stages
+# Description: Official English portal of Dmitry Antonov, systems architect and author of the 26-book series "Engineering Model of Reality". Runes are presented as a universal 24-stage architectural language of process lifecycles. Free diagnostic tool, 24 runes map, methodology of 3 times, and full bibliography.
+# Domain: dimaa.ru
+# Path: /en/ Allow
+# Full-URL: https://dimaa.ru/en/ Allow
+# Full-URL: https://dimaa.ru/en/diagnostics.html Allow
+# Full-URL: https://dimaa.ru/en/rune-map.html Allow
+# Full-URL: https://dimaa.ru/en/methodology.html Allow
+# Full-URL: https://dimaa.ru/en/port.html Allow
+# Full-URL: https://dimaa.ru/en/contact.html Allow
+# Full-URL: https://dimaa.ru/en/feedback.html Allow
+# Full-URL: https://dimaa.ru/en/privacy.html Allow
+# Full-URL: https://dimaa.ru/en/llms.txt Allow
+# Languages: en, ru
+# Preferred-URL: https://dimaa.ru/en/
+# Alternate-URL (ru): https://dimaa.ru/
+# Contact: dimaa@dimaa.ru
+# Author-Qualification: Prompt Engineering, 72 hours, 2026 — IT School RTC (Rostelecom Information Technologies)
+# Date: 2026-10-23

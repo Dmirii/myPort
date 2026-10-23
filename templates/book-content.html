@@ -1,7 +1,7 @@
 <main class="container">
   <div class="book-header">
     <div class="book-cover-small">
-      <img src="{{cover}}" alt="{{title}}">
+      <img src="{{cover}}" alt="{{title}} — Дмитрий Антонов, серия «Инженерная модель реальности»" loading="lazy">
     </div>
     <div class="book-info">
       <div class="book-number">{{numberFull}}</div>
@@ -14,7 +14,7 @@
       <div class="book-actions">
         {{#if litresLink}}<a href="{{litresLink}}" class="btn btn-litres" target="_blank" rel="noopener">📘 Читать на Литрес</a>{{/if}}
         {{#if noLitres}}<a href="/feedback.html" class="btn btn-terracotta">📬 Сообщить о выходе</a>{{/if}}
-        <a href="index.html#books" class="btn">← Назад</a>
+        <a href="/#books" class="btn">← Назад</a>
       </div>
     </div>
   </div>
@@ -219,7 +219,7 @@
     <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1rem 0 2rem;">
       {{#if litresLink}}<a href="{{litresLink}}" class="btn btn-litres" target="_blank" rel="noopener">📘 Купить на Литрес</a>{{/if}}
       {{#if noLitres}}<a href="/feedback.html" class="btn btn-terracotta">📬 Сообщить о выходе</a>{{/if}}
-      <a href="index.html#books" class="btn">← Назад к книгам</a>
+      <a href="/#books" class="btn">← Назад к книгам</a>
     </div>
   </div>
 </main>
