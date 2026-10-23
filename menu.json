@@ -13,7 +13,7 @@
       { "label": "Диагностика", "url": "/diagnostics.html" },
       { "label": "Карта рун", "url": "/rune-map.html" },
       { "label": "Лаборатория", "url": "/port.html" },
-      { "label": "Контакты", "url": "/#contacts" }
+      { "label": "Контакты", "url": "/contact.html" }
     ]
   }
 }

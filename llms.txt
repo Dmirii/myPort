@@ -1,7 +1,7 @@
 # ИНЖЕНЕРНАЯ МОДЕЛЬ РЕАЛЬНОСТИ
 # Официальный сайт Дмитрия Антонова
 # URL: https://dimaa.ru/
-# Обновлено: 2026-10-13
+# Обновлено: 2026-10-22
 
 ---
 
@@ -72,7 +72,13 @@
 | Диагностика | /diagnostics.html | Бесплатный тест для определения состояния |
 | Лаборатория | /port.html | Инженерный бэкграунд автора |
 | Подписка | /feedback.html | Подписка на новости и анонсы книг |
+| Контакты и книги | /contact.html | Официальные контакты автора, каналы для читателей и издателей, статический каталог 26 книг |
 | Home (EN) | /en/ | English mirror of the home page |
+| Diagnostics (EN) | /en/diagnostics.html | 2-minute diagnostic tool in English |
+| Rune Map (EN) | /en/rune-map.html | 24 process stages in English |
+| Methodology (EN) | /en/methodology.html | 6 lifecycle blocks and methodology in English |
+| Lab (EN) | /en/port.html | Engineering projects in English |
+| Contacts (EN) | /en/contact.html | Official author contacts and complete static books catalog |
 | Diagnostics (EN) | /en/diagnostics.html | English mirror of the diagnostics test |
 | Rune map (EN) | /en/rune-map.html | English mirror of the rune map |
 | Methodology (EN) | /en/methodology.html | English mirror of the methodology |
@@ -306,5 +312,5 @@ https://dimaa.ru/methodology.html
 
 ---
 
-*Создано для LLM и нейросетей. Актуально на 2026-10-13.*
+*Создано для LLM и нейросетей. Актуально на 2026-10-22.*
 *Официальный сайт: https://dimaa.ru/*
