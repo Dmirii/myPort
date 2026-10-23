@@ -13,7 +13,8 @@
       "statusText": "✅ Available (RU)",
       "litresLink": "https://www.litres.ru/74245334/",
       "cover": "/img/cover_book_0.jpg",
-      "year": "2025"
+      "year": "2025",
+      "url": "/en/book0.html"
     },
     {
       "id": 1,
@@ -27,7 +28,8 @@
       "statusText": "✅ Available (RU)",
       "litresLink": "https://www.litres.ru/73990393/",
       "cover": "/img/cover_book_1.jpeg",
-      "year": "2025"
+      "year": "2025",
+      "url": "/en/book1.html"
     },
     {
       "id": 2,
@@ -41,7 +43,8 @@
       "statusText": "✅ Available (RU)",
       "litresLink": "https://www.litres.ru/74056056/",
       "cover": "/img/cover_book_2.jpeg",
-      "year": "2025"
+      "year": "2025",
+      "url": "/en/book2.html"
     },
     {
       "id": 3,
@@ -55,7 +58,8 @@
       "statusText": "✅ Available (RU)",
       "litresLink": "https://www.litres.ru/74065998/",
       "cover": "/img/cover_book_2_5.jpg",
-      "year": "2025"
+      "year": "2025",
+      "url": "/en/book25.html"
     },
     {
       "id": 4,
@@ -69,7 +73,8 @@
       "statusText": "✅ Available (RU)",
       "litresLink": "https://www.litres.ru/74093559/",
       "cover": "/img/cover_book_3.jpg",
-      "year": "2025"
+      "year": "2025",
+      "url": "/en/book3.html"
     },
     {
       "id": 5,
@@ -83,7 +88,8 @@
       "statusText": "✅ Available (RU)",
       "litresLink": "https://www.litres.ru/74198889/",
       "cover": "/img/cover_book_5.jpg",
-      "year": "2025"
+      "year": "2025",
+      "url": "/en/book5.html"
     },
     {
       "id": 6,
@@ -97,7 +103,8 @@
       "statusText": "✅ Available (RU)",
       "litresLink": "https://www.litres.ru/74316812/",
       "cover": "/img/cover_book_6.jpg",
-      "year": "2025"
+      "year": "2025",
+      "url": "/en/book6.html"
     },
     {
       "id": 7,
@@ -110,7 +117,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book7.html",
+      "cover": "/img/cover_book_7.jpg"
     },
     {
       "id": 8,
@@ -123,7 +131,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book8.html",
+      "cover": "/img/cover_book_8.jpg"
     },
     {
       "id": 9,
@@ -136,7 +145,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book9.html",
+      "cover": "/img/cover_book_9.jpg"
     },
     {
       "id": 10,
@@ -149,7 +159,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book10.html",
+      "cover": "/img/cover_book_10.jpg"
     },
     {
       "id": 11,
@@ -162,7 +173,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book11.html",
+      "cover": "/img/cover_book_11.jpg"
     },
     {
       "id": 12,
@@ -175,7 +187,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book12.html",
+      "cover": "/img/cover_book_12.jpg"
     },
     {
       "id": 13,
@@ -188,7 +201,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book13.html",
+      "cover": "/img/cover_book_13.jpg"
     },
     {
       "id": 14,
@@ -201,7 +215,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book14.html",
+      "cover": "/img/cover_book_14.jpg"
     },
     {
       "id": 15,
@@ -214,7 +229,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book15.html",
+      "cover": "/img/cover_book_15.jpg"
     },
     {
       "id": 16,
@@ -227,7 +243,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book16.html",
+      "cover": "/img/cover_book_16.jpg"
     },
     {
       "id": 17,
@@ -240,7 +257,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book17.html",
+      "cover": "/img/cover_book_17.jpg"
     },
     {
       "id": 18,
@@ -253,7 +271,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book18.html",
+      "cover": "/img/cover_book_18.jpg"
     },
     {
       "id": 19,
@@ -266,7 +285,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book19.html",
+      "cover": "/img/cover_book_19.jpg"
     },
     {
       "id": 20,
@@ -279,7 +299,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book20.html",
+      "cover": "/img/cover_book_20.jpg"
     },
     {
       "id": 21,
@@ -292,7 +313,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book21.html",
+      "cover": "/img/cover_book_21.jpg"
     },
     {
       "id": 22,
@@ -305,7 +327,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book22.html",
+      "cover": "/img/cover_book_22.jpg"
     },
     {
       "id": 23,
@@ -318,7 +341,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book23.html",
+      "cover": "/img/cover_book_23.jpg"
     },
     {
       "id": 24,
@@ -331,7 +355,8 @@
       "status": "planned",
       "statusText": "📝 Planned",
       "action": "notify",
-      "url": "/en/feedback.html"
+      "url": "/en/book24.html",
+      "cover": "/img/cover_book_24.jpg"
     }
   ]
 }

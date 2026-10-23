@@ -28,8 +28,11 @@ async function loadBookData() {
     
     if (bookId === undefined || Number.isNaN(bookId)) return;
 
+    const IS_EN = window.location.pathname.startsWith('/en/');
+    const dataUrl = IS_EN ? '/books-en.json' : '/books.json';
+
     try {
-        const response = await fetch('/books.json');
+        const response = await fetch(dataUrl);
         if (!response.ok) throw new Error('Network error');
         const data = await response.json();
         const book = data.books.find(b => b.id === bookId);
@@ -39,7 +42,7 @@ async function loadBookData() {
         const coverImg = document.querySelector('.book-cover-small img');
         if (coverImg && book.cover) {
             coverImg.src = book.cover;
-            coverImg.alt = book.title;
+            coverImg.alt = IS_EN ? `${book.title} — Dmitry Antonov` : `${book.title} — Дмитрий Антонов`;
         }
 
         // 2. Обновляем все ссылки на Литрес
@@ -57,9 +60,13 @@ async function loadBookData() {
 
         // 4. Обновляем заголовок страницы
         if (book.title) {
-            const numberWords = ['', 'первая', 'вторая', 'третья', 'четвёртая', 'пятая', 'шестая', 'седьмая', 'восьмая', 'девятая', 'десятая'];
-            const word = numberWords[bookId] || `книга ${bookId}`;
-            document.title = `${book.title} — ${word} | Дмитрий Антонов`;
+            if (IS_EN) {
+                document.title = `${book.title} | Dmitry Antonov`;
+            } else {
+                const numberWords = ['', 'первая', 'вторая', 'третья', 'четвёртая', 'пятая', 'шестая', 'седьмая', 'восьмая', 'девятая', 'десятая'];
+                const word = numberWords[bookId] || `книга ${bookId}`;
+                document.title = `${book.title} — ${word} | Дмитрий Антонов`;
+            }
         }
 
         // 5. Обновляем мета-описание

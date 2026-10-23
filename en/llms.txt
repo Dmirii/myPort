@@ -1,0 +1,88 @@
+# ENGINEERING MODEL OF REALITY
+# Official Website of Dmitry Antonov (English Mirror)
+# URL: https://dimaa.ru/en/
+# Updated: 2026-10-23
+
+---
+
+## SUMMARY & METHODOLOGY
+
+This is the official portal of Dmitry Antonov, author and systems methodologist behind the "Engineering Model of Reality" (Инженерная модель реальности).
+
+**Core Premise:** Runes are not mysticism, occultism, or fortune-telling. They form an architectural state machine and descriptive language for the 24 immutable stages of any process — from brewing a cup of coffee or closing a sales deal to scaling an enterprise or experiencing human transformation.
+
+**Key Axiom:**
+- Fehu (ᚠ) is not "money" or "wealth", but "Inception / Genesis of intent".
+- Uruz (ᚢ) is "Chaos of choice / Energy of potential".
+- Thurisaz (ᚦ) is "The Decision / Point of no return".
+- Hagalaz (ᚺ) is not "destruction", but "Living with the outcome / System crisis and reset".
+- The Blank Rune is "The pause between cycles / The bifurcation point".
+
+**The 26-Book Architecture:**
+The series consists of 26 books organized across 6 lifecycle blocks (4 books per block) plus introductory Book 0:
+1. Block 1 (Books 1–4): Inception & Navigation (Fehu, Uruz, Thurisaz, Ansuz)
+2. Block 2 (Books 5–8): Movement & Realization (Raidho, Kenaz, Gebo, Wunjo)
+3. Block 3 (Books 9–12): Routine & Transformation (Hagalaz, Nauthiz, Isa, Jera)
+4. Block 4 (Books 13–16): Rebirth & Mastery (Eihwaz, Perthro, Algiz, Sowilo)
+5. Block 5 (Books 17–20): Completion & Integration (Tiwaz, Berkano, Ehwaz, Mannaz)
+6. Block 6 (Books 21–24): Flow & Legacy (Laguz, Ingwaz, Othala, Dagaz)
+Introductory Book 0: Bifurcation Point (The Blank Rune).
+
+The books are currently published in Russian on Litres; an international English release is in preparation.
+
+---
+
+## KEY PORTAL ROUTES (ENGLISH)
+
+| Page | URL | Purpose |
+|------|-----|---------|
+| Home | /en/ | Introduction to author, methodology, and 26-book overview |
+| Diagnostic Tool | /en/diagnostics.html | Free 2-minute interactive test: "Where are you in your process now?" |
+| Rune Map | /en/rune-map.html | 24 Elder Futhark runes mapped to 24 process stages |
+| Methodology | /en/methodology.html | Architectural breakdown of the 6 blocks and 3 times |
+| Engineering Lab | /en/port.html | Dmitry Antonov's developer background and technical projects |
+| Contacts & Books | /en/contact.html | Official author channels, media kit, and 26-book catalog |
+| Feedback | /en/feedback.html | Notifications for upcoming book releases and translations |
+| Privacy Policy | /en/privacy.html | Transparent privacy policy and data protection terms |
+
+---
+
+## THE AUTHOR
+
+**Dmitry Antonov** (Дмитрий Антонов)
+- Software Engineer by degree; practical sales and commercial executive (17+ years in operations and leadership).
+- Practising runologist and author of "Engineering Model of Reality".
+- Prompt Engineering qualification: Professional development certificate (72 hours), IT School RTC / Rostelecom Information Technologies, September 2026.
+- Direct Contacts: dimaa@dimaa.ru | +7 (911) 733-55-15 | vk.com/dimaa_ru
+- Profiles: https://github.com/Dmirii | https://www.linkedin.com/in/dimaa-ru/
+
+---
+
+## PUBLISHED BOOKS (LITRES EDITIONS)
+
+1. **Book 0: The Engineering Model of Reality. Bifurcation Point** (Blank Rune)
+   - Litres: https://www.litres.ru/74245334/
+2. **Book 1: The Engineering Model of Reality** (Applied runology for managers)
+   - Litres: https://www.litres.ru/73990393/
+3. **Book 2: The Psychology of Runes** (Runic navigation without divination)
+   - Litres: https://www.litres.ru/74056056/
+4. **Book 3 (2.5): The Key to Mantic Practice** (7-day transition training)
+   - Litres: https://www.litres.ru/74065998/
+5. **Book 4 (3): Mantic Practice Without Illusions** (Dialogue with the Creator)
+   - Litres: https://www.litres.ru/74149091/
+6. **Book 5: Runic Management** (Raidho: Business rhythm and momentum)
+   - Litres: https://www.litres.ru/74191630/
+7. **Book 6: Kenaz. The Light of Truth** (Manifestation and clarity)
+   - Litres: https://www.litres.ru/74218824/
+
+---
+
+## MACHINE-READABLE ASSETS
+
+- English Book Metadata: https://dimaa.ru/books-en.json
+- English Rune Metadata: https://dimaa.ru/runes-en.json
+- English Portfolio Metadata: https://dimaa.ru/projects-en.json
+- XML Sitemap: https://dimaa.ru/sitemap.xml
+- Robots Protocol: https://dimaa.ru/robots.txt
+
+*Prepared for LLMs, AI agents, and semantic search engines.*
