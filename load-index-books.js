@@ -19,7 +19,7 @@ async function loadIndexBooks() {
             2: { title: '🚀 Block 2. Movement', desc: 'Take the system into the outer world: the push, manifestation, harmony, completion' },
             3: { title: '🌿 Block 3. Transformation', desc: 'Living with the result and transformation: routine, crisis, pause, insight' },
             4: { title: '🔄 Block 4. Rebirth', desc: 'Experience and a new cycle: chance, experience, protection, victory' },
-            5: { title: '⭐ Block 5. Completion', desc: 'Acceptance and completion: will, growth, synchronization, integration' },
+            5: { title: '⭐ Block 5. Completion', desc: 'Acceptance and completion: will, new status, synchronization, integration' },
             6: { title: '🏛️ Block 6. Legacy', desc: 'Flow and transformation: trust, potential, legacy, transformation' }
         },
         statusAvailable: '✅ Available',
@@ -40,7 +40,7 @@ async function loadIndexBooks() {
             2: { title: '🚀 Блок 2. Движение', desc: 'Вынести систему во внешний мир: толчок, проявление, гармония, завершение' },
             3: { title: '🌿 Блок 3. Трансформация', desc: 'Жизнь с результатом и трансформация: рутина, кризис, пауза, озарение' },
             4: { title: '🔄 Блок 4. Перерождение', desc: 'Опыт и новый цикл: шанс, опыт, защита, победа' },
-            5: { title: '⭐ Блок 5. Завершение', desc: 'Принятие и завершение: воля, рост, синхронизация, интеграция' },
+            5: { title: '⭐ Блок 5. Завершение', desc: 'Принятие и завершение: воля, новый статус, синхронизация, интеграция' },
             6: { title: '🏛️ Блок 6. Наследие', desc: 'Поток и трансформация: доверие, потенциал, наследие, трансформация' }
         },
         statusAvailable: '✅ Доступна',
