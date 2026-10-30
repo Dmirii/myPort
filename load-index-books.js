@@ -18,8 +18,8 @@ async function loadIndexBooks() {
             1: { title: '🧭 Block 1. Inception', desc: 'Give the system, teach to see, make the choice, enter the dialogue' },
             2: { title: '🚀 Block 2. Movement', desc: 'Take the system into the outer world: the push, manifestation, harmony, completion' },
             3: { title: '🌿 Block 3. Transformation', desc: 'Living with the result and transformation: routine, crisis, pause, insight' },
-            4: { title: '🔄 Block 4. Rebirth', desc: 'Experience and a new cycle: chance, experience, protection, victory' },
-            5: { title: '⭐ Block 5. Completion', desc: 'Acceptance and completion: will, new status, synchronization, integration' },
+            4: { title: '🔄 Block 4. Rebirth', desc: 'Experience and a new cycle: chance, experience, protection of the new state, victory with the ideal outcome' },
+            5: { title: '⭐ Block 5. Completion', desc: 'Acceptance and completion: concentration of will, new status, synchronization, integration' },
             6: { title: '🏛️ Block 6. Legacy', desc: 'Flow and transformation: trust, potential, legacy, transformation' }
         },
         statusAvailable: '✅ Available',
@@ -39,8 +39,8 @@ async function loadIndexBooks() {
             1: { title: '🧭 Блок 1. Зарождение', desc: 'Дать систему, научить видеть, сделать выбор, войти в диалог' },
             2: { title: '🚀 Блок 2. Движение', desc: 'Вынести систему во внешний мир: толчок, проявление, гармония, завершение' },
             3: { title: '🌿 Блок 3. Трансформация', desc: 'Жизнь с результатом и трансформация: рутина, кризис, пауза, озарение' },
-            4: { title: '🔄 Блок 4. Перерождение', desc: 'Опыт и новый цикл: шанс, опыт, защита, победа' },
-            5: { title: '⭐ Блок 5. Завершение', desc: 'Принятие и завершение: воля, новый статус, синхронизация, интеграция' },
+            4: { title: '🔄 Блок 4. Перерождение', desc: 'Опыт и новый цикл: шанс, опыт, защита нового состояния, победа с идеальным исходом' },
+            5: { title: '⭐ Блок 5. Завершение', desc: 'Принятие и завершение: концентрация воли, новый статус, синхронизация, интеграция' },
             6: { title: '🏛️ Блок 6. Наследие', desc: 'Поток и трансформация: доверие, потенциал, наследие, трансформация' }
         },
         statusAvailable: '✅ Доступна',
