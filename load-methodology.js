@@ -23,8 +23,8 @@ async function loadMethodologyBooks() {
             2: { title: '🚀 Block 2. Movement', summary: 'Push → Result → Balance → Completion' },
             3: { title: '🌿 Block 3. Transformation', summary: 'Routine → Signal → Pause → Insight' },
             4: { title: '🔄 Block 4. Rebirth', summary: 'Chance → Experience → Protection → Victory' },
-            5: { title: '⭐ Block 5. Completion', summary: 'Will → Growth → Synchronization → Integration' },
-            6: { title: '🏛️ Block 6. Legacy', summary: 'Trust → Potential → Legacy → Transformation' }
+            5: { title: '⭐ Block 5. Completion', summary: 'Will → Growth → Lift/Bridge → Confirmation of Rebirth' },
+            6: { title: '🏛️ Block 6. Legacy', summary: 'Rebirth → Multiplicity → Connection & Consequence → Rebirth of Cycle' }
         }
     } : {
         dataUrl: '/books.json',
@@ -40,8 +40,8 @@ async function loadMethodologyBooks() {
             2: { title: '🚀 Блок 2. Движение', summary: 'Толчок → Результат → Баланс → Завершение' },
             3: { title: '🌿 Блок 3. Трансформация', summary: 'Рутина → Сигнал → Пауза → Озарение' },
             4: { title: '🔄 Блок 4. Перерождение', summary: 'Шанс → Опыт → Защита → Победа' },
-            5: { title: '⭐ Блок 5. Завершение', summary: 'Воля → Рост → Синхронизация → Интеграция' },
-            6: { title: '🏛️ Блок 6. Наследие', summary: 'Доверие → Потенциал → Наследие → Трансформация' }
+            5: { title: '⭐ Блок 5. Завершение', summary: 'Воля → Рост → Лифт/Мост → Подтверждение возрождения' },
+            6: { title: '🏛️ Блок 6. Наследие', summary: 'Перерождение → Многообразие → Связь и следствие → Перерождение цикла' }
         }
     };
 
