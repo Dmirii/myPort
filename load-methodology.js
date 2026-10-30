@@ -22,9 +22,9 @@ async function loadMethodologyBooks() {
             1: { title: '🧭 Block 1. Inception', summary: 'System → Vision → Choice → Dialogue' },
             2: { title: '🚀 Block 2. Movement', summary: 'Push → Result → Balance → Completion' },
             3: { title: '🌿 Block 3. Transformation', summary: 'Living with Result → Signal → Pause → Insight' },
-            4: { title: '🔄 Block 4. Rebirth', summary: 'Chance → Experience → Protection → Victory' },
-            5: { title: '⭐ Block 5. Completion', summary: 'Will → New Status → Lift/Bridge → Confirmation of Rebirth' },
-            6: { title: '🏛️ Block 6. Legacy', summary: 'Rebirth → Multiplicity → Connection & Consequence → Rebirth of Cycle' }
+            4: { title: '🔄 Block 4. Rebirth', summary: 'Chance → Experience → Protection of the New State → Victory with the Ideal Outcome' },
+            5: { title: '⭐ Block 5. Completion', summary: 'Concentration of Will → New Status → Lift/Bridge → Confirmation of Rebirth' },
+            6: { title: '🏛️ Block 6. Legacy', summary: 'Rebirth → Multiplicity → Inheritance & Connection → Rebirth of Cycle' }
         }
     } : {
         dataUrl: '/books.json',
@@ -39,9 +39,9 @@ async function loadMethodologyBooks() {
             1: { title: '🧭 Блок 1. Зарождение', summary: 'Система → Видение → Выбор → Диалог' },
             2: { title: '🚀 Блок 2. Движение', summary: 'Толчок → Результат → Баланс → Завершение' },
             3: { title: '🌿 Блок 3. Трансформация', summary: 'Жизнь с результатом → Сигнал → Пауза → Озарение' },
-            4: { title: '🔄 Блок 4. Перерождение', summary: 'Шанс → Опыт → Защита → Победа' },
-            5: { title: '⭐ Блок 5. Завершение', summary: 'Воля → Новый статус → Лифт/Мост → Подтверждение возрождения' },
-            6: { title: '🏛️ Блок 6. Наследие', summary: 'Перерождение → Многообразие → Связь и следствие → Перерождение цикла' }
+            4: { title: '🔄 Блок 4. Перерождение', summary: 'Шанс → Опыт → Защита нового состояния → Победа с идеальным исходом' },
+            5: { title: '⭐ Блок 5. Завершение', summary: 'Концентрация воли → Новый статус → Лифт/Мост → Подтверждение возрождения' },
+            6: { title: '🏛️ Блок 6. Наследие', summary: 'Перерождение → Многообразие → Наследство и связь → Перерождение цикла' }
         }
     };
 
