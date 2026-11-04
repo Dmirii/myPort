@@ -1320,3 +1320,243 @@ h2 {
   color: #4a5a52;
 }
 .tone-note strong { color: #1e3a2f; }
+
+/* ========================================
+   КАЛЕНДАРЬ СОСТОЯНИЙ ГОДА (calendar.html)
+   ======================================== */
+
+/* --- Виджет «Состояние года» --- */
+#state-of-year {
+  margin: 1.2rem auto 0;
+  max-width: 760px;
+  padding: 0 1.5rem;
+}
+
+#state-of-year .soy {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 12px 18px;
+  border: 1px solid #e2d5ca;
+  border-left: 4px solid #b87c4f;
+  border-radius: 10px;
+  background: #f7f4ef;
+  text-decoration: none;
+  color: #1e3a2f;
+  opacity: .95;
+  transition: opacity .2s, border-color .2s, background .2s;
+}
+
+#state-of-year .soy:hover {
+  opacity: 1;
+  background: #f3eee6;
+  border-left-color: #a06a3f;
+}
+
+#state-of-year .soy-glyph {
+  font-size: 1.5em;
+  line-height: 1;
+  color: #b87c4f;
+}
+
+#state-of-year .soy-main {
+  font-size: .98rem;
+  line-height: 1.45;
+}
+
+#state-of-year .soy-main i { color: #5f6c66; }
+
+#state-of-year .soy-sub {
+  margin-left: auto;
+  font-size: .85rem;
+  color: #5f6c66;
+  white-space: nowrap;
+}
+
+/* --- Таблицы календаря --- */
+.cal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0 0;
+  font-size: .9rem;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+
+.cal-table th,
+.cal-table td {
+  padding: .6rem .7rem;
+  border-bottom: 1px solid #eee8df;
+  text-align: left;
+  vertical-align: top;
+}
+
+.cal-table th {
+  background: #f1efe9;
+  font-weight: 600;
+  font-size: .8rem;
+  color: #1e3a2f;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.cal-table tr:last-child td { border-bottom: none; }
+
+.cal-table .cal-num {
+  color: #8a7f6d;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.cal-table .cal-glyph {
+  font-size: 1.15em;
+  color: #b87c4f;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.cal-table .cal-name { font-weight: 600; color: #1e3a2f; white-space: nowrap; }
+
+.cal-table .cal-formula { color: #5f6c66; }
+
+/* Строка «сейчас» — подсвечивается из state-widget.js */
+.cal-table tr.is-now td {
+  background: #fdf6e9;
+  border-top: 1px solid #e8d9bd;
+  border-bottom: 1px solid #e8d9bd;
+}
+
+.cal-table tr.is-now .cal-name::after {
+  content: " · сейчас";
+  font-weight: 500;
+  font-size: .78em;
+  color: #b87c4f;
+  white-space: nowrap;
+}
+
+/* --- Словарь терминов (блок 4) --- */
+.cal-dict {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.4rem;
+  font-size: .92rem;
+}
+
+.cal-dict th,
+.cal-dict td {
+  padding: .55rem .7rem;
+  border-bottom: 1px solid #eee8df;
+  text-align: left;
+  vertical-align: top;
+}
+
+.cal-dict th {
+  background: #f1efe9;
+  color: #1e3a2f;
+  font-weight: 600;
+  font-size: .82rem;
+}
+
+/* --- Сворачиваемый блок окон цикла (блок 6) --- */
+.cal-details {
+  margin: 1.4rem 0 0;
+  border: 1px solid #e2d5ca;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.cal-details > summary {
+  padding: .9rem 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #1e3a2f;
+  font-size: .95rem;
+  list-style: none;
+}
+
+.cal-details > summary::-webkit-details-marker { display: none; }
+
+.cal-details > summary::after {
+  content: " (развернуть)";
+  font-weight: 400;
+  font-size: .85rem;
+  color: #8a7f6d;
+}
+
+.cal-details[open] > summary::after { content: " (свернуть)"; }
+
+.cal-details[open] > summary {
+  border-bottom: 1px solid #eee8df;
+  background: #f9f7f3;
+}
+
+.cal-details .cal-details-body { padding: 0 1.1rem 1.2rem; }
+
+.cal-details .cal-note {
+  margin: .9rem 0 0;
+  font-size: .85rem;
+  color: #5f6c66;
+  line-height: 1.55;
+}
+
+/* --- Карточка «пример» в блоке 8 --- */
+.cal-example {
+  margin: 1.2rem 0 0;
+  padding: 1rem 1.2rem;
+  background: #f7f4ef;
+  border-left: 3px solid #b87c4f;
+  border-radius: 0 10px 10px 0;
+  font-size: .93rem;
+  line-height: 1.6;
+  color: #3d4f4a;
+}
+
+.cal-example p { margin: 0 0 .5rem; }
+.cal-example p:last-child { margin-bottom: 0; }
+.cal-example strong { color: #1e3a2f; }
+
+/* --- FAQ (блок 9) --- */
+.cal-faq dt {
+  margin: 1.3rem 0 .35rem;
+  font-weight: 600;
+  color: #1e3a2f;
+  font-size: 1rem;
+}
+
+.cal-faq dd {
+  margin: 0;
+  color: #3d4f4a;
+  line-height: 1.6;
+}
+
+/* --- CTA и футерная строка (блок 10) --- */
+.cal-cta {
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 1.6rem 0 1.2rem;
+}
+
+.cal-motto {
+  margin: 0;
+  font-style: italic;
+  font-size: .9rem;
+  color: #8a7f6d;
+}
+
+@media (max-width: 680px) {
+  #state-of-year { padding: 0 1rem; }
+  #state-of-year .soy-sub { margin-left: 0; white-space: normal; }
+  .cal-table { font-size: .84rem; }
+  .cal-table th, .cal-table td { padding: .5rem .45rem; }
+  .cal-table .cal-name, .cal-table .cal-glyph { white-space: normal; }
+  .cal-table .cal-formula { display: none; }
+  .cal-dict th, .cal-dict td { padding: .45rem .5rem; }
+  .cal-dict th:nth-child(3), .cal-dict td:nth-child(3) { display: none; }
+}
