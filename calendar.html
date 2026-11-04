@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; } }
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109861723', 'ym');
+
+    ym(109861723, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109861723" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Календарь состояний года — Инженерная модель реальности</title>
+  <meta name="description" content="Второй циферблат рядом с обычным календарём: 24 состояния годового цикла от зимнего солнцестояния. В каком состоянии сейчас год — и как этим пользоваться.">
+  <meta name="author" content="Дмитрий Антонов">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dimaa.ru/calendar.html">
+  <link rel="alternate" hreflang="ru" href="https://dimaa.ru/calendar.html">
+  <link rel="alternate" hreflang="x-default" href="https://dimaa.ru/calendar.html">
+  <meta property="og:title" content="Календарь состояний года — Инженерная модель реальности">
+  <meta property="og:description" content="Второй циферблат рядом с обычным календарём: 24 состояния годового цикла от зимнего солнцестояния.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dimaa.ru/calendar.html">
+  <meta property="og:site_name" content="Инженерная модель реальности">
+  <meta property="og:image" content="https://dimaa.ru/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Логотип — Инженерная модель реальности">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/img/logo.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="/style.css?v=202611">
+
+  <!-- ===== JSON-LD: FAQPage (блок 9) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Календарь состояний года — это гороскоп?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Нет. Календарь ничего не предсказывает и не оценивает дни («хороший/плохой»). Он показывает состояние процесса под названием «год». Решения — твои."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "При чём тут руны?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "В этой серии руны — не знаки судьбы, а имена этапов процесса. Феху — не «деньги», а начало; Хагалаз — не «разрушение», а жизнь с результатом. Календарь просто применяет этот язык к году."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Почему от солнцестояния, а не от 1 января?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1 января — договорённость для удобства бухгалтерии. Солнцестояние — измерение: момент, когда свет физически разворачивается. Нулевая точка календаря должна быть измеримой, а не назначенной."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Почему 24 состояния, а не 12 или 365?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Потому что язык модели — 24 состояния, и система говорит на одном языке во всех масштабах: день, год, проект, жизнь. Шаг при этом — конвенция; физичен только нуль."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Есть похожие календари?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да: круг из 24 человечество делил не раз — китайские 24 сезона года (в списке ЮНЕСКО), рунные «полумесяца» XX века. Соседство приятное, но не родство: те системы отвечают на свои вопросы. Наш вопрос — состояние года, наш нуль — измеренный момент солнцестояния, наш шаг — вычислимый."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Моё состояние не совпадает с состоянием года — я что-то делаю не так?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Нет. Это разные часы. Знать оба показания полезно, синхронизировать насильно — не нужно."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ===== МЕНЮ (подгружается из menu.html) ===== -->
+<div id="menuPlaceholder"></div>
+<script src="/load-menu.js"></script>
+
+<!-- ===== БЛОК 1 — HERO ===== -->
+<section class="section hero">
+  <div class="container">
+    <h1>Календарь состояний года</h1>
+    <p style="color: #8a7f6d; font-size: 0.95rem; margin: 0.2rem 0 1.1rem;">Инженерная модель реальности</p>
+    <blockquote style="margin: 0; padding: 0.9rem 1.2rem; border-left: 3px solid #b87c4f; background: #f7f4ef; border-radius: 0 10px 10px 0; color: #3d4f4a; font-size: 1rem; line-height: 1.6;">
+      Время — это непрерывный процесс. Процесс можно описать состояниями. Состояний двадцать четыре.
+    </blockquote>
+
+    <!-- ===== БЛОК 2 — ЖИВОЙ ВИДЖЕТ ===== -->
+    <div id="state-of-year"></div>
+    <noscript><p style="margin: 1.2rem 0 0;"><a href="/calendar.html">Календарь состояний года</a></p></noscript>
+  </div>
+</section>
+
+<!-- ===== БЛОК 3 — ЧТО ЭТО ===== -->
+<section class="section">
+  <div class="container">
+    <h2>Что это</h2>
+    <p style="margin-bottom: 1rem;"><strong>В каком состоянии сейчас год?</strong> Этот календарь отвечает на один вопрос.</p>
+
+    <p style="margin-bottom: 1rem;">Обычный календарь говорит, какое сегодня число. Календарь состояний говорит, в каком состоянии год. Год — такой же процесс, как проект, книга или отношения: у него есть начало, разгон, рутина, нужда, пауза, озарение и завершение. Инженерная модель реальности описывает любой процесс двадцатью четырьмя состояниями — год просто самый доступный общий процесс на свете.</p>
+
+    <p style="margin-bottom: 1rem;">Это второй циферблат. Рядом с «3 ноября» всегда есть второй ответ: «Лагуз, день тринадцатый».</p>
+
+    <p style="margin-bottom: 0;">Состояния названы рунами и несут их формулы из карты серии: Феху — начало, Хагалаз — жизнь с результатом, Дагаз — завершение. То есть год говорит на том же языке, на котором модель описывает любой твой процесс. Календарь — не отдельная штука, а применение системы к планете.</p>
+  </div>
+</section>
+
+<!-- ===== БЛОК 4 — КАК УСТРОЕНО ===== -->
+<section class="section">
+  <div class="container">
+    <h2>Как устроено</h2>
+
+    <p style="margin-bottom: 1rem;"><strong>Нуль — физичен.</strong> Зимнее солнцестояние: момент, когда свет перестаёт убывать и разворачивается. Это измеряется, а не выбирается. В системе это узел <strong>Пустая</strong> — точка бифуркации из Книги 0, у которой теперь есть дата и время. Узел — мгновение, а не сутки: на круге он точка, а не сектор.</p>
+
+    <p style="margin-bottom: 1rem;"><strong>Сетка — условна, и мы говорим это вслух.</strong> От узла год раскладывается на 24 равных по времени состояния. Шаг ≈ 15,22 суток. Сетка делит год по времени, а не по градусам, и могла быть другой — но язык модели 24-состояний, и система должна говорить на одном языке во всех масштабах.</p>
+
+    <p style="margin-bottom: 1.4rem;">Формула проекта: <strong>шаг условен, нуль физичен.</strong></p>
+
+    <p style="margin-bottom: .6rem;">Словарь — три термина:</p>
+    <table class="cal-dict">
+      <thead>
+        <tr><th>Термин</th><th>Значение</th><th>Вопрос</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Состояние</strong></td><td>Режим процесса без исполнителя: год, планета</td><td>В каком состоянии мир?</td></tr>
+        <tr><td><strong>Этап</strong></td><td>Состояние процесса с исполнителем: ты, проект</td><td>На каком этапе ты?</td></tr>
+        <tr><td><strong>Узел</strong></td><td>Мгновение переключения</td><td>Когда переключается?</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== БЛОК 5 — 24 СОСТОЯНИЯ ГОДА (Т1) ===== -->
+<section class="section">
+  <div class="container">
+    <h2>24 состояния года</h2>
+    <p style="margin-bottom: .4rem;">У каждого состояния — формула (что это) и вопрос окна (что спросить у себя, пока год здесь). Формулы — канон серии; окна считаются от зимнего солнцестояния, шаг ≈ 15,22 суток.</p>
+
+    <table class="cal-table">
+      <thead>
+        <tr>
+          <th>№</th>
+          <th>Знак</th>
+          <th>Состояние</th>
+          <th>Формула</th>
+          <th>Вопрос окна</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-state="1"><td class="cal-num">1</td><td class="cal-glyph">ᚠ</td><td class="cal-name">Феху</td><td class="cal-formula">начало, искра</td><td>Что только занимается — где искра уже есть у меня?</td></tr>
+        <tr data-state="2"><td class="cal-num">2</td><td class="cal-glyph">ᚢ</td><td class="cal-name">Уруз</td><td class="cal-formula">вихрь вариантов</td><td>Какие варианты крутятся вокруг? Какой я ещё не видел?</td></tr>
+        <tr data-state="3"><td class="cal-num">3</td><td class="cal-glyph">ᚦ</td><td class="cal-name">Турисаз</td><td class="cal-formula">выбор, отсечение</td><td>Что пора отсечь, чтобы осталось главное?</td></tr>
+        <tr data-state="4"><td class="cal-num">4</td><td class="cal-glyph">ᚨ</td><td class="cal-name">Ансуз</td><td class="cal-formula">подтверждение, зелёный свет</td><td>Где уже горит зелёный — и почему я ещё стою?</td></tr>
+        <tr data-state="5"><td class="cal-num">5</td><td class="cal-glyph">ᚱ</td><td class="cal-name">Райдо</td><td class="cal-formula">первый шаг</td><td>Какой первый шаг я откладываю?</td></tr>
+        <tr data-state="6"><td class="cal-num">6</td><td class="cal-glyph">ᚲ</td><td class="cal-name">Кеназ</td><td class="cal-formula">проявление, свет</td><td>Что стало видно? Что я с этим сделаю?</td></tr>
+        <tr data-state="7"><td class="cal-num">7</td><td class="cal-glyph">ᚷ</td><td class="cal-name">Гебо</td><td class="cal-formula">гармония, равновесие</td><td>Где обмен неравный: что беру, что отдаю?</td></tr>
+        <tr data-state="8"><td class="cal-num">8</td><td class="cal-glyph">ᚹ</td><td class="cal-name">Вуньо</td><td class="cal-formula">радость, выдох</td><td>Чему я не разрешаю себе радоваться?</td></tr>
+        <tr data-state="9"><td class="cal-num">9</td><td class="cal-glyph">ᚺ</td><td class="cal-name">Хагалаз</td><td class="cal-formula">жизнь с результатом, рутина</td><td>Какая рутина и есть результат? Как я её встречаю?</td></tr>
+        <tr data-state="10"><td class="cal-num">10</td><td class="cal-glyph">ᚾ</td><td class="cal-name">Наутиз</td><td class="cal-formula">нужда, сигнал</td><td>Где зажато? О чём сигналит эта нужда?</td></tr>
+        <tr data-state="11"><td class="cal-num">11</td><td class="cal-glyph">ᛁ</td><td class="cal-name">Иса</td><td class="cal-formula">пауза, концентрация</td><td>Где пауза собирает силу — а где я просто замёрз?</td></tr>
+        <tr data-state="12"><td class="cal-num">12</td><td class="cal-glyph">ᛃ</td><td class="cal-name">Йера</td><td class="cal-formula">озарение, вспышка</td><td>Что уже созрело для озарения?</td></tr>
+        <tr data-state="13"><td class="cal-num">13</td><td class="cal-glyph">ᛈ</td><td class="cal-name">Перт</td><td class="cal-formula">второй шанс</td><td>Что можно переиграть, пока игра не кончилась?</td></tr>
+        <tr data-state="14"><td class="cal-num">14</td><td class="cal-glyph">ᛇ</td><td class="cal-name">Эйваз</td><td class="cal-formula">действие на опыте</td><td>На каком своём опыте я могу встать сейчас?</td></tr>
+        <tr data-state="15"><td class="cal-num">15</td><td class="cal-glyph">ᛉ</td><td class="cal-name">Альгиз</td><td class="cal-formula">защита, интуиция</td><td>Что охранять? Что подсказывает интуиция?</td></tr>
+        <tr data-state="16"><td class="cal-num">16</td><td class="cal-glyph">ᛋ</td><td class="cal-name">Соулу</td><td class="cal-formula">идеальный исход</td><td>Как выглядит идеальный исход — по пунктам?</td></tr>
+        <tr data-state="17"><td class="cal-num">17</td><td class="cal-glyph">ᛏ</td><td class="cal-name">Тейваз</td><td class="cal-formula">воля</td><td>Куда направлена воля — и где её не хватает?</td></tr>
+        <tr data-state="18"><td class="cal-num">18</td><td class="cal-glyph">ᛒ</td><td class="cal-name">Беркана</td><td class="cal-formula">возрождение, новый статус</td><td>Что возрождается? В каком новом статусе?</td></tr>
+        <tr data-state="19"><td class="cal-num">19</td><td class="cal-glyph">ᛖ</td><td class="cal-name">Эваз</td><td class="cal-formula">перенос, партнёрство</td><td>Что пора перенести? С кем я в паре?</td></tr>
+        <tr data-state="20"><td class="cal-num">20</td><td class="cal-glyph">ᛗ</td><td class="cal-name">Маназ</td><td class="cal-formula">подтверждение, социум</td><td>Кто подтверждает моё возрождение? Кто рядом?</td></tr>
+        <tr data-state="21"><td class="cal-num">21</td><td class="cal-glyph">ᛚ</td><td class="cal-name">Лагуз</td><td class="cal-formula">поток, доверие</td><td>Что уже несёт само? Что я ещё держу зря?</td></tr>
+        <tr data-state="22"><td class="cal-num">22</td><td class="cal-glyph">ᛜ</td><td class="cal-name">Ингуз</td><td class="cal-formula">семя, потенциал</td><td>Какое семя заложено? Что из него вырастет?</td></tr>
+        <tr data-state="23"><td class="cal-num">23</td><td class="cal-glyph">ᛟ</td><td class="cal-name">Отал</td><td class="cal-formula">наследие</td><td>Что останется после? Моё наследие — что в нём?</td></tr>
+        <tr data-state="24"><td class="cal-num">24</td><td class="cal-glyph">ᛞ</td><td class="cal-name">Дагаз</td><td class="cal-formula">завершение, перерождение</td><td>Что завершается? Чему это освобождает место?</td></tr>
+        <tr data-state="0"><td class="cal-num">0</td><td class="cal-glyph">—</td><td class="cal-name"><strong>Пустая</strong> (узел)</td><td class="cal-formula">точка бифуркации года</td><td>(мгновение, не окно; см. словарь)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== БЛОК 6 — ОКНА ТЕКУЩЕГО ЦИКЛА (Т2) ===== -->
+<section class="section">
+  <div class="container">
+    <details class="cal-details">
+      <summary>Точные окна цикла 2025–26</summary>
+      <div class="cal-details-body">
+        <table class="cal-table" style="font-size: .85rem;">
+          <thead>
+            <tr><th>Окно</th><th>Состояние</th><th>Окно</th><th>Состояние</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="cal-num">21.12–05.01</td><td class="cal-name">Феху</td><td class="cal-num">22.07–07.08</td><td class="cal-name">Альгиз</td></tr>
+            <tr><td class="cal-num">05.01–21.01</td><td class="cal-name">Уруз</td><td class="cal-num">07.08–22.08</td><td class="cal-name">Соулу</td></tr>
+            <tr><td class="cal-num">21.01–05.02</td><td class="cal-name">Турисаз</td><td class="cal-num">22.08–06.09</td><td class="cal-name">Тейваз</td></tr>
+            <tr><td class="cal-num">05.02–20.02</td><td class="cal-name">Ансуз</td><td class="cal-num">06.09–21.09</td><td class="cal-name">Беркана</td></tr>
+            <tr><td class="cal-num">20.02–07.03</td><td class="cal-name">Райдо</td><td class="cal-num">21.09–06.10</td><td class="cal-name">Эваз</td></tr>
+            <tr><td class="cal-num">07.03–23.03</td><td class="cal-name">Кеназ</td><td class="cal-num">06.10–22.10</td><td class="cal-name">Маназ</td></tr>
+            <tr><td class="cal-num">23.03–07.04</td><td class="cal-name">Гебо</td><td class="cal-num">22.10–06.11</td><td class="cal-name">Лагуз</td></tr>
+            <tr><td class="cal-num">07.04–22.04</td><td class="cal-name">Вуньо</td><td class="cal-num">06.11–21.11</td><td class="cal-name">Ингуз</td></tr>
+            <tr><td class="cal-num">22.04–07.05</td><td class="cal-name">Хагалаз</td><td class="cal-num">21.11–06.12</td><td class="cal-name">Отал</td></tr>
+            <tr><td class="cal-num">07.05–22.05</td><td class="cal-name">Наутиз</td><td class="cal-num">06.12–21.12</td><td class="cal-name">Дагаз</td></tr>
+            <tr><td class="cal-num">22.05–07.06</td><td class="cal-name">Иса</td><td class="cal-num"><strong>21.12</strong></td><td class="cal-name"><strong>Пустая — узел</strong></td></tr>
+            <tr><td class="cal-num">07.06–22.06</td><td class="cal-name">Йера</td><td></td><td></td></tr>
+            <tr><td class="cal-num">22.06–07.07</td><td class="cal-name">Перт</td><td></td><td></td></tr>
+            <tr><td class="cal-num">07.07–22.07</td><td class="cal-name">Эйваз</td><td></td><td></td></tr>
+          </tbody>
+        </table>
+        <p class="cal-note">t₀ = 21.12.2025 (момент солнцестояния). Для будущих циклов окна считаются формулой: окно k = [t₀ + (k−1)·Δ … t₀ + k·Δ], Δ ≈ 15,2184 сут.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== БЛОК 7 — КАК ПОЛЬЗОВАТЬСЯ ===== -->
+<section class="section">
+  <div class="container">
+    <h2>Как пользоваться</h2>
+
+    <p style="margin-bottom: 1rem;"><strong>Этаж 1. Десять секунд.</strong> Посмотри на строку выше: сейчас год в состоянии таком-то, день такой-то из пятнадцати. Уже достаточно, чтобы знать, в каком времени живёшь.</p>
+
+    <p style="margin-bottom: 1rem;"><strong>Этаж 2. Две минуты в узел.</strong> Двадцать четыре раза в год, каждые две недели с копейкой, год переключается. В этот день задай себе вопрос окна из таблицы. Это как синк с командой — только команда здесь планета.</p>
+
+    <p style="margin-bottom: 1rem;"><strong>Этаж 3. Десять минут, по желанию.</strong> Пройди <a href="diagnostics.html">диагностику</a> и посмотри карточку <strong>«Мир × Ты»</strong>: в каком состоянии год — и на каком этапе ты. Это разные часы, и рассинхрон — норма (см. следующий блок).</p>
+
+    <p style="margin-bottom: 0;">Календарь не требует веры и не требует дисциплины. Он как километровый столб у дороги: можно свериться — можно идти дальше. Модель полезна, пока полезна.</p>
+  </div>
+</section>
+
+<!-- ===== БЛОК 8 — ГОД И ТЫ ===== -->
+<section class="section">
+  <div class="container">
+    <h2>Год и ты</h2>
+
+    <p style="margin-bottom: 1rem;">У мира — <strong>состояние</strong>. У тебя — <strong>этап</strong>. Разные часы.</p>
+
+    <p style="margin-bottom: 1.2rem;">Если год в Феху, а ты в Хагалаз — это не «несовпадение с энергиями» и не поломка. Мир начал новое; ты — живёшь с результатом. Масштабы разные, трения нет. Карточка «Мир × Ты» — просто карта: она показывает обе позиции и оставляет решение тебе.</p>
+
+    <p style="margin-bottom: .4rem;">Пример:</p>
+    <div class="cal-example">
+      <p><strong>Мир: Лагуз (21/24)</strong> — поток, доверие: мир уже несёт.</p>
+      <p><strong>Ты: Наутиз</strong> — нужда, сигнал: зажат ресурс, и это сообщение, а не поломка.</p>
+      <p><strong>Сверка:</strong> поток мира не отменяет твою нужду; нужда не отменяет потока. Вопрос дней окна: что уже можно отдать потоку — и что ещё держишь зря?</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== БЛОК 9 — ЧЕСТНЫЕ ОТВЕТЫ ===== -->
+<section class="section">
+  <div class="container">
+    <h2>Честные ответы</h2>
+
+    <dl class="cal-faq">
+      <dt>Это гороскоп?</dt>
+      <dd>Нет. Календарь ничего не предсказывает и не оценивает дни («хороший/плохой»). Он показывает состояние процесса под названием «год». Решения — твои.</dd>
+
+      <dt>При чём тут руны?</dt>
+      <dd>В этой серии руны — не знаки судьбы, а имена этапов процесса. Феху — не «деньги», а начало; Хагалаз — не «разрушение», а жизнь с результатом. Календарь просто применяет этот язык к году.</dd>
+
+      <dt>Почему от солнцестояния, а не от 1 января?</dt>
+      <dd>1 января — договорённость для удобства бухгалтерии. Солнцестояние — измерение: момент, когда свет физически разворачивается. Нулевая точка календаря должна быть измеримой, а не назначенной.</dd>
+
+      <dt>Почему 24 состояния, а не 12 или 365?</dt>
+      <dd>Потому что язык модели — 24 состояния, и система говорит на одном языке во всех масштабах: день, год, проект, жизнь. Шаг при этом — конвенция; физичен только нуль.</dd>
+
+      <dt>Есть похожие календари?</dt>
+      <dd>Да: круг из 24 человечество делил не раз — китайские 24 сезона года (в списке ЮНЕСКО), рунные «полумесяца» XX века. Соседство приятное, но не родство: те системы отвечают на свои вопросы («что делать хозяйству», «какая руна рождения»). Наш вопрос — состояние года, наш нуль — измеренный момент солнцестояния, наш шаг — вычислимый.</dd>
+
+      <dt>Моё состояние не совпадает с состоянием года — я что-то делаю не так?</dt>
+      <dd>Нет. Это разные часы. Знать оба показания полезно, синхронизировать насильно — не нужно.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ===== БЛОК 10 — CTA + ФУТЕРНАЯ СТРОКА ===== -->
+<section class="section">
+  <div class="container">
+    <div class="cal-cta">
+      <a href="diagnostics.html" class="btn">Узнать свой этап — диагностика</a>
+      <a href="/#books" style="color: #2c6e49; text-decoration: none; border-bottom: 1px dotted #2c6e49; font-size: .92rem;">Книги серии →</a>
+    </div>
+    <p class="cal-motto">Шаг условен. Нуль физичен. Модель полезна, пока полезна.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-nav" style="display: flex; justify-content: center; gap: 1.4rem; flex-wrap: wrap; margin-bottom: 1.2rem; font-size: 0.85rem;">
+      <a href="/#about" >Об авторе</a>
+      <a href="/#books" >Книги</a>
+      <a href="/methodology.html" >Методология</a>
+      <a href="/diagnostics.html" >Диагностика</a>
+      <a href="/rune-map.html" >Карта рун</a>
+      <a href="/calendar.html" >Календарь</a>
+      <a href="/port.html" >Лаборатория</a>
+      <a href="/contact.html" >Контакты</a>
+      <a href="/en/" >English (EN)</a>
+    </div>
+    <p>© Дмитрий Антонов · Руны как этапы процесса</p>
+    <p style="margin-top: 0.3rem; font-size: 0.78rem; color: #cbd5c3;">«Мир устроен системно. Руны — это способ увидеть и настроить его процессы»</p>
+    <p style="margin-top: 0.5rem; font-size: 0.78rem;"><a href="/privacy.html" style="color: #2c6e49; text-decoration: none; border-bottom: 1px dotted #2c6e49;">Политика обработки данных</a></p>
+  </div>
+</footer>
+
+<script src="/state-widget.js" defer></script>
+
+</body>
+</html>
