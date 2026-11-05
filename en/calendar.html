@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; } }
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109861723', 'ym');
+
+    ym(109861723, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109861723" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>State of the Year Calendar — Engineering Model of Reality</title>
+  <meta name="description" content="The second dial next to the ordinary calendar: 24 states of the annual cycle from the winter solstice. What state the year is in now — and how to use it.">
+  <meta name="author" content="Dmitry Antonov">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dimaa.ru/en/calendar.html">
+  <link rel="alternate" hreflang="ru" href="https://dimaa.ru/calendar.html">
+  <link rel="alternate" hreflang="en" href="https://dimaa.ru/en/calendar.html">
+  <link rel="alternate" hreflang="x-default" href="https://dimaa.ru/calendar.html">
+  <meta property="og:title" content="State of the Year Calendar — Engineering Model of Reality">
+  <meta property="og:description" content="The second dial next to the ordinary calendar: 24 states of the annual cycle from the winter solstice.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dimaa.ru/en/calendar.html">
+  <meta property="og:site_name" content="The Engineering Model of Reality">
+  <meta property="og:image" content="https://dimaa.ru/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo — Engineering Model of Reality">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="State of the Year Calendar — Engineering Model of Reality">
+  <meta name="twitter:description" content="The second dial next to the ordinary calendar: 24 states of the annual cycle from the winter solstice.">
+  <meta name="twitter:image" content="https://dimaa.ru/img/og-image.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/img/logo.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <!-- ===== OFFICIAL SITE CONFIRMATION ===== -->
+  <meta name="publisher" content="Dmitry Antonov">
+  <link rel="publisher" href="https://dimaa.ru/">
+
+  <link rel="stylesheet" href="/style.css?v=202611">
+
+  <!-- ===== JSON-LD: FAQPage ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is the State of the Year Calendar a horoscope?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The calendar predicts nothing and grades no days (\"good/bad\"). It shows the state of the process called \"the year\". The decisions are yours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do runes have to do with it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In this series runes are not fate signs but names of process stages. Fehu is not \"money\" — it is a beginning; Hagalaz is not \"destruction\" — it is living with the result. The calendar simply applies this language to the year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why from the solstice and not from January 1?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "January 1 is an accounting convenience. The solstice is a measurement: the moment when the light physically turns around. The zero point of the calendar must be measurable, not appointed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why 24 states and not 12 or 365?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because the language of the model is 24 states, and the system speaks one language at every scale: day, year, project, life. The step is a convention; only the zero is physical."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there similar calendars?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes: humanity has divided the circle of 24 more than once — the Chinese 24 solar terms (on the UNESCO list), the rune \"half-months\" of the 20th century. Pleasant company, but not kinship: those systems answer their own questions. Our question is the state of the year, our zero is the measured moment of the solstice, our step is computable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "My state doesn't match the state of the year — am I doing something wrong?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. These are different clocks. Knowing both readings is useful; forcing them into sync is not."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ===== MENU (loaded from menu.html) ===== -->
+<div id="menuPlaceholder"></div>
+<script src="/load-menu.js"></script>
+
+<!-- ===== BLOCK 1 — HERO ===== -->
+<section class="section hero">
+  <div class="container">
+    <h1>State of the Year Calendar</h1>
+    <p style="color: #8a7f6d; font-size: 0.95rem; margin: 0.2rem 0 1.1rem;">Engineering Model of Reality</p>
+    <blockquote style="margin: 0; padding: 0.9rem 1.2rem; border-left: 3px solid #b87c4f; background: #f7f4ef; border-radius: 0 10px 10px 0; color: #3d4f4a; font-size: 1rem; line-height: 1.6;">
+      Time is a continuous process. A process can be described by states. There are twenty-four states.
+    </blockquote>
+
+    <!-- ===== BLOCK 2 — LIVE WIDGET ===== -->
+    <div id="state-of-year"></div>
+    <noscript><p style="margin: 1.2rem 0 0;"><a href="/en/calendar.html">State of the Year Calendar</a></p></noscript>
+  </div>
+</section>
+
+<!-- ===== BLOCK 3 — WHAT IS THIS ===== -->
+<section class="section">
+  <div class="container">
+    <h2>What is this</h2>
+    <p style="margin-bottom: 1rem;"><strong>What state is the year in right now?</strong> This calendar answers one question.</p>
+
+    <p style="margin-bottom: 1rem;">A regular calendar tells you today's date. The state calendar tells you the state of the year. The year is a process like a project, a book, or a relationship: it has a beginning, a build-up, routine, need, pause, insight, and completion. The Engineering Model of Reality describes any process with twenty-four states — the year is simply the most accessible shared process there is.</p>
+
+    <p style="margin-bottom: 1rem;">This is a second dial. Next to "November 3" there is always a second answer: "Laguz, day thirteen."</p>
+
+    <p style="margin-bottom: 0;">The states are named after runes and carry their formulas from the series' rune map: Fehu — beginning, Hagalaz — living with the result, Dagaz — completion. In other words, the year speaks the same language the model uses to describe any of your processes. The calendar is not a separate thing — it is the system applied to the planet.</p>
+  </div>
+</section>
+
+<!-- ===== BLOCK 4 — HOW IT WORKS ===== -->
+<section class="section">
+  <div class="container">
+    <h2>How it works</h2>
+
+    <p style="margin-bottom: 1rem;"><strong>The zero is physical.</strong> The winter solstice: the moment when the light stops decreasing and turns around. This is measured, not chosen. In the system this is the node <strong>Blank Rune</strong> — the bifurcation point from Book 0, which now has a date and time. A node is an instant, not a day: on the circle it is a point, not a sector.</p>
+
+    <p style="margin-bottom: 1rem;"><strong>The grid is conventional — and we say so out loud.</strong> From the node the year is laid out into 24 equal-in-time states. The step ≈ 15.22 days. The grid divides the year by time, not by degrees, and could have been different — but the model's language is 24 states, and the system must speak one language at every scale.</p>
+
+    <p style="margin-bottom: 1.4rem;">The project's formula: <strong>the step is conventional, the zero is physical.</strong></p>
+
+    <p style="margin-bottom: .6rem;">The glossary — three terms:</p>
+    <table class="cal-dict">
+      <thead>
+        <tr><th>Term</th><th>Meaning</th><th>Question</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>State</strong></td><td>Process mode without an agent: the year, the planet</td><td>What state is the world in?</td></tr>
+        <tr><td><strong>Stage</strong></td><td>State of a process with an agent: you, a project</td><td>What stage are you at?</td></tr>
+        <tr><td><strong>Node</strong></td><td>The moment of switching</td><td>When does it switch?</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== BLOCK 5 — 24 STATES OF THE YEAR (T1) ===== -->
+<section class="section">
+  <div class="container">
+    <h2>24 states of the year</h2>
+    <p style="margin-bottom: .4rem;">Every state has a formula (what it is) and a window question (what to ask yourself while the year is here). The formulas are the canon of the series; the windows are counted from the winter solstice, step ≈ 15.22 days.</p>
+
+    <table class="cal-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Rune</th>
+          <th>State</th>
+          <th>Formula</th>
+          <th>Window question</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-state="1"><td class="cal-num">1</td><td class="cal-glyph">ᚠ</td><td class="cal-name">Fehu</td><td class="cal-formula">beginning, a spark</td><td>What is just catching fire — where do I already have a spark?</td></tr>
+        <tr data-state="2"><td class="cal-num">2</td><td class="cal-glyph">ᚢ</td><td class="cal-name">Uruz</td><td class="cal-formula">a vortex of options</td><td>Which options are swirling around? Which one haven't I seen yet?</td></tr>
+        <tr data-state="3"><td class="cal-num">3</td><td class="cal-glyph">ᚦ</td><td class="cal-name">Thurisaz</td><td class="cal-formula">choice, cutting away</td><td>What is time to cut away so the main thing remains?</td></tr>
+        <tr data-state="4"><td class="cal-num">4</td><td class="cal-glyph">ᚨ</td><td class="cal-name">Ansuz</td><td class="cal-formula">confirmation, the green light</td><td>Where is the green light already on — and why am I still standing?</td></tr>
+        <tr data-state="5"><td class="cal-num">5</td><td class="cal-glyph">ᚱ</td><td class="cal-name">Raidho</td><td class="cal-formula">the first step</td><td>Which first step am I putting off?</td></tr>
+        <tr data-state="6"><td class="cal-num">6</td><td class="cal-glyph">ᚲ</td><td class="cal-name">Kenaz</td><td class="cal-formula">manifestation, light</td><td>What has become visible? What will I do with it?</td></tr>
+        <tr data-state="7"><td class="cal-num">7</td><td class="cal-glyph">ᚷ</td><td class="cal-name">Gebo</td><td class="cal-formula">harmony, balance</td><td>Where is the exchange unequal: what do I take, what do I give?</td></tr>
+        <tr data-state="8"><td class="cal-num">8</td><td class="cal-glyph">ᚹ</td><td class="cal-name">Wunjo</td><td class="cal-formula">joy, an exhale</td><td>What don't I allow myself to enjoy?</td></tr>
+        <tr data-state="9"><td class="cal-num">9</td><td class="cal-glyph">ᚺ</td><td class="cal-name">Hagalaz</td><td class="cal-formula">living with the result, routine</td><td>Which routine IS the result? How do I meet it?</td></tr>
+        <tr data-state="10"><td class="cal-num">10</td><td class="cal-glyph">ᚾ</td><td class="cal-name">Nauthiz</td><td class="cal-formula">need, a signal</td><td>Where am I squeezed tight? What is this need signaling?</td></tr>
+        <tr data-state="11"><td class="cal-num">11</td><td class="cal-glyph">ᛁ</td><td class="cal-name">Isa</td><td class="cal-formula">pause, concentration</td><td>Where does the pause gather strength — and where have I just frozen?</td></tr>
+        <tr data-state="12"><td class="cal-num">12</td><td class="cal-glyph">ᛃ</td><td class="cal-name">Jera</td><td class="cal-formula">insight, a flash</td><td>What has already ripened for an insight?</td></tr>
+        <tr data-state="13"><td class="cal-num">13</td><td class="cal-glyph">ᛈ</td><td class="cal-name">Perthro</td><td class="cal-formula">a second chance</td><td>What can be replayed while the game isn't over?</td></tr>
+        <tr data-state="14"><td class="cal-num">14</td><td class="cal-glyph">ᛇ</td><td class="cal-name">Eihwaz</td><td class="cal-formula">action built on experience</td><td>Which of my own experience can I stand on right now?</td></tr>
+        <tr data-state="15"><td class="cal-num">15</td><td class="cal-glyph">ᛉ</td><td class="cal-name">Algiz</td><td class="cal-formula">protection, intuition</td><td>What to guard? What does intuition suggest?</td></tr>
+        <tr data-state="16"><td class="cal-num">16</td><td class="cal-glyph">ᛋ</td><td class="cal-name">Sowilo</td><td class="cal-formula">the ideal outcome</td><td>What does the ideal outcome look like — point by point?</td></tr>
+        <tr data-state="17"><td class="cal-num">17</td><td class="cal-glyph">ᛏ</td><td class="cal-name">Tiwaz</td><td class="cal-formula">will</td><td>Where is the will directed — and where is it lacking?</td></tr>
+        <tr data-state="18"><td class="cal-num">18</td><td class="cal-glyph">ᛒ</td><td class="cal-name">Berkana</td><td class="cal-formula">rebirth, a new status</td><td>What is being reborn? In what new status?</td></tr>
+        <tr data-state="19"><td class="cal-num">19</td><td class="cal-glyph">ᛖ</td><td class="cal-name">Ehwaz</td><td class="cal-formula">a lift, partnership</td><td>What is time to move? Who am I paired with?</td></tr>
+        <tr data-state="20"><td class="cal-num">20</td><td class="cal-glyph">ᛗ</td><td class="cal-name">Mannaz</td><td class="cal-formula">confirmation, community</td><td>Who confirms my rebirth? Who is around?</td></tr>
+        <tr data-state="21"><td class="cal-num">21</td><td class="cal-glyph">ᛚ</td><td class="cal-name">Laguz</td><td class="cal-formula">flow, trust</td><td>What is already carrying itself? What am I still holding for no reason?</td></tr>
+        <tr data-state="22"><td class="cal-num">22</td><td class="cal-glyph">ᛜ</td><td class="cal-name">Ingwaz</td><td class="cal-formula">a seed, potential</td><td>What seed has been planted? What will grow from it?</td></tr>
+        <tr data-state="23"><td class="cal-num">23</td><td class="cal-glyph">ᛟ</td><td class="cal-name">Othala</td><td class="cal-formula">inheritance</td><td>What will remain after? My inheritance — what's in it?</td></tr>
+        <tr data-state="24"><td class="cal-num">24</td><td class="cal-glyph">ᛞ</td><td class="cal-name">Dagaz</td><td class="cal-formula">completion, rebirth</td><td>What is completing? What does it make room for?</td></tr>
+        <tr data-state="0"><td class="cal-num">0</td><td class="cal-glyph">—</td><td class="cal-name"><strong>Blank Rune</strong> (node)</td><td class="cal-formula">the bifurcation point of the year</td><td>(an instant, not a window; see the glossary)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== BLOCK 6 — WINDOWS OF THE CURRENT CYCLE (T2) ===== -->
+<section class="section">
+  <div class="container">
+    <details class="cal-details">
+      <summary>Exact windows of the 2025–26 cycle</summary>
+      <div class="cal-details-body">
+        <table class="cal-table" style="font-size: .85rem;">
+          <thead>
+            <tr><th>Window</th><th>State</th><th>Window</th><th>State</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="cal-num">Dec 21 – Jan 5</td><td class="cal-name">Fehu</td><td class="cal-num">Jul 22 – Aug 7</td><td class="cal-name">Algiz</td></tr>
+            <tr><td class="cal-num">Jan 5 – Jan 21</td><td class="cal-name">Uruz</td><td class="cal-num">Aug 7 – Aug 22</td><td class="cal-name">Sowilo</td></tr>
+            <tr><td class="cal-num">Jan 21 – Feb 5</td><td class="cal-name">Thurisaz</td><td class="cal-num">Aug 22 – Sep 6</td><td class="cal-name">Tiwaz</td></tr>
+            <tr><td class="cal-num">Feb 5 – Feb 20</td><td class="cal-name">Ansuz</td><td class="cal-num">Sep 6 – Sep 21</td><td class="cal-name">Berkana</td></tr>
+            <tr><td class="cal-num">Feb 20 – Mar 7</td><td class="cal-name">Raidho</td><td class="cal-num">Sep 21 – Oct 6</td><td class="cal-name">Ehwaz</td></tr>
+            <tr><td class="cal-num">Mar 7 – Mar 23</td><td class="cal-name">Kenaz</td><td class="cal-num">Oct 6 – Oct 22</td><td class="cal-name">Mannaz</td></tr>
+            <tr><td class="cal-num">Mar 23 – Apr 7</td><td class="cal-name">Gebo</td><td class="cal-num">Oct 22 – Nov 6</td><td class="cal-name">Laguz</td></tr>
+            <tr><td class="cal-num">Apr 7 – Apr 22</td><td class="cal-name">Wunjo</td><td class="cal-num">Nov 6 – Nov 21</td><td class="cal-name">Ingwaz</td></tr>
+            <tr><td class="cal-num">Apr 22 – May 7</td><td class="cal-name">Hagalaz</td><td class="cal-num">Nov 21 – Dec 6</td><td class="cal-name">Othala</td></tr>
+            <tr><td class="cal-num">May 7 – May 22</td><td class="cal-name">Nauthiz</td><td class="cal-num">Dec 6 – Dec 21</td><td class="cal-name">Dagaz</td></tr>
+            <tr><td class="cal-num">May 22 – Jun 7</td><td class="cal-name">Isa</td><td class="cal-num"><strong>Dec 21</strong></td><td class="cal-name"><strong>Blank Rune — node</strong></td></tr>
+            <tr><td class="cal-num">Jun 7 – Jun 22</td><td class="cal-name">Jera</td><td></td><td></td></tr>
+            <tr><td class="cal-num">Jun 22 – Jul 7</td><td class="cal-name">Perthro</td><td></td><td></td></tr>
+            <tr><td class="cal-num">Jul 7 – Jul 22</td><td class="cal-name">Eihwaz</td><td></td><td></td></tr>
+          </tbody>
+        </table>
+        <p class="cal-note">t₀ = Dec 21, 2025 (the solstice moment). For future cycles the windows are computed by the formula: window k = [t₀ + (k−1)·Δ … t₀ + k·Δ], Δ ≈ 15.2184 days.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== BLOCK 7 — HOW TO USE IT ===== -->
+<section class="section">
+  <div class="container">
+    <h2>How to use it</h2>
+
+    <p style="margin-bottom: 1rem;"><strong>Floor 1. Ten seconds.</strong> Look at the line above: the year is currently in such-and-such state, day so-and-so out of fifteen. That is already enough to know what time you are living in.</p>
+
+    <p style="margin-bottom: 1rem;"><strong>Floor 2. Two minutes at a node.</strong> Twenty-four times a year, every two weeks and a bit, the year switches. On that day ask yourself the window question from the table. It is like a sync with your team — except the team here is the planet.</p>
+
+    <p style="margin-bottom: 1rem;"><strong>Floor 3. Ten minutes, optional.</strong> Take the <a href="diagnostics.html">diagnostics</a> and look at the <strong>"World × You"</strong> card: what state the year is in — and what stage you are at. These are different clocks, and being out of sync is normal (see the next block).</p>
+
+    <p style="margin-bottom: 0;">The calendar demands no belief and no discipline. It is like a milestone by the road: you can check it — or keep walking. The model is useful as long as it is useful.</p>
+  </div>
+</section>
+
+<!-- ===== BLOCK 8 — THE YEAR AND YOU ===== -->
+<section class="section">
+  <div class="container">
+    <h2>The year and you</h2>
+
+    <p style="margin-bottom: 1rem;">The world has a <strong>state</strong>. You have a <strong>stage</strong>. Different clocks.</p>
+
+    <p style="margin-bottom: 1.2rem;">If the year is in Fehu and you are in Hagalaz, that is not a "mismatch of energies" and not a breakdown. The world has started something new; you are living with the result. The scales are different, there is no friction. The "World × You" card is simply a map: it shows both positions and leaves the decision to you.</p>
+
+    <p style="margin-bottom: .4rem;">Example:</p>
+    <div class="cal-example">
+      <p><strong>World: Laguz (21/24)</strong> — flow, trust: the world is already carrying.</p>
+      <p><strong>You: Nauthiz</strong> — need, a signal: your resource is squeezed tight, and that is a message, not a breakdown.</p>
+      <p><strong>Cross-check:</strong> the world's flow does not cancel your need; the need does not cancel the flow. The question of the window days: what can already be given to the flow — and what are you still holding for no reason?</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOCK 9 — HONEST ANSWERS ===== -->
+<section class="section">
+  <div class="container">
+    <h2>Honest answers</h2>
+
+    <dl class="cal-faq">
+      <dt>Is this a horoscope?</dt>
+      <dd>No. The calendar predicts nothing and grades no days ("good/bad"). It shows the state of the process called "the year". The decisions are yours.</dd>
+
+      <dt>What do runes have to do with it?</dt>
+      <dd>In this series runes are not fate signs but names of process stages. Fehu is not "money" — it is a beginning; Hagalaz is not "destruction" — it is living with the result. The calendar simply applies this language to the year.</dd>
+
+      <dt>Why from the solstice and not from January 1?</dt>
+      <dd>January 1 is an accounting convenience. The solstice is a measurement: the moment when the light physically turns around. The zero point of the calendar must be measurable, not appointed.</dd>
+
+      <dt>Why 24 states and not 12 or 365?</dt>
+      <dd>Because the language of the model is 24 states, and the system speaks one language at every scale: day, year, project, life. The step is a convention; only the zero is physical.</dd>
+
+      <dt>Are there similar calendars?</dt>
+      <dd>Yes: humanity has divided the circle of 24 more than once — the Chinese 24 solar terms (on the UNESCO list), the rune "half-months" of the 20th century. Pleasant company, but not kinship: those systems answer their own questions ("what to do for the household", "what is my birth rune"). Our question is the state of the year, our zero is the measured moment of the solstice, our step is computable.</dd>
+
+      <dt>My state doesn't match the state of the year — am I doing something wrong?</dt>
+      <dd>No. These are different clocks. Knowing both readings is useful; forcing them into sync is not.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- ===== BLOCK: WIDGET FOR ANY SITE ===== -->
+<section class="section">
+  <div class="container">
+    <h2>Widget for any site</h2>
+    <p>Want a second dial of your own — on a blog, a portfolio, a storefront? Paste this code just before the closing <code>&lt;/body&gt;</code> tag of your site. The line is live: it calculates the state of the year itself and always leads here, to the calendar.</p>
+    <p style="color: #5f6c66; font-size: 0.92rem;">It runs on world time (UTC) — every visitor sees the same state of the year. No dependencies or build step: two pieces of code and you're done.</p>
+    <div style="margin-top: 1.1rem;">
+      <button type="button" id="copy-widget" class="btn btn-small" style="margin-bottom: 0.7rem;">Copy code</button>
+      <pre id="widget-snippet" style="margin: 0; background: #f7f4ef; border: 1px solid #e6ddcf; border-radius: 10px; padding: 1rem 1.15rem; overflow-x: auto; font-size: 0.83rem; line-height: 1.55;"><code>&lt;div id="state-of-year"&gt;&lt;/div&gt;
+&lt;style&gt;
+#state-of-year { margin: 1.2rem auto 0; max-width: 760px; padding: 0 1.5rem; font-family: inherit; }
+#state-of-year .soy { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; padding: 12px 18px; border: 1px solid #e2d5ca; border-left: 4px solid #b87c4f; border-radius: 10px; background: #f7f4ef; text-decoration: none; color: #1e3a2f; opacity: .95; }
+#state-of-year .soy:hover { opacity: 1; background: #f3eee6; }
+#state-of-year .soy-glyph { font-size: 1.5em; line-height: 1; color: #b87c4f; }
+#state-of-year .soy-main { font-size: .98rem; line-height: 1.45; }
+#state-of-year .soy-main i { color: #5f6c66; }
+#state-of-year .soy-sub { margin-left: auto; font-size: .85rem; color: #5f6c66; white-space: nowrap; }
+#state-of-year .soy-note { flex-basis: 100%; font-size: .8rem; line-height: 1.45; color: #5f6c66; border-top: 1px dashed #e2d5ca; padding-top: 7px; margin-top: 2px; }
+&lt;/style&gt;
+&lt;script src="https://dimaa.ru/state-widget.js" defer&gt;&lt;/script&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOCK 10 — CTA + FOOTER LINE ===== -->
+<section class="section">
+  <div class="container">
+    <div class="cal-cta">
+      <a href="diagnostics.html" class="btn">Find your stage — diagnostics</a>
+      <a href="/en/#books" style="color: #2c6e49; text-decoration: none; border-bottom: 1px dotted #2c6e49; font-size: .92rem;">Books of the series →</a>
+    </div>
+    <p class="cal-motto">The step is conventional. The zero is physical. The model is useful as long as it is useful.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-nav" style="display: flex; justify-content: center; gap: 1.4rem; flex-wrap: wrap; margin-bottom: 1.2rem; font-size: 0.85rem;">
+      <a href="/en/#about" >About</a>
+      <a href="/en/#books" >Books</a>
+      <a href="/en/methodology.html" >Methodology</a>
+      <a href="/en/diagnostics.html" >Diagnostics</a>
+      <a href="/en/rune-map.html" >Rune Map</a>
+      <a href="/en/calendar.html" >Calendar</a>
+      <a href="/en/port.html" >Lab</a>
+      <a href="/en/contact.html" >Contacts</a>
+      <a href="/" >Русская версия (RU)</a>
+    </div>
+    <p>© Dmitry Antonov · Runes as process stages</p>
+    <p style="margin-top: 0.3rem; font-size: 0.78rem; color: #cbd5c3;">"The world is built systematically. Runes are a way to see and tune its processes"</p>
+    <p style="margin-top: 0.5rem; font-size: 0.78rem;"><a href="/en/privacy.html" style="color: #2c6e49; text-decoration: none; border-bottom: 1px dotted #2c6e49;">Data processing policy</a></p>
+  </div>
+</footer>
+
+<script src="/state-widget.js" defer></script>
+<script>
+(function () {
+  var btn = document.getElementById('copy-widget');
+  var code = document.getElementById('widget-snippet');
+  if (!btn || !code) return;
+  btn.addEventListener('click', function () {
+    var text = code.innerText;
+    function done() {
+      btn.textContent = 'Copied ✓';
+      setTimeout(function () { btn.textContent = 'Copy code'; }, 1600);
+    }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); done(); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else {
+      fallback();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

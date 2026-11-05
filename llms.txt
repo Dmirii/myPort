@@ -38,7 +38,7 @@
 [Laboratory (EN)](/en/port.html): the author's engineering background
 [Subscribe (EN)](/en/feedback.html): news and book announcements
 
-Русские страницы имеют английское зеркало с тем же путём под префиксом `/en/` (hreflang ru ↔ en, x-default — русская версия); исключение — `/calendar.html` (RU-only). Machine-readable data: [books-en.json](/books-en.json), [runes-en.json](/runes-en.json), [projects-en.json](/projects-en.json).
+Русские страницы имеют английское зеркало с тем же путём под префиксом `/en/` (hreflang ru ↔ en, x-default — русская версия), включая `/calendar.html`. Machine-readable data: [books-en.json](/books-en.json), [runes-en.json](/runes-en.json), [projects-en.json](/projects-en.json).
 
 ---
 

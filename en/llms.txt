@@ -39,6 +39,7 @@ The books are currently published in Russian on Litres; an international English
 | Home | /en/ | Introduction to author, methodology, and 26-book overview |
 | Diagnostic Tool | /en/diagnostics.html | Free 2-minute interactive test: "Where are you in your process now?" |
 | Rune Map | /en/rune-map.html | 24 Elder Futhark runes mapped to 24 process stages |
+| Calendar | /en/calendar.html | 24 states of the annual cycle from the winter solstice; live widget with the current state |
 | Methodology | /en/methodology.html | Architectural breakdown of the 6 blocks and 3 times |
 | Engineering Lab | /en/port.html | Dmitry Antonov's developer background and technical projects |
 | Contacts & Books | /en/contact.html | Official author channels, media kit, and 26-book catalog |

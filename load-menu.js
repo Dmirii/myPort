@@ -8,7 +8,7 @@
 const SITE_LANG = window.location.pathname.startsWith('/en/') ? 'en' : 'ru';
 
 // Страницы, у которых есть английская версия (для переключателя языка)
-const TRANSLATED_PAGES = ['index.html', 'methodology.html', 'rune-map.html', 'port.html', 'diagnostics.html', 'feedback.html', 'contact.html', 'privacy.html'];
+const TRANSLATED_PAGES = ['index.html', 'methodology.html', 'rune-map.html', 'port.html', 'diagnostics.html', 'feedback.html', 'contact.html', 'privacy.html', 'calendar.html'];
 
 async function loadMenu() {
     const placeholder = document.getElementById('menuPlaceholder');
