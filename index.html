@@ -177,45 +177,11 @@
     </div>
   </section>
 
-  <!-- ===== БЛОК «КАЛЕНДАРЕ СОСТОЯНИЯ ГОДА»: карточка автора + живой виджет рядом ===== -->
-  <style>
-    .soy-row { display: flex; gap: 16px; align-items: stretch; }
-    .soy-author, .soy-widget { background: #fff; border: 1px solid #e2d5ca; border-left: 4px solid #b87c4f; border-radius: 12px; padding: 20px 22px; }
-    .soy-author { display: flex; gap: 16px; align-items: flex-start; flex: 1 1 320px; }
-    .soy-author img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 2px solid #b87c4f; flex-shrink: 0; }
-    .soy-name { margin: 0 0 0.15rem; font-weight: 700; font-size: 1.02rem; color: #1e3a2f; }
-    .soy-role { margin: 0 0 0.55rem; font-size: 0.8rem; color: #685f52; }
-    .soy-text { margin: 0; font-size: 0.93rem; line-height: 1.55; color: #2d2a26; }
-    .soy-widget { flex: 1.4 1 440px; display: flex; flex-direction: column; }
-    .soy-cta { display: inline-block; margin-top: 0.75rem; font-weight: 600; color: #1e3a2f; font-size: 0.93rem; text-decoration: none; border-bottom: 1px solid #b87c4f; padding-bottom: 1px; align-self: flex-start; }
-    .soy-cta:hover { color: #b87c4f; }
-    #state-of-year { margin: 0; max-width: none; padding: 0; }
-    #state-of-year .soy { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; padding: 12px 18px; border: 1px solid #e2d5ca; border-left: 4px solid #b87c4f; border-radius: 10px; background: #f7f4ef; text-decoration: none; color: #1e3a2f; opacity: .95; }
-    #state-of-year .soy:hover { opacity: 1; background: #f3eee6; }
-    #state-of-year .soy-glyph { font-size: 1.5em; line-height: 1; color: #b87c4f; }
-    #state-of-year .soy-main { font-size: .98rem; line-height: 1.45; }
-    #state-of-year .soy-main i { color: #5f6c66; }
-    #state-of-year .soy-sub { margin-left: auto; font-size: .85rem; color: #5f6c66; white-space: nowrap; }
-    #state-of-year .soy-note { flex-basis: 100%; font-size: .8rem; line-height: 1.45; color: #5f6c66; border-top: 1px dashed #e2d5ca; padding-top: 7px; margin-top: 2px; }
-    @media (max-width: 860px) { .soy-row { flex-direction: column; } }
-  </style>
+  <!-- ===== ЖИВОЙ ВИДЖЕТ «СОСТОЯНИЕ ГОДА» — сразу под блоком «Об авторе» ===== -->
   <section class="section" style="padding-top: 0; padding-bottom: 0.5rem;">
     <div class="container">
-      <div class="soy-row">
-        <div class="soy-author">
-          <img src="img/DimaA.webp" alt="Дмитрий Антонов" loading="lazy" width="72" height="72">
-          <div>
-            <p class="soy-name">Дмитрий Антонов</p>
-            <p class="soy-role">инженер-программист, управленец, рунолог</p>
-            <p class="soy-text">Год — тоже процесс. Я описал его ход через 24 рунических состояния: это расчёт по времени, а не гадание.</p>
-          </div>
-        </div>
-        <div class="soy-widget">
-          <div id="state-of-year"></div>
-          <noscript><p style="margin: 0.6rem 0 0;"><a href="/calendar.html">Открыть календарь состояний года</a></p></noscript>
-          <a class="soy-cta" href="/calendar.html">Открыть календарь состояний года →</a>
-        </div>
-      </div>
+      <div id="state-of-year"></div>
+      <noscript><p style="text-align: center; margin: 0.8rem 0 0;"><a href="/calendar.html">Календарь состояний года</a></p></noscript>
     </div>
   </section>
   <script src="/state-widget.js" defer></script>
