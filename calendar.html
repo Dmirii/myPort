@@ -297,6 +297,29 @@
   </div>
 </section>
 
+<!-- ===== БЛОК: ВИДЖЕТ НА ЛЮБОЙ САЙТ ===== -->
+<section class="section">
+  <div class="container">
+    <h2>Виджет на любой сайт</h2>
+    <p>Хочешь второй циферблат у себя — в блоге, в портфолио, в витрине? Вставь этот код перед закрывающим тегом <code>&lt;/body&gt;</code> своего сайта. Строка живая: сама считает состояние года и всегда ведёт сюда, в календарь.</p>
+    <p style="color: #5f6c66; font-size: 0.92rem;">Считает по всемирному времени (UTC) — у всех посетителей одно и то же состояние года. Без зависимостей и сборки: два куска кода, и готово.</p>
+    <div style="margin-top: 1.1rem;">
+      <button type="button" id="copy-widget" class="btn btn-small" style="margin-bottom: 0.7rem;">Скопировать код</button>
+      <pre id="widget-snippet" style="margin: 0; background: #f7f4ef; border: 1px solid #e6ddcf; border-radius: 10px; padding: 1rem 1.15rem; overflow-x: auto; font-size: 0.83rem; line-height: 1.55;"><code>&lt;div id="state-of-year"&gt;&lt;/div&gt;
+&lt;style&gt;
+#state-of-year { margin: 1.2rem auto 0; max-width: 760px; padding: 0 1.5rem; font-family: inherit; }
+#state-of-year .soy { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; padding: 12px 18px; border: 1px solid #e2d5ca; border-left: 4px solid #b87c4f; border-radius: 10px; background: #f7f4ef; text-decoration: none; color: #1e3a2f; opacity: .95; }
+#state-of-year .soy:hover { opacity: 1; background: #f3eee6; }
+#state-of-year .soy-glyph { font-size: 1.5em; line-height: 1; color: #b87c4f; }
+#state-of-year .soy-main { font-size: .98rem; line-height: 1.45; }
+#state-of-year .soy-main i { color: #5f6c66; }
+#state-of-year .soy-sub { margin-left: auto; font-size: .85rem; color: #5f6c66; white-space: nowrap; }
+&lt;/style&gt;
+&lt;script src="https://dimaa.ru/state-widget.js" defer&gt;&lt;/script&gt;</code></pre>
+    </div>
+  </div>
+</section>
+
 <!-- ===== БЛОК 10 — CTA + ФУТЕРНАЯ СТРОКА ===== -->
 <section class="section">
   <div class="container">
@@ -328,6 +351,33 @@
 </footer>
 
 <script src="/state-widget.js" defer></script>
+<script>
+(function () {
+  var btn = document.getElementById('copy-widget');
+  var code = document.getElementById('widget-snippet');
+  if (!btn || !code) return;
+  btn.addEventListener('click', function () {
+    var text = code.innerText;
+    function done() {
+      btn.textContent = 'Скопировано ✓';
+      setTimeout(function () { btn.textContent = 'Скопировать код'; }, 1600);
+    }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); done(); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else {
+      fallback();
+    }
+  });
+})();
+</script>
 
 </body>
 </html>

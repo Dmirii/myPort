@@ -78,7 +78,7 @@
       ? "сегодня узел — год переключается в " + s.nextName
       : "до узла " + s.nextName + " ≈ " + Math.round(s.daysToNode) + " сут";
     el.innerHTML =
-      '<a class="soy" href="calendar.html">' +
+      '<a class="soy" href="https://dimaa.ru/calendar.html">' +
         '<span class="soy-glyph">' + s.glyph + "</span>" +
         '<span class="soy-main">Сейчас год в состоянии <b>' + s.name + "</b> (" +
           s.num + " из 24) — <i>" + s.formula + "</i></span>" +
