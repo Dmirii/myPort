@@ -981,16 +981,13 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* Правая колонка hero: карточка автора + живой виджет столбиком */
-.author-side {
-  flex: 1;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+/* Виджет в hero: на мобильных — после «Об авторе» и образования;
+   на десктопе (≥1024) — CSS grid ставит его в правую колонку под фото */
+.hero-edu {
+  margin-top: 1.5rem;
 }
 
-.author-side #state-of-year {
+.hero-widget #state-of-year {
   margin: 0;
   max-width: none;
   padding: 0;
@@ -1052,6 +1049,36 @@ h2 {
   .author-wrap {
     flex-direction: row;
     align-items: flex-start;
+  }
+  /* Десктоп hero: сетка «текст | карточка с фото», под фото — виджет,
+     образование — на всю ширину (на мобильных виджет идёт после образования в потоке) */
+  #about > .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "text photo"
+      "text widget"
+      "edu edu";
+    gap: 1.4rem 2rem;
+  }
+  #about .author-wrap {
+    display: contents;
+  }
+  #about .author-text {
+    grid-area: text;
+    align-self: start;
+  }
+  #about .author-photo {
+    grid-area: photo;
+    align-self: start;
+  }
+  #about .hero-edu {
+    grid-area: edu;
+    margin-top: 0;
+  }
+  #about .hero-widget {
+    grid-area: widget;
+    align-self: start;
   }
   h1 {
     font-size: 2.5rem;
@@ -1156,6 +1183,11 @@ h2 {
   #menuPlaceholder .navbar.scrolled .nav-links a.lang-switch {
     font-size: 0.7rem;
     padding: 0.1rem 0.5rem;
+  }
+  /* Логотип не наезжает на угловую кнопку языка на узких экранах:
+     не влезает однострочное название — переносится на вторую строку */
+  #menuPlaceholder .nav-inner .logo {
+    max-width: calc(100% - 92px);
   }
 
   .form-section {
