@@ -149,21 +149,17 @@
 
         </div>
 
-        <div class="author-side">
-          <div class="author-photo">
-            <img src="/img/DimaA.webp" alt="Дмитрий Антонов" style="width: 180px; height: 180px; border-radius: 24px; object-fit: cover; margin: 0 auto 1rem auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-            <div style="font-size: 1.2rem; font-weight: 600;">Дмитрий Антонов</div>
-            <div style="font-size: 0.8rem; margin-top: 0.3rem;">инженер-программист, управленец, рунолог</div>
-            <hr style="margin: 1rem 0; border-color:#cbd5c3; width: 40px; margin-left: auto; margin-right: auto;">
-            <div style="font-size: 0.85rem;">РУНЫ — это больше, чем магия. <br>Это этапы процесса.</div>
-          </div>
-          <div id="state-of-year"></div>
-          <noscript><p style="margin: 0;"><a href="/calendar.html">Календарь состояний года</a></p></noscript>
+        <div class="author-photo">
+          <img src="/img/DimaA.webp" alt="Дмитрий Антонов" style="width: 180px; height: 180px; border-radius: 24px; object-fit: cover; margin: 0 auto 1rem auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <div style="font-size: 1.2rem; font-weight: 600;">Дмитрий Антонов</div>
+          <div style="font-size: 0.8rem; margin-top: 0.3rem;">инженер-программист, управленец, рунолог</div>
+          <hr style="margin: 1rem 0; border-color:#cbd5c3; width: 40px; margin-left: auto; margin-right: auto;">
+          <div style="font-size: 0.85rem;">РУНЫ — это больше, чем магия. <br>Это этапы процесса.</div>
         </div>
       </div>
 
       <!-- ===== ОБРАЗОВАНИЕ ===== -->
-      <div style="margin-top: 1.5rem; background: #eef4ed; border-radius: 24px; padding: 1.3rem 1.8rem; border-left: 5px solid #2c6e49;">
+      <div class="hero-edu" style="background: #eef4ed; border-radius: 24px; padding: 1.3rem 1.8rem; border-left: 5px solid #2c6e49;">
         <div style="font-size: 1.05rem; font-weight: 700; color: #1e3a2f; margin-bottom: 0.7rem;">🎓 Образование и квалификация</div>
         <div style="display: flex; flex-direction: column; gap: 0.7rem;">
           <div>
@@ -177,6 +173,12 @@
         </div>
       </div>
       <!-- ===== КОНЕЦ ОБРАЗОВАНИЯ ===== -->
+
+      <!-- ===== ВИДЖЕТ «СОСТОЯНИЕ ГОДА»: на мобильных — после образования; на десктопе — в правой колонке (CSS grid) ===== -->
+      <div class="hero-widget">
+        <div id="state-of-year"></div>
+        <noscript><p style="margin: 0;"><a href="/calendar.html">Календарь состояний года</a></p></noscript>
+      </div>
 
     </div>
   </section>
