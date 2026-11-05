@@ -117,18 +117,142 @@
     markDial(s);
   }
 
-  // Подсветка текущего сегмента на SVG-циферблате (календарь). Если циферблата нет — тихо выходим.
+  // ===== Циферблат: подсветка + панель-подсказка (только страницы календаря) =====
+  var dialRoot = null;
+  var panel = null;
+  var live = null;    // текущее (живое) состояние
+  var pinned = null;  // выбрано кликом/тапом
+  var hover = null;
+  var hints = null;   // num → «что делать» из runes*.json
+  var t2 = null;      // имя состояния → строка окна из таблицы Т2
+
+  function setText(id, v, rowId) {
+    var e = document.getElementById(id);
+    if (e) e.textContent = v || "";
+    if (rowId) {
+      var row = document.getElementById(rowId);
+      if (row) row.hidden = !v;
+    }
+  }
+
+  function windowFromT2(n) {
+    var name = STATES[n - 1][EN ? 1 : 0];
+    return (t2 && t2[name]) || "";
+  }
+
+  // Окна — ровно те же строки, что видит читатель в Т2: даты читаем из таблицы, не считаем
+  function loadT2() {
+    var map = {};
+    var rows = document.querySelectorAll(".cal-details table.cal-table tr");
+    for (var i = 0; i < rows.length; i++) {
+      var tds = rows[i].querySelectorAll("td");
+      for (var c = 0; c + 1 < tds.length; c += 2) {
+        var nm = (tds[c + 1].textContent || "").trim();
+        var win = (tds[c].textContent || "").trim();
+        if (nm && win) map[nm] = win;
+      }
+    }
+    return map;
+  }
+
+  // «Что делать» — из канонических карточек (ru/en по локали страницы)
+  function loadHints() {
+    if (typeof fetch !== "function") return;
+    var url = EN ? "/runes-en.json" : "/runes.json";
+    fetch(url)
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        var arr = Array.isArray(d) ? d : (d && d.runes) || [];
+        var map = {};
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] && arr[i].num) map[arr[i].num] = arr[i].what || "";
+        }
+        hints = map;
+        updateDial();
+      })
+      .catch(function () {});
+  }
+
+  function dialTarget() {
+    if (hover != null) return hover;
+    if (pinned != null) return pinned;
+    return live ? live.num : 0;
+  }
+
+  function updateDial() {
+    if (!dialRoot || !live) return;
+    var n = dialTarget();
+    if (n < 1 || n > 24) return;
+    var sel = dialRoot.querySelector(".dial-seg.is-sel");
+    if (sel) sel.classList.remove("is-sel");
+    if (pinned != null) {
+      var p = dialRoot.querySelector('.dial-seg[data-state="' + pinned + '"]');
+      if (p) p.classList.add("is-sel");
+    }
+    var st = STATES[n - 1];
+    var name = st[EN ? 1 : 0];
+    var nameEl = dialRoot.querySelector(".dial-name");
+    var subEl = dialRoot.querySelector(".dial-sub");
+    if (nameEl) nameEl.textContent = name;
+    if (subEl) {
+      subEl.textContent =
+        n === live.num
+          ? T.dayPre + live.dayInState + T.dayPost
+          : windowFromT2(n);
+    }
+    if (!panel) return;
+    panel.hidden = false;
+    setText("dp-head", st[2] + " " + name + " — " + st[EN ? 4 : 3]);
+    setText("dp-window", windowFromT2(n), "dp-window-row");
+    var q = document.querySelector('tr[data-state="' + n + '"] td:last-child');
+    setText("dp-question", q ? (q.textContent || "").trim() : "", "dp-question-row");
+    setText("dp-what", hints && hints[n] ? hints[n] : "", "dp-what-row");
+    var rb = document.getElementById("dial-reset");
+    if (rb) rb.classList.toggle("on", pinned != null);
+  }
+
+  // Подсветка текущего сегмента (живое состояние) — вызывается из render()
   function markDial(s) {
-    var dial = document.querySelector(".cal-dial");
-    if (!dial) return;
-    var prev = dial.querySelector(".dial-seg.is-now");
+    if (!dialRoot) return;
+    live = s;
+    var prev = dialRoot.querySelector(".dial-seg.is-now");
     if (prev) prev.classList.remove("is-now");
-    var cur = dial.querySelector('.dial-seg[data-state="' + s.num + '"]');
+    var cur = dialRoot.querySelector('.dial-seg[data-state="' + s.num + '"]');
     if (cur) cur.classList.add("is-now");
-    var name = dial.querySelector(".dial-name");
-    var sub = dial.querySelector(".dial-sub");
-    if (name) name.textContent = s.name;
-    if (sub) sub.textContent = (EN ? "day " + s.dayInState : "день " + s.dayInState) + " · " + s.num + "/24";
+    updateDial();
+  }
+
+  // Инициализация панели и событий — один раз и только если на странице есть циферблат
+  function initDial() {
+    dialRoot = document.querySelector(".cal-dial");
+    if (!dialRoot) return;
+    panel = document.getElementById("dial-panel");
+    t2 = loadT2();
+    var segs = dialRoot.querySelectorAll(".dial-seg");
+    for (var i = 0; i < segs.length; i++) {
+      (function (seg) {
+        var n = parseInt(seg.getAttribute("data-state"), 10);
+        seg.setAttribute("tabindex", "0");
+        seg.setAttribute("role", "button");
+        seg.setAttribute("aria-label", STATES[n - 1][EN ? 1 : 0]);
+        function pin() { pinned = n; updateDial(); }
+        seg.addEventListener("click", pin);
+        seg.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pin(); }
+        });
+      })(segs[i]);
+    }
+    var canHover = typeof matchMedia === "function" && matchMedia("(hover: hover)").matches;
+    if (canHover) {
+      dialRoot.addEventListener("mouseover", function (e) {
+        var g = e.target && e.target.closest ? e.target.closest(".dial-seg") : null;
+        if (g) { hover = parseInt(g.getAttribute("data-state"), 10); updateDial(); }
+      });
+      dialRoot.addEventListener("mouseleave", function () { hover = null; updateDial(); });
+    }
+    var rb = document.getElementById("dial-reset");
+    if (rb) rb.addEventListener("click", function () { pinned = null; updateDial(); });
+    loadHints();
   }
 
   // Подсветка текущего состояния в таблице Т1 (блок 5). Если таблицы нет — тихо выходим.
@@ -144,6 +268,7 @@
   }
 
   function start() {
+    initDial();
     render();
     setInterval(render, 60000); // пересчёт раз в минуту
   }

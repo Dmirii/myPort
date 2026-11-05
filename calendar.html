@@ -119,36 +119,45 @@
     <div id="state-of-year"></div>
     <noscript><p style="margin: 1.2rem 0 0;"><a href="/calendar.html">Календарь состояний года</a></p></noscript>
       </div>
-      <div class="cal-dial" aria-hidden="true">
-        <svg viewBox="0 0 300 300" role="img" aria-label="24 состояния года — круговой календарь">
-        <circle class="dial-ring" cx="150" cy="150" r="92"/>
-        <g class="dial-seg" data-state="1"><circle cx="150.0" cy="30.0" r="15"/><text x="150.0" y="30.0" dominant-baseline="central">ᚠ</text></g>
-        <g class="dial-seg" data-state="2"><circle cx="181.1" cy="34.1" r="15"/><text x="181.1" y="34.1" dominant-baseline="central">ᚢ</text></g>
-        <g class="dial-seg" data-state="3"><circle cx="210.0" cy="46.1" r="15"/><text x="210.0" y="46.1" dominant-baseline="central">ᚦ</text></g>
-        <g class="dial-seg" data-state="4"><circle cx="234.9" cy="65.1" r="15"/><text x="234.9" y="65.1" dominant-baseline="central">ᚨ</text></g>
-        <g class="dial-seg" data-state="5"><circle cx="253.9" cy="90.0" r="15"/><text x="253.9" y="90.0" dominant-baseline="central">ᚱ</text></g>
-        <g class="dial-seg" data-state="6"><circle cx="265.9" cy="118.9" r="15"/><text x="265.9" y="118.9" dominant-baseline="central">ᚲ</text></g>
-        <g class="dial-seg" data-state="7"><circle cx="270.0" cy="150.0" r="15"/><text x="270.0" y="150.0" dominant-baseline="central">ᚷ</text></g>
-        <g class="dial-seg" data-state="8"><circle cx="265.9" cy="181.1" r="15"/><text x="265.9" y="181.1" dominant-baseline="central">ᚹ</text></g>
-        <g class="dial-seg" data-state="9"><circle cx="253.9" cy="210.0" r="15"/><text x="253.9" y="210.0" dominant-baseline="central">ᚺ</text></g>
-        <g class="dial-seg" data-state="10"><circle cx="234.9" cy="234.9" r="15"/><text x="234.9" y="234.9" dominant-baseline="central">ᚾ</text></g>
-        <g class="dial-seg" data-state="11"><circle cx="210.0" cy="253.9" r="15"/><text x="210.0" y="253.9" dominant-baseline="central">ᛁ</text></g>
-        <g class="dial-seg" data-state="12"><circle cx="181.1" cy="265.9" r="15"/><text x="181.1" y="265.9" dominant-baseline="central">ᛃ</text></g>
-        <g class="dial-seg" data-state="13"><circle cx="150.0" cy="270.0" r="15"/><text x="150.0" y="270.0" dominant-baseline="central">ᛈ</text></g>
-        <g class="dial-seg" data-state="14"><circle cx="118.9" cy="265.9" r="15"/><text x="118.9" y="265.9" dominant-baseline="central">ᛇ</text></g>
-        <g class="dial-seg" data-state="15"><circle cx="90.0" cy="253.9" r="15"/><text x="90.0" y="253.9" dominant-baseline="central">ᛉ</text></g>
-        <g class="dial-seg" data-state="16"><circle cx="65.1" cy="234.9" r="15"/><text x="65.1" y="234.9" dominant-baseline="central">ᛋ</text></g>
-        <g class="dial-seg" data-state="17"><circle cx="46.1" cy="210.0" r="15"/><text x="46.1" y="210.0" dominant-baseline="central">ᛏ</text></g>
-        <g class="dial-seg" data-state="18"><circle cx="34.1" cy="181.1" r="15"/><text x="34.1" y="181.1" dominant-baseline="central">ᛒ</text></g>
-        <g class="dial-seg" data-state="19"><circle cx="30.0" cy="150.0" r="15"/><text x="30.0" y="150.0" dominant-baseline="central">ᛖ</text></g>
-        <g class="dial-seg" data-state="20"><circle cx="34.1" cy="118.9" r="15"/><text x="34.1" y="118.9" dominant-baseline="central">ᛗ</text></g>
-        <g class="dial-seg" data-state="21"><circle cx="46.1" cy="90.0" r="15"/><text x="46.1" y="90.0" dominant-baseline="central">ᛚ</text></g>
-        <g class="dial-seg" data-state="22"><circle cx="65.1" cy="65.1" r="15"/><text x="65.1" y="65.1" dominant-baseline="central">ᛜ</text></g>
-        <g class="dial-seg" data-state="23"><circle cx="90.0" cy="46.1" r="15"/><text x="90.0" y="46.1" dominant-baseline="central">ᛟ</text></g>
-        <g class="dial-seg" data-state="24"><circle cx="118.9" cy="34.1" r="15"/><text x="118.9" y="34.1" dominant-baseline="central">ᛞ</text></g>
-        <text class="dial-name" x="150" y="144">—</text>
-        <text class="dial-sub" x="150" y="168">24 × ~15 дней</text>
-        </svg>
+      <div class="cal-dial-col">
+        <div class="cal-dial">
+          <svg viewBox="0 0 300 300">
+                    <circle class="dial-ring" cx="150" cy="150" r="92"/>
+                    <g class="dial-seg" data-state="1"><circle cx="150.0" cy="30.0" r="15"/><text x="150.0" y="30.0" dominant-baseline="central">ᚠ</text></g>
+                    <g class="dial-seg" data-state="2"><circle cx="181.1" cy="34.1" r="15"/><text x="181.1" y="34.1" dominant-baseline="central">ᚢ</text></g>
+                    <g class="dial-seg" data-state="3"><circle cx="210.0" cy="46.1" r="15"/><text x="210.0" y="46.1" dominant-baseline="central">ᚦ</text></g>
+                    <g class="dial-seg" data-state="4"><circle cx="234.9" cy="65.1" r="15"/><text x="234.9" y="65.1" dominant-baseline="central">ᚨ</text></g>
+                    <g class="dial-seg" data-state="5"><circle cx="253.9" cy="90.0" r="15"/><text x="253.9" y="90.0" dominant-baseline="central">ᚱ</text></g>
+                    <g class="dial-seg" data-state="6"><circle cx="265.9" cy="118.9" r="15"/><text x="265.9" y="118.9" dominant-baseline="central">ᚲ</text></g>
+                    <g class="dial-seg" data-state="7"><circle cx="270.0" cy="150.0" r="15"/><text x="270.0" y="150.0" dominant-baseline="central">ᚷ</text></g>
+                    <g class="dial-seg" data-state="8"><circle cx="265.9" cy="181.1" r="15"/><text x="265.9" y="181.1" dominant-baseline="central">ᚹ</text></g>
+                    <g class="dial-seg" data-state="9"><circle cx="253.9" cy="210.0" r="15"/><text x="253.9" y="210.0" dominant-baseline="central">ᚺ</text></g>
+                    <g class="dial-seg" data-state="10"><circle cx="234.9" cy="234.9" r="15"/><text x="234.9" y="234.9" dominant-baseline="central">ᚾ</text></g>
+                    <g class="dial-seg" data-state="11"><circle cx="210.0" cy="253.9" r="15"/><text x="210.0" y="253.9" dominant-baseline="central">ᛁ</text></g>
+                    <g class="dial-seg" data-state="12"><circle cx="181.1" cy="265.9" r="15"/><text x="181.1" y="265.9" dominant-baseline="central">ᛃ</text></g>
+                    <g class="dial-seg" data-state="13"><circle cx="150.0" cy="270.0" r="15"/><text x="150.0" y="270.0" dominant-baseline="central">ᛈ</text></g>
+                    <g class="dial-seg" data-state="14"><circle cx="118.9" cy="265.9" r="15"/><text x="118.9" y="265.9" dominant-baseline="central">ᛇ</text></g>
+                    <g class="dial-seg" data-state="15"><circle cx="90.0" cy="253.9" r="15"/><text x="90.0" y="253.9" dominant-baseline="central">ᛉ</text></g>
+                    <g class="dial-seg" data-state="16"><circle cx="65.1" cy="234.9" r="15"/><text x="65.1" y="234.9" dominant-baseline="central">ᛋ</text></g>
+                    <g class="dial-seg" data-state="17"><circle cx="46.1" cy="210.0" r="15"/><text x="46.1" y="210.0" dominant-baseline="central">ᛏ</text></g>
+                    <g class="dial-seg" data-state="18"><circle cx="34.1" cy="181.1" r="15"/><text x="34.1" y="181.1" dominant-baseline="central">ᛒ</text></g>
+                    <g class="dial-seg" data-state="19"><circle cx="30.0" cy="150.0" r="15"/><text x="30.0" y="150.0" dominant-baseline="central">ᛖ</text></g>
+                    <g class="dial-seg" data-state="20"><circle cx="34.1" cy="118.9" r="15"/><text x="34.1" y="118.9" dominant-baseline="central">ᛗ</text></g>
+                    <g class="dial-seg" data-state="21"><circle cx="46.1" cy="90.0" r="15"/><text x="46.1" y="90.0" dominant-baseline="central">ᛚ</text></g>
+                    <g class="dial-seg" data-state="22"><circle cx="65.1" cy="65.1" r="15"/><text x="65.1" y="65.1" dominant-baseline="central">ᛜ</text></g>
+                    <g class="dial-seg" data-state="23"><circle cx="90.0" cy="46.1" r="15"/><text x="90.0" y="46.1" dominant-baseline="central">ᛟ</text></g>
+                    <g class="dial-seg" data-state="24"><circle cx="118.9" cy="34.1" r="15"/><text x="118.9" y="34.1" dominant-baseline="central">ᛞ</text></g>
+                    <text class="dial-name" x="150" y="144">—</text>
+                    <text class="dial-sub" x="150" y="168">24 × ~15 дней</text>
+                    </svg>
+        </div>
+        <div class="dial-panel" id="dial-panel" hidden>
+          <div class="dp-head" id="dp-head"></div>
+          <div class="dp-row" id="dp-window-row"><span class="dp-label">Окно: </span><span id="dp-window"></span></div>
+          <div class="dp-row" id="dp-question-row"><span class="dp-label">Вопрос: </span><span id="dp-question"></span></div>
+          <div class="dp-row" id="dp-what-row"><span class="dp-label">Что делать: </span><span id="dp-what"></span></div>
+          <button type="button" class="dial-reset" id="dial-reset">↺ Сейчас</button>
+        </div>
       </div>
     </div>
   </div>
