@@ -114,6 +114,21 @@
         '<span class="soy-note">' + T.note + "</span>" +
       "</a>";
     highlightRow(s.num);
+    markDial(s);
+  }
+
+  // Подсветка текущего сегмента на SVG-циферблате (календарь). Если циферблата нет — тихо выходим.
+  function markDial(s) {
+    var dial = document.querySelector(".cal-dial");
+    if (!dial) return;
+    var prev = dial.querySelector(".dial-seg.is-now");
+    if (prev) prev.classList.remove("is-now");
+    var cur = dial.querySelector('.dial-seg[data-state="' + s.num + '"]');
+    if (cur) cur.classList.add("is-now");
+    var name = dial.querySelector(".dial-name");
+    var sub = dial.querySelector(".dial-sub");
+    if (name) name.textContent = s.name;
+    if (sub) sub.textContent = (EN ? "day " + s.dayInState : "день " + s.dayInState) + " · " + s.num + "/24";
   }
 
   // Подсветка текущего состояния в таблице Т1 (блок 5). Если таблицы нет — тихо выходим.
