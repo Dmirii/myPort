@@ -1466,6 +1466,7 @@ h2 {
   color: #b87c4f;
   white-space: nowrap;
 }
+html[lang="en"] .cal-table tr.is-now .cal-name::after { content: " · now"; }
 
 /* --- Словарь терминов (блок 4) --- */
 .cal-dict {
@@ -1516,8 +1517,10 @@ h2 {
   font-size: .85rem;
   color: #8a7f6d;
 }
+html[lang="en"] .cal-details > summary::after { content: " (expand)"; }
 
 .cal-details[open] > summary::after { content: " (свернуть)"; }
+html[lang="en"] .cal-details[open] > summary::after { content: " (collapse)"; }
 
 .cal-details[open] > summary {
   border-bottom: 1px solid #eee8df;
