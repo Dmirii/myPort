@@ -1,39 +1,66 @@
 /**
  * Виджет «Состояние года» — вторая строка календаря.
- * Подключается на calendar.html: <script src="/state-widget.js" defer></script>
+ * Подключается: <script src="/state-widget.js" defer></script>
  * Расчёт идёт в UTC-моментах, от зимнего солнцестояния (нуль цикла).
+ * Локаль определяется по <html lang> страницы (ru по умолчанию).
  * Дополнительно подсвечивает текущее состояние в таблице Т1 (data-state="N").
  */
 (function () {
   var DELTA = 365.2422 / 24; // суток на одно состояние ≈ 15.2184
+  var EN = (document.documentElement.lang || "").toLowerCase().indexOf("en") === 0;
 
-  // 24 состояния года: [имя, знак, формула] — канон серии
+  // 24 состояния года: [имя RU, имя EN, знак, формула RU, формула EN] — канон серии
   var STATES = [
-    ["Феху", "ᚠ", "начало, искра"],
-    ["Уруз", "ᚢ", "вихрь вариантов"],
-    ["Турисаз", "ᚦ", "выбор, отсечение"],
-    ["Ансуз", "ᚨ", "подтверждение, зелёный свет"],
-    ["Райдо", "ᚱ", "первый шаг"],
-    ["Кеназ", "ᚲ", "проявление, свет"],
-    ["Гебо", "ᚷ", "гармония, равновесие"],
-    ["Вуньо", "ᚹ", "радость, выдох"],
-    ["Хагалаз", "ᚺ", "жизнь с результатом, рутина"],
-    ["Наутиз", "ᚾ", "нужда, сигнал"],
-    ["Иса", "ᛁ", "пауза, концентрация"],
-    ["Йера", "ᛃ", "озарение, вспышка"],
-    ["Перт", "ᛈ", "второй шанс"],
-    ["Эйваз", "ᛇ", "действие на опыте"],
-    ["Альгиз", "ᛉ", "защита, интуиция"],
-    ["Соулу", "ᛋ", "идеальный исход"],
-    ["Тейваз", "ᛏ", "воля"],
-    ["Беркана", "ᛒ", "возрождение, новый статус"],
-    ["Эваз", "ᛖ", "перенос, партнёрство"],
-    ["Маназ", "ᛗ", "подтверждение, социум"],
-    ["Лагуз", "ᛚ", "поток, доверие"],
-    ["Ингуз", "ᛜ", "семя, потенциал"],
-    ["Отал", "ᛟ", "наследие"],
-    ["Дагаз", "ᛞ", "завершение, перерождение"]
+    ["Феху", "Fehu", "ᚠ", "начало, искра", "beginning, a spark"],
+    ["Уруз", "Uruz", "ᚢ", "вихрь вариантов", "a vortex of options"],
+    ["Турисаз", "Thurisaz", "ᚦ", "выбор, отсечение", "choice, cutting away"],
+    ["Ансуз", "Ansuz", "ᚨ", "подтверждение, зелёный свет", "confirmation, the green light"],
+    ["Райдо", "Raidho", "ᚱ", "первый шаг", "the first step"],
+    ["Кеназ", "Kenaz", "ᚲ", "проявление, свет", "manifestation, light"],
+    ["Гебо", "Gebo", "ᚷ", "гармония, равновесие", "harmony, balance"],
+    ["Вуньо", "Wunjo", "ᚹ", "радость, выдох", "joy, an exhale"],
+    ["Хагалаз", "Hagalaz", "ᚺ", "жизнь с результатом, рутина", "living with the result, routine"],
+    ["Наутиз", "Nauthiz", "ᚾ", "нужда, сигнал", "need, a signal"],
+    ["Иса", "Isa", "ᛁ", "пауза, концентрация", "pause, concentration"],
+    ["Йера", "Jera", "ᛃ", "озарение, вспышка", "insight, a flash"],
+    ["Перт", "Perthro", "ᛈ", "второй шанс", "a second chance"],
+    ["Эйваз", "Eihwaz", "ᛇ", "действие на опыте", "action built on experience"],
+    ["Альгиз", "Algiz", "ᛉ", "защита, интуиция", "protection, intuition"],
+    ["Соулу", "Sowilo", "ᛋ", "идеальный исход", "the ideal outcome"],
+    ["Тейваз", "Tiwaz", "ᛏ", "воля", "will"],
+    ["Беркана", "Berkana", "ᛒ", "возрождение, новый статус", "rebirth, a new status"],
+    ["Эваз", "Ehwaz", "ᛖ", "перенос, партнёрство", "a lift, partnership"],
+    ["Маназ", "Mannaz", "ᛗ", "подтверждение, социум", "confirmation, community"],
+    ["Лагуз", "Laguz", "ᛚ", "поток, доверие", "flow, trust"],
+    ["Ингуз", "Ingwaz", "ᛜ", "семя, потенциал", "a seed, potential"],
+    ["Отал", "Othala", "ᛟ", "наследие", "inheritance"],
+    ["Дагаз", "Dagaz", "ᛞ", "завершение, перерождение", "completion, rebirth"]
   ];
+
+  // Строки интерфейса виджета
+  var T = EN ? {
+    head: "State of the Year Calendar",
+    now: "the year is currently in the state of",
+    note: "24 rune states of the year: ~15 days each — a time calculation, not fortune-telling. Everyone is in the same state right now.",
+    dayPre: "day ",
+    dayPost: " of ~15",
+    nodePre: "until node ",
+    nodePost: " days",
+    todayNode: "node today — the year switches to ",
+    href: "https://dimaa.ru/en/calendar.html",
+    title: "Open the State of the Year Calendar"
+  } : {
+    head: "Календарь состояний года",
+    now: "сейчас год в состоянии",
+    note: "24 состояния года по рунам: каждое ~15 дней — расчёт по времени, без гаданий. У всех сейчас одно и то же.",
+    dayPre: "день ",
+    dayPost: " из ~15",
+    nodePre: "до узла ",
+    nodePost: " сут",
+    todayNode: "сегодня узел — год переключается в ",
+    href: "https://dimaa.ru/calendar.html",
+    title: "Открыть календарь состояний года"
+  };
 
   // Моменты зимнего солнцестояния (нуль цикла), UTC. Источник: эфемериды.
   // Пополнять ежегодно: в ноябре добавлять следующий год.
@@ -59,13 +86,13 @@
     var nodeAt = t0 + (k + 1) * DELTA * 864e5; // момент следующего узла
     return {
       num: k + 1,
-      name: STATES[k][0],
-      glyph: STATES[k][1],
-      formula: STATES[k][2],
+      name: STATES[k][EN ? 1 : 0],
+      glyph: STATES[k][2],
+      formula: STATES[k][EN ? 4 : 3],
       dayInState: Math.floor(days - k * DELTA) + 1,
       daysToNode: Math.max(0, (nodeAt - t) / 864e5),
       // после Дагаз (24) следующий узел — Пустая (нуль нового цикла)
-      nextName: k === 23 ? "Пустая" : STATES[k + 1][0]
+      nextName: k === 23 ? (EN ? "Blank Rune" : "Пустая") : STATES[k + 1][EN ? 1 : 0]
     };
   }
 
@@ -74,15 +101,17 @@
     if (!el) return;
     var s = stateOf(new Date());
     if (!s) { el.style.display = "none"; return; }
+    var dDays = Math.round(s.daysToNode);
     var tail = s.daysToNode < 0.5
-      ? "сегодня узел — год переключается в " + s.nextName
-      : "до узла " + s.nextName + " ≈ " + Math.round(s.daysToNode) + " сут";
+      ? T.todayNode + s.nextName
+      : T.nodePre + s.nextName + " ≈ " + dDays + (EN ? (dDays === 1 ? " day" : " days") : T.nodePost);
     el.innerHTML =
-      '<a class="soy" href="https://dimaa.ru/calendar.html">' +
+      '<a class="soy" href="' + T.href + '" title="' + T.title + '">' +
         '<span class="soy-glyph">' + s.glyph + "</span>" +
-        '<span class="soy-main">Сейчас год в состоянии <b>' + s.name + "</b> (" +
-          s.num + " из 24) — <i>" + s.formula + "</i></span>" +
-        '<span class="soy-sub">день ' + s.dayInState + " из ~15 · " + tail + " →</span>" +
+        '<span class="soy-main"><b>' + T.head + "</b> — " + T.now + " <b>" + s.name + "</b> (" +
+          s.num + (EN ? " of 24" : " из 24") + ") — <i>" + s.formula + "</i></span>" +
+        '<span class="soy-sub">' + T.dayPre + s.dayInState + T.dayPost + " · " + tail + " →</span>" +
+        '<span class="soy-note">' + T.note + "</span>" +
       "</a>";
     highlightRow(s.num);
   }
