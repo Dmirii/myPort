@@ -1512,6 +1512,79 @@ h2 {
   text-anchor: middle;
 }
 
+/* Циферблат: интерактивность + панель-подсказка «что делать» */
+.cal-dial-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dial-seg {
+  cursor: pointer;
+}
+.dial-seg:focus {
+  outline: none;
+}
+.dial-seg:focus-visible circle {
+  stroke: #1e3a2f;
+  stroke-width: 2.5;
+}
+.dial-seg.is-sel circle {
+  stroke: #1e3a2f;
+  stroke-width: 2;
+}
+.dial-seg.is-sel text {
+  fill: #1e3a2f;
+  font-weight: 700;
+}
+.dial-panel {
+  width: 100%;
+  max-width: 340px;
+  margin-top: 0.9rem;
+  background: #fff;
+  border: 1px solid #e2d5ca;
+  border-left: 4px solid #b87c4f;
+  border-radius: 10px;
+  padding: 0.8rem 0.95rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #2d2a26;
+  text-align: left;
+}
+.dial-panel .dp-head {
+  font-weight: 700;
+  color: #1e3a2f;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+.dial-panel .dp-row {
+  margin: 0.3rem 0;
+}
+.dial-panel .dp-label {
+  color: #8a6a55;
+  font-weight: 600;
+}
+.dial-reset {
+  display: none;
+  margin-top: 0.6rem;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #1e3a2f;
+  background: #eef4ed;
+  border: 1px solid #cbd5c3;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.dial-reset.on {
+  display: inline-block;
+}
+.dial-reset:hover {
+  background: #1e3a2f;
+  border-color: #1e3a2f;
+  color: #fff;
+}
+
 /* --- Таблицы календаря --- */
 .cal-table {
   width: 100%;
