@@ -112,9 +112,11 @@
 <div id="menuPlaceholder"></div>
 <script src="/load-menu.js"></script>
 
-<!-- ===== BLOCK 1 — HERO ===== -->
+<!-- ===== BLOCK 1 — HERO: text + the24-state dial ===== -->
 <section class="section hero">
   <div class="container">
+    <div class="cal-hero-grid">
+      <div class="cal-hero-left">
     <h1>State of the Year Calendar</h1>
     <p style="color: #8a7f6d; font-size: 0.95rem; margin: 0.2rem 0 1.1rem;">Engineering Model of Reality</p>
     <blockquote style="margin: 0; padding: 0.9rem 1.2rem; border-left: 3px solid #b87c4f; background: #f7f4ef; border-radius: 0 10px 10px 0; color: #3d4f4a; font-size: 1rem; line-height: 1.6;">
@@ -124,13 +126,46 @@
     <!-- ===== BLOCK 2 — LIVE WIDGET ===== -->
     <div id="state-of-year"></div>
     <noscript><p style="margin: 1.2rem 0 0;"><a href="/en/calendar.html">State of the Year Calendar</a></p></noscript>
+      </div>
+      <div class="cal-dial" aria-hidden="true">
+        <svg viewBox="0 0 300 300" role="img" aria-label="24 состояния года — круговой календарь">
+        <circle class="dial-ring" cx="150" cy="150" r="92"/>
+        <g class="dial-seg" data-state="1"><circle cx="150.0" cy="30.0" r="15"/><text x="150.0" y="30.0" dominant-baseline="central">ᚠ</text></g>
+        <g class="dial-seg" data-state="2"><circle cx="181.1" cy="34.1" r="15"/><text x="181.1" y="34.1" dominant-baseline="central">ᚢ</text></g>
+        <g class="dial-seg" data-state="3"><circle cx="210.0" cy="46.1" r="15"/><text x="210.0" y="46.1" dominant-baseline="central">ᚦ</text></g>
+        <g class="dial-seg" data-state="4"><circle cx="234.9" cy="65.1" r="15"/><text x="234.9" y="65.1" dominant-baseline="central">ᚨ</text></g>
+        <g class="dial-seg" data-state="5"><circle cx="253.9" cy="90.0" r="15"/><text x="253.9" y="90.0" dominant-baseline="central">ᚱ</text></g>
+        <g class="dial-seg" data-state="6"><circle cx="265.9" cy="118.9" r="15"/><text x="265.9" y="118.9" dominant-baseline="central">ᚲ</text></g>
+        <g class="dial-seg" data-state="7"><circle cx="270.0" cy="150.0" r="15"/><text x="270.0" y="150.0" dominant-baseline="central">ᚷ</text></g>
+        <g class="dial-seg" data-state="8"><circle cx="265.9" cy="181.1" r="15"/><text x="265.9" y="181.1" dominant-baseline="central">ᚹ</text></g>
+        <g class="dial-seg" data-state="9"><circle cx="253.9" cy="210.0" r="15"/><text x="253.9" y="210.0" dominant-baseline="central">ᚺ</text></g>
+        <g class="dial-seg" data-state="10"><circle cx="234.9" cy="234.9" r="15"/><text x="234.9" y="234.9" dominant-baseline="central">ᚾ</text></g>
+        <g class="dial-seg" data-state="11"><circle cx="210.0" cy="253.9" r="15"/><text x="210.0" y="253.9" dominant-baseline="central">ᛁ</text></g>
+        <g class="dial-seg" data-state="12"><circle cx="181.1" cy="265.9" r="15"/><text x="181.1" y="265.9" dominant-baseline="central">ᛃ</text></g>
+        <g class="dial-seg" data-state="13"><circle cx="150.0" cy="270.0" r="15"/><text x="150.0" y="270.0" dominant-baseline="central">ᛈ</text></g>
+        <g class="dial-seg" data-state="14"><circle cx="118.9" cy="265.9" r="15"/><text x="118.9" y="265.9" dominant-baseline="central">ᛇ</text></g>
+        <g class="dial-seg" data-state="15"><circle cx="90.0" cy="253.9" r="15"/><text x="90.0" y="253.9" dominant-baseline="central">ᛉ</text></g>
+        <g class="dial-seg" data-state="16"><circle cx="65.1" cy="234.9" r="15"/><text x="65.1" y="234.9" dominant-baseline="central">ᛋ</text></g>
+        <g class="dial-seg" data-state="17"><circle cx="46.1" cy="210.0" r="15"/><text x="46.1" y="210.0" dominant-baseline="central">ᛏ</text></g>
+        <g class="dial-seg" data-state="18"><circle cx="34.1" cy="181.1" r="15"/><text x="34.1" y="181.1" dominant-baseline="central">ᛒ</text></g>
+        <g class="dial-seg" data-state="19"><circle cx="30.0" cy="150.0" r="15"/><text x="30.0" y="150.0" dominant-baseline="central">ᛖ</text></g>
+        <g class="dial-seg" data-state="20"><circle cx="34.1" cy="118.9" r="15"/><text x="34.1" y="118.9" dominant-baseline="central">ᛗ</text></g>
+        <g class="dial-seg" data-state="21"><circle cx="46.1" cy="90.0" r="15"/><text x="46.1" y="90.0" dominant-baseline="central">ᛚ</text></g>
+        <g class="dial-seg" data-state="22"><circle cx="65.1" cy="65.1" r="15"/><text x="65.1" y="65.1" dominant-baseline="central">ᛜ</text></g>
+        <g class="dial-seg" data-state="23"><circle cx="90.0" cy="46.1" r="15"/><text x="90.0" y="46.1" dominant-baseline="central">ᛟ</text></g>
+        <g class="dial-seg" data-state="24"><circle cx="118.9" cy="34.1" r="15"/><text x="118.9" y="34.1" dominant-baseline="central">ᛞ</text></g>
+        <text class="dial-name" x="150" y="144">—</text>
+        <text class="dial-sub" x="150" y="168">24 × ~15 days</text>
+        </svg>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ===== BLOCK 3 — WHAT IS THIS ===== -->
 <section class="section">
   <div class="container">
-    <h2>What is this</h2>
+    <h2>🧭 What is this</h2>
     <p style="margin-bottom: 1rem;"><strong>What state is the year in right now?</strong> This calendar answers one question.</p>
 
     <p style="margin-bottom: 1rem;">A regular calendar tells you today's date. The state calendar tells you the state of the year. The year is a process like a project, a book, or a relationship: it has a beginning, a build-up, routine, need, pause, insight, and completion. The Engineering Model of Reality describes any process with twenty-four states — the year is simply the most accessible shared process there is.</p>
@@ -144,7 +179,7 @@
 <!-- ===== BLOCK 4 — HOW IT WORKS ===== -->
 <section class="section">
   <div class="container">
-    <h2>How it works</h2>
+    <h2>⚙️ How it works</h2>
 
     <p style="margin-bottom: 1rem;"><strong>The zero is physical.</strong> The winter solstice: the moment when the light stops decreasing and turns around. This is measured, not chosen. In the system this is the node <strong>Blank Rune</strong> — the bifurcation point from Book 0, which now has a date and time. A node is an instant, not a day: on the circle it is a point, not a sector.</p>
 
@@ -169,7 +204,7 @@
 <!-- ===== BLOCK 5 — 24 STATES OF THE YEAR (T1) ===== -->
 <section class="section">
   <div class="container">
-    <h2>24 states of the year</h2>
+    <h2>📋 24 states of the year</h2>
     <p style="margin-bottom: .4rem;">Every state has a formula (what it is) and a window question (what to ask yourself while the year is here). The formulas are the canon of the series; the windows are counted from the winter solstice, step ≈ 15.22 days.</p>
 
     <table class="cal-table">
@@ -217,7 +252,7 @@
 <section class="section">
   <div class="container">
     <details class="cal-details">
-      <summary>Exact windows of the 2025–26 cycle</summary>
+      <summary>🗓 Exact windows of the 2025–26 cycle</summary>
       <div class="cal-details-body">
         <table class="cal-table" style="font-size: .85rem;">
           <thead>
@@ -249,7 +284,7 @@
 <!-- ===== BLOCK 7 — HOW TO USE IT ===== -->
 <section class="section">
   <div class="container">
-    <h2>How to use it</h2>
+    <h2>🛠 How to use it</h2>
 
     <p style="margin-bottom: 1rem;"><strong>Floor 1. Ten seconds.</strong> Look at the line above: the year is currently in such-and-such state, day so-and-so out of fifteen. That is already enough to know what time you are living in.</p>
 
@@ -264,7 +299,7 @@
 <!-- ===== BLOCK 8 — THE YEAR AND YOU ===== -->
 <section class="section">
   <div class="container">
-    <h2>The year and you</h2>
+    <h2>🌍 The year and you</h2>
 
     <p style="margin-bottom: 1rem;">The world has a <strong>state</strong>. You have a <strong>stage</strong>. Different clocks.</p>
 
@@ -282,7 +317,7 @@
 <!-- ===== BLOCK 9 — HONEST ANSWERS ===== -->
 <section class="section">
   <div class="container">
-    <h2>Honest answers</h2>
+    <h2>❓ Honest answers</h2>
 
     <dl class="cal-faq">
       <dt>Is this a horoscope?</dt>
@@ -309,7 +344,7 @@
 <!-- ===== BLOCK: WIDGET FOR ANY SITE ===== -->
 <section class="section">
   <div class="container">
-    <h2>Widget for any site</h2>
+    <h2>📌 Widget for any site</h2>
     <p>Want a second dial of your own — on a blog, a portfolio, a storefront? Paste this code just before the closing <code>&lt;/body&gt;</code> tag of your site. The line is live: it calculates the state of the year itself and always leads here, to the calendar.</p>
     <p style="color: #5f6c66; font-size: 0.92rem;">It runs on world time (UTC) — every visitor sees the same state of the year. No dependencies or build step: two pieces of code and you're done.</p>
     <div style="margin-top: 1.1rem;">

@@ -1393,7 +1393,7 @@ h2 {
 /* --- Виджет «Состояние года» --- */
 #state-of-year {
   margin: 1.2rem auto 0;
-  max-width: 760px;
+  max-width: 560px;
   padding: 0 1.5rem;
 }
 
@@ -1448,6 +1448,68 @@ h2 {
   border-top: 1px dashed #e2d5ca;
   padding-top: 7px;
   margin-top: 2px;
+}
+
+/* --- Герой календаря: текст + циферблат24 состояний --- */
+.cal-hero-grid {
+  display: grid;
+  gap: 1.8rem;
+}
+.cal-hero-left {
+  min-width: 0;
+}
+.cal-hero-left #state-of-year {
+  margin: 1.2rem 0 0;
+}
+.cal-dial {
+  display: flex;
+  justify-content: center;
+}
+.cal-dial svg {
+  width: min(300px, 78vw);
+  height: auto;
+}
+@media (min-width: 900px) {
+  .cal-hero-grid {
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 2rem;
+    align-items: center;
+  }
+}
+.dial-ring {
+  fill: none;
+  stroke: #e2d5ca;
+  stroke-width: 1.5;
+}
+.dial-seg circle {
+  fill: #f7f4ef;
+  stroke: #e2d5ca;
+  stroke-width: 1;
+  transition: fill .3s, stroke .3s;
+}
+.dial-seg text {
+  fill: #5f6c66;
+  font-size: 14px;
+  text-anchor: middle;
+}
+.dial-seg.is-now circle {
+  fill: #b87c4f;
+  stroke: #a06a3f;
+}
+.dial-seg.is-now text {
+  fill: #fff;
+  font-weight: 700;
+}
+.dial-name {
+  font-size: 20px;
+  font-weight: 700;
+  fill: #1e3a2f;
+  text-anchor: middle;
+}
+.dial-sub {
+  font-size: 12.5px;
+  fill: #5f6c66;
+  text-anchor: middle;
 }
 
 /* --- Таблицы календаря --- */
