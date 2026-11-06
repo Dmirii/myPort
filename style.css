@@ -1539,6 +1539,7 @@ h2 {
 .dial-panel {
   width: 100%;
   max-width: 340px;
+  min-height: 15rem;
   margin-top: 0.9rem;
   background: #fff;
   border: 1px solid #e2d5ca;
